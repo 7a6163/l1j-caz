@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/data/xml/NpcActions
+END
+Quest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/data/xml/NpcActions/Quest.xml
+END
+ItemMaking.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/data/xml/NpcActions/ItemMaking.xml
+END
+Teleporter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/data/xml/NpcActions/Teleporter.xml
+END
+SingleItemMaking.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/data/xml/NpcActions/SingleItemMaking.xml
+END

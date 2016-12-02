@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet/command
+END
+TelnetCommandList.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet/command/TelnetCommandList.java
+END
+TelnetCommandExecutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet/command/TelnetCommandExecutor.java
+END
+TelnetCommandResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet/command/TelnetCommandResult.java
+END
+TelnetCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet/command/TelnetCommand.java
+END

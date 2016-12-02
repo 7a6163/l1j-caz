@@ -1,0 +1,395 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM
+END
+clan_warehouse.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/clan_warehouse.sql
+END
+letter.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/letter.sql
+END
+commands.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/commands.sql
+END
+spawnlist_time.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_time.sql
+END
+getback_restart.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/getback_restart.sql
+END
+connection_test_table.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/connection_test_table.sql
+END
+shop.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/shop.sql
+END
+spawnlist_boss.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_boss.sql
+END
+pettypes.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/pettypes.sql
+END
+character_skills.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_skills.sql
+END
+npcaction.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/npcaction.sql
+END
+accounts.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/accounts.sql
+END
+npc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/npc.sql
+END
+drop_item.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/drop_item.sql
+END
+ub_settings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/ub_settings.sql
+END
+ban_ip.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/ban_ip.sql
+END
+character_buff.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_buff.sql
+END
+dungeon.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/dungeon.sql
+END
+dungeon_random.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/dungeon_random.sql
+END
+character_quests.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_quests.sql
+END
+skills.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/skills.sql
+END
+spr_action.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spr_action.sql
+END
+character_buddys.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_buddys.sql
+END
+clan_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/clan_data.sql
+END
+trap.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/trap.sql
+END
+ub_times.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/ub_times.sql
+END
+spawnlist_light.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_light.sql
+END
+mapids.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/mapids.sql
+END
+mail.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/mail.sql
+END
+house.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/house.sql
+END
+spawnlist_npc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_npc.sql
+END
+town.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/town.sql
+END
+weapon_skill.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/weapon_skill.sql
+END
+mobgroup.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/mobgroup.sql
+END
+character_items.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_items.sql
+END
+droplist.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/droplist.sql
+END
+character_elf_warehouse.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_elf_warehouse.sql
+END
+spawnlist_door.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_door.sql
+END
+spawnlist_trap.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_trap.sql
+END
+pets.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/pets.sql
+END
+castle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/castle.sql
+END
+polymorphs.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/polymorphs.sql
+END
+character_warehouse.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_warehouse.sql
+END
+characters.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/characters.sql
+END
+armor.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/armor.sql
+END
+log_enchant.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/log_enchant.sql
+END
+ub_managers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/ub_managers.sql
+END
+beginner.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/beginner.sql
+END
+getback.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/getback.sql
+END
+petitem.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/petitem.sql
+END
+area.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/area.sql
+END
+board_auction.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/board_auction.sql
+END
+spawnlist_ub.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_ub.sql
+END
+character_teleport.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_teleport.sql
+END
+mobskill.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/mobskill.sql
+END
+npcchat.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/npcchat.sql
+END
+log_chat.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/log_chat.sql
+END
+resolvent.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/resolvent.sql
+END
+character_config.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/character_config.sql
+END
+spawnlist.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist.sql
+END
+board.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/board.sql
+END
+spawnlist_furniture.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/spawnlist_furniture.sql
+END
+weapon.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/weapon.sql
+END
+etcitem.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/etcitem.sql
+END
+armor_set.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/382/trunk/L1J-TW_3.80c/db/Japan/MyISAM/armor_set.sql
+END

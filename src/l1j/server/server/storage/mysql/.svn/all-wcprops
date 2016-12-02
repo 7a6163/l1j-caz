@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/mysql
+END
+MysqlAutoBackup.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/mysql/MysqlAutoBackup.java
+END
+MySqlCharacterStorage.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/mysql/MySqlCharacterStorage.java
+END
+MySqlCharactersItemStorage.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/mysql/MySqlCharactersItemStorage.java
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action
+END
+L1NpcMakeItemAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcMakeItemAction.java
+END
+L1NpcSetQuestAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcSetQuestAction.java
+END
+L1NpcTeleportAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcTeleportAction.java
+END
+L1NpcXmlParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcXmlParser.java
+END
+L1NpcAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcAction.java
+END
+L1NpcXmlAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcXmlAction.java
+END
+L1NpcListedAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcListedAction.java
+END
+L1NpcDefaultAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcDefaultAction.java
+END
+L1NpcShowHtmlAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcShowHtmlAction.java
+END
+L1NpcActionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action/L1NpcActionFactory.java
+END

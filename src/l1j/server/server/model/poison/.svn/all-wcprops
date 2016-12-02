@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/poison
+END
+L1DamagePoison.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/poison/L1DamagePoison.java
+END
+L1Poison.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/poison/L1Poison.java
+END
+L1SilencePoison.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/poison/L1SilencePoison.java
+END
+L1ParalysisPoison.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/poison/L1ParalysisPoison.java
+END

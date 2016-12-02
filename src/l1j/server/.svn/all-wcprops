@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server
+END
+FileLogFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/FileLogFormatter.java
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/Config.java
+END
+Server.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/Server.java
+END
+ErrorLogHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/ErrorLogHandler.java
+END
+L1DatabaseFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/L1DatabaseFactory.java
+END
+ErrorFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/ErrorFilter.java
+END
+L1Message.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/L1Message.java
+END

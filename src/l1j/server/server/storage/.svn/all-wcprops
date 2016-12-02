@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage
+END
+CharacterStorage.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/CharacterStorage.java
+END
+CharactersItemStorage.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/CharactersItemStorage.java
+END
+TrapStorage.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/TrapStorage.java
+END
