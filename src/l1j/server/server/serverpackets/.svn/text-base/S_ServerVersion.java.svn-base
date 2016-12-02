@@ -15,35 +15,32 @@
 package l1j.server.server.serverpackets;
 
 import l1j.server.Config;
-import l1j.server.server.GameServer;
 import l1j.server.server.Opcodes;
 
 public class S_ServerVersion extends ServerBasePacket {
-	private static final int SERVER_NO = 0x01;
 	private static final int CLIENT_LANGUAGE = Config.CLIENT_LANGUAGE;
 	private static final int uptime = (int) (System.currentTimeMillis() / 1000);
-	
+
 	/*
-	 * [Server] opcode = 139
-	 * 0000: 8b 00 1c ed 84 c7 07 e8 84 c7 07 2d 69 fc 77 e8 ...........-i.w.
-	 * 0010: 84 c7 07 4c d9 f9 51 00 00 03 c2 7d 7f 08 8f 3b ...L..Q....}..;
-	 * 0020: fa 51 01 00 97 82 64 56 .Q....dV
+	 * [來源:Server]<位址:17>{長度:32}(時間:1314150068749) 0000: 11 00 38 32 c7 a8 00 a7
+	 * c6 a8 00 ba 6e cf 77 ad ..82........n.w. 0010: cd a8 00 71 23 53 4e 00 00
+	 * 03 00 00 00 00 08 00 ...q#SN.........
 	 */
 	public S_ServerVersion() {
 		writeC(Opcodes.S_OPCODE_SERVERVERSION);
-		writeC(0x00);       // Auth ok?
-		writeC(SERVER_NO);  // Server Id
-		writeD(0x07cbf4dd); // server version 3.80C Taiwan Server
-		writeD(0x07cbf4dd); // cache version 3.80C Taiwan Server
-		writeD(0x77fc692d); // auth version 3.80C Taiwan Server
-		writeD(0x07cbf4d9); // npc version 3.80C Taiwan Server
-		writeD(GameServer.getInstance().startTime);
+		writeC(0x00);
+		writeC(0x02);
+		writeD(0x00a8c732); // server verion 3.5C Taiwan Server
+		writeD(0x00a8c6a7); // cache verion 3.5C Taiwan Server
+		writeD(0x77cf6eba); // auth verion 3.5C Taiwan Server
+		writeD(0x00a8cdad); // npc verion 3.5C Taiwan Server
+		writeD(uptime);
 		writeC(0x00); // unknown
 		writeC(0x00); // unknown
 		writeC(CLIENT_LANGUAGE); // Country: 0.US 3.Taiwan 4.Janpan 5.China
-		writeD(0x087f7dc2);      // Server Type
-		writeD(uptime);          // Uptime
-		writeH(0x01);
+		writeD(0x00000000);
+		writeC(0xae); // unknown
+		writeC(0xb2); // unknown
 	}
 
 	@Override

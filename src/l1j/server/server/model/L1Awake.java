@@ -48,7 +48,7 @@ public class L1Awake {
 					pc.getParty().updateMiniHP(pc);
 				}
 				pc.addAc(-12);
-				pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+				pc.sendPackets(new S_OwnCharStatus2(pc));
 			}
 			else if (skillId == AWAKEN_FAFURION) { // 覺醒：法力昂
 				pc.addMr(30);
@@ -66,7 +66,7 @@ public class L1Awake {
 				pc.addCha(5);
 				pc.addInt(5);
 				pc.addWis(5);
-				pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+				pc.sendPackets(new S_OwnCharStatus2(pc));
 			}
 			pc.setAwakeSkillId(skillId);
 			doPoly(pc);
@@ -101,7 +101,7 @@ public class L1Awake {
 			pc.addCha(-5);
 			pc.addInt(-5);
 			pc.addWis(-5);
-			pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+			pc.sendPackets(new S_OwnCharStatus2(pc));
 		}
 		pc.setAwakeSkillId(0);
 		undoPoly(pc);

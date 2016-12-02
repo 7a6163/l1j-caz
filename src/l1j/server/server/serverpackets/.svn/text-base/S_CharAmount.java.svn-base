@@ -34,7 +34,9 @@ public class S_CharAmount extends ServerBasePacket {
 
 		writeC(Opcodes.S_OPCODE_CHARAMOUNT);
 		writeC(value);
-		writeC(maxAmount); // 最大角色欄位數量
+// writeD(0x00000000);
+// writeD(0x0000);
+		writeC(maxAmount); // max amount
 	}
 
 	@Override

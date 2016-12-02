@@ -234,7 +234,8 @@ public class L1TreasureBox {
 			if ((itemId == 46000)) {
 				L1ItemInstance box = pc.getInventory().findItemId(itemId);
 				box.setChargeCount(box.getChargeCount() - 1);
-				pc.getInventory().updateItem(box, L1PcInventory.COL_CHARGE_COUNT);
+				pc.getInventory().updateItem(box,
+						L1PcInventory.COL_CHARGE_COUNT);
 				if (box.getChargeCount() < 1) {
 					pc.getInventory().removeItem(box, 1);
 				}

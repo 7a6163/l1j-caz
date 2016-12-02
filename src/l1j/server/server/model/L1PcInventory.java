@@ -15,9 +15,7 @@
 package l1j.server.server.model;
 
 import java.text.DecimalFormat;
-
 import l1j.server.server.utils.Random;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,7 +28,6 @@ import l1j.server.server.model.identity.L1ItemId;
 import l1j.server.server.serverpackets.S_AddItem;
 import l1j.server.server.serverpackets.S_CharVisualUpdate;
 import l1j.server.server.serverpackets.S_DeleteInventoryItem;
-import l1j.server.server.serverpackets.S_EquipmentSlot;
 import l1j.server.server.serverpackets.S_ItemColor;
 import l1j.server.server.serverpackets.S_ItemStatus;
 import l1j.server.server.serverpackets.S_OwnCharStatus;
@@ -46,7 +43,8 @@ public class L1PcInventory extends L1Inventory {
 
 	private static final long serialVersionUID = 1L;
 
-	private static Logger _log = Logger.getLogger(L1PcInventory.class.getName());
+	private static Logger _log = Logger
+			.getLogger(L1PcInventory.class.getName());
 
 	private static final int MAX_SIZE = 180;
 
@@ -158,7 +156,8 @@ public class L1PcInventory extends L1Inventory {
 					item.setEquipped(false);
 					setEquipped(item, true, true, false);
 				}
-				if (item.getItem().getType2() == 0 && item.getItem().getType() == 2) { // light系アイテム
+				if (item.getItem().getType2() == 0
+						&& item.getItem().getType() == 2) { // light系アイテム
 					item.setRemainingTime(item.getItem().getLightFuel());
 				}
 				/**
@@ -190,7 +189,8 @@ public class L1PcInventory extends L1Inventory {
 	public void insertItem(L1ItemInstance item) {
 		_owner.sendPackets(new S_AddItem(item));
 		if (item.getItem().getWeight() != 0) {
-			_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,getWeight242()));
+			_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,
+					getWeight242()));
 		}
 		try {
 			CharactersItemStorage storage = CharactersItemStorage.create();
@@ -287,7 +287,8 @@ public class L1PcInventory extends L1Inventory {
 		if (column >= COL_ITEMID) { // 別のアイテムになる場合(便箋を開封したときなど)
 			_owner.sendPackets(new S_ItemStatus(item));
 			_owner.sendPackets(new S_ItemColor(item));
-			_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,getWeight242()));
+			_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,
+					getWeight242()));
 			column -= COL_ITEMID;
 		}
 		if (column >= COL_DELAY_EFFECT) { // 効果ディレイ
@@ -305,7 +306,8 @@ public class L1PcInventory extends L1Inventory {
 			}
 			if (item.getItem().getWeight() != 0) {
 				// XXX 242段階のウェイトが変化しない場合は送らなくてよい
-				_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,getWeight242()));
+				_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,
+						getWeight242()));
 			}
 			column -= COL_COUNT;
 		}
@@ -461,11 +463,12 @@ public class L1PcInventory extends L1Inventory {
 		if (item.isEquipped()) {
 			setEquipped(item, false);
 		}
-		if (item.getItem().getWeight() != 0) {
-			_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,getWeight242()));
-		}
 		_owner.sendPackets(new S_DeleteInventoryItem(item));
 		_items.remove(item);
+		if (item.getItem().getWeight() != 0) {
+			_owner.sendPackets(new S_PacketBox(S_PacketBox.WEIGHT,
+					getWeight242()));
+		}
 	}
 
 	// アイテムを装着脱着させる（L1ItemInstanceの変更、補正値の設定、character_itemsの更新、パケット送信まで管理）
@@ -473,13 +476,13 @@ public class L1PcInventory extends L1Inventory {
 		setEquipped(item, equipped, false, false);
 	}
 
-	public void setEquipped(L1ItemInstance item, boolean equipped, boolean loaded, boolean changeWeapon) {
+	public void setEquipped(L1ItemInstance item, boolean equipped,
+			boolean loaded, boolean changeWeapon) {
 		if (item.isEquipped() != equipped) { // 設定値と違う場合だけ処理
 			L1Item temp = item.getItem();
 			if (equipped) { // 装着
 				item.setEquipped(true);
 				_owner.getEquipSlot().set(item);
-				setEquipmentOnOff(item, true);
 			} else { // 脱着
 				if (!loaded) {
 					// インビジビリティクローク バルログブラッディクローク装備中でインビジ状態の場合はインビジ状態の解除
@@ -491,7 +494,6 @@ public class L1PcInventory extends L1Inventory {
 						}
 					}
 				}
-				setEquipmentOnOff(item, false);
 				item.setEquipped(false);
 				_owner.getEquipSlot().remove(item);
 			}
@@ -731,55 +733,5 @@ public class L1PcInventory extends L1Inventory {
 		}
 		setEquipped(penaltyItem, false);
 		return penaltyItem;
-	}
-	
-	public void setEquipmentOnOff(L1ItemInstance item, boolean onOff) {
-		int index = 0;
-		if(item.isEquipped() && item.getItem().getType2() == 1){ // L1Weapon
-			index = 8;
-		} else if (item.isEquipped() && item.getItem().getType2() == 2) { // L1Armor
-			if ((item.getItem().getType() == 1)) {
-				index = 1;
-			} else if ((item.getItem().getType() == 2)) {
-				index = 2;
-			} else if ((item.getItem().getType() == 3)) {
-				index = 3;
-			} else if ((item.getItem().getType() == 4)) {
-				index = 4;
-			} else if ((item.getItem().getType() == 5)) {
-				index = 6;
-			} else if ((item.getItem().getType() == 6)) {
-				index = 5;
-			} else if ((item.getItem().getType() == 7)) {
-				index = 7;
-			} else if ((item.getItem().getType() == 8)) {
-				index = 10;
-			} else if ((item.getItem().getType() == 9)) {
-				index = 18;
-			} else if ((item.getItem().getType() == 10)) {
-				index = 11;
-			} else if ((item.getItem().getType() == 11)) {
-				index = 19;
-			} else if ((item.getItem().getType() == 12)) {
-				index = 12;
-			} else if ((item.getItem().getType() == 13)) {
-				index = 7;
-			} else if ((item.getItem().getType() == 14)) {
-				index = 22;
-			} else if ((item.getItem().getType() == 15)) {
-				index = 23;
-			} else if ((item.getItem().getType() == 16)) {
-				index = 24;
-			} else if ((item.getItem().getType() == 17)) {
-				index = 25;
-			} else if ((item.getItem().getType() == 18)) {
-				index = 26;
-			} else if ((item.getItem().getType() == 19)) {
-				index = 20;
-			} else if ((item.getItem().getType() == 20)) {
-				index = 21;
-			}
-		}
-		_owner.sendPackets(new S_EquipmentSlot(item.getId(), index, onOff));
 	}
 }

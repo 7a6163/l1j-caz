@@ -1,35 +1,35 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/gametime
-END
-L1GameTimeListener.java
-K 25
-svn:wc:ra_dav:version-url
-V 97
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/gametime/L1GameTimeListener.java
-END
-L1GameTimeCarrier.java
-K 25
-svn:wc:ra_dav:version-url
-V 96
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/gametime/L1GameTimeCarrier.java
-END
-L1GameTimeClock.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/gametime/L1GameTimeClock.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/gametime
 END
 L1GameTime.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/gametime/L1GameTime.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/gametime/L1GameTime.java
 END
 L1GameTimeAdapter.java
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/gametime/L1GameTimeAdapter.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/gametime/L1GameTimeAdapter.java
+END
+L1GameTimeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/gametime/L1GameTimeListener.java
+END
+L1GameTimeCarrier.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/gametime/L1GameTimeCarrier.java
+END
+L1GameTimeClock.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/gametime/L1GameTimeClock.java
 END

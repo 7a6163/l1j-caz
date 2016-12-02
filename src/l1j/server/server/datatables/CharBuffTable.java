@@ -144,7 +144,8 @@ public class CharBuffTable {
 		try {
 
 			con = L1DatabaseFactory.getInstance().getConnection();
-			pstm = con.prepareStatement("SELECT * FROM character_buff WHERE char_obj_id=?");
+			pstm = con
+					.prepareStatement("SELECT * FROM character_buff WHERE char_obj_id=?");
 			pstm.setInt(1, pc.getId());
 			rs = pstm.executeQuery();
 			while (rs.next()) {

@@ -15,10 +15,10 @@
 package l1j.server.server.serverpackets;
 
 import java.util.List;
+import java.util.StringTokenizer;
 
 import l1j.server.server.Opcodes;
 import l1j.server.server.datatables.MailTable;
-import l1j.server.server.model.Instance.L1PcInstance;
 import l1j.server.server.templates.L1Mail;
 import l1j.server.server.utils.collections.Lists;
 
@@ -32,78 +32,58 @@ public class S_Mail extends ServerBasePacket {
 	private byte[] _byte = null;
 
 	/**
-	 * 『來源:伺服器』<位址:186>{長度:216}(時間:1061159132)
-     *  0000:  ba 00 08 00 63 78 00 00 01 d8 dc 25 52 01 ae a9    ....cx.....%R...
-     *  0010:  ac f5 b9 d0 00 35 00 35 00 35 00 35 00 35 00 35    .....5.5.5.5.5.5
-     *  0020:  00 00 00 65 78 00 00 01 c8 dd 25 52 01 ae a9 ac    ...ex.....%R....
-     *  0030:  f5 b9 d0 00 32 00 32 00 32 00 32 00 32 00 32 00    ....2.2.2.2.2.2.
-     *  0040:  32 00 32 00 32 00 00 00 eb 78 00 00 00 50 2f 3d    2.2.2....x...P/=
-     *  0050:  52 00 ae a9 ac f5 b9 d0 00 33 00 33 00 33 00 00    R........3.3.3..
-     *  0060:  00 ed 78 00 00 00 50 2f 3d 52 00 ae a9 ac f5 b9    ..x...P/=R......
-     *  0070:  d0 00 33 00 33 00 00 00 ef 78 00 00 00 40 30 3d    ..3.3....x...@0=
-     *  0080:  52 00 ae a9 ac f5 b9 d0 00 32 00 32 00 00 00 f1    R........2.2....
-     *  0090:  78 00 00 00 40 30 3d 52 00 ae a9 ac f5 b9 d0 00    x...@0=R........
-     *  00a0:  32 00 32 00 00 00 f3 78 00 00 00 d4 32 3d 52 00    2.2....x....2=R.
-     *  00b0:  ae a9 ac f5 b9 d0 00 32 00 32 00 00 00 f5 78 00    .......2.2....x.
-     *  00c0:  00 00 d0 36 3d 52 00 ae a9 ac f5 b9 d0 00 35 00    ...6=R........5.
-     *  00d0:  35 00 00 00 45 1c c9 93                            5...E...
+	 * 
+	 * //一般信件的標題 [Server] opcode = 48 3封 0000: [30][00 03][00][27 00 00
+	 * 00][00][09][01][12][32 32 33 33 0...'.......2233 0010: 32 31 00] [31
+	 * 00]00 [00] [28 00 00 00] [01] 09 01 12 32 21.1...(.......2 0020: 32 33 33
+	 * 32 31 00 31 00 00 00 2a 00 00 00 00 09 23321.1...*..... 0030: 01 13 32 32
+	 * 33 33 32 31 00 31 00 00 00 93 0a 00 ..223321.1......
+	 * 
+	 * [Server] opcode = 48 2封 0000: 30 /00 02/ 00/ 27 00 00 00/ 00/ 09 01 12 32
+	 * 32 33 33 0...'.......2233 0010: 32 31 00 31 00 00 00 28 00 00 00 00 09 01
+	 * 12 32 21.1...(.......2 0020: 32 33 33 32 31 00 31 00 00 00 96 3d c4 79 1a
+	 * 4d 23321.1....=.y.M
 	 */
 	// 打開收信夾 ?封信件顯示標題
-	public S_Mail(L1PcInstance pc, int type) {
+	public S_Mail(String receiverName, int type) {
 		List<L1Mail> mails = Lists.newList();
 		MailTable.getInstance();
 		for (L1Mail mail : MailTable.getAllMail()) {
-			if(mail.getInBoxId() == pc.getId()){
+			if (mail.getReceiverName().equalsIgnoreCase(receiverName)) {
 				if (mail.getType() == type) {
 					mails.add(mail);
 				}
 			}
 		}
+		if (mails.isEmpty()) {
+			return;
+		}
 
 		writeC(Opcodes.S_OPCODE_MAIL);
 		writeC(type);
 		writeH(mails.size());
-		
-		if (mails.isEmpty()) {
-			return;
-		}
-		
 		for (int i = 0; i < mails.size(); i++) {
 			L1Mail mail = mails.get(i);
 			writeD(mail.getId());
 			writeC(mail.getReadStatus());
-			writeD((int) (mail.getDate().getTime() / 1000));
-			writeC(mail.getSenderName().equalsIgnoreCase(pc.getName()) ? 1 : 0); // 寄件/備份
-			writeS(mail.getSenderName().equalsIgnoreCase(pc.getName()) ? mail.getReceiverName() : mail.getSenderName());
+
+			StringTokenizer st = new StringTokenizer(mail.getDate(), "/"); // yy/mm/dd
+			int size = st.countTokens();
+			for (int j = 0; j < size; j++) {
+				// XXX writeC(Year) writeC(Month) writeC(Day)
+				writeC(Integer.parseInt(st.nextToken()));
+			}
+			writeS(mail.getSenderName());
 			writeByte(mail.getSubject());
 		}
 	}
-	
-	/**
-	 * <b>寄出信件</b>
-	 * @param pc 寄出信件: 寄信人 , 寄件備份: 收信人<br>
-	 * @param isDraft 是否是寄件備份 ? true:備份  , false:寄出
-	 */
-	public S_Mail(L1PcInstance pc, int mailId, boolean isDraft){
-		MailTable.getInstance();
-		L1Mail mail = MailTable.getMail(mailId);
-		writeC(Opcodes.S_OPCODE_MAIL);
-		writeC(0x50);
-		writeD(mailId);
-		writeC(isDraft ? 1 : 0);
-		writeS(pc.getName());
-		writeByte(mail.getSubject());
-	}
 
 	/**
-	 * 寄信結果通知
-	 * @param type 信件類別 
-	 * @param isDelivered 寄出:1 ,失敗:0
+	 * //無法傳送信件 [Server] opcode = 48 0000: 30 20 00 45 54 fa 00 b5
 	 */
-	public S_Mail(int type, boolean isDelivered) {
+	public S_Mail(int type) { // 受信者にメール通知
 		writeC(Opcodes.S_OPCODE_MAIL);
 		writeC(type);
-		writeC(isDelivered ? 1 : 0);
 	}
 
 	/**
@@ -115,7 +95,7 @@ public class S_Mail extends ServerBasePacket {
 	 */
 	public S_Mail(int mailId, int type) {
 		// 刪除信件
-		// 0x30: 刪除一般 0x31:刪除血盟 0x32:一般存到保管箱 0x40:刪除保管箱
+		// 0x30: 刪除一般 0x31:刪除血盟 0x32:?般存到保管箱 0x40:刪除保管箱
 		if ((type == 0x30) || (type == 0x31) || (type == 0x32) || (type == 0x40)) {
 			writeC(Opcodes.S_OPCODE_MAIL);
 			writeC(type);
@@ -132,8 +112,6 @@ public class S_Mail extends ServerBasePacket {
 			writeByte(mail.getContent());
 		}
 	}
-	
-	
 
 	@Override
 	public byte[] getContent() {

@@ -80,9 +80,8 @@ public class DropTable {
 				int min = rs.getInt("min");
 				int max = rs.getInt("max");
 				int chance = rs.getInt("chance");
-				int enchantlvl = rs.getInt("enchantlvl");
 
-				L1Drop drop = new L1Drop(mobId, itemId, min, max, chance, enchantlvl);
+				L1Drop drop = new L1Drop(mobId, itemId, min, max, chance);
 
 				List<L1Drop> dropList = droplistMap.get(drop.getMobid());
 				if (dropList == null) {
@@ -129,7 +128,6 @@ public class DropTable {
 		int itemCount;
 		int addCount;
 		int randomChance;
-		int enchantlvl;
 		L1ItemInstance item;
 
 		for (L1Drop drop : dropList) {
@@ -166,13 +164,10 @@ public class DropTable {
 			if (itemCount > 2000000000) {
 				itemCount = 2000000000;
 			}
-			
-			enchantlvl = drop.getEnchantlvl();
 
 			// アイテムの生成
 			item = ItemTable.getInstance().createItem(itemId);
 			item.setCount(itemCount);
-			item.setEnchantLevel(enchantlvl);
 
 			// アイテム格納
 			inventory.storeItem(item);

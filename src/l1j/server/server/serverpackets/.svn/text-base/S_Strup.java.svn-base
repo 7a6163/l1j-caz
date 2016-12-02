@@ -28,7 +28,7 @@ public class S_Strup extends ServerBasePacket {
 		writeC(pc.getStr());
 		writeC(pc.getInventory().getWeight242());
 		writeC(type);
-		writeH(0);
+		writeD(0);
 	}
 
 	@Override

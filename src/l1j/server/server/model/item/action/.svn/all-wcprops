@@ -1,35 +1,35 @@
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/item/action
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/item/action
 END
 Potion.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/item/action/Potion.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/item/action/Potion.java
 END
 MagicDoll.java
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/item/action/MagicDoll.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/item/action/MagicDoll.java
 END
 Effect.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/item/action/Effect.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/item/action/Effect.java
 END
 Enchant.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/item/action/Enchant.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/item/action/Enchant.java
 END
 FurnitureItem.java
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/item/action/FurnitureItem.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/item/action/FurnitureItem.java
 END

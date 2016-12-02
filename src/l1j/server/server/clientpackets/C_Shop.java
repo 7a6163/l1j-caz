@@ -14,19 +14,15 @@
  */
 package l1j.server.server.clientpackets;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import l1j.server.server.ActionCodes;
 import l1j.server.server.ClientThread;
-import l1j.server.server.model.L1PolyMorph;
 import l1j.server.server.model.Instance.L1DollInstance;
 import l1j.server.server.model.Instance.L1ItemInstance;
 import l1j.server.server.model.Instance.L1NpcInstance;
 import l1j.server.server.model.Instance.L1PcInstance;
 import l1j.server.server.model.Instance.L1PetInstance;
-import l1j.server.server.model.identity.L1SystemMessageId;
-import l1j.server.server.serverpackets.S_ChangeShape;
 import l1j.server.server.serverpackets.S_DoActionGFX;
 import l1j.server.server.serverpackets.S_DoActionShop;
 import l1j.server.server.serverpackets.S_ServerMessage;
@@ -44,12 +40,6 @@ public class C_Shop extends ClientBasePacket {
 
 	private static final String C_SHOP = "[C] C_Shop";
 
-	/**
-	 * 『來源:客戶端』<位址:38>{長度:36}(時間:-465193548)
-        0000: 26 00 01 00 d4 b3 75 00 05 00 00 00 01 00 00 00 &.....u.........
-        0010: 00 00 35 35 ff 00 74 72 61 64 65 7a 6f 6e 65 31 ..55..tradezone1
-        0020: 00 08 50 57 ..PW
-	 */
 	public C_Shop(byte abyte0[], ClientThread clientthread) {
 		super(abyte0);
 
@@ -59,7 +49,8 @@ public class C_Shop extends ClientBasePacket {
 		}
 
 		int mapId = pc.getMapId();
-		if ((mapId != 340) && (mapId != 350) && (mapId != 360) && (mapId != 370) && (mapId != 800) ) {
+		if ((mapId != 340) && (mapId != 350) && (mapId != 360)
+				&& (mapId != 370)) {
 			pc.sendPackets(new S_ServerMessage(876)); // この場所では個人商店を開けません。
 			return;
 		}
@@ -83,14 +74,16 @@ public class C_Shop extends ClientBasePacket {
 				checkItem = pc.getInventory().getItem(sellObjectId);
 				if (!checkItem.getItem().isTradable()) {
 					tradable = false;
-					pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$166, checkItem.getItem().getName(), "這是不可能處理。"));
+					pc.sendPackets(new S_ServerMessage(166, // \f1%0が%4%1%3%2
+							checkItem.getItem().getName(), "這是不可能處理。"));
 				}
 				for (L1NpcInstance petNpc : pc.getPetList().values()) {
 					if (petNpc instanceof L1PetInstance) {
 						L1PetInstance pet = (L1PetInstance) petNpc;
 						if (checkItem.getId() == pet.getItemObjId()) {
 							tradable = false;
-							pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$166, checkItem.getItem().getName(), "這是不可能處理。"));
+							pc.sendPackets(new S_ServerMessage(166, // \f1%0が%4%1%3%2
+									checkItem.getItem().getName(), "這是不可能處理。"));
 							break;
 						}
 					}
@@ -113,14 +106,18 @@ public class C_Shop extends ClientBasePacket {
 				checkItem = pc.getInventory().getItem(buyObjectId);
 				if (!checkItem.getItem().isTradable()) {
 					tradable = false;
-					pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$166, checkItem.getItem().getName(), "這是不可能處理。"));
+					pc.sendPackets(new S_ServerMessage(166, // \f1%0が%4%1%3%2
+							checkItem.getItem().getName(), "這是不可能處理。"));
 				}
 				if (checkItem.getBless() >= 128) { // 封印的裝備
-					pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$210, checkItem.getItem().getName()));
+					// \f1%0は捨てたりまたは他人に讓ることができません。
+					pc.sendPackets(new S_ServerMessage(210, checkItem.getItem()
+							.getName()));
 					return;
 				}
 				// 防止異常堆疊交易
-				if ((checkItem.getCount() > 1) && (!checkItem.getItem().isStackable())) {
+				if ((checkItem.getCount() > 1)
+						&& (!checkItem.getItem().isStackable())) {
 					pc.sendPackets(new S_SystemMessage("此物品非堆疊，但異常堆疊無法交易。"));
 					return;
 				}
@@ -154,30 +151,27 @@ public class C_Shop extends ClientBasePacket {
 				sellList.clear();
 				buyList.clear();
 				pc.setPrivateShop(false);
-				pc.sendPackets(new S_DoActionGFX(pc.getId(), ActionCodes.ACTION_Idle));
-				pc.broadcastPacket(new S_DoActionGFX(pc.getId(), ActionCodes.ACTION_Idle));
+				pc.sendPackets(new S_DoActionGFX(pc.getId(),
+						ActionCodes.ACTION_Idle));
+				pc.broadcastPacket(new S_DoActionGFX(pc.getId(),
+						ActionCodes.ACTION_Idle));
 				return;
 			}
 			byte[] chat = readByte();
 			pc.setShopChat(chat);
 			pc.setPrivateShop(true);
-			pc.sendPackets(new S_DoActionShop(pc.getId(),ActionCodes.ACTION_Shop, chat));
-			pc.broadcastPacket(new S_DoActionShop(pc.getId(),ActionCodes.ACTION_Shop, chat));
-			//// 3.80C 個人商店變身  
-			int SelectedPolyNum = 0;
-			try {
-				SelectedPolyNum = Integer.parseInt(new String(chat, "utf8").split("tradezone")[1].substring(0, 1));
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			L1PolyMorph.doPolyPraivateShop(pc, SelectedPolyNum);
+			pc.sendPackets(new S_DoActionShop(pc.getId(),
+					ActionCodes.ACTION_Shop, chat));
+			pc.broadcastPacket(new S_DoActionShop(pc.getId(),
+					ActionCodes.ACTION_Shop, chat));
 		} else if (type == 1) { // 終了
 			sellList.clear();
 			buyList.clear();
 			pc.setPrivateShop(false);
-			pc.sendPackets(new S_DoActionGFX(pc.getId(),ActionCodes.ACTION_Idle));
-			pc.broadcastPacket(new S_DoActionGFX(pc.getId(),ActionCodes.ACTION_Idle));
-			L1PolyMorph.undoPolyPrivateShop(pc); // 取消變身
+			pc.sendPackets(new S_DoActionGFX(pc.getId(),
+					ActionCodes.ACTION_Idle));
+			pc.broadcastPacket(new S_DoActionGFX(pc.getId(),
+					ActionCodes.ACTION_Idle));
 		}
 	}
 

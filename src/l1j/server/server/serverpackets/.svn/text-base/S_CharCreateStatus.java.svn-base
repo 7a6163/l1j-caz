@@ -31,7 +31,7 @@ public class S_CharCreateStatus extends ServerBasePacket {
 		writeC(Opcodes.S_OPCODE_NEWCHARWRONG);
 		writeC(reason);
 		writeD(0x00000000);
-		writeH(0x0000);
+		writeD(0x0000);
 	}
 
 	@Override

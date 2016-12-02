@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/build
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/build
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
+2013-10-20T08:01:49.675503Z
+380
 ibm99nets
-has-props
+
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2016-01-09T23:18:49.016910Z
+2016-01-09T23:18:44.237037Z
 b2fa593646bf46ee58e1135edd907093
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-23T06:57:01.337086Z
+30
+for.sqven
 
 
 

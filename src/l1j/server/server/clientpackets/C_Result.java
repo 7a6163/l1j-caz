@@ -57,7 +57,6 @@ public class C_Result extends ClientBasePacket {
 		int npcObjectId = readD();
 		int resultType = readC();
 		int size = readH();
-		
 		int level = pc.getLevel();
 
 		int npcId = 0;
@@ -68,8 +67,8 @@ public class C_Result extends ClientBasePacket {
 		if (findObject != null) {
 			int diffLocX = Math.abs(pc.getX() - findObject.getX());
 			int diffLocY = Math.abs(pc.getY() - findObject.getY());
-			// 5格以上的距離視為無效要求
-			if ((diffLocX > 5) || (diffLocY > 5)) {
+			// 3格以上的距離視為無效要求
+			if ((diffLocX > 3) || (diffLocY > 3)) {
 				return;
 			}
 			if (findObject instanceof L1NpcInstance) {
@@ -81,21 +80,24 @@ public class C_Result extends ClientBasePacket {
 			}
 		}
 
-		if ((resultType == 0) && (size != 0) && npcImpl.equalsIgnoreCase("L1Merchant")) { // 買道具
+		if ((resultType == 0) && (size != 0)
+				&& npcImpl.equalsIgnoreCase("L1Merchant")) { // 買道具
 			L1Shop shop = ShopTable.getInstance().get(npcId);
 			L1ShopBuyOrderList orderList = shop.newBuyOrderList();
 			for (int i = 0; i < size; i++) {
 				orderList.add(readD(), readD());
 			}
 			shop.sellItems(pc, orderList);
-		} else if ((resultType == 1) && (size != 0) && npcImpl.equalsIgnoreCase("L1Merchant")) { // 賣道具
+		} else if ((resultType == 1) && (size != 0)
+				&& npcImpl.equalsIgnoreCase("L1Merchant")) { // 賣道具
 			L1Shop shop = ShopTable.getInstance().get(npcId);
 			L1ShopSellOrderList orderList = shop.newSellOrderList(pc);
 			for (int i = 0; i < size; i++) {
 				orderList.add(readD(), readD());
 			}
 			shop.buyItems(orderList);
-		} else if ((resultType == 2) && (size != 0) && npcImpl.equalsIgnoreCase("L1Dwarf") && (level >= 5)) { // 自己的倉庫
+		} else if ((resultType == 2) && (size != 0)
+				&& npcImpl.equalsIgnoreCase("L1Dwarf") && (level >= 5)) { // 自己的倉庫
 			int objectId, count;
 			for (int i = 0; i < size; i++) {
 				tradable = true;
@@ -105,7 +107,8 @@ public class C_Result extends ClientBasePacket {
 				L1ItemInstance item = (L1ItemInstance) object;
 				if (!item.getItem().isTradable()) {
 					tradable = false;
-					pc.sendPackets(new S_ServerMessage(210, item.getItem().getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
+					pc.sendPackets(new S_ServerMessage(210, item.getItem()
+							.getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
 				}
 				for (L1NpcInstance petNpc : pc.getPetList().values()) {
 					if (petNpc instanceof L1PetInstance) {
@@ -113,7 +116,8 @@ public class C_Result extends ClientBasePacket {
 						if (item.getId() == pet.getItemObjId()) {
 							tradable = false;
 							// \f1%0は捨てたりまたは他人に讓ることができません。
-							pc.sendPackets(new S_ServerMessage(210, item.getItem().getName()));
+							pc.sendPackets(new S_ServerMessage(210, item
+									.getItem().getName()));
 							break;
 						}
 					}
@@ -125,12 +129,14 @@ public class C_Result extends ClientBasePacket {
 						break;
 					}
 				}
-				if (pc.getDwarfInventory().checkAddItemToWarehouse(item, count,L1Inventory.WAREHOUSE_TYPE_PERSONAL) == L1Inventory.SIZE_OVER) {
+				if (pc.getDwarfInventory().checkAddItemToWarehouse(item, count,
+						L1Inventory.WAREHOUSE_TYPE_PERSONAL) == L1Inventory.SIZE_OVER) {
 					pc.sendPackets(new S_ServerMessage(75)); // \f1これ以上ものを置く場所がありません。
 					break;
 				}
 				if (tradable) {
-					pc.getInventory().tradeItem(objectId, count,pc.getDwarfInventory());
+					pc.getInventory().tradeItem(objectId, count,
+							pc.getDwarfInventory());
 					pc.turnOnOffLight();
 				}
 			}
@@ -148,7 +154,8 @@ public class C_Result extends ClientBasePacket {
 				if (pc.getInventory().checkAddItem(item, count) == L1Inventory.OK) // 檢查重量與容量
 				{
 					if (pc.getInventory().consumeItem(L1ItemId.ADENA, 30)) {
-						pc.getDwarfInventory().tradeItem(item, count,pc.getInventory());
+						pc.getDwarfInventory().tradeItem(item, count,
+								pc.getInventory());
 					} else {
 						pc.sendPackets(new S_ServerMessage(189)); // \f1アデナが不足しています。
 						break;
@@ -158,24 +165,28 @@ public class C_Result extends ClientBasePacket {
 					break;
 				}
 			}
-		} else if ((resultType == 4) && (size != 0) && npcImpl.equalsIgnoreCase("L1Dwarf") && (level >= 5)) { // 儲存道具到血盟倉庫
+		} else if ((resultType == 4) && (size != 0)
+				&& npcImpl.equalsIgnoreCase("L1Dwarf") && (level >= 5)) { // 儲存道具到倉庫
 			int objectId, count;
 			if (pc.getClanid() != 0) { // 有血盟
 				for (int i = 0; i < size; i++) {
 					tradable = true;
 					objectId = readD();
 					count = readD();
-					L1Clan clan = L1World.getInstance().getClan(pc.getClanname());
+					L1Clan clan = L1World.getInstance().getClan(
+							pc.getClanname());
 					L1Object object = pc.getInventory().getItem(objectId);
 					L1ItemInstance item = (L1ItemInstance) object;
 					if (clan != null) {
 						if (!item.getItem().isTradable()) {
 							tradable = false;
-							pc.sendPackets(new S_ServerMessage(210, item.getItem().getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
+							pc.sendPackets(new S_ServerMessage(210, item
+									.getItem().getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
 						}
 						if (item.getBless() >= 128) { // 被封印的裝備
 							tradable = false;
-							pc.sendPackets(new S_ServerMessage(210, item.getItem().getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
+							pc.sendPackets(new S_ServerMessage(210, item
+									.getItem().getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
 						}
 						for (L1NpcInstance petNpc : pc.getPetList().values()) {
 							if (petNpc instanceof L1PetInstance) {
@@ -183,7 +194,8 @@ public class C_Result extends ClientBasePacket {
 								if (item.getId() == pet.getItemObjId()) {
 									tradable = false;
 									// \f1%0は捨てたりまたは他人に讓ることができません。
-									pc.sendPackets(new S_ServerMessage(210, item.getItem().getName()));
+									pc.sendPackets(new S_ServerMessage(210,
+											item.getItem().getName()));
 									break;
 								}
 							}
@@ -196,13 +208,15 @@ public class C_Result extends ClientBasePacket {
 
 							}
 						}
-						if (clan.getDwarfForClanInventory().checkAddItemToWarehouse(item, count,L1Inventory.WAREHOUSE_TYPE_CLAN) == L1Inventory.SIZE_OVER) {
+						if (clan.getDwarfForClanInventory()
+								.checkAddItemToWarehouse(item, count,
+										L1Inventory.WAREHOUSE_TYPE_CLAN) == L1Inventory.SIZE_OVER) {
 							pc.sendPackets(new S_ServerMessage(75)); // \f1これ以上ものを置く場所がありません。
 							break;
 						}
 						if (tradable) {
-							pc.getInventory().tradeItem(objectId, count, clan.getDwarfForClanInventory());
-							clan.getDwarfForClanInventory().writeHistory(pc, item, count, 0); // 血盟倉庫存入紀錄
+							pc.getInventory().tradeItem(objectId, count,
+									clan.getDwarfForClanInventory());
 							pc.turnOnOffLight();
 						}
 					}
@@ -214,7 +228,7 @@ public class C_Result extends ClientBasePacket {
 				pc.sendPackets(new S_ServerMessage(208)); // \f1血盟倉庫を使用するには血盟に加入していなくてはなりません。
 			}
 		} else if ((resultType == 5) && (size != 0)
-				&& npcImpl.equalsIgnoreCase("L1Dwarf") && (level >= 5)) { // 從克萊因血盟倉庫中取出道具
+				&& npcImpl.equalsIgnoreCase("L1Dwarf") && (level >= 5)) { // 從克萊因倉庫中取出道具
 			int objectId, count;
 			L1ItemInstance item;
 
@@ -226,7 +240,8 @@ public class C_Result extends ClientBasePacket {
 					item = clan.getDwarfForClanInventory().getItem(objectId);
 					if (pc.getInventory().checkAddItem(item, count) == L1Inventory.OK) { // 容量重量確認及びメッセージ送信
 						if (pc.getInventory().consumeItem(L1ItemId.ADENA, 30)) {
-							clan.getDwarfForClanInventory().tradeItem(item,count, pc.getInventory());
+							clan.getDwarfForClanInventory().tradeItem(item,
+									count, pc.getInventory());
 						} else {
 							pc.sendPackets(new S_ServerMessage(189)); // \f1アデナが不足しています。
 							break;
@@ -235,11 +250,11 @@ public class C_Result extends ClientBasePacket {
 						pc.sendPackets(new S_ServerMessage(270)); // \f1持っているものが重くて取引できません。
 						break;
 					}
-					clan.getDwarfForClanInventory().writeHistory(pc, item, count, 1); // 血盟倉庫領出紀錄
 				}
 				clan.setWarehouseUsingChar(0); // クラン倉庫のロックを解除
 			}
-		} else if ((resultType == 5) && (size == 0) && npcImpl.equalsIgnoreCase("L1Dwarf")) { // クラン倉庫から取り出し中にCancel、または、ESCキー
+		} else if ((resultType == 5) && (size == 0)
+				&& npcImpl.equalsIgnoreCase("L1Dwarf")) { // クラン倉庫から取り出し中にCancel、または、ESCキー
 			L1Clan clan = L1World.getInstance().getClan(pc.getClanname());
 			if (clan != null) {
 				clan.setWarehouseUsingChar(0); // クラン倉庫のロックを解除
@@ -256,7 +271,8 @@ public class C_Result extends ClientBasePacket {
 				L1ItemInstance item = (L1ItemInstance) object;
 				if (!item.getItem().isTradable()) {
 					tradable = false;
-					pc.sendPackets(new S_ServerMessage(210, item.getItem().getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
+					pc.sendPackets(new S_ServerMessage(210, item.getItem()
+							.getName())); // \f1%0は捨てたりまたは他人に讓ることができません。
 				}
 				for (L1NpcInstance petNpc : pc.getPetList().values()) {
 					if (petNpc instanceof L1PetInstance) {
@@ -264,7 +280,8 @@ public class C_Result extends ClientBasePacket {
 						if (item.getId() == pet.getItemObjId()) {
 							tradable = false;
 							// \f1%0は捨てたりまたは他人に讓ることができません。
-							pc.sendPackets(new S_ServerMessage(210, item.getItem().getName()));
+							pc.sendPackets(new S_ServerMessage(210, item
+									.getItem().getName()));
 							break;
 						}
 					}
@@ -276,7 +293,8 @@ public class C_Result extends ClientBasePacket {
 						break;
 					}
 				}
-				if (pc.getDwarfForElfInventory().checkAddItemToWarehouse(item, count, L1Inventory.WAREHOUSE_TYPE_PERSONAL) == L1Inventory.SIZE_OVER) {
+				if (pc.getDwarfForElfInventory().checkAddItemToWarehouse(item,
+						count, L1Inventory.WAREHOUSE_TYPE_PERSONAL) == L1Inventory.SIZE_OVER) {
 					pc.sendPackets(new S_ServerMessage(75)); // \f1これ以上ものを置く場所がありません。
 					break;
 				}
@@ -365,26 +383,33 @@ public class C_Result extends ClientBasePacket {
 					if (pc.getInventory().checkAddItem(item, count) == L1Inventory.OK) { // 容量重量確認及びメッセージ送信
 						for (int j = 0; j < count; j++) { // オーバーフローをチェック
 							if (sellPrice * j > 2000000000) {
-								// 総販売価格は%dアデナを超過できません。
-								pc.sendPackets(new S_ServerMessage(904, "2000000000"));
+								pc.sendPackets(new S_ServerMessage(904, // 総販売価格は%dアデナを超過できません。
+										"2000000000"));
 								targetPc.setTradingInPrivateShop(false);
 								return;
 							}
 						}
 						price = count * sellPrice;
 						if (pc.getInventory().checkItem(L1ItemId.ADENA, price)) {
-							L1ItemInstance adena = pc.getInventory().findItemId(L1ItemId.ADENA);
+							L1ItemInstance adena = pc.getInventory()
+									.findItemId(L1ItemId.ADENA);
 							if ((targetPc != null) && (adena != null)) {
-								if (targetPc.getInventory().tradeItem(item, count, pc.getInventory()) == null) {
+								if (targetPc.getInventory().tradeItem(item,
+										count, pc.getInventory()) == null) {
 									targetPc.setTradingInPrivateShop(false);
 									return;
 								}
-								pc.getInventory().tradeItem(adena, price,targetPc.getInventory());
-								String message = item.getItem().getName()+ " (" + String.valueOf(count) + ")";
-								targetPc.sendPackets(new S_ServerMessage(877, pc.getName(), message));
+								pc.getInventory().tradeItem(adena, price,
+										targetPc.getInventory());
+								String message = item.getItem().getName()
+										+ " (" + String.valueOf(count) + ")";
+								targetPc.sendPackets(new S_ServerMessage(877, // %1%o
+										// %0に販売しました。
+										pc.getName(), message));
 								pssl.setSellCount(count + sellCount);
 								sellList.set(order, pssl);
-								if (pssl.getSellCount() == pssl.getSellTotalCount()) { // 売る予定の個数を売った
+								if (pssl.getSellCount() == pssl
+										.getSellTotalCount()) { // 売る予定の個数を売った
 									isRemoveFromList[order] = true;
 								}
 							}

@@ -1,29 +1,29 @@
 K 25
 svn:wc:ra_dav:version-url
 V 40
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/lib
-END
-c3p0-0.9.1.2.jar
-K 25
-svn:wc:ra_dav:version-url
-V 57
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/lib/c3p0-0.9.1.2.jar
-END
-javolution-5.5.1.jar
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/lib/javolution-5.5.1.jar
-END
-ant.jar
-K 25
-svn:wc:ra_dav:version-url
-V 48
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/lib/ant.jar
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/lib
 END
 mysql-connector-java-5.1.14-bin.jar
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/lib/mysql-connector-java-5.1.14-bin.jar
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/lib/mysql-connector-java-5.1.14-bin.jar
+END
+c3p0-0.9.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/lib/c3p0-0.9.1.2.jar
+END
+javolution-5.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/lib/javolution-5.5.1.jar
+END
+ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/lib/ant.jar
 END

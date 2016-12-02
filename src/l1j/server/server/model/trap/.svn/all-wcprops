@@ -1,53 +1,53 @@
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap
 END
 L1SkillTrap.java
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1SkillTrap.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1SkillTrap.java
 END
 L1DamageTrap.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1DamageTrap.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1DamageTrap.java
 END
 L1TeleportTrap.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1TeleportTrap.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1TeleportTrap.java
 END
 L1Trap.java
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1Trap.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1Trap.java
 END
 L1PoisonTrap.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1PoisonTrap.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1PoisonTrap.java
 END
 L1MonsterTrap.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1MonsterTrap.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1MonsterTrap.java
 END
 L1HealingTrap.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1HealingTrap.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1HealingTrap.java
 END
 L1WorldTraps.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/trap/L1WorldTraps.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/trap/L1WorldTraps.java
 END

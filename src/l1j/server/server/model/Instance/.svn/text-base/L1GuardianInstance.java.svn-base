@@ -483,7 +483,8 @@ public class L1GuardianInstance extends L1NpcInstance {
 						.toTargetArrayList();
 				List<Integer> dropHateList = _dropHateList.toHateArrayList();
 				try {
-					DropTable.getInstance().dropShare(_npc, dropTargetList, dropHateList);
+					DropTable.getInstance().dropShare(_npc, dropTargetList,
+							dropHateList);
 				} catch (Exception e) {
 					_log.log(Level.SEVERE, e.getLocalizedMessage(), e);
 				}

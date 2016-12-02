@@ -650,7 +650,6 @@ public class L1ItemInstance extends L1Object {
 					name.append(attrStr + " ");
 				}
 			}
-			
 			if ((getItem().getType2() == 1) || (getItem().getType2() == 2)) { // 武器・防具
 				if (getEnchantLevel() >= 0) {
 					name.append("+" + getEnchantLevel() + " ");
@@ -1020,7 +1019,7 @@ public class L1ItemInstance extends L1Object {
 			}
 			// 魔力回復率
 			if (getItem().get_addmpr() != 0 || getMpr() != 0) {
-				os.writeC(26); // 3.70C 
+				os.writeC(38);
 				os.writeC(getItem().get_addmpr() + getMpr());
 			}
 			// 幸運
@@ -1364,43 +1363,5 @@ public class L1ItemInstance extends L1Object {
 
 	public void setDueTime(Timestamp i) {
 		_dueTime = i;
-	}
-	
-	public int getItemStatusX() {
-		if (!isIdentified()) {
-			return 0;
-		}
-		int statusX = 1;
-		
-		if (!getItem().isTradable()) {
-			statusX |= 2; // 無法交易
-		}
-
-		if (getItem().isCantDelete()) {
-			statusX |= 4; // 無法刪除
-		}
-
-		if (getItem().get_safeenchant() < 0) {
-			statusX |= 8; // 無法強化
-		}
-
-		if (getItem().get_safeenchant() < 0) {
-			statusX |= 16; // 倉庫保管功能
-		}
-
-		final int bless = getBless();
-		if (bless >= 128 && bless <= 131) {
-			statusX |= 2; // 無法交易
-			statusX |= 4; // 無法刪除
-			statusX |= 8; // 無法強化
-			statusX |= 32; // 封印狀態
-		} else if (bless > 131) {
-			statusX |= 64; // 特殊封印狀態
-		}
-		
-		if (getItem().isStackable()) {
-			statusX |= 128; // 可以堆疊
-		}
-		return statusX;
 	}
 }

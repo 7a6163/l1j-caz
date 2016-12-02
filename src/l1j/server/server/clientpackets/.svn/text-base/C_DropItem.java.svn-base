@@ -94,7 +94,8 @@ public class C_DropItem extends ClientBasePacket {
 			}
 			if (item.getBless() >= 128) { // 封印的裝備
 				// \f1%0%d是不可轉移的…
-				pc.sendPackets(new S_ServerMessage(210, item.getItem().getName()));
+				pc.sendPackets(new S_ServerMessage(210, item.getItem()
+						.getName()));
 				return;
 			}
 
@@ -102,7 +103,8 @@ public class C_DropItem extends ClientBasePacket {
 			if (Config.writeDropLog)
 				LogRecorder.writeDropLog(pc, item);
 
-			pc.getInventory().tradeItem(item, count,L1World.getInstance().getInventory(x, y, pc.getMapId()));
+			pc.getInventory().tradeItem(item, count,
+					L1World.getInstance().getInventory(x, y, pc.getMapId()));
 			pc.turnOnOffLight();
 		}
 	}

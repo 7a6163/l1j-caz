@@ -101,9 +101,9 @@ public class S_NPCPack extends ServerBasePacket {
 		writeC(0xFF); // HP
 		writeC(0);
 		writeC(npc.getLevel());
-		writeC(0xFF);
-		writeC(0xFF);
 		writeC(0);
+		writeC(0xFF);
+		writeC(0xFF);
 	}
 
 	@Override

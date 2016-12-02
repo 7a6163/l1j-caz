@@ -35,7 +35,8 @@ public class L1Party {
 		if (pc == null) {
 			throw new NullPointerException();
 		}
-		if (((_membersList.size() == Config.MAX_PT) && !_leader.isGm()) || _membersList.contains(pc)) {
+		if (((_membersList.size() == Config.MAX_PT) && !_leader.isGm())
+				|| _membersList.contains(pc)) {
 			return;
 		}
 
@@ -101,27 +102,29 @@ public class L1Party {
 		L1PcInstance[] members = getMembers();
 
 		for (L1PcInstance member : members) {
-			member.sendPackets(new S_HPMeter(pc.getId(), 100 * pc.getCurrentHp() / pc.getMaxHp()));
-			pc.sendPackets(new S_HPMeter(member.getId(), 100 * member.getCurrentHp() / member.getMaxHp()));
+			member.sendPackets(new S_HPMeter(pc.getId(), 100
+					* pc.getCurrentHp() / pc.getMaxHp()));
+			pc.sendPackets(new S_HPMeter(member.getId(), 100
+					* member.getCurrentHp() / member.getMaxHp()));
 		}
 	}
 
 	private void deleteMiniHp(L1PcInstance pc) {
-		// 隊員離隊時，頭頂的Hp血條消除。
+		// パーティー離脱時、HPバーを削除する。
 		L1PcInstance[] members = getMembers();
-		
+
 		for (L1PcInstance member : members) {
-			member.sendPackets(new S_HPMeter(pc.getId(), 0xff));
 			pc.sendPackets(new S_HPMeter(member.getId(), 0xff));
+			member.sendPackets(new S_HPMeter(pc.getId(), 0xff));
 		}
-		pc.sendPackets(new S_HPMeter(pc.getId(), 0xff));
 	}
 
 	public void updateMiniHP(L1PcInstance pc) {
 		L1PcInstance[] members = getMembers();
 
 		for (L1PcInstance member : members) { // パーティーメンバー分更新
-			member.sendPackets(new S_HPMeter(pc.getId(), 100 * pc.getCurrentHp() / pc.getMaxHp()));
+			member.sendPackets(new S_HPMeter(pc.getId(), 100
+					* pc.getCurrentHp() / pc.getMaxHp()));
 		}
 	}
 
@@ -129,14 +132,8 @@ public class L1Party {
 		L1PcInstance[] members = getMembers();
 
 		for (L1PcInstance member : members) {
-			if (!isLeader(member)) {
-				sendLeftMessage(getLeader(), member);
-				removeMember(member);
-				member.sendPackets(new S_ServerMessage(418)); // 您解散您的隊伍了!!
-			} else {
-				member.sendPackets(new S_ServerMessage(418)); // 您解散您的隊伍了!!
-				removeMember(member);
-			}
+			removeMember(member);
+			member.sendPackets(new S_ServerMessage(418)); // パーティーを解散しました。
 		}
 	}
 

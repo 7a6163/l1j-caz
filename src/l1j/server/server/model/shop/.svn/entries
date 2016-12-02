@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/src/l1j/server/server/model/shop
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/src/l1j/server/server/model/shop
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
+2011-08-10T12:03:32.278445Z
+323
 ibm99nets
-has-props
+
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2016-01-09T23:18:47.376954Z
+2016-01-09T23:18:40.889126Z
 8735c4652839e0f49699307f17a788f6
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -66,11 +66,11 @@ file
 
 
 
-2016-01-09T23:18:47.376954Z
+2016-01-09T23:18:40.889126Z
 e18d4ae038e23533b826d32a7356529f
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -100,11 +100,11 @@ file
 
 
 
-2016-01-09T23:18:47.376954Z
+2016-01-09T23:18:40.889126Z
 72e5dbcf606168652f2de3f99adba518
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-04-02T11:05:22.770104Z
+54
+ibm99nets@gmail.com
 
 
 
@@ -134,10 +134,10 @@ file
 
 
 
-2016-01-09T23:18:47.376954Z
-6847b5cc6ad6409312ebe8e25d311bdc
-2013-11-13T15:01:16.279159Z
-385
+2016-01-09T23:18:40.889126Z
+0ad4dccb0ef69928b88f6982c1d71bc0
+2011-08-10T12:03:32.278445Z
+323
 ibm99nets
 
 
@@ -160,5 +160,5 @@ ibm99nets
 
 
 
-12044
+12050
 

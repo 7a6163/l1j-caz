@@ -39,7 +39,7 @@ public class C_BanParty extends ClientBasePacket {
 		String s = readS();
 		
 		if (!player.getParty().isLeader(player)) {
-			// 非組隊隊長
+			// 是組對對長
 			player.sendPackets(new S_ServerMessage(427)); // 只有領導者才有驅逐隊伍成員的權力。
 			return;
 		}

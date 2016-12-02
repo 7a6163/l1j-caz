@@ -22,7 +22,8 @@ import java.util.logging.Logger;
 import l1j.server.Config;
 
 public abstract class ServerBasePacket {
-	private static Logger _log = Logger.getLogger(ServerBasePacket.class.getName());
+	private static Logger _log = Logger.getLogger(ServerBasePacket.class
+			.getName());
 
 	private static final String CLIENT_LANGUAGE_CODE = Config.CLIENT_LANGUAGE_CODE;
 

@@ -18,9 +18,9 @@ package l1j.server.server.model.identity;
  * <h1>string-c字串編號 SystemMessage
  */
 public class L1SystemMessageId {
-	/** 王族 */
+	/** 王子 */
 	public static final int $0 = 0;
-	/** 王族 */
+	/** 公主 */
 	public static final int $1 = 1;
 	/** 騎士 */
 	public static final int $2 = 2;
@@ -108,7 +108,7 @@ public class L1SystemMessageId {
 	public static final int $43 = 43;
 	/** 連結關閉 */
 	public static final int $44 = 44;
-	/** 發生錯誤因此無法再進行。(error code： %d) */
+	/** 未知的錯誤%d */
 	public static final int $45 = 45;
 	/** 錯誤 */
 	public static final int $46 = 46;
@@ -116,7 +116,7 @@ public class L1SystemMessageId {
 	public static final int $47 = 47;
 	/** 正在接收檔案。 */
 	public static final int $48 = 48;
-	/** 無法執行Lin.bin。 */
+	/** 無法執行lin。bin。 */
 	public static final int $49 = 49;
 	/** 確定要離開？ [Y/N] */
 	public static final int $50 = 50;
@@ -149,8 +149,9 @@ public class L1SystemMessageId {
 	/** 連線中斷。 */
 	public static final int $64 = 64;
 	/**
-	 * 無法登入的原因如下： 1.您的帳號密碼輸入錯誤。 2.帳號受晶片卡保護但未使用晶片卡登入。 3.帳號受GAMAOTP保護但未用GAMAOTP登入。
-	 * 4.帳號已升級為beanFun!但未用beanFun!登入。 若仍有疑問請洽客服中心02-8024-2002
+	 * 無法登入的原因如下： 1.您的帳號密碼輸入錯誤。 2.帳號受PlaySafe保護但未用PlaySafe登入。
+	 * 3.帳號受GAMAOTP保護但未用GAMAOTP登入。 4.帳號已升級為GASH+，但未用beanfun! 登入。
+	 * 5.使用GAMAOTP或PlaySafe或beanfun!登入逾時，請重新登入。 若仍有疑問請洽客服中心02-8024-2002
 	 */
 	public static final int $65 = 65;
 	/** 已經使用中。 */
@@ -403,19 +404,11 @@ public class L1SystemMessageId {
 	public static final int $189 = 189;
 	/** \f1%0%d 沒有購買。 */
 	public static final int $190 = 190;
-	/**
-	 * 無法登入的原因如下： 1.區間到期，帳號內剩餘點數不足；欲繼續包月請儲值足夠包月點數，或至會員中心變更為計時制，即可進行遊戲。
-	 * 2.使用期間結束了。請在會員中心延長使用時間。 3.您的帳號目前無法使用，請至會員中心『大事紀』查詢原因。
-	 * 若仍有疑問請洽客服中心02-8024-2002
-	 */
+	/** 無法登入的原因如下： */
 	public static final int $191 = 191;
 	/** 結束測試使用。請在 %s上正式登錄。 */
 	public static final int $192 = 192;
-	/**
-	 * 無法登入的原因如下： 1.區間到期，帳號內剩餘點數不足；欲繼續包月請儲值足夠包月點數，或至會員中心變更為計時制，即可進行遊戲。
-	 * 2.使用期間結束了。請在會員中心延長使用時間。 3.您的帳號目前無法使用，請至會員中心『大事紀』查詢原因。
-	 * 若仍有疑問請洽客服中心02-8024-2002
-	 */
+	/** 無法登入的原因如下： */
 	public static final int $193 = 193;
 	/** 你的信用卡出問題。請至%s查詢一下。 */
 	public static final int $194 = 194;
@@ -1090,16 +1083,14 @@ public class L1SystemMessageId {
 	/**
 	 * @使用者除了由公司提供的以服務為目的的用途之外不可以做如下的行為。- 
 	 *                                    欺負或威脅其他使用者，持續給予特定玩家痛苦和給予特定玩困擾的行為。<天堂使用者同意書的義務中
-	 *                                    > 根據天堂同意書，被停用使用者的帳號。在遊戲裡的聊天視窗不是一個人使用的區域
+	 *                                    > 根據天堂同意書，被停用使用者的帳號。
+	 *                                    在遊戲裡的聊天視窗不是一個人使用的區域
 	 *                                    ，而是與所有玩家一同分享的區域。請以電子郵件詢問負責伺服器GM。
 	 */
 	public static final int $500 = 500;
 	/** 由於您多次嘗試以錯誤密碼登入，為確保您的帳號使用安全，系統暫時鎖定您的帳號2小時，請您務必確認帳號密碼是否正確。 */
 	public static final int $501 = 501;
-	/**
-	 * 無法登入的原因如下： 1.帳號受PlaySafe保護但未用PlaySafe登入。 2.帳號受GAMAOTP保護但未用GAMAOTP登入。
-	 * 3.帳號已升級為GASH+，但未用beanfun! 登入。 若仍有疑問請洽客服中心02-8024-2002
-	 */
+	/** 無法登入的原因如下： */
 	public static final int $502 = 502;
 	/** 由信用卡盜用報警被停用使用者的帳號。請詢問天堂客服中心(0800031500)。 */
 	public static final int $503 = 503;
@@ -1206,6 +1197,8 @@ public class L1SystemMessageId {
 	public static final int $552 = 552;
 	/** \f3NPC伺服器暫時關閉。 請等候重新啟動。 */
 	public static final int $553 = 553;
+	/**  */
+	public static final int $554 = 554;
 	/** http://www。lineage。com。tw */
 	public static final int $555 = 555;
 	/** call_center@gamania。com */
@@ -1354,7 +1347,7 @@ public class L1SystemMessageId {
 	public static final int $622 = 622;
 	/** 道具取得失敗。 */
 	public static final int $623 = 623;
-	/** 若要中斷刪除 \fZ%s\f>角色，請按下取消鍵。 刪除時間剩餘 \fZ%d\f>秒。 5級以上的角色將進入七天等待時間。 */
+	/** 若要中斷刪除 \fZ%s\f>角色，請按下取消鍵。 */
 	public static final int $624 = 624;
 	/** 請選擇要傳送的入口。 */
 	public static final int $625 = 625;
@@ -1660,7 +1653,7 @@ public class L1SystemMessageId {
 	public static final int $772 = 772;
 	/** 一般 */
 	public static final int $773 = 773;
-	/** 修習騎士 */
+	/** 見習 */
 	public static final int $774 = 774;
 	/** 在線上的血盟成員 */
 	public static final int $775 = 775;
@@ -1668,13 +1661,13 @@ public class L1SystemMessageId {
 	public static final int $776 = 776;
 	/** 需要教堂才能結婚 */
 	public static final int $777 = 777;
-	/** 請輸入 %s血盟員的新階級[階級 = 守護騎士、一般、修習騎士] */
+	/** 請輸入 %s血盟員的新階級[階級 = 守護騎士、一般、見習] */
 	public static final int $778 = 778;
 	/** 階級 */
 	public static final int $779 = 779;
-	/** \f1請依照如下輸入："/階級 \f0角色名稱 階級[守護騎士、一般、修習騎士]\f1" */
+	/** \f1請依照如下輸入："/階級 \f0角色名稱 階級[守護騎士、一般、見習]\f1" */
 	public static final int $780 = 780;
-	/** 請輸入想要變更階級的人的名稱與階級。[階級 = 守護騎士、一般、修習騎士] */
+	/** 請輸入想要變更階級的人的名稱與階級。[階級 = 守護騎士、一般、見習] */
 	public static final int $781 = 781;
 	/** %s 血盟的 %s打敗了反王 */
 	public static final int $782 = 782;
@@ -1860,8 +1853,10 @@ public class L1SystemMessageId {
 	public static final int $872 = 872;
 	/** 要刪除所選擇的道具嗎？(Y/N) */
 	public static final int $873 = 873;
-	/** windouws 95，98 互換模式發生問題，將清除該模式，請重新執行天堂。 */
+	/** windows 95，98 互換模式發生問題，將清除該模式，請重新執行天堂。 */
 	public static final int $874 = 874;
+	/**  */
+	public static final int $875 = 875;
 	/** 無法在此開設個人商店。 */
 	public static final int $876 = 876;
 	/** 將 %1%o 賣給 %0。 */
@@ -2036,7 +2031,7 @@ public class L1SystemMessageId {
 	public static final int $961 = 961;
 	/** 暫時提升遠距離攻擊力及命中率 */
 	public static final int $962 = 962;
-	/** 遠距離傷害+6、遠距離命中+3。 */
+	/** 暫時提升遠距離攻擊力，但命中率下降 */
 	public static final int $963 = 963;
 	/** 在武器上附加神聖的力量 */
 	public static final int $964 = 964;
@@ -2072,7 +2067,7 @@ public class L1SystemMessageId {
 	public static final int $979 = 979;
 	/** 全體隊員的攻擊力提升 */
 	public static final int $980 = 980;
-	/** 近距離傷害+6、近距離命中+6。 */
+	/** 攻擊力大幅提升 */
 	public static final int $981 = 981;
 	/** 提升體力與魔力的最大值 */
 	public static final int $982 = 982;
@@ -2082,7 +2077,7 @@ public class L1SystemMessageId {
 	public static final int $984 = 984;
 	/** 無法使用藥水 */
 	public static final int $985 = 985;
-	/** 突然感覺到混亂。 */
+	/** 無法使用藥水 */
 	public static final int $986 = 986;
 	/** 防禦力與命中率降低 */
 	public static final int $987 = 987;
@@ -2114,7 +2109,7 @@ public class L1SystemMessageId {
 	public static final int $1000 = 1000;
 	/** 攻擊速度變慢。 */
 	public static final int $1001 = 1001;
-	/** 取消刪除後，如果再進行刪除，就必須重新等待7天的時間。 您確定要取消刪除\fZ%s\f>嗎？ */
+	/** 取消刪除後，如果再進行刪除，就必須重新等待7天的時間。 */
 	public static final int $1002 = 1002;
 	/** 透明狀態無法使用的魔法。 */
 	public static final int $1003 = 1003;
@@ -2211,7 +2206,7 @@ public class L1SystemMessageId {
 	public static final int $1042 = 1042;
 	/** 盔甲變得堅韌。 */
 	public static final int $1043 = 1043;
-	/** 近距離命中+6。 */
+	/** 身上盔甲的性質與外型開始改變。 */
 	public static final int $1044 = 1044;
 	/** 大圓形競技場，混沌的大戰開始！ */
 	public static final int $1045 = 1045;
@@ -2689,7 +2684,7 @@ public class L1SystemMessageId {
 	public static final int $1238 = 1238;
 	/** 已將信件送出了。 */
 	public static final int $1239 = 1239;
-	/** 對方的信箱已經滿了，所以無法再寄信到對方信箱。 */
+	/** 無法傳送信件。 */
 	public static final int $1240 = 1240;
 	/** 信件已被儲存。 */
 	public static final int $1241 = 1241;
@@ -2890,7 +2885,7 @@ public class L1SystemMessageId {
 	public static final int $1337 = 1337;
 	/** 以自己的殘象保護身體。 */
 	public static final int $1338 = 1338;
-	/** 攻擊力些微的提升。 */
+	/** 突然感覺到混亂。 */
 	public static final int $1339 = 1339;
 	/** 感覺擁有了歐吉的力量。 */
 	public static final int $1340 = 1340;
@@ -2926,7 +2921,7 @@ public class L1SystemMessageId {
 	public static final int $1355 = 1355;
 	/** 盔甲的連接部分被破壞了。 */
 	public static final int $1356 = 1356;
-	/** 感受到地龍安塔拉斯的力量。 */
+	/** 將擁有變化地龍安塔瑞斯的樣貌力量。 */
 	public static final int $1357 = 1357;
 	/** 引發龍之血暴發出來了。 */
 	public static final int $1358 = 1358;
@@ -2970,19 +2965,22 @@ public class L1SystemMessageId {
 	public static final int $1377 = 1377;
 	/** 感覺所有力量被強制性平均了。 */
 	public static final int $1378 = 1378;
-	/** 因您的帳號疑似是盜用帳號或進行現金/現物交易之行為，故暫時鎖定帳號。 若您有相關之問題，還請來電至客服中心，將有專人為您進行服務。 */
+	/**
+	 * 推測您的帳號是盜帳號及現金/現物為目的進行遊戲因此暫時鎖住帳號. 若不是相關事由時請登入天堂官網執行本人確認流程即可正常使用服務.
+	 * 更詳細的事項請到官網(lineage.plaync.co.kr) 客服 1:1尋問來確認。
+	 */
 	public static final int $1379 = 1379;
-	/** 散發強烈的藍色光芒後消失了。 */
+	/** 他暫時強烈發光藍色蒸發後消失了。 */
 	public static final int $1380 = 1380;
-	/** 衝擊的力量將魔法防禦的效果降低。 */
+	/** 衝擊之力量將魔法防禦變困難。 */
 	public static final int $1381 = 1381;
-	/** 感受到魔族超越死亡的破壞力量。 */
+	/** 感受到破壞魔族的超越死亡的力量。 */
 	public static final int $1382 = 1382;
 	/** 因擁有加值產包道具或附加服務道具無法刪除角色。 */
 	public static final int $1383 = 1383;
-	/** 以目前狀態，是無法進行變身的。 */
+	/** 目前狀態中無法變身。 */
 	public static final int $1384 = 1384;
-	/** 以目前狀態，是無法使用覺醒魔法的。 */
+	/** 目前狀態中無法使用覺醒魔法。 */
 	public static final int $1385 = 1385;
 	/** 請稍候再進行下一場死亡競賽。 */
 	public static final int $1386 = 1386;
@@ -3038,29 +3036,69 @@ public class L1SystemMessageId {
 	public static final int $1411 = 1411;
 	/** 已在地板上召喚了魔法立方塊。 */
 	public static final int $1412 = 1412;
-	/** 目前情況是無法使用的。 */
+	/** 目前情況是無法使用。 */
 	public static final int $1413 = 1413;
-	/** 已超過能負載重量的狀態下，是無法取得道具的。 */
+	/** 已超過能再負載重量的狀態下無法支付道具。 */
 	public static final int $1414 = 1414;
+	/** dummy */
+	public static final int $1415 = 1415;
+	/** dummy */
+	public static final int $1416 = 1416;
+	/** dummy */
+	public static final int $1417 = 1417;
+	/** dummy */
+	public static final int $1418 = 1418;
+	/** dummy */
+	public static final int $1419 = 1419;
+	/** dummy */
+	public static final int $1420 = 1420;
+	/** dummy */
+	public static final int $1421 = 1421;
+	/** dummy */
+	public static final int $1422 = 1422;
+	/** dummy */
+	public static final int $1423 = 1423;
+	/** dummy */
+	public static final int $1424 = 1424;
+	/** dummy */
+	public static final int $1425 = 1425;
+	/** dummy */
+	public static final int $1426 = 1426;
+	/** dummy */
+	public static final int $1427 = 1427;
+	/** dummy */
+	public static final int $1428 = 1428;
+	/** dummy */
+	public static final int $1429 = 1429;
+	/** dummy */
+	public static final int $1430 = 1430;
+	/** dummy */
+	public static final int $1431 = 1431;
+	/** dummy */
+	public static final int $1432 = 1432;
+	/** dummy */
+	public static final int $1433 = 1433;
+	/** dummy */
+	public static final int $1434 = 1434;
 	/** 角色欄位已擴充了，請至角色選擇畫面中確認跳過視窗頁面。 */
 	public static final int $1435 = 1435;
-	/** 命中和攻擊力提高 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM1 */
 	public static final int $1436 = 1436;
-	/** 體力恢復和最大體力值增加 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM2 */
 	public static final int $1437 = 1437;
-	/** 戰鬥力大幅提高 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM3 */
 	public static final int $1438 = 1438;
-	/** 魔法攻擊力增加 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM4 */
 	public static final int $1439 = 1439;
-	/** 魔法恢復加速 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM5 */
 	public static final int $1440 = 1440;
-	/** 魔法戰鬥力大幅增加 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM6 */
 	public static final int $1441 = 1441;
-	/** 魔攻與遠距離攻擊和命中增加 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM7 */
 	public static final int $1442 = 1442;
-	/** 體力魔力恢復和最大值增加 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM8 */
 	public static final int $1443 = 1443;
-	/** 魔法和遠距離攻擊力大幅增加 */
+	/** STR_STATUS_EFFECT_BM_CHINA_ITEM9 */
 	public static final int $1444 = 1444;
 	/** 感覺到生命之樹的氣息從腳底直衝而來。 */
 	public static final int $1445 = 1445;
@@ -3078,7 +3116,7 @@ public class L1SystemMessageId {
 	public static final int $1451 = 1451;
 	/** 使用非法系統時服務可能被限制。 */
 	public static final int $1452 = 1452;
-	/** 此裝備無法進行強化。 */
+	/** 此裝備無法使用強化。 */
 	public static final int $1453 = 1453;
 	/** STR_STATUS_EFFECT_BM_JAPAN_ITEM1 */
 	public static final int $1454 = 1454;
@@ -3175,6 +3213,8 @@ public class L1SystemMessageId {
 	 * 詳細事項說明，玩家們可以透過天堂官網(lineage.plaync.co.kr) 客服部，進行1對1的詢問。
 	 */
 	public static final int $1499 = 1499;
+	/** dummy */
+	public static final int $1500 = 1500;
 	/** 將增加50%的狩獵經驗值 */
 	public static final int $1501 = 1501;
 	/** 將增加70%的狩獵經驗值 */
@@ -3217,19 +3257,19 @@ public class L1SystemMessageId {
 	public static final int $1520 = 1520;
 	/** 一天能參與的遊戲次數 %0 次都使用完畢了 */
 	public static final int $1521 = 1521;
-	/** 地監可停留時間：%0 小時，都已使用完畢了。 */
+	/** 奇岩地監可停留時間：%0 小時，都已使用完畢了。 */
 	public static final int $1522 = 1522;
-	/** 地監可停留時間 %0 分都使用完畢了 */
+	/** 奇岩地監可停留時間 %0 分都使用完畢了 */
 	public static final int $1523 = 1523;
-	/** 地監可停留時間 %0 小時 %1分都使用完畢了 */
+	/** 奇岩地監可停留時間 %0 小時 %1分都使用完畢了 */
 	public static final int $1524 = 1524;
-	/** 地監可停留時間剩餘 %0小時 %1分了 */
+	/** 奇岩地監可停留時間剩餘 %0小時 %1分了 */
 	public static final int $1525 = 1525;
-	/** 地監可停留時間剩餘 %0小時了 */
+	/** 奇岩地監可停留時間剩餘 %0小時了 */
 	public static final int $1526 = 1526;
-	/** 地監可停留時間剩餘 %0分了 */
+	/** 奇岩地監可停留時間剩餘 %0分了 */
 	public static final int $1527 = 1527;
-	/** 地監可停留時間剩餘 %0秒了 */
+	/** 奇岩地監可停留時間剩餘 %0秒了 */
 	public static final int $1528 = 1528;
 	/** %0 道具裝備中或持有狀態下，無法進行召喚魔法娃娃。 */
 	public static final int $1529 = 1529;
@@ -3261,13 +3301,13 @@ public class L1SystemMessageId {
 	public static final int $1542 = 1542;
 	/** STR_STATUS_EFFECT_JBM_EXP_BOOSTER */
 	public static final int $1543 = 1543;
-	/** 若要使用相關角色需透過角色名稱服務給予名稱。 */
+	/** dummy1546 */
 	public static final int $1544 = 1544;
-	/** 要取消魔法娃娃的階級嗎？若魔法娃娃的階段取消後，所使用的「黃昏的眼淚」是無法回復的。 */
+	/** dummy1547 */
 	public static final int $1545 = 1545;
-	/** 完成魔法娃娃刻印的角色是無法登入亞丁世界。 */
+	/** dummy1548 */
 	public static final int $1546 = 1546;
-	/** 魔法娃娃刻印中。 */
+	/** dummy1549 */
 	public static final int $1547 = 1547;
 	/** 約 %d小時 */
 	public static final int $1548 = 1548;
@@ -3289,9 +3329,9 @@ public class L1SystemMessageId {
 	public static final int $1556 = 1556;
 	/** 魔法娃娃 */
 	public static final int $1557 = 1557;
-	/** 魔法娃娃召喚中 */
+	/** 娃娃覺醒中 */
 	public static final int $1558 = 1558;
-	/** 此魔法娃娃是無法刪除的。 */
+	/** 魔法娃娃是無法刪除的 */
 	public static final int $1559 = 1559;
 	/** 此角色是在天堂中所創立的角色，無法在無界擂台中刪除。 */
 	public static final int $1560 = 1560;
@@ -3445,17 +3485,17 @@ public class L1SystemMessageId {
 	public static final int $1634 = 1634;
 	/** 熱鍵視窗<3> */
 	public static final int $1635 = 1635;
-	/** 賦予可攻擊地下室幽靈的神密力量。 */
+	/** dummy1638 */
 	public static final int $1636 = 1636;
-	/** 感受到後裔的祝福。 */
+	/** dummy1639 */
 	public static final int $1637 = 1637;
-	/** 感受到象牙塔的祝福。 */
+	/** dummy1640 */
 	public static final int $1638 = 1638;
 	/** 更改外觀 */
 	public static final int $1639 = 1639;
 	/** 大小變更 */
 	public static final int $1640 = 1640;
-	/** 侏儒的吶喊：誕生了能阻止古代水龍的黑色氣息的勇士!! */
+	/** dummy1643 */
 	public static final int $1641 = 1641;
 	/** 垃圾桶 */
 	public static final int $1642 = 1642;
@@ -3465,19 +3505,19 @@ public class L1SystemMessageId {
 	public static final int $1644 = 1644;
 	/** 好像因為受到法利昂的血痕影響，變得更加厲害。具有提升體力回復量 +3、魔力回復量 +1的效果。 */
 	public static final int $1645 = 1645;
-	/** 似乎受到林德拜爾的血痕影響，變得更加強大。 */
+	/** dummy1648 */
 	public static final int $1646 = 1646;
-	/** 似乎受到林德拜爾的血痕影響，變得更加強大，具有提升魔攻+1、魔法命中+1的效果。 */
+	/** dummy1649 */
 	public static final int $1647 = 1647;
-	/** 感受到巴拉卡斯的血痕影響，變得更加勇猛。 */
+	/** dummy1650 */
 	public static final int $1648 = 1648;
-	/** 感受到巴拉卡斯的血痕影響，變得更加勇猛，近距離攻擊+1、近距離命中+1、遠距離攻擊+1、遠距離命中+1的效果。 */
+	/** dummy1651 */
 	public static final int $1649 = 1649;
-	/** 吃完南瓜後感受到清爽的感覺。 */
+	/** dummy1652 */
 	public static final int $1650 = 1650;
-	/** STR_MESSAGE_ITEM_USER_DESC */
+	/** dummy1653 */
 	public static final int $1651 = 1651;
-	/** STR_MESSAGE_WINDOW_MODE_ONLY_16BIT_COLOR */
+	/** dummy1654 */
 	public static final int $1652 = 1652;
 	/** 目前倉庫管理員非常忙碌，請稍候再使用。 */
 	public static final int $1653 = 1653;
@@ -3559,6 +3599,8 @@ public class L1SystemMessageId {
 	public static final int $1691 = 1691;
 	/** 防禦力提升。 */
 	public static final int $1692 = 1692;
+	/** dummy1695 */
+	public static final int $1693 = 1693;
 	/** 沒有選擇目標。 */
 	public static final int $1694 = 1694;
 	/** 要委任隊長的隊員沒在附近。 */
@@ -3571,7 +3613,7 @@ public class L1SystemMessageId {
 	public static final int $1698 = 1698;
 	/** 被捲在水柱中，無法動彈。 */
 	public static final int $1699 = 1699;
-	/** STR_DISPLAY_SETTING_ERROR */
+	/** dummy1702 */
 	public static final int $1700 = 1700;
 	/** 修改遊戲畫面，使其符合windows解析度。 */
 	public static final int $1701 = 1701;
@@ -3617,13 +3659,13 @@ public class L1SystemMessageId {
 	public static final int $1721 = 1721;
 	/** 確定結束？ */
 	public static final int $1722 = 1722;
-	/** STR_BLOCK_GET_ITEM %0 */
+	/** dummy1725 */
 	public static final int $1723 = 1723;
-	/** STR_BLOCK_ATTACK %0 */
+	/** dummy1726 */
 	public static final int $1724 = 1724;
-	/** STR_BLOCK_USE_POTION %0 */
+	/** dummy1727 */
 	public static final int $1725 = 1725;
-	/** STR_BLOCK_SPELL_ONE_TIME %0 */
+	/** dummy1728 */
 	public static final int $1726 = 1726;
 	/** 以目前的解析度無法擴大遊戲視窗。 */
 	public static final int $1727 = 1727;
@@ -3643,7 +3685,7 @@ public class L1SystemMessageId {
 	public static final int $1734 = 1734;
 	/** 地圖 */
 	public static final int $1735 = 1735;
-	/** STR_SHIELD_CAMPAIGN_NAME_CHECK_IN_TROUBLE */
+	/** dummy1738 */
 	public static final int $1736 = 1736;
 	/** 經驗值獲得量增加30%。 */
 	public static final int $1737 = 1737;
@@ -3679,61 +3721,61 @@ public class L1SystemMessageId {
 	public static final int $1752 = 1752;
 	/** 正在接受經驗值獎勵，無法使用。 */
 	public static final int $1753 = 1753;
-	/** 侏儒族的吶喊：打敗林德拜爾的勇士誕生了！！ */
+	/** dummy1756 */
 	public static final int $1754 = 1754;
-	/** 林德拜爾：好大的膽子，敢打擾我睡覺？！ */
+	/** dummy1757 */
 	public static final int $1755 = 1755;
-	/** 林德拜爾：賽尼斯妳又想惹怒我？ */
+	/** dummy1758 */
 	public static final int $1756 = 1756;
-	/** 林德拜爾：愚蠢的人類...！ */
+	/** dummy1759 */
 	public static final int $1757 = 1757;
-	/** 林德拜爾：竟然有勇氣招惹我，你會付出代價的！ */
+	/** dummy1760 */
 	public static final int $1758 = 1758;
-	/** 林德拜爾：可笑！你們該為這愚蠢的行為感到後悔！ */
+	/** dummy1761 */
 	public static final int $1759 = 1759;
-	/** 烏雲大精靈：你是誰？竟敢侵入林德拜爾聖地！ */
+	/** dummy1762 */
 	public static final int $1760 = 1760;
-	/** 林德拜爾：還不錯嘛！但能撐到什麼時候呢？ */
+	/** dummy1763 */
 	public static final int $1761 = 1761;
-	/** 林德拜爾：好久沒有舒展身骨了，來嚐嚐我的厲害吧！ */
+	/** dummy1764 */
 	public static final int $1762 = 1762;
-	/** 烏雲大精靈：哼哼..竟然讓林德拜爾感到不悅！ */
+	/** dummy1765 */
 	public static final int $1763 = 1763;
-	/** 林德拜爾：似乎小看你們了... */
+	/** dummy1766 */
 	public static final int $1764 = 1764;
-	/** 林德拜爾：傲慢自大...讓你們知道這會帶來什麼結果！ */
+	/** dummy1767 */
 	public static final int $1765 = 1765;
-	/** 烏雲大精靈：竟然敢....我不會放任不管的！ */
+	/** dummy1768 */
 	public static final int $1766 = 1766;
-	/** 林德拜爾：這麻煩...愚蠢的傢伙~~現在是考驗我嗎？ */
+	/** dummy1769 */
 	public static final int $1767 = 1767;
-	/** 林德拜爾：我看你們還能掙扎多久！ */
+	/** dummy1770 */
 	public static final int $1768 = 1768;
-	/** 烏雲大精靈：請賜給我力量吧！ */
+	/** dummy1771 */
 	public static final int $1769 = 1769;
-	/** 林德拜爾：怪只怪你們太愚蠢了！ */
+	/** dummy1772 */
 	public static final int $1770 = 1770;
-	/** 林德拜爾：我不會再放過你們了，準備接招吧！ */
+	/** dummy1773 */
 	public static final int $1771 = 1771;
-	/** 林德拜爾：這怎麼可能！區區個人類竟然能.....是我太小看你們了... */
+	/** dummy1774 */
 	public static final int $1772 = 1772;
-	/** 林德拜爾：啊！！我的母親席琳請抓住我吧.... */
+	/** dummy1775 */
 	public static final int $1773 = 1773;
-	/** 林德拜爾：已經鬧夠了！我會讓你了解到甚麼叫做痛苦的滋味！ */
+	/** dummy1776 */
 	public static final int $1774 = 1774;
-	/** 甘特：大勢已去，我將用盡最後剩餘的力量協助你們召喚到安全地方去。 */
+	/** dummy1777 */
 	public static final int $1775 = 1775;
-	/** 侏儒的納喊：很快哈爾巴斯的部下會為了守護此地趕來。 */
+	/** dummy1778 */
 	public static final int $1776 = 1776;
-	/** 侏儒的納喊：哈爾巴斯的部下將化身成鳥的型態，動作十分敏捷迅速，一瞬間就能將肉體撕裂。 */
+	/** dummy1779 */
 	public static final int $1777 = 1777;
-	/** 侏儒的納喊：為了守護林德拜爾，哈爾巴斯所派遣的手下即將到來。 */
+	/** dummy1780 */
 	public static final int $1778 = 1778;
-	/** 侏儒的納喊：他們來了...全面戒備！！ */
+	/** dummy1781 */
 	public static final int $1779 = 1779;
-	/** 侏儒的納喊：看門狗出現了！要擊敗他們才能通過這裡。 */
+	/** dummy1782 */
 	public static final int $1780 = 1780;
-	/** 甘特：屠龍勇士們！已準備擊退林德拜爾的準備了嗎？ */
+	/** dummy1783 */
 	public static final int $1781 = 1781;
 	/** 無法找到該角色或角色不在線上。 */
 	public static final int $1782 = 1782;
@@ -3745,20 +3787,20 @@ public class L1SystemMessageId {
 	public static final int $1785 = 1785;
 	/** 位置記憶已超過30個，最多能記憶30個。 */
 	public static final int $1786 = 1786;
-	/** 甘特的話語銘記在心。 */
+	/** dummy1789 */
 	public static final int $1787 = 1787;
-	/** 甘特的話語已想不起來。 */
+	/** dummy1790 */
 	public static final int $1788 = 1788;
-	/** 訊息頻道 */
+	/** dummy1791 */
 	public static final int $1789 = 1789;
 	/**
 	 * 由於利用bug的行為，或與此相關的內容，停用使用者的帳號。利用bug的行為，也許會導致遊戲Service產生嚴重的障礙與破壞遊戲平衡。
 	 * 詳細事項請參考 plaync 主頁 （www.plaync.co。kr）客服1:1諮詢處。
 	 */
 	public static final int $1790 = 1790;
-	/** STR_BLOCK_LOGOUT */
+	/** dummy1793 */
 	public static final int $1791 = 1791;
-	/** 已超過可輸入範圍，最多12個字。%12 */
+	/** 已超過可輸入範圍。（最大 %d者） */
 	public static final int $1792 = 1792;
 	/** 物理防禦力提升2、魔法防禦力提升3。 */
 	public static final int $1793 = 1793;
@@ -3774,25 +3816,25 @@ public class L1SystemMessageId {
 	public static final int $1798 = 1798;
 	/** 被比自己高10等級的玩家擊敗時，能夠得到保護。 */
 	public static final int $1799 = 1799;
-	/** 全體 */
+	/** dummy1802 */
 	public static final int $1800 = 1800;
-	/** 裝備 */
+	/** dummy1803 */
 	public static final int $1801 = 1801;
-	/** 試煉 */
+	/** dummy1804 */
 	public static final int $1802 = 1802;
-	/** 其他 */
+	/** dummy1805 */
 	public static final int $1803 = 1803;
-	/** 中文遞增排序 */
+	/** dummy1806 */
 	public static final int $1804 = 1804;
-	/** 中文遞減排序 */
+	/** dummy1807 */
 	public static final int $1805 = 1805;
-	/** 英文遞增排序 */
+	/** dummy1808 */
 	public static final int $1806 = 1806;
-	/** 英文遞減排序 */
+	/** dummy1809 */
 	public static final int $1807 = 1807;
-	/** 數量高的排序 */
+	/** dummy1810 */
 	public static final int $1808 = 1808;
-	/** 數量低的排序 */
+	/** dummy1811 */
 	public static final int $1809 = 1809;
 	/** 巴風特伺服器只對滿18歲以上的客戶服務。 上線的帳號，不符合巴風特伺服器使用年齡標準，請選擇其他伺服器。 */
 	public static final int $1810 = 1810;
@@ -3801,403 +3843,407 @@ public class L1SystemMessageId {
 	 * 請先加入保安服務或查看是否有暫時停止後，重新使用。
 	 */
 	public static final int $1811 = 1811;
-	/** 具有魔力上限+50和攻擊力減少5的效果。 */
+	/** 具有MP 50的提升和攻擊力減少5的效果。 */
 	public static final int $1812 = 1812;
-	/** 要刪除你所選擇的好友嗎? */
+	/** dummy1815 */
 	public static final int $1813 = 1813;
-	/** STR_LOGIN_FRIENDLIST */
+	/** dummy1816 */
 	public static final int $1814 = 1814;
 	/** 激烈的戰鬥！ 24日16點開始。 */
 	public static final int $1815 = 1815;
 	/** 角色新增從 24日16點以後才可以。 */
 	public static final int $1816 = 1816;
-	/** 本遊戲是未18歲以上的遊戲有關審議內容資訊和使用等級的介紹在選擇tap裡。 */
+	/**  */
 	public static final int $1817 = 1817;
-	/** 時間的破裂在座標%0開放著. */
+	/**  */
 	public static final int $1818 = 1818;
-	/** 時間的裂痕現在並沒有開放。 */
+	/**  */
 	public static final int $1819 = 1819;
-	/** 輔助裝備 */
+	/**  */
 	public static final int $1820 = 1820;
-	/** %s的時間約剩下%d分 */
+	/**  */
 	public static final int $1821 = 1821;
-	/** 伺服器的時間約剩下%d分 */
+	/**  */
 	public static final int $1822 = 1822;
-	/** 到了約好的時間產生了新的道具，請在道具欄位確認。 */
+	/**  */
 	public static final int $1823 = 1823;
-	/** 總instanse地城的s%個中，開放的instanse地城是%s個。 */
+	/**  */
 	public static final int $1824 = 1824;
-	/** 當該年度不能收到生產角色。 */
+	/**  */
 	public static final int $1825 = 1825;
-	/** 再不能縮減時間了。 */
+	/**  */
 	public static final int $1826 = 1826;
-	/** 生日的祝福而經驗值得獲得量增加20%. */
+	/**  */
 	public static final int $1827 = 1827;
-	/** 由於打獵而經驗值獲得量一點點增加 */
+	/**  */
 	public static final int $1828 = 1828;
-	/** 跟AuthD伺服器的連接斷了，請迅速處理。 */
+	/**  */
 	public static final int $1829 = 1829;
-	/** 感覺到冰塊雕刻很涼爽 */
+	/**  */
 	public static final int $1830 = 1830;
-	/** 阿波羅 */
+	/**  */
 	public static final int $1831 = 1831;
-	/** 反王肯恩 */
+	/**  */
 	public static final int $1832 = 1832;
-	/** 絲莉安 */
+	/**  */
 	public static final int $1833 = 1833;
-	/** 衣食陸太 */
+	/**  */
 	public static final int $1834 = 1834;
-	/** 宙斯 */
+	/**  */
 	public static final int $1835 = 1835;
-	/** 哈汀 */
+	/**  */
 	public static final int $1836 = 1836;
-	/** 戰神馬爾斯 */
+	/**  */
 	public static final int $1837 = 1837;
-	/** 歐瑞 */
+	/**  */
 	public static final int $1838 = 1838;
-	/** 波賽頓 */
+	/**  */
 	public static final int $1839 = 1839;
-	/** 黑帝斯 */
+	/**  */
 	public static final int $1840 = 1840;
-	/** 火神赫發斯特斯 */
+	/**  */
 	public static final int $1841 = 1841;
-	/** 甘特 */
+	/**  */
 	public static final int $1842 = 1842;
-	/** 阿斯態爾 */
+	/**  */
 	public static final int $1843 = 1843;
-	/** 德客待必 */
+	/**  */
 	public static final int $1844 = 1844;
-	/** 巴生 */
+	/**  */
 	public static final int $1845 = 1845;
-	/** 額理恩 */
+	/**  */
 	public static final int $1846 = 1846;
-	/** 凱斯特 */
+	/**  */
 	public static final int $1847 = 1847;
-	/** 獅子涅墨亞 */
+	/**  */
 	public static final int $1848 = 1848;
-	/** 戴刊 */
+	/**  */
 	public static final int $1849 = 1849;
-	/** 帕格立歐 */
+	/**  */
 	public static final int $1850 = 1850;
-	/** 伊娃 */
+	/**  */
 	public static final int $1851 = 1851;
-	/** 沙哈 */
+	/**  */
 	public static final int $1852 = 1852;
-	/** 馬普勒 */
+	/**  */
 	public static final int $1853 = 1853;
-	/** 林戴 */
+	/**  */
 	public static final int $1854 = 1854;
-	/** 朱德 */
+	/**  */
 	public static final int $1855 = 1855;
-	/** 卡洛斯 */
+	/**  */
 	public static final int $1856 = 1856;
-	/** 希德拉休 */
+	/**  */
 	public static final int $1857 = 1857;
-	/** 勞待碼依 */
+	/**  */
 	public static final int $1858 = 1858;
-	/** 安塔瑞斯 */
+	/**  */
 	public static final int $1859 = 1859;
-	/** 法利昂 */
+	/**  */
 	public static final int $1860 = 1860;
-	/** 巴拉卡斯 */
+	/**  */
 	public static final int $1861 = 1861;
-	/** 林德拜爾 */
+	/**  */
 	public static final int $1862 = 1862;
-	/** 肯特 */
+	/**  */
 	public static final int $1863 = 1863;
-	/** 古魯丁 */
+	/**  */
 	public static final int $1864 = 1864;
-	/** 風木 */
+	/**  */
 	public static final int $1865 = 1865;
-	/** 奇岩 */
+	/**  */
 	public static final int $1866 = 1866;
-	/** 歐瑞 */
+	/**  */
 	public static final int $1867 = 1867;
-	/** 潘朵拉 */
+	/**  */
 	public static final int $1868 = 1868;
-	/** 格蘭肯 */
+	/**  */
 	public static final int $1869 = 1869;
-	/** 拉斯塔巴德 */
+	/**  */
 	public static final int $1870 = 1870;
-	/** 死亡騎士 */
+	/**  */
 	public static final int $1871 = 1871;
-	/** 亞丁 */
+	/**  */
 	public static final int $1872 = 1872;
-	/** 妖魔 */
+	/**  */
 	public static final int $1873 = 1873;
-	/** 測試機 */
+	/**  */
 	public static final int $1874 = 1874;
-	/** 殷海薩 */
+	/**  */
 	public static final int $1875 = 1875;
-	/** 勞安格林 */
+	/**  */
 	public static final int $1876 = 1876;
-	/** 海音 */
+	/**  */
 	public static final int $1877 = 1877;
-	/** 副君主 */
+	/**  */
 	public static final int $1878 = 1878;
-	/** 修習騎士 */
+	/**  */
 	public static final int $1879 = 1879;
-	/** %s將道具 %s */
+	/**  */
 	public static final int $1880 = 1880;
-	/** %s將金幣 %s */
+	/**  */
 	public static final int $1881 = 1881;
-	/** 從血盟倉庫領出。 */
+	/**  */
 	public static final int $1882 = 1882;
-	/** 存放至血盟倉庫中。 */
+	/**  */
 	public static final int $1883 = 1883;
-	/** [%s]x(%d) */
+	/**  */
 	public static final int $1884 = 1884;
-	/** [%d] 金幣 */
+	/**  */
 	public static final int $1885 = 1885;
-	/** (動作時間已過：%d分) */
+	/**  */
 	public static final int $1886 = 1886;
-	/** (動作時間已過：%d小時) */
+	/**  */
 	public static final int $1887 = 1887;
-	/** (動作時間已過：%d日) */
+	/**  */
 	public static final int $1888 = 1888;
-	/** 目前沒有血盟倉庫使用的記錄。 */
+	/**  */
 	public static final int $1889 = 1889;
-	/** 對方目前忙碌狀態，請梢後再詢問。 */
+	/**  */
 	public static final int $1890 = 1890;
-	/** 只可以在隱藏龍之氣息的土地上使用。 */
+	/**  */
 	public static final int $1891 = 1891;
-	/** 在這裡不可以使用龍之鑰匙。 */
+	/**  */
 	public static final int $1892 = 1892;
-	/** STR_ERROR_TREASURE_WEIGHT */
+	/**  */
 	public static final int $1893 = 1893;
-	/** STR_ERROR_TREASURE_COUNT */
+	/**  */
 	public static final int $1894 = 1894;
-	/** 於血戰中任意退出時將處於3小時的血盟加入限制。(請求君主同意Y，任意退出N) */
+	/**  */
 	public static final int $1895 = 1895;
-	/** 跟君主請求允許退出血盟中，請稍候。 */
+	/**  */
 	public static final int $1896 = 1896;
-	/** %0%s已申請退出血盟。請問要同意嗎？ */
+	/**  */
 	public static final int $1897 = 1897;
-	/** %0已退出血盟。 */
+	/**  */
 	public static final int $1898 = 1898;
-	/** 已拒絕%0退出血盟。 */
+	/**  */
 	public static final int $1899 = 1899;
-	/** 君主已同意您退出血盟。 */
+	/**  */
 	public static final int $1900 = 1900;
-	/** 君主已拒絕您退出血盟。請問要任意退出嗎？ */
+	/**  */
 	public static final int $1901 = 1901;
-	/** 已任意退出%0血盟，處於3小時的血盟加入制限。 */
+	/**  */
 	public static final int $1902 = 1902;
-	/** 君主為非連線中。請問要任意退出嗎？ */
+	/**  */
 	public static final int $1903 = 1903;
-	/** 確定要沒經過君主的同意就任意退出嗎？ */
+	/**  */
 	public static final int $1904 = 1904;
-	/** STR_LEAVE_PLEDGE_IN_WAR_CANNOT_ANSWER, */
+	/**  */
 	public static final int $1905 = 1905;
-	/** 於血戰中任意退出時會被處以3小時的血盟加入限制。(請求君主同意Y，任意退出N) */
+	/**  */
 	public static final int $1906 = 1906;
-	/** 跟君主/副君主請求允許退出血盟中，請稍候。 */
+	/**  */
 	public static final int $1907 = 1907;
-	/** %0%s已申請退出血盟。請問要同意嗎？ */
+	/**  */
 	public static final int $1908 = 1908;
-	/** %0已退出血盟。 */
+	/**  */
 	public static final int $1909 = 1909;
-	/** 已拒絕%0退出血盟。 */
+	/**  */
 	public static final int $1910 = 1910;
-	/** 君主/副君主已同意您退出血盟。 */
+	/**  */
 	public static final int $1911 = 1911;
-	/** 君主已拒絕您退出血盟，請問要任意退出嗎？ */
+	/**  */
 	public static final int $1912 = 1912;
-	/** 已任意退出%0血盟，須待3小時才可加入其他血盟。 */
+	/**  */
 	public static final int $1913 = 1913;
-	/** 君主/副君主為非連線中，請問要任意退出嗎？ */
+	/**  */
 	public static final int $1914 = 1914;
-	/** 確定要沒經過君主/副君主的同意就任意退出嗎？ */
+	/**  */
 	public static final int $1915 = 1915;
-	/** %0君主(副君主)已同意%1退出血盟。 */
+	/**  */
 	public static final int $1916 = 1916;
-	/** %0君主(副君主)已拒絕%1退出血盟。 */
+	/**  */
 	public static final int $1917 = 1917;
-	/** STR_LEAVE_UNITED_IN_WAR_CANNOT_ANSWER */
+	/**  */
 	public static final int $1918 = 1918;
-	/** 神秘的氣息滲透全身，激發潛在能力。 */
+	/**  */
 	public static final int $1919 = 1919;
-	/** 無法得知的伺服器位置。 */
+	/**  */
 	public static final int $1920 = 1920;
-	/** STR_CRC_CHECK_FAIL */
+	/**  */
+	public static final int $1921 = 1921;
+	/**  */
+	public static final int $1922 = 1922;
+	/**  */
 	public static final int $1923 = 1923;
-	/** 不可以馴服。 */
+	/**  */
 	public static final int $1924 = 1924;
-	/** 於血戰中退出%0小時後，才可加入其他血盟。 */
+	/**  */
 	public static final int $1925 = 1925;
-	/** 生存的吶喊(Ctrl + e) */
+	/**  */
 	public static final int $1926 = 1926;
-	/** 因 %0狀態特殊，故維持封印。 */
+	/**  */
 	public static final int $1927 = 1927;
-	/** nana */
+	/**  */
 	public static final int $1928 = 1928;
-	/** thomas */
+	/**  */
 	public static final int $1929 = 1929;
-	/** james */
+	/**  */
 	public static final int $1930 = 1930;
-	/** toby */
+	/**  */
 	public static final int $1931 = 1931;
-	/** lexadoig */
+	/**  */
 	public static final int $1932 = 1932;
-	/** 魔力上限+150 */
+	/**  */
 	public static final int $1933 = 1933;
-	/** 魔力上限+200 */
+	/**  */
 	public static final int $1934 = 1934;
-	/** 魔力上限+250 */
+	/**  */
 	public static final int $1935 = 1935;
-	/** 魔力上限+300 */
+	/**  */
 	public static final int $1936 = 1936;
-	/** 魔力上限+400 */
+	/**  */
 	public static final int $1937 = 1937;
-	/** 魔力上限+500 */
+	/**  */
 	public static final int $1938 = 1938;
-	/** 命中率+3 */
+	/**  */
 	public static final int $1939 = 1939;
-	/** 命中率+4 */
+	/**  */
 	public static final int $1940 = 1940;
-	/** 命中率+5 */
+	/**  */
 	public static final int $1941 = 1941;
-	/** 目前是0階段，成為1階段時，將會收到經驗值加倍獎勵。 */
+	/**  */
 	public static final int $1942 = 1942;
-	/** 目前是1階段，成為2階段時，追加掉寶率加倍獎勵。 */
+	/**  */
 	public static final int $1943 = 1943;
-	/** 目前是2階段，成為3階段時，將會增加獎勵的倍數。 */
+	/**  */
 	public static final int $1944 = 1944;
-	/** 升級成3階段，請等待獎勵置入的時間。 */
+	/**  */
 	public static final int $1945 = 1945;
-	/** 接受經驗值2倍獎勵中。 */
+	/**  */
 	public static final int $1946 = 1946;
-	/** 接受掉寶率、經驗值2倍的獎勵中。 */
+	/**  */
 	public static final int $1947 = 1947;
-	/** 接受掉寶率、經驗值3倍的獎勵中。 */
+	/**  */
 	public static final int $1948 = 1948;
-	/** STR_REMAINED_PERCENT_ORC_SERVER, */
+	/**  */
 	public static final int $1949 = 1949;
-	/** 秘密敢死隊法師：歡迎！那麼開始吧？ */
+	/**  */
 	public static final int $1950 = 1950;
-	/** 秘密敢死隊法師：給予的課題都完成了，感受到能力更上一層樓，期待下次再見。 */
+	/**  */
 	public static final int $1951 = 1951;
-	/** 秘密敢死隊法師：第2個休息房間的門開啟了。 */
+	/**  */
 	public static final int $1952 = 1952;
-	/** 秘密敢死隊法師：第2個首領賀洛斯在等待著。 */
+	/**  */
 	public static final int $1953 = 1953;
-	/** 秘密敢死隊法師：第1個休息房間的門開啟了。 */
+	/**  */
 	public static final int $1954 = 1954;
-	/** 秘密敢死隊法師：第1個首領阿努比斯在等待著。 */
+	/**  */
 	public static final int $1955 = 1955;
-	/** 秘密敢死隊法師：修練還不夠啊！請再多加油！ */
+	/**  */
 	public static final int $1956 = 1956;
-	/** 秘密敢死隊法師：10分後會將你傳送到亞丁城鎮，若還有未完成的事情，請盡速處理吧！ */
+	/**  */
 	public static final int $1957 = 1957;
-	/** 秘密敢死隊法師：第3個休息室的房間門開啟了。 */
+	/**  */
 	public static final int $1958 = 1958;
-	/** 秘密敢死隊法師：第3個首領歐西里斯在等待著。 */
+	/**  */
 	public static final int $1959 = 1959;
-	/** 請將天堂遊戲畫面為最小化才能執行 24hz player */
+	/**  */
 	public static final int $1960 = 1960;
-	/** 目前是時空的次元中流程不完整無法入場裂痕的地城.請稍後再試. */
+	/**  */
 	public static final int $1961 = 1961;
-	/** 目前等級是無法使用的。 */
+	/**  */
 	public static final int $1962 = 1962;
-	/** 目前達成度是 %d，%04d%%，成為1階段時給予經驗值加倍獎勵。 */
+	/**  */
 	public static final int $1963 = 1963;
-	/** 目前達成度是1階段 %d，%04d%%，達到2階段時給予掉寶率加倍獎勵。 */
+	/**  */
 	public static final int $1964 = 1964;
-	/** 目前達成度是2階段 %d，%04d%%，達到3階段時增加獎勵倍數。 */
+	/**  */
 	public static final int $1965 = 1965;
-	/** 到3階段目標完成了，獎勵發送期間是星期五上午9點開始。 */
+	/**  */
 	public static final int $1966 = 1966;
-	/** 沒達到獎勵水準，請從週一上午9點開始再繼續努力吧！ */
+	/**  */
 	public static final int $1967 = 1967;
-	/** 1階段獎勵期間，收到【經驗值2倍】效果。 */
+	/**  */
 	public static final int $1968 = 1968;
-	/** 2階段補償期間，收到【經驗值2倍】、【掉寶率2倍】效果。 */
+	/**  */
 	public static final int $1969 = 1969;
-	/** 3階段補償期間，收到【經驗值3倍】、【掉寶率3倍】效果。 */
+	/**  */
 	public static final int $1970 = 1970;
-	/** 全身都能感受到死亡騎士的憤怒。 */
+	/**  */
 	public static final int $1971 = 1971;
-	/** 無法感受死亡騎士的憤怒。 */
+	/**  */
 	public static final int $1972 = 1972;
-	/** 必須裝備上武器才可使用。 */
+	/**  */
 	public static final int $1973 = 1973;
-	/** 還無法使用生存的吶喊。 */
+	/**  */
 	public static final int $1974 = 1974;
-	/** 秘密敢死隊法師：辛苦了，唉呦...不錯嘛？！ 修練的成果很好喔。 */
+	/**  */
 	public static final int $1975 = 1975;
-	/** 秘密敢死隊法師：辛苦了，呦喝...不錯嘛？！ 修練的成果不錯嘛。 */
+	/**  */
 	public static final int $1976 = 1976;
-	/** 秘密敢死隊法師：辛苦了，嗯...就一般的修練成果表現而已。 */
+	/**  */
 	public static final int $1977 = 1977;
-	/** 用滑鼠按想要的數字6~8字之後請按鈕ok */
+	/**  */
 	public static final int $1978 = 1978;
-	/** 為了正確確認請重新再輸入密碼 */
+	/**  */
 	public static final int $1979 = 1979;
-	/** 正常的登記了角色密碼.角色密碼是包含了登錄的帳號以外還包含了所有司服器登入時同時地作用(忘記密碼時請至天堂網站詢問) */
+	/**  */
 	public static final int $1980 = 1980;
-	/** 用滑鼠按角色密碼數字6~8後請按鈕ok */
+	/**  */
 	public static final int $1981 = 1981;
-	/** 所輸入的密碼不一致.請重新輸入. */
+	/**  */
 	public static final int $1982 = 1982;
-	/** 用滑鼠按基本角色密碼數字6~8字後請按鈕ok */
+	/**  */
 	public static final int $1983 = 1983;
-	/** 用滑鼠按要變更的密碼6~8字後請按鈕ok */
+	/**  */
 	public static final int $1984 = 1984;
-	/** 角色密碼成功地變更.(忘記密碼時請至天堂網站詢問) */
+	/**  */
 	public static final int $1985 = 1985;
-	/** 錯的密碼累積5次而8小時間內不可以登入.網站登入>資料變更>角色密碼初始化裡透過本人認證而可以立即解除. */
+	/**  */
 	public static final int $1986 = 1986;
-	/** 最近登入。 */
+	/**  */
 	public static final int $1987 = 1987;
-	/** STR_ORCSERVER_SERVER_INFO */
+	/**  */
 	public static final int $1988 = 1988;
-	/** STR_ORCSERVER_USER_INFO */
+	/**  */
 	public static final int $1989 = 1989;
-	/** 為了安全的玩天堂遊戲,沒有使用保安服務[NCOTP,PC登記服務,電話認證服務]的玩家.必須要登記"角色密碼"(數字6~8) */
+	/**  */
 	public static final int $1990 = 1990;
-	/** 角色密碼變更失敗 */
+	/**  */
 	public static final int $1991 = 1991;
-	/** 角色密碼登記失敗 */
+	/**  */
 	public static final int $1992 = 1992;
-	/** 感到紅豆年糕的風味. */
+	/**  */
 	public static final int $1993 = 1993;
-	/** 基本型 */
+	/**  */
 	public static final int $1994 = 1994;
-	/** 戰鬥型 */
+	/**  */
 	public static final int $1995 = 1995;
-	/** 隊伍型 */
+	/**  */
 	public static final int $1996 = 1996;
-	/** 聊天型 */
+	/**  */
 	public static final int $1997 = 1997;
-	/** 為了保安密碼數字不能使用連接的數字(例:123456)或同樣的數字(例:222222)來登記.請重新輸入. */
+	/**  */
 	public static final int $1998 = 1998;
-	/** 具有魔力上限+30、體力回復+2、魔力回復+2的效果 */
+	/**  */
 	public static final int $1999 = 1999;
-	/** 持有金幣 */
+	/**  */
 	public static final int $2000 = 2000;
-	/** 寵物狀態資訊窗 */
+	/**  */
 	public static final int $2001 = 2001;
-	/** 您好.我們是天堂.登入的帳號因收到天堂帳號資料變更紛爭,所以已被限制的狀態.詳細詢問請至[plaync網站的green客戶中心(下方)] */
+	/**  */
 	public static final int $2002 = 2002;
-	/** 增加魔力上限和額外傷害減免的效果。 */
+	/**  */
 	public static final int $2003 = 2003;
-	/** STR_SHUTDOWN_POLICY_5MINUTES_WARNING */
+	/**  */
 	public static final int $2004 = 2004;
-	/** 因青少年保護法 ，0點到6點期間限制使用登入，因此結束遊戲。 */
+	/**  */
 	public static final int $2005 = 2005;
-	/** 你所輸入的密碼%d次錯誤,錯5次的話會導致遊戲運作上的限制.請輸入正確的密碼. */
+	/**  */
 	public static final int $2006 = 2006;
-	/** 聊天選擇 */
+	/**  */
 	public static final int $2007 = 2007;
-	/** 收到道具會導致請約撤回的限制.要現在收嗎?(Y/N) */
+	/**  */
 	public static final int $2008 = 2008;
-	/** 開始成功。 */
+	/**  */
 	public static final int $2009 = 2009;
-	/** 停止成功。 */
+	/**  */
 	public static final int $2010 = 2010;
-	/** 關機訊息已被開啟。 */
+	/**  */
 	public static final int $2011 = 2011;
-	/** 關機訊息已被取消。 */
+	/**  */
 	public static final int $2012 = 2012;
 	/** 使用1階附魔石(近戰)後全身充滿神秘力量。 */
 	public static final int $2013 = 2013;
@@ -4271,2624 +4317,5 @@ public class L1SystemMessageId {
 	public static final int $2047 = 2047;
 	/** 使用9階附魔石(防禦)後全身充滿神秘力量。 */
 	public static final int $2048 = 2048;
-	/** %s玩家所送出去的禮物不是請約撤回對象. (Y 收取, N 未收取) */
-	public static final int $2049 = 2049;
-	/** 商品目錄更新中發生了網路問題。 */
-	public static final int $2050 = 2050;
-	/** 處理確認購買中發生了網路問題。 */
-	public static final int $2051 = 2051;
-	/** 處理延遲中，請重新試看。 */
-	public static final int $2052 = 2052;
-	/** 已經退款的道具 */
-	public static final int $2053 = 2053;
-	/** 已經購買確認的道具 */
-	public static final int $2054 = 2054;
-	/** 現在的變身是無法裝備 \f1%0%o 的。 */
-	public static final int $2055 = 2055;
-	/** 這次遊戲順序 */
-	public static final int $2056 = 2056;
-	/** 分數 */
-	public static final int $2057 = 2057;
-	/** 順序 */
-	public static final int $2058 = 2058;
-	/** 參加者 */
-	public static final int $2059 = 2059;
-	/** 處理中，請稍後。 */
-	public static final int $2060 = 2060;
-	/** 強化數值12以下的魔族武器才能使用。 */
-	public static final int $2061 = 2061;
-	/** 申請同盟申請了.請稍等. */
-	public static final int $2062 = 2062;
-	/** 同盟中無法加入聯合血盟. */
-	public static final int $2063 = 2063;
-	/** 無法變更副王族階級. */
-	public static final int $2064 = 2064;
-	/** 只能對比自己低階級才能給予稱號. */
-	public static final int $2065 = 2065;
-	/** Edward */
-	public static final int $2066 = 2066;
-	/** Percy */
-	public static final int $2067 = 2067;
-	/** 對自己較低階級才能變更. */
-	public static final int $2068 = 2068;
-	/** 相關玩家目前並不是登入中. */
-	public static final int $2069 = 2069;
-	/** 聯合血盟的情況12名為止可命名為守護騎士. */
-	public static final int $2070 = 2070;
-	/** 一般血盟的情況5人為止可命名為守護騎士. */
-	public static final int $2071 = 2071;
-	/** 侏儒的吶喊：哈爾巴斯的追縱者奈垃拜垃斯為了守護這才聚集在這.請準備. */
-	public static final int $2072 = 2072;
-	/** 侏儒的吶喊：奈垃拜垃斯是地獄犬與人類中間的樣貌.非常有智慧並且火系列非常強. */
-	public static final int $2073 = 2073;
-	/** 侏儒的吶喊：為了守護火龍巴拉卡斯的安息暗黑龍哈爾巴斯所派出的手下. */
-	public static final int $2074 = 2074;
-	/** 侏儒的吶喊：屠龍劍!有做好打倒巴拉卡斯的準備嗎?! */
-	public static final int $2075 = 2075;
-	/** 侏儒的吶喊：巴拉卡斯的劍是誕生了停止安息的勇士們. */
-	public static final int $2076 = 2076;
-	/** STR_DO_YOU_WANT_TO_CLEAR_SPELL_ENCHANTS */
-	public static final int $2077 = 2077;
-	/** STR_SPELL_SUCCESSFULLY_ENCHANTED */
-	public static final int $2078 = 2078;
-	/** STR_SPELL_FAILED_TO_ENCHANT */
-	public static final int $2079 = 2079;
-	/** STR_CANT_ENCHANT_SPELL_ANYMORE */
-	public static final int $2080 = 2080;
-	/** 巴拉卡斯：是哪個不怕死的傢伙侵入到這身雷爾身上呢? */
-	public static final int $2081 = 2081;
-	/** 巴拉卡斯：又是偷取寶物的小矮人嗎?! */
-	public static final int $2082 = 2082;
-	/** 巴拉卡斯：呵哈哈哈!亞丁大陸所厲害的龍遠征大軍! */
-	public static final int $2083 = 2083;
-	/** 巴拉卡斯：竟然不怕死跑到我聖所.! 你覺悟吧! */
-	public static final int $2084 = 2084;
-	/** 巴拉卡斯：喝嗚..憤怒已衝到上天去了! */
-	public static final int $2085 = 2085;
-	/** 吉倫：你的頭顱將會落地。 */
-	public static final int $2086 = 2086;
-	/** 巴拉卡斯:呵嗚!!你是誰?! */
-	public static final int $2087 = 2087;
-	/** 吉倫：我是亞丁法師吉倫!我已準備好即將打倒你!你覺悟吧! */
-	public static final int $2088 = 2088;
-	/** 巴拉卡斯：你這傢伙.!!不要取笑我! */
-	public static final int $2089 = 2089;
-	/** 巴拉卡斯：你..這傢伙!讓我火大了! */
-	public static final int $2090 = 2090;
-	/** 吉倫：勇士們.魔法準備已做好了!馬上在那邊以死亡騎士召喚! */
-	public static final int $2091 = 2091;
-	/** 巴拉卡斯：好酷?! 死亡騎士?! */
-	public static final int $2092 = 2092;
-	/** 死亡騎士：我..等這天..等很久了..除掉你..將討回我的同室..冤魂.. */
-	public static final int $2093 = 2093;
-	/** 巴拉卡斯：呵哈哈.全部..殺光! */
-	public static final int $2094 = 2094;
-	/** 巴拉卡斯：嗚嗚..這不像話!憤怒的詛咒將在你們那邊!席琳.我的母親,請接受我的生命… */
-	public static final int $2095 = 2095;
-	/** 吉倫：嗚嗚終於打倒了!全都是亞丁的真正英雄阿! */
-	public static final int $2096 = 2096;
-	/** 死亡騎士：我..我也..好..感謝.. */
-	public static final int $2097 = 2097;
-	/** 吉倫：請安息吧.. */
-	public static final int $2098 = 2098;
-	/** 巴拉卡斯：呵哈哈. 不自量力的傢伙, 這裡會是你們的墳墓! */
-	public static final int $2099 = 2099;
-	/** 吉倫：哎唷..失敗了嗎?..我會馬上使用空間移動魔法就你了. */
-	public static final int $2100 = 2100;
-	/** 火 */
-	public static final int $2101 = 2101;
-	/** 烈焰 */
-	public static final int $2102 = 2102;
-	/** 火靈 */
-	public static final int $2103 = 2103;
-	/** 水 */
-	public static final int $2104 = 2104;
-	/** 海嘯 */
-	public static final int $2105 = 2105;
-	/** 水靈 */
-	public static final int $2106 = 2106;
-	/** 土之 */
-	public static final int $2107 = 2107;
-	/** 崩裂 */
-	public static final int $2108 = 2108;
-	/** 地靈 */
-	public static final int $2109 = 2109;
-	/** 風 */
-	public static final int $2110 = 2110;
-	/** 暴風 */
-	public static final int $2111 = 2111;
-	/** 風靈 */
-	public static final int $2112 = 2112;
-	/** 祝福 */
-	public static final int $2113 = 2113;
-	/** 詛咒 */
-	public static final int $2114 = 2114;
-	/** 一般 */
-	public static final int $2115 = 2115;
-	/** 經驗值獲得量增加40% */
-	public static final int $2116 = 2116;
-	/** 經驗值獲得量增加30% */
-	public static final int $2117 = 2117;
-	/** 血盟名稱 */
-	public static final int $2118 = 2118;
-	/** 血盟創立日 */
-	public static final int $2119 = 2119;
-	/** 釣魚的時候不可以開個人商店 */
-	public static final int $2120 = 2120;
-	/** 生存的吶喊有效期限有變更了. */
-	public static final int $2121 = 2121;
-	/** STR_GET_SPECIFIED_CHARACTER_ONLY 有只有指定的角色才能受領的道具. */
-	public static final int $2122 = 2122;
-	/** 已經在保護中的道具上無法使用. */
-	public static final int $2123 = 2123;
-	/** 無法在封印的道具上使用. */
-	public static final int $2124 = 2124;
-	/** 把%s任命為%s。 */
-	public static final int $2125 = 2125;
-	/** 游標變更 */
-	public static final int $2126 = 2126;
-	/** 變更了滑鼠游標 */
-	public static final int $2127 = 2127;
-	/** STR_CANT_USE_LEVELUPBONUSTICKET_NOW */
-	public static final int $2128 = 2128;
-	/** OS的資安水準是最新狀態. 因此身體和心理上可以感覺變強。 */
-	public static final int $2129 = 2129;
-	/** 欄位空了。 */
-	public static final int $2130 = 2130;
-	/** 信箱認證是等待中的帳號 */
-	public static final int $2131 = 2131;
-	/** 物理攻擊+1、魔法攻擊+1、傷害減免+3、體力上限+30、魔力上限+30。 */
-	public static final int $2132 = 2132;
-	/** 帳號時間到期與司服器連接斷掉 */
-	public static final int $2133 = 2133;
-	/** 在夢中不會受到死亡懲罰。 */
-	public static final int $2134 = 2134;
-	/** 總金額無法超過 %d金幣。 */
-	public static final int $2135 = 2135;
-	/** 傳送所在位置。 */
-	public static final int $2136 = 2136;
-	/** 可傳送所在位置。 */
-	public static final int $2137 = 2137;
-	/** 無法傳送所在位置。 */
-	public static final int $2138 = 2138;
-	/** 該區域的位置無法進行傳送。 */
-	public static final int $2139 = 2139;
-	/** 獲得龍的力量, 以綠寶石的氣息提升EXP獎勵為154%。 */
-	public static final int $2140 = 2140;
-	/** 請選擇魔法娃娃。 */
-	public static final int $2141 = 2141;
-	/** 獲得龍的力量. 目前無法獲得綠寶石的氣息。 */
-	public static final int $2142 = 2142;
-	/** 您的階級無法賦予稱號。 */
-	public static final int $2143 = 2143;
-	/** STR_CANT_SELL_UNIDENTIFIED, */
-	public static final int $2144 = 2144;
-	/** 因使用龍之綠寶石所以二個小時內無法使用。 */
-	public static final int $2145 = 2145;
-	/** 因使用龍之綠寶石所以二個小時內其它寶石無法使用。 */
-	public static final int $2146 = 2146;
-	/** 因使用龍之綠寶石所以二個小時內無法使用。 */
-	public static final int $2147 = 2147;
-	/** %s請輸入血盟員的新階級. [階級 = 守護騎士, 修習騎士, 一般] */
-	public static final int $2148 = 2148;
-	/** \f1請輸入以下內容: "/階級 \f0角色名稱 階級[守護騎士, 修習騎士, 一般]\f1" */
-	public static final int $2149 = 2149;
-	/** 請輸入階級變更人的名稱和階級. [階級 = 守護騎士, 修習騎士, 一般] */
-	public static final int $2150 = 2150;
-	/** STR_NEED_PLEDGE_OWNER_LOGIN */
-	public static final int $2151 = 2151;
-	/** STR_FAILED_TO_SPELL_BECAUSE_OF_LOW_SPELL_LEVEL */
-	public static final int $2152 = 2152;
-	/** 10等級以上才能向血盟員賦予稱號。 */
-	public static final int $2153 = 2153;
-	/** 40等級以上才能向血盟員賦予稱號。 */
-	public static final int $2154 = 2154;
-	/** 45等級以上才能向血盟員任命階級。 */
-	public static final int $2155 = 2155;
-	/** 獲得體力上限+50、魔力上限+30、體力恢復+1、魔力恢復+1的效果。 */
-	public static final int $2156 = 2156;
-	/** 由於第3階段性向值獎勵每秒體力值恢復5%。 */
-	public static final int $2157 = 2157;
-	/** 由於第3階段性向值獎勵每秒體力值減少5%。 */
-	public static final int $2158 = 2158;
-	/** 以高潔的信任使武器發光。 */
-	public static final int $2159 = 2159;
-	/** 以冷靜的判斷使武器發光。 */
-	public static final int $2160 = 2160;
-	/** 滲入守護騎士的意志。 */
-	public static final int $2161 = 2161;
-	/** 固執的意志讓負擔變輕。 */
-	public static final int $2162 = 2162;
-	/** 血流像天鵝的翅膀一樣柔軟。 */
-	public static final int $2163 = 2163;
-	/** 全身像獅子的步伐一樣神速。 */
-	public static final int $2164 = 2164;
-	/** 國王的號令引領勇猛。 */
-	public static final int $2165 = 2165;
-	/** 國王的加護守護著你。 */
-	public static final int $2166 = 2166;
-	/** 國王的信任以用勝利的箭頭回答。 */
-	public static final int $2167 = 2167;
-	/** 國王的智慧引領出隱藏的魔力。 */
-	public static final int $2168 = 2168;
-	/** 獅子的咆哮制伏了箭矢。 */
-	public static final int $2169 = 2169;
-	/** 天鵝的哭聲制伏了魔法。 */
-	public static final int $2170 = 2170;
-	/** 國王的號令喚出守護騎士的靈魂。 */
-	public static final int $2171 = 2171;
-	/** 國王的加護滲入全身。 */
-	public static final int $2172 = 2172;
-	/** 國王的信任召喚出守護妖精的靈魂。 */
-	public static final int $2173 = 2173;
-	/** 國王的智慧呼喚出大魔法師的靈魂。 */
-	public static final int $2174 = 2174;
-	/** 帝王的權位使身體更堅固。 */
-	public static final int $2175 = 2175;
-	/** 帝王的權位使精神更集中。 */
-	public static final int $2176 = 2176;
-	/** 盔甲變得更加堅固。 */
-	public static final int $2177 = 2177;
-	/** 集中在盾牌上後，迴避近身攻擊。 */
-	public static final int $2178 = 2178;
-	/** 集中在盾牌上後，迴避魔法攻擊。 */
-	public static final int $2179 = 2179;
-	/** 冷靜地看出對方的近身攻擊。 */
-	public static final int $2180 = 2180;
-	/** 騎士笨重的盾牌使身體變緊繃。 */
-	public static final int $2181 = 2181;
-	/** 巨劍的衝擊讓全身昏迷。 */
-	public static final int $2182 = 2182;
-	/** 堅韌的精神力讓盔甲更堅固。 */
-	public static final int $2183 = 2183;
-	/** 集中在盾牌上後，迴避箭頭攻擊。 */
-	public static final int $2184 = 2184;
-	/** 阻止武器後，做好讓逆擊的準備。 */
-	public static final int $2185 = 2185;
-	/** 在盾牌上，刻了反擊魔法的紋章。 */
-	public static final int $2186 = 2186;
-	/** 騎士的老練制伏了敵人的武器。 */
-	public static final int $2187 = 2187;
-	/** 黑帝斯的 氣魄已經刻在你的巨劍上。 */
-	public static final int $2188 = 2188;
-	/** 防禦魔法的小葉子出現。 */
-	public static final int $2189 = 2189;
-	/** 有點痛但是心情逐漸變平穩。 */
-	public static final int $2190 = 2190;
-	/** 安特的結實給予保護。 */
-	public static final int $2191 = 2191;
-	/** 在召喚術上使用神速語言的密語。 */
-	public static final int $2192 = 2192;
-	/** 在世界樹的葉子上暫時託付行李。 */
-	public static final int $2193 = 2193;
-	/** 母親的歌曲賦予手指力量。 */
-	public static final int $2194 = 2194;
-	/** 土地之歌讓皮膚更加緊實。 */
-	public static final int $2195 = 2195;
-	/** 腿被巨龍的爪割傷。 */
-	public static final int $2196 = 2196;
-	/** 火之歌點燃了勇氣。 */
-	public static final int $2197 = 2197;
-	/** 水之歌賦予治癒的祝福。 */
-	public static final int $2198 = 2198;
-	/** 風之歌讓弓絃顫舞。 */
-	public static final int $2199 = 2199;
-	/** 微風使長靴變輕。 */
-	public static final int $2200 = 2200;
-	/** 束縛的風綁住雙腳。 */
-	public static final int $2201 = 2201;
-	/** 感受到溫和生命的流動 */
-	public static final int $2202 = 2202;
-	/** 海嘯的精靈使之避開箭矢。 */
-	public static final int $2203 = 2203;
-	/** 如果請求的話，就會給予滅魔的審判。 */
-	public static final int $2204 = 2204;
-	/** 精靈加護消失。 */
-	public static final int $2205 = 2205;
-	/** 精靈的微笑鼓舞了智慧和力量。 */
-	public static final int $2206 = 2206;
-	/** 克雷的結界固定了身體。 */
-	public static final int $2207 = 2207;
-	/** 精靈的耳語讓身體變輕。 */
-	public static final int $2208 = 2208;
-	/** 在壓迫的狀況下也會湧出活力。 */
-	public static final int $2209 = 2209;
-	/** 伊格尼斯的火花湧現在武器上。 */
-	public static final int $2210 = 2210;
-	/** 即使在荒漠的狀況上也會湧現活力。 */
-	public static final int $2211 = 2211;
-	/** 雙手在被妖精的手銬給銬住了。 */
-	public static final int $2212 = 2212;
-	/** 在箭矢前面即將屈服的命運。 */
-	public static final int $2213 = 2213;
-	/** 完結的話，就會降下沉默的審判。 */
-	public static final int $2214 = 2214;
-	/** 克雷強大的結界保護了你， */
-	public static final int $2215 = 2215;
-	/** 伊格尼斯的力量讓短劍變得更輕。 */
-	public static final int $2216 = 2216;
-	/** 伊格尼斯的憤怒融化了武器。 */
-	public static final int $2217 = 2217;
-	/** 在治癒的卷軸裡充滿被污染的力量。 */
-	public static final int $2218 = 2218;
-	/** 在弓絃上充滿了暴風的精靈。 */
-	public static final int $2219 = 2219;
-	/** 感受到大精靈溫暖的雙手。 */
-	public static final int $2220 = 2220;
-	/** 恢復的戒指綁在刑具上。 */
-	public static final int $2221 = 2221;
-	/** 治癒的藥水上充滿污染的力量。 */
-	public static final int $2222 = 2222;
-	/** 大精靈的祝福充滿在披風上。 */
-	public static final int $2223 = 2223;
-	/** 伊娃的手阻止了箭矢。 */
-	public static final int $2224 = 2224;
-	/** 全部恢復綁在燃燒的刑具上。 */
-	public static final int $2225 = 2225;
-	/** 伊娃之歌賦予治癒的祝福。 */
-	public static final int $2226 = 2226;
-	/** 為了魔法防禦的結界製作 */
-	public static final int $2227 = 2227;
-	/** 為了減少重量而畫出的魔法陣。 */
-	public static final int $2228 = 2228;
-	/** 魔力恢復的咒文加在盔甲上。 */
-	public static final int $2229 = 2229;
-	/** 受到擋住視野的詛咒。 */
-	public static final int $2230 = 2230;
-	/** 以肉體的苦行引領精神。 */
-	public static final int $2231 = 2231;
-	/** 以苦痛的集中力引領精神。 */
-	public static final int $2232 = 2232;
-	/** 畫上攻擊魔法抵檔的紋路。 */
-	public static final int $2233 = 2233;
-	/** 在魔法的力量支配雙腳。 */
-	public static final int $2234 = 2234;
-	/** 受到治癒魔法減半的結界。 */
-	public static final int $2235 = 2235;
-	/** 魔力增加的咒文纏繞武器。 */
-	public static final int $2236 = 2236;
-	/** 大魔法師宙斯的指導再次出現。 */
-	public static final int $2237 = 2237;
-	/** 神速的咒文環繞全身。 */
-	public static final int $2238 = 2238;
-	/** 衰弱的靈魂支配肉體。 */
-	public static final int $2239 = 2239;
-	/** 在靴子上產生神速的圖樣。 */
-	public static final int $2240 = 2240;
-	/** 宙斯的抵抗石產生在肉體上。 */
-	public static final int $2241 = 2241;
-	/** 產生大魔法師海拉的紅色圖樣。 */
-	public static final int $2242 = 2242;
-	/** 感受到治癒魔法陣的效果。 */
-	public static final int $2243 = 2243;
-	/** 因海拉的詛咒而無法說話。 */
-	public static final int $2244 = 2244;
-	/** 宙斯的抵抗石產生在精神上。 */
-	public static final int $2245 = 2245;
-	/** 藥水固體化後，無法服用。 */
-	public static final int $2246 = 2246;
-	/** 受到肉體沉睡詛咒。 */
-	public static final int $2247 = 2247;
-	/** 設立出絕對防禦的結界。 */
-	public static final int $2248 = 2248;
-	/** 褪去肉體和精神的界限。 */
-	public static final int $2249 = 2249;
-	/** 因海拉的詛咒而使雙手被支配。 */
-	public static final int $2250 = 2250;
-	/** 賦予召喚術產生肉體狂亂咒文。 */
-	public static final int $2251 = 2251;
-	/** 賦予召喚術產生魔力爆發咒文。 */
-	public static final int $2252 = 2252;
-	/** 感受到強韌力量的顫慄。 */
-	public static final int $2253 = 2253;
-	/** 闇黑保護幕覆蓋全身。 */
-	public static final int $2254 = 2254;
-	/** 在武器上塗上致命的毒藥。 */
-	public static final int $2255 = 2255;
-	/** 感受到俐落敏捷的顫慄。 */
-	public static final int $2256 = 2256;
-	/** 麻痺毒粉進入眼睛。 */
-	public static final int $2257 = 2257;
-	/** 可以不留痕跡的走路。 */
-	public static final int $2258 = 2258;
-	/** 除去邪念並集中在破壞上。 */
-	public static final int $2259 = 2259;
-	/** 注入對其他毒藥免疫的強毒。 */
-	public static final int $2260 = 2260;
-	/** 震憾陰影後引起混亂。 */
-	public static final int $2261 = 2261;
-	/** 狂奔後，在雙刀流上極度集中。 */
-	public static final int $2262 = 2262;
-	/** 以黑暗預言迴避近身攻擊。 */
-	public static final int $2263 = 2263;
-	/** 無情黑暗力量滲入武器。 */
-	public static final int $2264 = 2264;
-	/** 行李的重量分別給予影子攜帶。 */
-	public static final int $2265 = 2265;
-	/** 狂奔後， 在鋼爪上極度集中。 */
-	public static final int $2266 = 2266;
-	/** 集中精神後，以地龍覺醒。 */
-	public static final int $2267 = 2267;
-	/** 引出龍族源源不盡的生命力。 */
-	public static final int $2268 = 2268;
-	/** 皮膚像龍鱗片一樣結實。 */
-	public static final int $2269 = 2269;
-	/** 在盔甲上發生致命的龜裂。 */
-	public static final int $2270 = 2270;
-	/** 集中精神後，以水龍覺醒。 */
-	public static final int $2271 = 2271;
-	/** 以強力的力量，和武器成為一體。 */
-	public static final int $2272 = 2272;
-	/** 因判斷混亂而無法迴避。 */
-	public static final int $2273 = 2273;
-	/** 集中精神後，以火龍覺醒。 */
-	public static final int $2274 = 2274;
-	/** 壓抑的鉤子使腳被抓住。 */
-	public static final int $2275 = 2275;
-	/** 制伏敵人後，使之喪失戰意。 */
-	public static final int $2276 = 2276;
-	/** 鱗片碎片留在敵方皮膚上方。 */
-	public static final int $2277 = 2277;
-	/** 集中精神後，以風龍覺醒。 */
-	public static final int $2278 = 2278;
-	/** 雷擊的衝擊而使手臂麻木。 */
-	public static final int $2279 = 2279;
-	/** 地龍狂奔即將爆發。 */
-	public static final int $2280 = 2280;
-	/** 水龍狂奔即將爆發。 */
-	public static final int $2281 = 2281;
-	/** 火龍狂奔即將爆發。 */
-	public static final int $2282 = 2282;
-	/** 因食人巨魔的幻象而使力氣提高。 */
-	public static final int $2283 = 2283;
-	/** 因混亂的風神而迴避敵方的攻擊。 */
-	public static final int $2284 = 2284;
-	/** 不能根據自己的意志移動嘴巴。 */
-	public static final int $2285 = 2285;
-	/** 受到激昂方塊的影響。 */
-	public static final int $2286 = 2286;
-	/** 因巫妖的幻象而使魔力提高。 */
-	public static final int $2287 = 2287;
-	/** 不能根據自己的意志移動身體。 */
-	public static final int $2288 = 2288;
-	/** 精神的穩定使恢復力增加。 */
-	public static final int $2289 = 2289;
-	/** 受到波長方塊的影響。 */
-	public static final int $2290 = 2290;
-	/** 因高崙的幻象使防禦力提高。 */
-	public static final int $2291 = 2291;
-	/** 不能根據自己的意志使用力量。 */
-	public static final int $2292 = 2292;
-	/** 掉入無法瞬間拒絕的夢裡。 */
-	public static final int $2293 = 2293;
-	/** 因幻術而忘記痛苦。 */
-	public static final int $2294 = 2294;
-	/** 受到閃光方塊的影響。 */
-	public static final int $2295 = 2295;
-	/** 掉入化身幻像的毀滅誘惑裡。 */
-	public static final int $2296 = 2296;
-	/** 因幻術而發現潛能。 */
-	public static final int $2297 = 2297;
-	/** 因幻術而使你的潛能沉睡。 */
-	public static final int $2298 = 2298;
-	/** 受到平靜方塊的影響。 */
-	public static final int $2299 = 2299;
-	/** 席琳的歌使力量變大。 */
-	public static final int $2300 = 2300;
-	/** 安塔瑞斯鱗甲出現。 */
-	public static final int $2301 = 2301;
-	/** 法利昂的血流流動。 */
-	public static final int $2302 = 2302;
-	/** 巴拉卡斯腳趾出現。 */
-	public static final int $2303 = 2303;
-	/** 受到沉默的審判。 */
-	public static final int $2304 = 2304;
-	/** 受到滅魔的審判。 */
-	public static final int $2305 = 2305;
-	/** 狂奔後，雙刀失去理性。 */
-	public static final int $2306 = 2306;
-	/** 狂奔後，鋼爪失去理性。 */
-	public static final int $2307 = 2307;
-	/** 樹木精靈的根綁住雙腳。 */
-	public static final int $2308 = 2308;
-	/** 無法意志憤怒。 */
-	public static final int $2309 = 2309;
-	/** 颱風的力量支配手臂。 */
-	public static final int $2310 = 2310;
-	/** 喪失神速和智慧。 */
-	public static final int $2311 = 2311;
-	/** 高潔的氣息從武器上消失。 */
-	public static final int $2312 = 2312;
-	/** 冷靜的氣息從武器上消失。 */
-	public static final int $2313 = 2313;
-	/** 守護的意志消失。 */
-	public static final int $2314 = 2314;
-	/** 減輕的意志消失。 */
-	public static final int $2315 = 2315;
-	/** 恢復的翅膀消失。 */
-	public static final int $2316 = 2316;
-	/** 神速的意志消失。 */
-	public static final int $2317 = 2317;
-	/** 勇猛的旗幟.隊伍消失。 */
-	public static final int $2318 = 2318;
-	/** 鐵壁的旗幟.隊伍消失。 */
-	public static final int $2319 = 2319;
-	/** 神箭手的旗幟.隊伍消失。 */
-	public static final int $2320 = 2320;
-	/** 滅魔的旗幟.隊伍消失。 */
-	public static final int $2321 = 2321;
-	/** 回應:阻擋縫隙的在消失。 */
-	public static final int $2322 = 2322;
-	/** 回應:魔力消失。 */
-	public static final int $2323 = 2323;
-	/** 勇猛的 旗幟:血盟 消失。 */
-	public static final int $2324 = 2324;
-	/** 鐵壁的 旗幟:血盟 消失。 */
-	public static final int $2325 = 2325;
-	/** 神箭手的 旗幟:血盟 消失。 */
-	public static final int $2326 = 2326;
-	/** 滅魔的 旗幟:血盟 消失。 */
-	public static final int $2327 = 2327;
-	/** 帝王的力量消失。 */
-	public static final int $2328 = 2328;
-	/** 帝王的省察 消失。 */
-	public static final int $2329 = 2329;
-	/** 防禦術解除。 */
-	public static final int $2330 = 2330;
-	/** 防禦術:近身迴避解除。 */
-	public static final int $2331 = 2331;
-	/** 防禦術:魔法迴避解除。 */
-	public static final int $2332 = 2332;
-	/** 洞悉攻擊解除。 */
-	public static final int $2333 = 2333;
-	/** 防禦術:束縛解除。 */
-	public static final int $2334 = 2334;
-	/** 巨劍術:沖擊波解除。 */
-	public static final int $2335 = 2335;
-	/** 衝擊減緩解除。 */
-	public static final int $2336 = 2336;
-	/** 防禦術:箭矢迴避解除。 */
-	public static final int $2337 = 2337;
-	/** 巨劍術:武器阻擋解除。 */
-	public static final int $2338 = 2338;
-	/** 防禦術:魔法反擊解除。 */
-	public static final int $2339 = 2339;
-	/** 預示制伏解除。 */
-	public static final int $2340 = 2340;
-	/** 黑帝斯 氣魄解除。 */
-	public static final int $2341 = 2341;
-	/** 滅魔的 葉子恢復。 */
-	public static final int $2342 = 2342;
-	/** 淨化的痛苦恢復。 */
-	public static final int $2343 = 2343;
-	/** 安特的加護恢復。 */
-	public static final int $2344 = 2344;
-	/** 召喚術神速的恢復。 */
-	public static final int $2345 = 2345;
-	/** 世界樹葉背包恢復。 */
-	public static final int $2346 = 2346;
-	/** 集中的箭矢頭恢復。 */
-	public static final int $2347 = 2347;
-	/** 地之歌恢復。 */
-	public static final int $2348 = 2348;
-	/** 地之爪手恢復。 */
-	public static final int $2349 = 2349;
-	/** 火之歌恢復。 */
-	public static final int $2350 = 2350;
-	/** 生命的祝福恢復。 */
-	public static final int $2351 = 2351;
-	/** 風之歌恢復。 */
-	public static final int $2352 = 2352;
-	/** 風之長靴恢復。 */
-	public static final int $2353 = 2353;
-	/** 束縛之風恢復。 */
-	public static final int $2354 = 2354;
-	/** 生命的流動恢復。 */
-	public static final int $2355 = 2355;
-	/** 海嘯的房壁恢復。 */
-	public static final int $2356 = 2356;
-	/** 滅魔的消滅恢復。 */
-	public static final int $2357 = 2357;
-	/** 精靈的消滅恢復。 */
-	public static final int $2358 = 2358;
-	/** 精靈的智慧恢復。 */
-	public static final int $2359 = 2359;
-	/** 恢復克雷的結界。 */
-	public static final int $2360 = 2360;
-	/** 精靈的撒嬌恢復。 */
-	public static final int $2361 = 2361;
-	/** 恢復克雷的活力。 */
-	public static final int $2362 = 2362;
-	/** 伊格尼斯的束縛力恢復。 */
-	public static final int $2363 = 2363;
-	/** 伊格尼斯的活力恢復。 */
-	public static final int $2364 = 2364;
-	/** 妖精手銬恢復。 */
-	public static final int $2365 = 2365;
-	/** 不幸的標的恢復。 */
-	public static final int $2366 = 2366;
-	/** 沉默之鏡恢復。 */
-	public static final int $2367 = 2367;
-	/** 克雷的保護恢復。 */
-	public static final int $2368 = 2368;
-	/** 伊格尼斯的短劍恢復。 */
-	public static final int $2369 = 2369;
-	/** 伊格尼斯的契約 恢復。 */
-	public static final int $2370 = 2370;
-	/** 被污染的治癒恢復。 */
-	public static final int $2371 = 2371;
-	/** 暴風之矢恢復。 */
-	public static final int $2372 = 2372;
-	/** 大精靈之手恢復。 */
-	public static final int $2373 = 2373;
-	/** 伊格尼斯的刑具 恢復。 */
-	public static final int $2374 = 2374;
-	/** 被污染的藥水 恢復。 */
-	public static final int $2375 = 2375;
-	/** 大精靈的披風恢復。 */
-	public static final int $2376 = 2376;
-	/** 伊娃的保護阻擋恢復。 */
-	public static final int $2377 = 2377;
-	/** 帕格立歐的刑具 恢復。 */
-	public static final int $2378 = 2378;
-	/** 伊娃的甘霖恢復。 */
-	public static final int $2379 = 2379;
-	/** 魔力保護阻擋消失。 */
-	public static final int $2380 = 2380;
-	/** 重量的消滅消失。 */
-	public static final int $2381 = 2381;
-	/** 瑪娜 恢復的盔甲消失。 */
-	public static final int $2382 = 2382;
-	/** 詛咒:闇黑消失。 */
-	public static final int $2383 = 2383;
-	/** 瑪娜的苦行 消失。 */
-	public static final int $2384 = 2384;
-	/** 瑪娜的集中消失。 */
-	public static final int $2385 = 2385;
-	/** 魔法阻擋消失。 */
-	public static final int $2386 = 2386;
-	/** 支配:移動妨礙 消失。 */
-	public static final int $2387 = 2387;
-	/** 殘敗的空間消失。 */
-	public static final int $2388 = 2388;
-	/** 魔力的武器消失。 */
-	public static final int $2389 = 2389;
-	/** 宙斯的祝福消失。 */
-	public static final int $2390 = 2390;
-	/** 神速的咒文消失。 */
-	public static final int $2391 = 2391;
-	/** 衰弱的肉身消失。 */
-	public static final int $2392 = 2392;
-	/** 神速的 長靴消失。 */
-	public static final int $2393 = 2393;
-	/** 宙斯的加護:物理消失。 */
-	public static final int $2394 = 2394;
-	/** 海拉的契約 消失。 */
-	public static final int $2395 = 2395;
-	/** 恢復的空間消失。 */
-	public static final int $2396 = 2396;
-	/** 海拉的鞍具消失。 */
-	public static final int $2397 = 2397;
-	/** 宙斯的加護:精神 消失。 */
-	public static final int $2398 = 2398;
-	/** 藥水封印消失。 */
-	public static final int $2399 = 2399;
-	/** 詛咒:睡眠消失。 */
-	public static final int $2400 = 2400;
-	/** 帝倫的加護 消失。 */
-	public static final int $2401 = 2401;
-	/** 專注和省察 消失。 */
-	public static final int $2402 = 2402;
-	/** 海拉的手銬消失。 */
-	public static final int $2403 = 2403;
-	/** 狂亂的啟示消失。 */
-	public static final int $2404 = 2404;
-	/** 暴走的啟示消失。 */
-	public static final int $2405 = 2405;
-	/** 強勢的姿勢已淨化。 */
-	public static final int $2406 = 2406;
-	/** 影子盾牌已淨化。 */
-	public static final int $2407 = 2407;
-	/** 死神的猛毒已淨化。. */
-	public static final int $2408 = 2408;
-	/** 俐落的姿勢已淨化。 */
-	public static final int $2409 = 2409;
-	/** 視線的消滅已淨化。. */
-	public static final int $2410 = 2410;
-	/** 無痕步伐已淨化。. */
-	public static final int $2411 = 2411;
-	/** 毀滅冥想已淨化。. */
-	public static final int $2412 = 2412;
-	/** 免疫血流已淨化。 */
-	public static final int $2413 = 2413;
-	/** 影子標的已淨化。. */
-	public static final int $2414 = 2414;
-	/** 黑暗的賭注:雙刀流 已淨化。. */
-	public static final int $2415 = 2415;
-	/** 約束的會幣已淨化。 */
-	public static final int $2416 = 2416;
-	/** 空刀身已淨化。. */
-	public static final int $2417 = 2417;
-	/** 重力的消滅已淨化。. */
-	public static final int $2418 = 2418;
-	/** 黑暗的賭注:鋼爪已淨化。 */
-	public static final int $2419 = 2419;
-	/** 覺醒:地龍已消滅。 */
-	public static final int $2420 = 2420;
-	/** 不死的生命已消滅。 */
-	public static final int $2421 = 2421;
-	/** 奧拉奇里亞的鱗片已消滅。 */
-	public static final int $2422 = 2422;
-	/** 解除的一擊已消滅。 */
-	public static final int $2423 = 2423;
-	/** 覺醒:水龍已消滅。 */
-	public static final int $2424 = 2424;
-	/** 殺戮的衝動已消滅。 */
-	public static final int $2425 = 2425;
-	/** 平靜的分裂已消滅。 */
-	public static final int $2426 = 2426;
-	/** 覺醒:火龍已消滅。 */
-	public static final int $2427 = 2427;
-	/** 壓抑的鉤子已消滅。 */
-	public static final int $2428 = 2428;
-	/** 戰意喪失已消滅。 */
-	public static final int $2429 = 2429;
-	/** 尖刺的鱗片已消滅。 */
-	public static final int $2430 = 2430;
-	/** 覺醒:風龍已消滅。 */
-	public static final int $2431 = 2431;
-	/** 雷擊的暗襲已消滅。 */
-	public static final int $2432 = 2432;
-	/** 狂奔的壓抑顫慄已消滅。 */
-	public static final int $2433 = 2433;
-	/** 狂奔的壓抑顫慄已消滅。. */
-	public static final int $2434 = 2434;
-	/** 狂奔的激昂顫慄已消滅。 */
-	public static final int $2435 = 2435;
-	/** 幻術:食人巨魔的本能解放。 */
-	public static final int $2436 = 2436;
-	/** 混亂的分身解開。 */
-	public static final int $2437 = 2437;
-	/** 回轉咒文解開。 */
-	public static final int $2438 = 2438;
-	/** 激昂的方塊已解開。 */
-	public static final int $2439 = 2439;
-	/** 幻術:巫妖的奸詐已解開。 */
-	public static final int $2440 = 2440;
-	/** 受阻礙的肉體已解開。 */
-	public static final int $2441 = 2441;
-	/** 平穩的教導解開。 */
-	public static final int $2442 = 2442;
-	/** 波長的方塊已解開。 */
-	public static final int $2443 = 2443;
-	/** 幻術:高崙的強力解開。 */
-	public static final int $2444 = 2444;
-	/** 受阻礙的手腳解開。 */
-	public static final int $2445 = 2445;
-	/** 夢幻迷路已解開。 */
-	public static final int $2446 = 2446;
-	/** 苦痛忘卻已解開。 */
-	public static final int $2447 = 2447;
-	/** 閃光的方塊已解開。 */
-	public static final int $2448 = 2448;
-	/** 幻術:火神的冒失解開。 */
-	public static final int $2449 = 2449;
-	/** 才能的發掘解開。 */
-	public static final int $2450 = 2450;
-	/** 才能的消滅已解開。 */
-	public static final int $2451 = 2451;
-	/** 平靜的方塊已解開。 */
-	public static final int $2452 = 2452;
-	/** 激情的合音解開。 */
-	public static final int $2453 = 2453;
-	/** 安塔瑞斯鱗甲已消滅。 */
-	public static final int $2454 = 2454;
-	/** 法利昂的血流已消滅。 */
-	public static final int $2455 = 2455;
-	/** 巴拉卡斯的腳趾已消滅。 */
-	public static final int $2456 = 2456;
-	/** 沉默的審判已恢復。 */
-	public static final int $2457 = 2457;
-	/** 滅魔的審判已恢復。 */
-	public static final int $2458 = 2458;
-	/** 雙刀流已恢復冷靜。 */
-	public static final int $2459 = 2459;
-	/** 鋼爪已恢復冷靜。 */
-	public static final int $2460 = 2460;
-	/** 精靈的根恢復。 */
-	public static final int $2461 = 2461;
-	/** 再次找回平靜。 */
-	public static final int $2462 = 2462;
-	/** 顫抖的手已經恢復安定。 */
-	public static final int $2463 = 2463;
-	/** 失去的戰意已經找回。 */
-	public static final int $2464 = 2464;
-	/** STR_CANT_ENCHANT_SPELL_ON_LIST_PAGE */
-	public static final int $2465 = 2465;
-	/** STR_CANT_ENCHANT_SPELL */
-	public static final int $2466 = 2466;
-	/** 使用不被允許的IP或無法通過正常的網路通信而連線結束。 */
-	public static final int $2467 = 2467;
-	/** 黑帝斯的力量讓兩個拳頭燃起火焰。 */
-	public static final int $2468 = 2468;
-	/** 黑帝斯的力量消失。 */
-	public static final int $2469 = 2469;
-	/** 君主現在處於忙碌的狀態，請稍後再詢問。 */
-	public static final int $2470 = 2470;
-	/** 如果要獲得該權限，需要25等級以上。 */
-	public static final int $2471 = 2471;
-	/** 如果要獲得該權限，需要 40等級以上。 */
-	public static final int $2472 = 2472;
-	/** 守護騎士階級要到40等級以上才能賦予血盟員資格。 */
-	public static final int $2473 = 2473;
-	/** 守護騎士階級無法賦予其他血盟員的稱號。 */
-	public static final int $2474 = 2474;
-	/** 聯合 */
-	public static final int $2475 = 2475;
-	/** 血盟規模 */
-	public static final int $2476 = 2476;
-	/** 只有魔法娃娃可以選擇。 */
-	public static final int $2477 = 2477;
-	/** 30分以內的魔法娃娃可以充電。 */
-	public static final int $2478 = 2478;
-	/** 生存的吶喊 %2d分鐘後可使用。 */
-	public static final int $2479 = 2479;
-	/** STR_TARGET_SKILL */
-	public static final int $2480 = 2480;
-	/** 未分出勝負之前，無法退出。 */
-	public static final int $2481 = 2481;
-	/** 不退的意志消失。 */
-	public static final int $2482 = 2482;
-	/** 身體裡深植的猛毒孢子流動。 */
-	public static final int $2483 = 2483;
-	/** 猛毒的孢子已淨化。 */
-	public static final int $2484 = 2484;
-	/** 業績 */
-	public static final int $2485 = 2485;
-	/** 情報 */
-	public static final int $2486 = 2486;
-	/** 現在 '封印解除卷軸'處於申請的狀態。申請取消可在網頁封印解除卷軸申請清單上進行。 */
-	public static final int $2487 = 2487;
-	/** STR_BEANFUN_LOGIN_ERROR */
-	public static final int $2488 = 2488;
-	/** \F3%s出現在沙漠地區。 */
-	public static final int $2489 = 2489;
-	/** 恭喜您！等成20等了！免費使用卷的使用資料已結束，1分鐘後遊戲會自動終止，請移動到安全地方並結束遊戲。 */
-	public static final int $2490 = 2490;
-	/** 家只能設置一個。 */
-	public static final int $2491 = 2491;
-	/** 必須先設置家才可。 */
-	public static final int $2492 = 2492;
-	/** 必須設置家外。 */
-	public static final int $2493 = 2493;
-	/** 必須設置家內。 */
-	public static final int $2494 = 2494;
-	/** 此為無法設置的城。 */
-	public static final int $2495 = 2495;
-	/** 必須在自己的盟屋設置。 */
-	public static final int $2496 = 2496;
-	/** 此為無法設置的地方。 */
-	public static final int $2497 = 2497;
-	/** 只有血盟君主才可。 */
-	public static final int $2498 = 2498;
-	/** 此為已設置的道具。 */
-	public static final int $2499 = 2499;
-	/** 為歸屬於地監的狀態，無法產生新的地監。 */
-	public static final int $2500 = 2500;
-	/** 經過30分後，原本在附加道具倉庫的「封印解除卷軸箱子」被刪除了。 */
-	public static final int $2501 = 2501;
-	/** 附加道具倉庫更新後，原先所開著的名單視窗已自動關閉，請再次重新開啟確認一次。 */
-	public static final int $2502 = 2502;
-	/** 在戰鬥伺服是不可加入/退出同盟的。 */
-	public static final int $2503 = 2503;
-	/** 副君主階級是無法把王族職業加入成血盟成員。 */
-	public static final int $2504 = 2504;
-	/** 唯有血盟指導者的君主可以驅逐。 */
-	public static final int $2505 = 2505;
-	/** STR_YOU_CANT_GIVE_TITLE_ANYONE, */
-	public static final int $2506 = 2506;
-	/** 領地佔領 */
-	public static final int $2507 = 2507;
-	/** 領地奪回 */
-	public static final int $2508 = 2508;
-	/** 領地防禦 */
-	public static final int $2509 = 2509;
-	/** 攪亂作戰 */
-	public static final int $2510 = 2510;
-	/** 奇岩警備塔 */
-	public static final int $2511 = 2511;
-	/** 妖魔警備塔 */
-	public static final int $2512 = 2512;
-	/** 肯特警備塔 */
-	public static final int $2513 = 2513;
-	/** 風木警備塔 */
-	public static final int $2514 = 2514;
-	/** 海音警備塔 */
-	public static final int $2515 = 2515;
-	/** 地底警備塔 */
-	public static final int $2516 = 2516;
-	/** 亞丁警備塔 */
-	public static final int $2517 = 2517;
-	/** 葡萄田 */
-	public static final int $2518 = 2518;
-	/** 胡椒農場 */
-	public static final int $2519 = 2519;
-	/** 製鹽所 */
-	public static final int $2520 = 2520;
-	/** 酒廠 */
-	public static final int $2521 = 2521;
-	/** 礦山 */
-	public static final int $2522 = 2522;
-	/** \F3請再次確認剩餘的滯留時間，確定要使用嗎？ */
-	public static final int $2523 = 2523;
-	/** 請選擇特產物道具。 */
-	public static final int $2524 = 2524;
-	/** 確定要使用已選擇的特產物嗎 (Y/N) */
-	public static final int $2525 = 2525;
-	/** 確認要販賣盟屋嗎？ (Y/N) */
-	public static final int $2526 = 2526;
-	/** 只能使用於特定T恤。 */
-	public static final int $2527 = 2527;
-	/** 你至今還沒有建盟屋。%n如果到%0月%1日%2點為止還沒建盟屋的話，則會強制驅逐請多加注意。%n%n */
-	public static final int $2528 = 2528;
-	/** 設置好的家可於10天後回收。 */
-	public static final int $2529 = 2529;
-	/** 設置好的特產物品消失了，確認要除去特產物傢俱嗎？ (Y/N) */
-	public static final int $2530 = 2530;
-	/** 玩家的角色由於違反營運政策而禁止聊天中，所剩時間為%0分鐘。 */
-	public static final int $2531 = 2531;
-	/** 如同曾警告過的，因你沒有蓋房子，現在要收回房子的所有權，違背領主之命的你會埋怨自己的。%n%n */
-	public static final int $2532 = 2532;
-	/** STR_NPC_LOC_INFO_LIST */
-	public static final int $2533 = 2533;
-	/**
-	 * 玩家的帳號已被確認為有商業性利用的行為，現在被限制無法使用所有遊戲服務的狀態。詳情請上 plaync網頁 (www.plaync.co.kr)
-	 * 的顧客中心來詢問。
-	 */
-	public static final int $2534 = 2534;
-	/** %0 : 剩餘時間 %1 分 */
-	public static final int $2535 = 2535;
-	/** 入場時間 */
-	public static final int $2536 = 2536;
-	/** 請輸入投標數量。 */
-	public static final int $2537 = 2537;
-	/**
-	 * 投標入場的上限是不可超過%d<BR>
-	 * 。
-	 */
-	public static final int $2538 = 2538;
-	/**
-	 * 投標時必須提出較高金額<BR>
-	 * 。
-	 */
-	public static final int $2539 = 2539;
-	/**
-	 * 輸入了比起拍賣物品數量還要多的投標數量。<BR>
-	 * 。
-	 */
-	public static final int $2540 = 2540;
-	/**
-	 * 必須輸入拍賣起價和即時賣價<BR>
-	 * 。
-	 */
-	public static final int $2541 = 2541;
-	/**
-	 * 即時購買價必須比起拍賣起價<BR>
-	 * 還要高。
-	 */
-	public static final int $2542 = 2542;
-	/**
-	 * 此為高價道具。<BR>
-	 * 請確認這價錢是否正確。
-	 */
-	public static final int $2543 = 2543;
-	/**
-	 * 消耗拍賣手續費%d金幣。<BR>
-	 * 即使取消拍賣/拍賣流標也不會退還手續費<BR>
-	 * 。請問要登記嗎？
-	 */
-	public static final int $2544 = 2544;
-	/**
-	 * 確認要消取該拍賣道具<BR>
-	 * 嗎？
-	 */
-	public static final int $2545 = 2545;
-	/**
-	 * 確認要刪除該拍賣物品的通知<BR>
-	 * 嗎？
-	 */
-	public static final int $2546 = 2546;
-	/** 拍賣物品的登記已完成。 */
-	public static final int $2547 = 2547;
-	/** 拍賣物品的投標已完成。 */
-	public static final int $2548 = 2548;
-	/** 拍賣物品的購買已完成。 */
-	public static final int $2549 = 2549;
-	/** 感興趣物品的登記已完成。 */
-	public static final int $2550 = 2550;
-	/** 經驗值恢復時會消耗救援證書。請問要讓經驗值恢復嗎？(Y/N) */
-	public static final int $2551 = 2551;
-	/** 煩請稍候再試一次！ */
-	public static final int $2552 = 2552;
-	/**
-	 * 無法購買自己登記的東西<BR>
-	 * 。
-	 */
-	public static final int $2553 = 2553;
-	/** 由於紅酒的效果，進距離攻擊力+1。 */
-	public static final int $2554 = 2554;
-	/** 由於白酒的效果，遠距離攻擊力+1。 */
-	public static final int $2555 = 2555;
-	/** 由於冰酒的效果，魔法命中率+3。 */
-	public static final int $2556 = 2556;
-	/** 材料：鮭魚1隻+特製料理醬 1個+香菜 1個+鹽1個 (體力上限+80、 體力回復+4。) */
-	public static final int $2557 = 2557;
-	/** 材料：鯛魚1隻+特製料理醬 1個+香菜 1個+鹽1個 (魔力上限+80、魔力回復+4。) */
-	public static final int $2558 = 2558;
-	/** 材料：發紅光的魚1隻+特製料理醬 1個+香菜 1個+鹽1個 (遠距離命中率+3和遠距離攻擊力+2。) */
-	public static final int $2559 = 2559;
-	/** 材料：發藍光的魚1隻+特製料理醬 1個+香菜 1個+鹽1個 (近距離命率+3和近距離攻擊力+2。) */
-	public static final int $2560 = 2560;
-	/** 材料：發白光的魚1隻+特製料理醬 1個+香菜 1個+鹽1個 (魔法防禦+18和屬性防禦+15。) */
-	public static final int $2561 = 2561;
-	/** 材料：發綠光的魚1隻+特製料理醬 1個+香菜 1個+鹽1個 (魔攻+2和魔法命中率+3。) */
-	public static final int $2562 = 2562;
-	/** 材料：鱈魚3隻+特製料理醬 1個+香菜 1個+鹽1個 (防禦+4。) */
-	public static final int $2563 = 2563;
-	/** 材料：珍奇的烏龜1隻+蘑菇胞子汁 1個+特製料理醬 1個+香菜 1個+鹽1個 (狩獵時取得的經驗值略微提升。) */
-	public static final int $2564 = 2564;
-	/** 體力上限+80、體力回復+4。 */
-	public static final int $2565 = 2565;
-	/** 魔力上限+80、魔力回復+4。 */
-	public static final int $2566 = 2566;
-	/** 遠距離命中率+3和遠距離攻擊力+2。 */
-	public static final int $2567 = 2567;
-	/** 近距離命中率+3和近距離攻擊力+2。 */
-	public static final int $2568 = 2568;
-	/** 魔法防禦+18和屬性防禦+15。 */
-	public static final int $2569 = 2569;
-	/** 魔攻+2和魔法命中率+3。 */
-	public static final int $2570 = 2570;
-	/** 防禦+4。 */
-	public static final int $2571 = 2571;
-	/** 狩獵時取得的經驗值略微提升。 */
-	public static final int $2572 = 2572;
-	/** STR_STATUS_EFFECT_MAGIC_BULLET */
-	public static final int $2573 = 2573;
-	/** 嗯嗯~？ */
-	public static final int $2574 = 2574;
-	/** 要看書嗎？呼嚕…呼嚕… */
-	public static final int $2575 = 2575;
-	/** 我強力的魔法…唉唷 */
-	public static final int $2576 = 2576;
-	/** 不錯~ 不錯~ */
-	public static final int $2577 = 2577;
-	/** 左顧…右盼… */
-	public static final int $2578 = 2578;
-	/** 好累阿~來睡覺吧！ */
-	public static final int $2579 = 2579;
-	/** 感受到魔法的力量…呃啊？…唉唷喂… */
-	public static final int $2580 = 2580;
-	/** 變小後腳步也變輕了呢！ */
-	public static final int $2581 = 2581;
-	/** 啦啦啦~啦啦~ */
-	public static final int $2582 = 2582;
-	/** 嘿嘿嘿~ */
-	public static final int $2583 = 2583;
-	/** 疑？哦~不！ */
-	public static final int $2584 = 2584;
-	/** 蹬蹬蹬~ */
-	public static final int $2585 = 2585;
-	/** 跟著節拍~ */
-	public static final int $2586 = 2586;
-	/** 轉的~ 性感點~ */
-	public static final int $2587 = 2587;
-	/** 可愛點~ 呀~ */
-	public static final int $2588 = 2588;
-	/** 優雅點~~ */
-	public static final int $2589 = 2589;
-	/** 真無聊~ */
-	public static final int $2590 = 2590;
-	/** 呃啊啊啊~！ */
-	public static final int $2591 = 2591;
-	/** 疑？！唉呀… */
-	public static final int $2592 = 2592;
-	/** 有氣無力地 */
-	public static final int $2593 = 2593;
-	/** ... */
-	public static final int $2594 = 2594;
-	/** 唉呀呀！ */
-	public static final int $2595 = 2595;
-	/** 舒展筋骨！哦阿阿？ */
-	public static final int $2596 = 2596;
-	/** 身體有點癢耶？ */
-	public static final int $2597 = 2597;
-	/** 好無聊啊~ */
-	public static final int $2598 = 2598;
-	/** 噗嗚~阿~阿！ */
-	public static final int $2599 = 2599;
-	/** 喂~很帥吧？ */
-	public static final int $2600 = 2600;
-	/** 嚓嚓 */
-	public static final int $2601 = 2601;
-	/** 你要等到何時？ */
-	public static final int $2602 = 2602;
-	/** 噗嗚~~ 啊~啊噗… */
-	public static final int $2603 = 2603;
-	/** 喂~我怎樣啊？ */
-	public static final int $2604 = 2604;
-	/** 一起去~ */
-	public static final int $2605 = 2605;
-	/** ...? */
-	public static final int $2606 = 2606;
-	/** 嗯？呃呀呀呀呀 */
-	public static final int $2607 = 2607;
-	/** 隱身！ */
-	public static final int $2608 = 2608;
-	/** 滴~滴~滴~ */
-	public static final int $2609 = 2609;
-	/** 你在幹麼？ */
-	public static final int $2610 = 2610;
-	/** 這是什麼？呃啊啊啊啊 */
-	public static final int $2611 = 2611;
-	/** 得躲起來！ */
-	public static final int $2612 = 2612;
-	/** 哪兒都一起~ */
-	public static final int $2613 = 2613;
-	/** 嘿嘿~ */
-	public static final int $2614 = 2614;
-	/** 保庇保庇保庇 呀~ */
-	public static final int $2615 = 2615;
-	/** 啊~！唉唷喂… */
-	public static final int $2616 = 2616;
-	/** 扣囉扣囉 */
-	public static final int $2617 = 2617;
-	/** 嘻嘻~ */
-	public static final int $2618 = 2618;
-	/** 保庇保庇保庇 喵~ */
-	public static final int $2619 = 2619;
-	/** 讚~! 嗚噗嗚噗~ */
-	public static final int $2620 = 2620;
-	/** 你要到哪邊？ */
-	public static final int $2621 = 2621;
-	/** 呼呼呼. */
-	public static final int $2622 = 2622;
-	/** 哎呀呀~太好了！ */
-	public static final int $2623 = 2623;
-	/** 給大家祝福~ */
-	public static final int $2624 = 2624;
-	/** 恰恰恰~ */
-	public static final int $2625 = 2625;
-	/** ？？ */
-	public static final int $2626 = 2626;
-	/** 哇嗚~ 太棒啦！ */
-	public static final int $2627 = 2627;
-	/** 哈哈哈~ */
-	public static final int $2628 = 2628;
-	/** 走路也要小心~ */
-	public static final int $2629 = 2629;
-	/** 嘿嘿~~ */
-	public static final int $2630 = 2630;
-	/** 看我弓箭的厲害吧！ 嚇！ */
-	public static final int $2631 = 2631;
-	/** 蝴蝶阿~ 蝴蝶阿~ 死吧！ */
-	public static final int $2632 = 2632;
-	/** 小心翼翼~ */
-	public static final int $2633 = 2633;
-	/** 真是漂亮的世界~ */
-	public static final int $2634 = 2634;
-	/** 嗯恰~ 疑？！ 嚇！ */
-	public static final int $2635 = 2635;
-	/** 是蝴蝶?~ 那~ 蟲好討厭! */
-	public static final int $2636 = 2636;
-	/** 一起去~ */
-	public static final int $2637 = 2637;
-	/** 嗯..呵嗯.. */
-	public static final int $2638 = 2638;
-	/** 出現吧方塊! 嚇! */
-	public static final int $2639 = 2639;
-	/** 巴巴巴巴巴~巴藍~ */
-	public static final int $2640 = 2640;
-	/** 踏步踏步 */
-	public static final int $2641 = 2641;
-	/** 有點詭異？ */
-	public static final int $2642 = 2642;
-	/** 給你看魔法方塊！ 疑？ */
-	public static final int $2643 = 2643;
-	/** 噗噗噗噗嗚~噗嗚~ */
-	public static final int $2644 = 2644;
-	/** 嗚..希望一起.. */
-	public static final int $2645 = 2645;
-	/** 嘿嘿~ */
-	public static final int $2646 = 2646;
-	/** 幻術的魔法~ 哇~幽靈！ */
-	public static final int $2647 = 2647;
-	/** 你要到哪~ 嘿嘿~ 礙~ */
-	public static final int $2648 = 2648;
-	/** 踏吧踏吧 */
-	public static final int $2649 = 2649;
-	/** 神秘的世界. */
-	public static final int $2650 = 2650;
-	/** 礙..幽靈好可怕.. */
-	public static final int $2651 = 2651;
-	/** 奇古獸阿~ 來和我玩吧~~ */
-	public static final int $2652 = 2652;
-	/** 你要去哪邊？ */
-	public static final int $2653 = 2653;
-	/** 呼呼呼. */
-	public static final int $2654 = 2654;
-	/** 一二~ 一二~ 一二~ 唉呀！ */
-	public static final int $2655 = 2655;
-	/** 唉呀！ 唉呀！ 唉呀！ */
-	public static final int $2656 = 2656;
-	/** 真有勇氣！ */
-	public static final int $2657 = 2657;
-	/** 我已準備好了！ */
-	public static final int $2658 = 2658;
-	/** 這程度都不算甚麼的！ */
-	public static final int $2659 = 2659;
-	/** 接受吧！ 嗚哇！喔！ */
-	public static final int $2660 = 2660;
-	/** 堂堂正正的! */
-	public static final int $2661 = 2661;
-	/** 我已準備好了 */
-	public static final int $2662 = 2662;
-	/** 呵阿阿~ */
-	public static final int $2663 = 2663;
-	/** 唉呀~ 痛呀~ */
-	public static final int $2664 = 2664;
-	/** 堂堂正正的~ */
-	public static final int $2665 = 2665;
-	/** 呼呼呼… */
-	public static final int $2666 = 2666;
-	/** 勇氣藥水最棒了~ 呵阿~ */
-	public static final int $2667 = 2667;
-	/** 喝阿~ 嘿~！ 嘿~！ */
-	public static final int $2668 = 2668;
-	/** 不管哪都去吧~ */
-	public static final int $2669 = 2669;
-	/** 嘿嘿~ */
-	public static final int $2670 = 2670;
-	/** 快跑~ 快衝~！ */
-	public static final int $2671 = 2671;
-	/** 這邊是我的領土! */
-	public static final int $2672 = 2672;
-	/** 咑啦~ 咑啦~ */
-	public static final int $2673 = 2673;
-	/** 有甚麼有趣的事嗎？ */
-	public static final int $2674 = 2674;
-	/** 嗚阿~~ 嗚阿~~ */
-	public static final int $2675 = 2675;
-	/** 跟著我！ */
-	public static final int $2676 = 2676;
-	/** 出擊！！往前！！ */
-	public static final int $2677 = 2677;
-	/** 嘿嘿~ */
-	public static final int $2678 = 2678;
-	/** 嘿嘿~ 這外貌~ */
-	public static final int $2679 = 2679;
-	/** 好開心喔~ */
-	public static final int $2680 = 2680;
-	/** 咚咑~咚咑~ */
-	public static final int $2681 = 2681;
-	/** 嗯~？ */
-	public static final int $2682 = 2682;
-	/** 呼呼~ 這太漂亮了 */
-	public static final int $2683 = 2683;
-	/** 啦啦啦~ 啦啦~ 啦~ */
-	public static final int $2684 = 2684;
-	/** 不管去哪都一起吧~ */
-	public static final int $2685 = 2685;
-	/** 有屬性防禦+10與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2686 = 2686;
-	/** 有體力上限+30與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2687 = 2687;
-	/** 有魔力回復+3與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2688 = 2688;
-	/** 有防禦力+1與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2689 = 2689;
-	/** 有魔力上限+20與近距離、遠距離、魔法命中率+1的效果。 */
-	public static final int $2690 = 2690;
-	/** 有體力回復+3與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2691 = 2691;
-	/** 有魔法防禦力+5與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2692 = 2692;
-	/** 狩獵時取得經驗值些微增加並且有近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2693 = 2693;
-	/** 有近距離攻擊力+1與近距離攻擊命中率 +4、遠距離及魔法命中率+3的效果。 */
-	public static final int $2694 = 2694;
-	/** 有體力上限+30與魔力上限+30且近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2695 = 2695;
-	/** 有防禦力+2與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2696 = 2696;
-	/** 遠距離攻擊力+1、遠距離命中率+4與近距離、魔法命中率+3的效果。 */
-	public static final int $2697 = 2697;
-	/** 有體力回復+2與 魔力回復+2與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2698 = 2698;
-	/** 有魔法防禦+10與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2699 = 2699;
-	/** 魔攻+1與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2700 = 2700;
-	/** 狩獵時取得經驗值些微增加並且有近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2701 = 2701;
-	/** 有遠距離攻擊力+1與遠距離命中率+5與近距離、魔法命中率+3的效果。 */
-	public static final int $2702 = 2702;
-	/** 有體力上限+50與魔力上限+50與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2703 = 2703;
-	/** 近距離攻擊力+1與 近距離攻擊命中率+5、遠距離及魔法命中率+3的效果。 */
-	public static final int $2704 = 2704;
-	/** 有防禦+3與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2705 = 2705;
-	/** 魔法防禦+15與屬性防禦+10、近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2706 = 2706;
-	/** 有魔力上限+2與魔力回復+2、近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2707 = 2707;
-	/** 有體力上限+30與體力回復+2、近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2708 = 2708;
-	/** 打獵時取得的經驗值些微增加與近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2709 = 2709;
-	/** 有體力上限+80與體力回復+4、近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2710 = 2710;
-	/** 有MP 80與 MP回覆率 4,近距離,遠距離,魔法命中率 3的 增加效果. */
-	public static final int $2711 = 2711;
-	/** 遠距離攻擊力+2、遠距離命中率+6、近距離及魔法命中率+3的效果。 */
-	public static final int $2712 = 2712;
-	/** 有近距離攻擊力+2與近距離命中率+6、遠距離及魔法命中率+3的效果。 */
-	public static final int $2713 = 2713;
-	/** 魔法防禦+18與屬性防禦+15、近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2714 = 2714;
-	/** 魔力上限+2與魔法命中率+6、近距離、遠距離攻擊命中率+3的效果。 */
-	public static final int $2715 = 2715;
-	/** 防禦+4與近距離、遠距離、魔法命中率 3的效果。 */
-	public static final int $2716 = 2716;
-	/** 狩獵時取得的經驗值些微增加、有近距離、遠距離、魔法命中率+3的效果。 */
-	public static final int $2717 = 2717;
-	/** 今天是滿月日 */
-	public static final int $2718 = 2718;
-	/** 相關血盟員在戰鬥中因此無法召喚. */
-	public static final int $2719 = 2719;
-	/** 依青少年保護法 %d分後結束遊戲。 */
-	public static final int $2720 = 2720;
-	/** 依青少年保護法 1分後結束遊戲。 */
-	public static final int $2721 = 2721;
-	/** 依青少年保護法，帳號從 00點開始到06點期間受到使用登入的限制。 */
-	public static final int $2722 = 2722;
-	/** 市價 */
-	public static final int $2723 = 2723;
-	/** 力量之書 */
-	public static final int $2724 = 2724;
-	/** 暫時可依神聖力量將周圍做淨化. */
-	public static final int $2725 = 2725;
-	/** 市價查詢 */
-	public static final int $2726 = 2726;
-	/** 龍之鑰匙的使用時間即將到期。 */
-	public static final int $2727 = 2727;
-	/** %0 分後龍之鑰匙的使用時間到期。 */
-	public static final int $2728 = 2728;
-	/** 無法執行市價查詢功能，請稍後再使用。 */
-	public static final int $2729 = 2729;
-	/** 相關道具是被特殊封印的。 */
-	public static final int $2730 = 2730;
-	/** 相關道具的特殊封印被解除。 */
-	public static final int $2731 = 2731;
-	/** 要複製角色嗎？ */
-	public static final int $2736 = 2736;
-	/** 只可複製一個角色。 */
-	public static final int $2737 = 2737;
-	/** 角色的等級太低。 */
-	public static final int $2738 = 2738;
-	/** 角色已加入血盟。 */
-	public static final int $2739 = 2739;
-	/** 道具資料中有錯誤。 */
-	public static final int $2740 = 2740;
-	/** STR_TENCENT_SA_BUYREQUEST_SUCCESS */
-	public static final int $2741 = 2741;
-	/** 目前無法購買的道具。 */
-	public static final int $2743 = 2743;
-	/** 目前販賣的價格不同。 */
-	public static final int $2744 = 2744;
-	/** 購買成功。 */
-	public static final int $2745 = 2745;
-	/** 相關道具是目前不存在的。 */
-	public static final int $2746 = 2746;
-	/** 由於角色等級較高，相關魔法娃娃不可被召喚。 */
-	public static final int $2787 = 2787;
-	/** 魔法娃娃使用時間已經耗盡，無法進行召喚。 */
-	public static final int $2788 = 2788;
-	/** \f1%0%s暫時有強烈的 %1 能量，充滿著和之前不一樣的感覺。 */
-	public static final int $2789 = 2789;
-	/** 近距離、遠距離攻擊與魔力提升了。 */
-	public static final int $2790 = 2790;
-	/** 尚未確認道具的狀態所以無法登錄。 */
-	public static final int $2791 = 2791;
-	/** 不可交換的道具所以無法登錄。 */
-	public static final int $2792 = 2792;
-	/** * 魔法娃娃的朋友 * */
-	public static final int $2793 = 2793;
-	/** * 魔法娃娃的記憶 * */
-	public static final int $2794 = 2794;
-	/** 複製的角色無法刪除朋友名單。 */
-	public static final int $2795 = 2795;
-	/** 複製的角色無法刪除記憶名單。 */
-	public static final int $2796 = 2796;
-	/** 目前的等級不可使用。 */
-	public static final int $2797 = 2797;
-	/** 驗證錯誤 */
-	public static final int $2802 = 2802;
-	/** 確定要購買嗎？ */
-	public static final int $2804 = 2804;
-	/** 目前無法全體聊天。 */
-	public static final int $2805 = 2805;
-	/** 招換魔法娃娃成功，獲得經驗值上升效果。 */
-	public static final int $2806 = 2806;
-	/** 封印解除。 */
-	public static final int $2807 = 2807;
-	/** 回復角色。 */
-	public static final int $2808 = 2808;
-	/** 可以使用角色魔法娃娃的記憶。 */
-	public static final int $2809 = 2809;
-	/** 可以使用角色魔法娃娃的朋友名單。 */
-	public static final int $2810 = 2810;
-	/** 可以獲得角色魔法娃娃的密語。 */
-	public static final int $2811 = 2811;
-	/** 在倉庫打開的情況下不可進行購買。 */
-	public static final int $2816 = 2816;
-	/** 潘朵拉的倉庫 */
-	public static final int $2817 = 2817;
-	/** 購買該項目 */
-	public static final int $2818 = 2818;
-	/** 該功能尚未開放 */
-	public static final int $2819 = 2819;
-	/** 該功能尚未開放 */
-	public static final int $2820 = 2820;
-	/** 開啟附加倉庫 */
-	public static final int $2821 = 2821;
-	/** 結算總花費 */
-	public static final int $2822 = 2822;
-	/** 受到黑龍祝福。 */
-	public static final int $2823 = 2823;
-	/** 龍族收到黑龍祝福。 */
-	public static final int $2824 = 2824;
-	/** 不可刪除封印的角色。 */
-	public static final int $2825 = 2825;
-	/** 不可遊玩封印的角色。 */
-	public static final int $2826 = 2826;
-	/** 快速記憶 */
-	public static final int $2827 = 2827;
-	/** 快速移動目錄最多只能登錄5個為止。 */
-	public static final int $2828 = 2828;
-	/** STR_DELETE_QUESTION_MEMORY_PLACE */
-	public static final int $2829 = 2829;
-	/** STR_MEMORY_QUESTION_THIS_PLACE */
-	public static final int $2830 = 2830;
-	/** 輸入要變更記憶場所的名字。 */
-	public static final int $2831 = 2831;
-	/** 要提領出多少金幣呢？ */
-	public static final int $2832 = 2832;
-	/** 要存入多少金幣呢？ */
-	public static final int $2833 = 2833;
-	/** 目前累積遊玩的遊戲時間共 %0小時%1分。 */
-	public static final int $2834 = 2834;
-	/** 感受到溫暖愛意的氣息。 */
-	public static final int $2835 = 2835;
-	/** 感受到性感男孩巧克力的魔法加持。 */
-	public static final int $2836 = 2836;
-	/** 感受到害羞男孩巧克力的魔法加持。 */
-	public static final int $2837 = 2837;
-	/** 感受到酷男孩巧克力的魔法加持。 */
-	public static final int $2838 = 2838;
-	/** 感受到聰明男孩巧克力的魔法加持。 */
-	public static final int $2839 = 2839;
-	/** 感受到酷炫男孩巧克力的魔法加持。 */
-	public static final int $2840 = 2840;
-	/** 感受到神秘男孩巧克力的魔法加持。 */
-	public static final int $2841 = 2841;
-	/** 設定為不可還價的商品 */
-	public static final int $2842 = 2842;
-	/** 開始價 */
-	public static final int $2843 = 2843;
-	/** 出價 */
-	public static final int $2844 = 2844;
-	/** 還價 */
-	public static final int $2845 = 2845;
-	/** 購買價 */
-	public static final int $2846 = 2846;
-	/** 座標記憶結束 */
-	public static final int $2847 = 2847;
-	/** 確定要將所有能力除去嗎？ */
-	public static final int $2848 = 2848;
-	/** 感受到懷錶的神秘力量。 */
-	public static final int $2850 = 2850;
-	/** 水晶洞穴的調查已告一段落，回去找馬賓吧！ */
-	public static final int $2851 = 2851;
-	/** 輸入的數目比平均價格還要低，確定要登錄嗎？ */
-	public static final int $2852 = 2852;
-	/** 身體已完全硬化 */
-	public static final int $2853 = 2853;
-	/** 魔法效果結束 */
-	public static final int $2854 = 2854;
-	/** 下一個 */
-	public static final int $2855 = 2855;
-	/** 結束 */
-	public static final int $2856 = 2856;
-	/** 獎勵道具 */
-	public static final int $2857 = 2857;
-	/** 要參與這次的調查嗎？ */
-	public static final int $2858 = 2858;
-	/** 疑問 */
-	public static final int $2859 = 2859;
-	/** 點擊後將會往下一個移動。 */
-	public static final int $2860 = 2860;
-	/** 開放式問題 */
-	public static final int $2861 = 2861;
-	/** 回覆內容 */
-	public static final int $2862 = 2862;
-	/** 謝謝參與 */
-	public static final int $2863 = 2863;
-	/** 領取獎勵道具，結束調查。 */
-	public static final int $2864 = 2864;
-	/** 不可購買0個道具。 */
-	public static final int $2865 = 2865;
-	/** 登錄的數量已超過了限制。 */
-	public static final int $2866 = 2866;
-	/** 只有30等級以上才可登錄。 */
-	public static final int $2867 = 2867;
-	/** 重複的道具只能登錄999個。 */
-	public static final int $2868 = 2868;
-	/** STR_AUCTION_BUY_PRICE_REQUIRED */
-	public static final int $2869 = 2869;
-	/** 購買物品的數量已超過限定值。 */
-	public static final int $2870 = 2870;
-	/** STR_AUCTION_MAX_BUY_PRICE */
-	public static final int $2871 = 2871;
-	/** STR_AUCTION_MAX_INVENTORY */
-	public static final int $2872 = 2872;
-	/** STR_AUCTION_OVERLOADED */
-	public static final int $2873 = 2873;
-	/** STR_AUCTION_BID_PRICE_REQUIRED */
-	public static final int $2874 = 2874;
-	/** STR_AUCTION_DISCOUNT_PRICE_REQUIRED */
-	public static final int $2875 = 2875;
-	/** STR_AUCTION_INVALID_ITEM */
-	public static final int $2876 = 2876;
-	/** 重複的道具不可輸入拍賣價開始。 */
-	public static final int $2877 = 2877;
-	/** 不可登陸贈品 */
-	public static final int $2878 = 2878;
-	/** 該道具不可出價 */
-	public static final int $2879 = 2879;
-	/** 請設定為拍賣價的3%的金錢為出價價格。 */
-	public static final int $2880 = 2880;
-	/** 獲得熱情的雞尾酒效果。 */
-	public static final int $2881 = 2881;
-	/** 獲得酸甜的雞尾酒效果。 */
-	public static final int $2882 = 2882;
-	/** 獲得清爽的雞尾酒效果。 */
-	public static final int $2883 = 2883;
-	/** 對應適用於該模式，您確定要繼續嗎？ */
-	public static final int $2884 = 2884;
-	/** 擴張最大記憶空間10個。 */
-	public static final int $2885 = 2885;
-	/** 拍賣信 */
-	public static final int $2886 = 2886;
-	/** 於背包內已經有特定道具，不可再獲取。 */
-	public static final int $2887 = 2887;
-	/** 超過一天內可以登入的 %0次，不可登錄公告。 */
-	public static final int $2888 = 2888;
-	/** 神秘的力量從內心深處湧出。 */
-	public static final int $2889 = 2889;
-	/** 拍賣場 */
-	public static final int $2890 = 2890;
-	/** %s 道具因有其他人以 %s 價錢出價，標價失敗。 */
-	public static final int $2891 = 2891;
-	/** 拍賣登錄時間截止%s 道具流標。 */
-	public static final int $2892 = 2892;
-	/** %s 道具以 %s 價錢出售成功。 */
-	public static final int $2893 = 2893;
-	/** %s 道具以 %s 價錢出售。 */
-	public static final int $2894 = 2894;
-	/** %s 道具出售，還價失敗。 */
-	public static final int $2895 = 2895;
-	/** %s 道具出售，競價失敗。 */
-	public static final int $2896 = 2896;
-	/** %s 道具以 %s 價錢購買了。 */
-	public static final int $2897 = 2897;
-	/** 取消 %s 道具的物品登錄，競價失敗。 */
-	public static final int $2898 = 2898;
-	/** %s 道具的登錄者取消物品登錄，還價失敗。 */
-	public static final int $2899 = 2899;
-	/** %s 道具登錄者同意以 %s 價格還價，出售成功。 */
-	public static final int $2900 = 2900;
-	/** %s 道具透過還價以 %s 價格販賣。 */
-	public static final int $2901 = 2901;
-	/** %s 道具透過還價販賣，競價失敗。 */
-	public static final int $2902 = 2902;
-	/** %s 道具以 %s 價格還價。 */
-	public static final int $2903 = 2903;
-	/** %s 道具登錄者拒絕還價，出售失敗。 */
-	public static final int $2904 = 2904;
-	/** 購買成功(購買) */
-	public static final int $2905 = 2905;
-	/** 購買成功(還價) */
-	public static final int $2906 = 2906;
-	/** 販賣成功(購買) */
-	public static final int $2907 = 2907;
-	/** 販賣成功(出售) */
-	public static final int $2908 = 2908;
-	/** 販賣成功(還價) */
-	public static final int $2909 = 2909;
-	/** 取消物品 */
-	public static final int $2910 = 2910;
-	/** 試圖還價 */
-	public static final int $2911 = 2911;
-	/** 競價失敗(販賣) */
-	public static final int $2912 = 2912;
-	/** 競價失敗(還價) */
-	public static final int $2913 = 2913;
-	/** 競價失敗(再次競價) */
-	public static final int $2914 = 2914;
-	/** 販賣失敗(流標) */
-	public static final int $2915 = 2915;
-	/** 還價失敗(拒絕) */
-	public static final int $2916 = 2916;
-	/** 還價失敗(販賣) */
-	public static final int $2917 = 2917;
-	/** 還價失敗(流標) */
-	public static final int $2918 = 2918;
-	/** 還價失敗(取消) */
-	public static final int $2919 = 2919;
-	/** 使用記憶珠子 */
-	public static final int $2920 = 2920;
-	/** 鐵門公會侏儒：嗯...龍的怒吼到這裡也聽得到，一定是有人打開了龍之門扉！向準備屠龍的勇士們給予榮耀和祝福！ */
-	public static final int $2921 = 2921;
-	/** 鐵門公會侏儒：魔法師吉倫說剛剛在亞丁大陸出現了龍之鑰匙，向獲得的屠龍勇士們給予榮耀和祝福! */
-	public static final int $2922 = 2922;
-	/** 要進去龍之門扉嗎？(Y/N) */
-	public static final int $2923 = 2923;
-	/** 有人獲得了守護者的靈魂。 */
-	public static final int $2924 = 2924;
-	/** 守護者的靈魂消逝了。 */
-	public static final int $2925 = 2925;
-	/** 選擇獎勵。 */
-	public static final int $2926 = 2926;
-	/** 調查抵達了。 */
-	public static final int $2927 = 2927;
-	/** 因維護發放補償。 */
-	public static final int $2928 = 2928;
-	/** 使用該道具，角色將會死亡並損失經驗值，真的要使用嗎？ */
-	public static final int $2929 = 2929;
-	/** 無法再提供記憶的數量。 */
-	public static final int $2930 = 2930;
-	/** **守護者** */
-	public static final int $2931 = 2931;
-	/** 可於身體裡感受到隱藏守護者靈魂的力量。 */
-	public static final int $2932 = 2932;
-	/** 沒有執行市價查詢必需的檔案，無法執行市價查詢功能。 */
-	public static final int $2933 = 2933;
-	/** %s 道具物品登錄被取消。 */
-	public static final int $2934 = 2934;
-	/** 目前要儲存記憶嗎？ */
-	public static final int $2935 = 2935;
-	/** 要增加儲存在珠子裡的記憶嗎？ */
-	public static final int $2936 = 2936;
-	/** 記憶空間不足不可使用。 */
-	public static final int $2937 = 2937;
-	/** 拍賣公告：%0 道具已出售。 */
-	public static final int $2938 = 2938;
-	/** 拍賣公告：%0 道具因還價成功故已出售。 */
-	public static final int $2939 = 2939;
-	/** 拍賣公告：%0 道具因立即購買所以販賣成功。 */
-	public static final int $2940 = 2940;
-	/** 拍賣公告：%0 道具因出價而販賣成功。 */
-	public static final int $2941 = 2941;
-	/** 拍賣公告：%0 道具依還價販賣。 */
-	public static final int $2942 = 2942;
-	/** 拍賣公告：販賣者取消拍賣登錄，競價失敗。 */
-	public static final int $2943 = 2943;
-	/** 拍賣公告：%0 道具的還價提議進來了。 */
-	public static final int $2944 = 2944;
-	/** 拍賣公告：%0 道具販賣,出價失敗。 */
-	public static final int $2945 = 2945;
-	/** 拍賣公告：%0 道具依還價販賣,出價失敗。 */
-	public static final int $2946 = 2946;
-	/** 拍賣公告：%0 道具因更高出價,故競價失敗。 */
-	public static final int $2947 = 2947;
-	/** 拍賣公告：拍賣登錄時間截止 %0 道具流標。 */
-	public static final int $2948 = 2948;
-	/** 拍賣公告：拒絕了 %0 道具的還價提議。 */
-	public static final int $2949 = 2949;
-	/** 拍賣公告：%0 道具販賣,故還價失敗。 */
-	public static final int $2950 = 2950;
-	/** 拍賣公告：拍賣登錄時間截止 %0 道具 還價失敗。 */
-	public static final int $2951 = 2951;
-	/** 拍賣公告：販賣者取消 %0 道具的拍賣登錄,還價失敗。 */
-	public static final int $2952 = 2952;
-	/** 拍賣公告：%0 道具的拍賣登錄已取消。 */
-	public static final int $2953 = 2953;
-	/** 角色魔法娃娃：恭喜升級~ */
-	public static final int $2954 = 2954;
-	/** 角色魔法娃娃：恭喜升級~ 往下ㄧ個等級邁進吧~！ */
-	public static final int $2955 = 2955;
-	/** 角色魔法娃娃：就這樣快速奔跑吧~！ */
-	public static final int $2956 = 2956;
-	/** 師徒 */
-	public static final int $2957 = 2957;
-	/** 要和 %0 締結師徒關係嗎？ */
-	public static final int $2958 = 2958;
-	/** 真的要結束師徒關係嗎？ */
-	public static final int $2959 = 2959;
-	/** 要結束和誰的師徒關係呢？ */
-	public static final int $2960 = 2960;
-	/** 記憶空間不足 %0個，不可使用。 */
-	public static final int $2961 = 2961;
-	/** 不可再擴充記憶空間了。 */
-	public static final int $2962 = 2962;
-	/** 記憶珠子沒有儲存的東西。 */
-	public static final int $2963 = 2963;
-	/** 師徒締結成功。 */
-	public static final int $2964 = 2964;
-	/** 師徒締結失敗。 */
-	public static final int $2965 = 2965;
-	/** 已經成為師徒關係。 */
-	public static final int $2966 = 2966;
-	/** 要將 %0 奉為師父嗎？ */
-	public static final int $2967 = 2967;
-	/** 要接受 %0 為弟子嗎？ */
-	public static final int $2968 = 2968;
-	/** 不能再締結師父了。 */
-	public static final int $2969 = 2969;
-	/** 該對象不能再締結師父了。 */
-	public static final int $2970 = 2970;
-	/** 不能再接收弟子了。 */
-	public static final int $2971 = 2971;
-	/** 該對象不能再接收弟子了。 */
-	public static final int $2972 = 2972;
-	/** 沒有成為師父的資格。 */
-	public static final int $2973 = 2973;
-	/** 該對象沒有成為師父的資格。 */
-	public static final int $2974 = 2974;
-	/** 沒有成為弟子的資格。 */
-	public static final int $2975 = 2975;
-	/** 該對象沒有成為弟子的資格。 */
-	public static final int $2976 = 2976;
-	/** 師徒關係已刪除。 */
-	public static final int $2977 = 2977;
-	/** 師徒關係刪除失敗。 */
-	public static final int $2978 = 2978;
-	/** 目前尚未有締結師徒關係的對象。 */
-	public static final int $2979 = 2979;
-	/** 血盟員 */
-	public static final int $2980 = 2980;
-	/** 拍賣 */
-	public static final int $2981 = 2981;
-	/** 作業中 */
-	public static final int $2982 = 2982;
-	/** 經驗值回復 */
-	public static final int $2983 = 2983;
-	/** 這道具於 %0 等級以下不可使用。 */
-	public static final int $2984 = 2984;
-	/** 沒有可回復的經驗值。 */
-	public static final int $2985 = 2985;
-	/** 同意參加領地戰。 */
-	public static final int $2986 = 2986;
-	/** 製作者： */
-	public static final int $2987 = 2987;
-	/** 為師徒懲罰期間。 */
-	public static final int $2988 = 2988;
-	/** STR_CANT_CHANGE_PLEDGE_RANK_WHILE_TERRITORY_WAR */
-	public static final int $2989 = 2989;
-	/** STR_CANT_LEAVE_PLEDGE_WHILE_TERRITORY_WAR */
-	public static final int $2990 = 2990;
-	/** STR_CANT_ALLOW_TERRITORY_WAR_BEFORE_LEAVE_PARTY */
-	public static final int $2991 = 2991;
-	/** STR_CANT_JOIN_TERRITORY_WAR_EXCEPT_IN_DRAFT_TIME */
-	public static final int $2992 = 2992;
-	/** 不是可以結婚的等級。 */
-	public static final int $2993 = 2993;
-	/** 目前兩人中不可和一人以上結婚的狀況。 */
-	public static final int $2994 = 2994;
-	/** 目前不可離婚。 */
-	public static final int $2995 = 2995;
-	/** 你的同伴死亡了。 */
-	public static final int $2996 = 2996;
-	/** 和活動性質不符的文字將不予警告直接刪除。 */
-	public static final int $2997 = 2997;
-	/** 守護者的靈魂使用時間即將結束。 */
-	public static final int $2998 = 2998;
-	/** %0 分後守護者的靈魂使用時間結束。 */
-	public static final int $2999 = 2999;
-	/** %d日前 */
-	public static final int $3000 = 3000;
-	/** %d小時前 */
-	public static final int $3001 = 3001;
-	/** %d分前 */
-	public static final int $3002 = 3002;
-	/** %d秒前 */
-	public static final int $3003 = 3003;
-	/** 交託 */
-	public static final int $3004 = 3004;
-	/** 找 */
-	public static final int $3005 = 3005;
-	/** 登入中 */
-	public static final int $3006 = 3006;
-	/** 因師徒關係，感受到能力的保佑，防禦-1。 */
-	public static final int $3007 = 3007;
-	/** 因師徒關係，感受到能力的保佑，防禦-1、額外魔法防禦+1。 */
-	public static final int $3008 = 3008;
-	/** 因師徒關係，感受到能力的保佑，防禦-1、額外魔法防禦+1、所有屬性防禦+2。 */
-	public static final int $3009 = 3009;
-	/** 因師徒關係，感受到能力的保佑，防禦-1、額外魔法防禦+1、所有屬性防禦+2、迴避率+1。 */
-	public static final int $3010 = 3010;
-	/** 因師徒關係，感受到能力的保佑，防禦-3。 */
-	public static final int $3011 = 3011;
-	/** 因師徒關係，感受到能力的保佑，防禦-3、額外魔法防禦+3。 */
-	public static final int $3012 = 3012;
-	/** 因師徒關係，感受到能力的保佑，防禦-3、額外魔法防禦+3、所有屬性防禦+6。 */
-	public static final int $3013 = 3013;
-	/** 因師徒關係，感受到能力的保佑，防禦-3、額外魔法防禦+3、所有屬性防禦+6、迴避率+3。 */
-	public static final int $3014 = 3014;
-	/** %0秒後即將結束程式。 */
-	public static final int $3015 = 3015;
-	/** 要增加記憶窗珠子的記憶嗎？ */
-	public static final int $3016 = 3016;
-	/** 重複登入，如果懷疑有其他人登入的話，還請進行變更密碼，掃毒等相關作業。 */
-	public static final int $3017 = 3017;
-	/** 嘗試重複登入，如果懷疑有其他人登入的話，還請進行變更密碼，掃毒等相關作業。 */
-	public static final int $3018 = 3018;
-	/** 持有角色魔法娃娃不可刪除。 */
-	public static final int $3019 = 3019;
-	/** 請正確選擇要精煉的道具。 */
-	public static final int $3020 = 3020;
-	/** 請正確選擇要製作的道具。 */
-	public static final int $3021 = 3021;
-	/** STR_ITEM_TRANSFORM_ERROR */
-	public static final int $3022 = 3022;
-	/** 此為只有在網咖裡才可使用的道具。 */
-	public static final int $3023 = 3023;
-	/** STR_PANDORA_SHOP_WRONG_PARAM */
-	public static final int $3024 = 3024;
-	/** 利用潘朵拉的倉庫時，一定要確認角色的負重量。 */
-	public static final int $3025 = 3025;
-	/** 道具製作失敗。 */
-	public static final int $3026 = 3026;
-	/** 以英雄的號令可以攻擊反王。 */
-	public static final int $3027 = 3027;
-	/** 英雄的號令消失。 */
-	public static final int $3028 = 3028;
-	/** 該道具只有女性才可以穿著。 */
-	public static final int $3029 = 3029;
-	/** 感受到憤怒的氣息。 */
-	public static final int $3030 = 3030;
-	/** 材料不足 */
-	public static final int $3031 = 3031;
-	/** 獲得 %0個結晶體。 */
-	public static final int $3032 = 3032;
-	/** STR_SMITH_DO_NOT_REGIST_ITEM, */
-	public static final int $3033 = 3033;
-	/** STR_SMITH_DO_NOT_REGIST_CATALYST, */
-	public static final int $3034 = 3034;
-	/** 要提煉這道具嗎？ */
-	public static final int $3035 = 3035;
-	/** 要製作這道具嗎？ */
-	public static final int $3036 = 3036;
-	/** 已經結束神秘的水晶洞穴的調查，故去找希歐娜。 */
-	public static final int $3037 = 3037;
-	/** STR_DIVORCED */
-	public static final int $3038 = 3038;
-	/** 魅力不足無法召喚 */
-	public static final int $3039 = 3039;
-	/** 太重了什麼都不能做。 */
-	public static final int $3040 = 3040;
-	/** 道具製作成功。 */
-	public static final int $3041 = 3041;
-	/** STR_STATUS_EFFECT_RED_WINE */
-	public static final int $3042 = 3042;
-	/** 近距離附加打擊/命中、魔法防禦、各屬性抵抗、體力/魔力恢復、傷害減免、經驗值獎勵 */
-	public static final int $3043 = 3043;
-	/**
-	 * OTP號碼的形式不正確.<BR>
-	 * 請重新輸入8個數字。
-	 */
-	public static final int $3044 = 3044;
-	/**
-	 * OTP 號碼不正確.<BR>
-	 * 請重新輸入。
-	 */
-	public static final int $3045 = 3045;
-	/** %d STR_DAILY_GIFT_ARRIVED */
-	public static final int $3046 = 3046;
-	/** STR_DAILY_GIFT_TOO_HEAVY */
-	public static final int $3047 = 3047;
-	/** 等待獎勵中 */
-	public static final int $3048 = 3048;
-	/** %d 次 */
-	public static final int $3049 = 3049;
-	/** 可領取獎勵 */
-	public static final int $3050 = 3050;
-	/** \F2封印的道具不可淬煉 */
-	public static final int $3051 = 3051;
-	/** 英雄的保佑在所有物體上都添加了保護的力量。 */
-	public static final int $3052 = 3052;
-	/** 英雄的保佑消失了。 */
-	public static final int $3053 = 3053;
-	/** 要刪除幾個呢？(1-%u, Enter=全部, Esc=取消) */
-	public static final int $3054 = 3054;
-	/** 要尋找的商人名稱？ */
-	public static final int $3055 = 3055;
-	/** 垃圾信件清單 */
-	public static final int $3056 = 3056;
-	/** \F2透明狀態 */
-	public static final int $3057 = 3057;
-	/** \F2封鎖移動 */
-	public static final int $3058 = 3058;
-	/** \F2魔法無效化 */
-	public static final int $3059 = 3059;
-	/** 防禦-3 */
-	public static final int $3060 = 3060;
-	/** \F2中毒狀態 */
-	public static final int $3061 = 3061;
-	/** \F2視野完全被遮蓋 */
-	public static final int $3062 = 3062;
-	/** \F2進入深層的睡眠狀態。 */
-	public static final int $3063 = 3063;
-	/** 近距離額外攻擊+2 */
-	public static final int $3064 = 3064;
-	/** \F2移動速度變緩慢 */
-	public static final int $3065 = 3065;
-	/** 近距離額外攻擊+2、近距離命中率+2 */
-	public static final int $3066 = 3066;
-	/** \F2眼前所有的事物都看不見了 */
-	public static final int $3067 = 3067;
-	/** STR_STATUS_EFFECT_DARKNESS, */
-	public static final int $3068 = 3068;
-	/** STR_STATUS_EFFECT_DARK_BLIND, */
-	public static final int $3069 = 3069;
-	/** \F2身體被凍住什麼事都無法做 */
-	public static final int $3070 = 3070;
-	/** \F2身體被麻痺了 */
-	public static final int $3071 = 3071;
-	/** \F2陷入深睡的狀態 */
-	public static final int $3072 = 3072;
-	/** 每5秒魔力恢復量+5、體力-25 */
-	public static final int $3073 = 3073;
-	/** \F2火屬性抵抗+30 */
-	public static final int $3074 = 3074;
-	/** \F2地屬性抵抗+30 */
-	public static final int $3075 = 3075;
-	/** STR_TROJAN_DETECT, */
-	public static final int $3076 = 3076;
-	/** 為了預防過度沉迷遊戲，不是父母/本人所設定的遊戲時間，目前時間不可以玩。 */
-	public static final int $3077 = 3077;
-	/** 為了預防過度沉迷遊戲，父母/本人所設定的遊戲使用時間剩下 %d分。 */
-	public static final int $3078 = 3078;
-	/** 為了預防過度沉迷遊戲，超過父母/本人所設定的遊戲使用時間，結束登入。 */
-	public static final int $3079 = 3079;
-	/** 我們的合約快到結束時間了。 */
-	public static final int $3080 = 3080;
-	/** 和你的合約已到期。 */
-	public static final int $3081 = 3081;
-	/** 信件遭阻擋無法寄出 */
-	public static final int $3082 = 3082;
-	/** PVP模式 */
-	public static final int $3083 = 3083;
-	/** 開啟「命令」的快捷鍵功能 */
-	public static final int $3084 = 3084;
-	/** 選擇一位玩家參加聚會 */
-	public static final int $3085 = 3085;
-	/** 想要被過濾的文句是什麼？ */
-	public static final int $3086 = 3086;
-	/** 0 */
-	public static final int $3089 = 3089;
-	/** 1 */
-	public static final int $3090 = 3090;
-	/** 2 */
-	public static final int $3091 = 3091;
-	/** 3 */
-	public static final int $3092 = 3092;
-	/** 4 */
-	public static final int $3093 = 3093;
-	/** 5 */
-	public static final int $3094 = 3094;
-	/** 6 */
-	public static final int $3095 = 3095;
-	/** 7 */
-	public static final int $3096 = 3096;
-	/** 8 */
-	public static final int $3097 = 3097;
-	/** 9 */
-	public static final int $3098 = 3098;
-	/** 10 */
-	public static final int $3099 = 3099;
-	/** 100 */
-	public static final int $3100 = 3100;
-	/** 1000 */
-	public static final int $3101 = 3101;
-	/** 萬 */
-	public static final int $3102 = 3102;
-	/** 億 */
-	public static final int $3103 = 3103;
-	/** 兆 */
-	public static final int $3104 = 3104;
-	/** 記憶內容太長無法變更顏色。 */
-	public static final int $3105 = 3105;
-	/** 只能在全部的項目中才可儲存記憶。 */
-	public static final int $3106 = 3106;
-	/** 所在位置 */
-	public static final int $3107 = 3107;
-	/** 獲得狩獵經驗+20%的效果。 */
-	public static final int $3108 = 3108;
-	/** 當血盟倉庫有道具時，不可解散血盟。 */
-	public static final int $3109 = 3109;
-	/** 血盟王族 */
-	public static final int $3110 = 3110;
-	/** 額外攻擊點數+2、攻擊命中率+2 */
-	public static final int $3111 = 3111;
-	/** 額外攻擊點數+3、攻擊命中率+3 */
-	public static final int $3112 = 3112;
-	/** 魔力回復+5、體力回復+5 */
-	public static final int $3113 = 3113;
-	/** 傷害減免+5 */
-	public static final int $3114 = 3114;
-	/** 體力上限+100、魔力上限+100 */
-	public static final int $3115 = 3115;
-	/** 體力/魔力無法自行恢復 */
-	public static final int $3116 = 3116;
-	/** 寵物 */
-	public static final int $3117 = 3117;
-	/** 行動視窗 */
-	public static final int $3118 = 3118;
-	/** 無法再放置任何東西了 */
-	public static final int $3119 = 3119;
-	/** STR_WEAPON_AUTO_FIXED */
-	public static final int $3120 = 3120;
-	/** 魔力恢復量增加 */
-	public static final int $3121 = 3121;
-	/** \fQ"%s"\f> 刪除後，即無法再次復原，真的要刪除嗎？ (Y/N) */
-	public static final int $3122 = 3122;
-	/** 獲得經驗值 */
-	public static final int $3123 = 3123;
-	/** 狩獵怪物數 */
-	public static final int $3124 = 3124;
-	/** 獲得金幣 */
-	public static final int $3125 = 3125;
-	/** 獲得道具 */
-	public static final int $3126 = 3126;
-	/** 沒有獲得的道具 */
-	public static final int $3127 = 3127;
-	/** 已取消 */
-	public static final int $3128 = 3128;
-	/** 10級以上才可以申訴。 */
-	public static final int $3129 = 3129;
-	/** 無法對自己進行申訴。 */
-	public static final int $3130 = 3130;
-	/** 查看道具 變動詳細內容 */
-	public static final int $3131 = 3131;
-	/** 刪除寵物後，即無法再次復原，真的要刪除嗎？ (Y/N) */
-	public static final int $3132 = 3132;
-	/** 刪除寵物後，即無法再次復原，真的要刪除嗎？ (Y/N) */
-	public static final int $3133 = 3133;
-	/** 目前尚未學習任何屬性。 */
-	public static final int $3134 = 3134;
-	/** 對方下注 %s金幣，要支付金幣預約挑戰嗎？ */
-	public static final int $3135 = 3135;
-	/** 遠距離附加打擊/命中、魔法防禦、各屬性抵抗、體力/魔力恢復、傷害減免、經驗值獎勵 */
-	public static final int $3136 = 3136;
-	/** 魔法攻擊、魔法防禦、各屬性抵抗力、體力/魔力恢復、傷害減免、經驗值獎勵 */
-	public static final int $3137 = 3137;
-	/** 傷害減免、經驗值獎勵 */
-	public static final int $3138 = 3138;
-	/** STR_COOK_BENTO_OF_RAFONS */
-	public static final int $3139 = 3139;
-	/** STR_COOK_WINE_OF_RAFONS */
-	public static final int $3140 = 3140;
-	/** 近距離物理傷害 +58% */
-	public static final int $3141 = 3141;
-	/** 種族 */
-	public static final int $3142 = 3142;
-	/** 等級 */
-	public static final int $3143 = 3143;
-	/** 上等 */
-	public static final int $3144 = 3144;
-	/** 同等 */
-	public static final int $3145 = 3145;
-	/** 下等 */
-	public static final int $3146 = 3146;
-	/** 狀態 */
-	public static final int $3147 = 3147;
-	/** 可挑戰 */
-	public static final int $3148 = 3148;
-	/** 可觀戰 */
-	public static final int $3149 = 3149;
-	/** 進行中 */
-	public static final int $3150 = 3150;
-	/** 結束 */
-	public static final int $3151 = 3151;
-	/** 遊玩時間約 %d分 */
-	public static final int $3152 = 3152;
-	/** 若要入場需下注選手 %s金幣才行，要賭哪位選手呢？ */
-	public static final int $3153 = 3153;
-	/** 慎重藥水：魔法攻擊+2、魔力恢復+2。福利慎重藥水： 魔法攻擊+2、魔力恢復+4。 */
-	public static final int $3154 = 3154;
-	/** STR_GOLDEN_HORN_MUST_SET_COLOR */
-	public static final int $3155 = 3155;
-	/** %0 秒後可使用吶喊功能，請稍後再使用。 */
-	public static final int $3156 = 3156;
-	/** 0階(鬥士)：體力上限+10 */
-	public static final int $3157 = 3157;
-	/** 1階(鬥士)：體力上限+20 */
-	public static final int $3158 = 3158;
-	/** 2階(鬥士)：體力上限+30 */
-	public static final int $3159 = 3159;
-	/** 3階(鬥士)：體力上限+40 */
-	public static final int $3160 = 3160;
-	/** 4階(鬥士)：體力上限+50 */
-	public static final int $3161 = 3161;
-	/** 5階(鬥士)：體力上限+50、近距離命中率+1 */
-	public static final int $3162 = 3162;
-	/** 6階(鬥士)：體力上限+70、近距離命中率+1、體力恢復量+1 */
-	public static final int $3163 = 3163;
-	/** 7階(鬥士)：體力上限+70、近距離命中率+1、體力恢復量+2、近距離攻擊力+1 */
-	public static final int $3164 = 3164;
-	/** 8階(鬥士)：體力上限+90、近距離命中率+2、體力恢復量+3、近距離攻擊力+1 */
-	public static final int $3165 = 3165;
-	/** 9階(鬥士)：體力上限+120、近距離命中率+3、體力恢復量+6、近距離攻擊力+3、力量+1 */
-	public static final int $3166 = 3166;
-	/** 0階(弓手)：體力上限+5、魔力上限+3 */
-	public static final int $3167 = 3167;
-	/** 1階(弓手)：體力上限+10、魔力上限+6 */
-	public static final int $3168 = 3168;
-	/** 2階(弓手)：體力上限+15、魔力上限+9 */
-	public static final int $3169 = 3169;
-	/** 3階(弓手)：體力上限+20、魔力上限+12 */
-	public static final int $3170 = 3170;
-	/** 4階(弓手)：體力上限+25、魔力上限+15 */
-	public static final int $3171 = 3171;
-	/** 5階(弓手)：體力上限+25、魔力上限+15、遠距離命中率+1 */
-	public static final int $3172 = 3172;
-	/** 6階(弓手)：體力上限+35、魔力上限+20、遠距離命中率+1、體力恢復量+1 */
-	public static final int $3173 = 3173;
-	/** 7階(弓手)：體力上限+35、魔力上限+22、遠距離命中率+1、體力恢復量+1、遠距離攻擊力+1 */
-	public static final int $3174 = 3174;
-	/** 8階(弓手)：體力上限+40、魔力上限+30、遠距離命中率+2、體力恢復量+2、魔力恢復量+2、遠距離攻擊力+1 */
-	public static final int $3175 = 3175;
-	/** 9階(弓手)：體力上限+60、魔力上限+43、遠距離命中率+3、體力恢復量+3、魔力恢復量+3、遠距離攻擊力+3、敏捷+1 */
-	public static final int $3176 = 3176;
-	/** 0階(賢者)：魔力上限+10 */
-	public static final int $3177 = 3177;
-	/** 1階(賢者)：魔力上限+20 */
-	public static final int $3178 = 3178;
-	/** 2階(賢者)：魔力上限+30 */
-	public static final int $3179 = 3179;
-	/** 3階(賢者)：魔力上限+40 */
-	public static final int $3180 = 3180;
-	/** 4階(賢者)：魔力上限+50 */
-	public static final int $3181 = 3181;
-	/** 5階(賢者)：魔力上限+50、魔力恢復量+1 */
-	public static final int $3182 = 3182;
-	/** 6階(賢者)：魔力上限+55、魔力恢復量+1 */
-	public static final int $3183 = 3183;
-	/** 7階(賢者)：魔力上限+55、魔力恢復量+2、魔法攻擊+1 */
-	public static final int $3184 = 3184;
-	/** 8階(賢者)：魔力上限+60、魔力恢復量+3、魔法攻擊+1 */
-	public static final int $3185 = 3185;
-	/** 9階(賢者)：魔力上限+70、魔力恢復量+5、魔法攻擊+3、智力+1 */
-	public static final int $3186 = 3186;
-	/** 0階(衝鋒)：防禦-1 */
-	public static final int $3187 = 3187;
-	/** 1階(衝鋒)：防禦-2 */
-	public static final int $3188 = 3188;
-	/** 2階(衝鋒)：防禦-3 */
-	public static final int $3189 = 3189;
-	/** 3階(衝鋒)：防禦-4 */
-	public static final int $3190 = 3190;
-	/** 4階(衝鋒)：防禦-5 */
-	public static final int $3191 = 3191;
-	/** 5階(衝鋒)：防禦-5、魔法防禦額外點數+1 */
-	public static final int $3192 = 3192;
-	/** 6階(衝鋒)：防禦-5、魔法防禦額外點數+6 */
-	public static final int $3193 = 3193;
-	/** 7階(衝鋒)：防禦-5、魔法防禦額外點數+9 */
-	public static final int $3194 = 3194;
-	/** 8階(衝鋒)：防禦-5、魔法防禦額外點數+15、額外傷害減免+2、昏迷耐性+2 */
-	public static final int $3195 = 3195;
-	/** 9階(衝鋒)：防禦-5、魔法防禦額外點數+21、額外傷害減免+4、昏迷耐性+5、體質+1 */
-	public static final int $3196 = 3196;
-	/** 殷海薩祝福經驗值獎勵+53%(階段別-10%)，不可使用：龍之綠寶石 */
-	public static final int $3197 = 3197;
-	/** 已經登錄其他房間了 */
-	public static final int $3198 = 3198;
-	/** 沒有空的房間 */
-	public static final int $3199 = 3199;
-	/** 登錄成功 */
-	public static final int $3200 = 3200;
-	/** 登錄失敗 */
-	public static final int $3201 = 3201;
-	/** 形成房間並等待挑戰者中 */
-	public static final int $3202 = 3202;
-	/** 房間的挑戰者登錄了 */
-	public static final int $3203 = 3203;
-	/** 戰鬥開始 */
-	public static final int $3204 = 3204;
-	/** 戰鬥結束 */
-	public static final int $3205 = 3205;
-	/** 戰鬥勝利獲得 %0 金幣 */
-	public static final int $3206 = 3206;
-	/** 戰鬥失敗 */
-	public static final int $3207 = 3207;
-	/** 冠軍勝利獲得 %0 金幣 */
-	public static final int $3208 = 3208;
-	/** 下注失敗 */
-	public static final int $3209 = 3209;
-	/** 下注成功獲得 %0 金幣 */
-	public static final int $3210 = 3210;
-	/** 挑戰者失敗 */
-	public static final int $3211 = 3211;
-	/** 戰鬥缺席失去資格 */
-	public static final int $3212 = 3212;
-	/** 戰鬥平手 */
-	public static final int $3213 = 3213;
-	/** 戰鬥取消 */
-	public static final int $3214 = 3214;
-	/** \f1感受到格蘭肯的憤怒 */
-	public static final int $3215 = 3215;
-	/** \f2感受到殷海薩的神聖氣息 */
-	public static final int $3216 = 3216;
-	/** 近距離命中 */
-	public static final int $3217 = 3217;
-	/** 近距離傷害 */
-	public static final int $3218 = 3218;
-	/** 防禦力獎勵 */
-	public static final int $3219 = 3219;
-	/** 最大負重上限 */
-	public static final int $3220 = 3220;
-	/** 體力恢復增加 */
-	public static final int $3221 = 3221;
-	/** 魔力恢復增加 */
-	public static final int $3222 = 3222;
-	/** 魔法防禦獎勵 */
-	public static final int $3223 = 3223;
-	/** 迴避率獎勵 */
-	public static final int $3224 = 3224;
-	/** 遠距離命中 */
-	public static final int $3225 = 3225;
-	/** 遠距離傷害 */
-	public static final int $3226 = 3226;
-	/** 體力上限增加 */
-	public static final int $3227 = 3227;
-	/** 魔力上限增加 */
-	public static final int $3228 = 3228;
-	/** 魔法命中 */
-	public static final int $3229 = 3229;
-	/** 魔法傷害 */
-	public static final int $3230 = 3230;
-	/** 魔法致命率 */
-	public static final int $3231 = 3231;
-	/** 魔力消耗減少 */
-	public static final int $3232 = 3232;
-	/** 陣營 */
-	public static final int $3233 = 3233;
-	/** 階段 */
-	public static final int $3234 = 3234;
-	/** 數值 */
-	public static final int $3235 = 3235;
-	/** 只可在特定場所使用 */
-	public static final int $3236 = 3236;
-	/** \F2已經學過的魔法 */
-	public static final int $3237 = 3237;
-	/** \F2不可在這裡學的魔法 */
-	public static final int $3238 = 3238;
-	/** 大戰場入場截止 %0 秒前 */
-	public static final int $3239 = 3239;
-	/** 經驗值獎勵+20% */
-	public static final int $3240 = 3240;
-	/** 沒有挑戰者的對戰已取消 */
-	public static final int $3241 = 3241;
-	/** 對手未入場獲得 %0 金幣 */
-	public static final int $3242 = 3242;
-	/** 道具市價查詢簡便搜索 */
-	public static final int $3243 = 3243;
-	/** 初心者引導 */
-	public static final int $3244 = 3244;
-	/** 目前有血盟等待著您 */
-	public static final int $3245 = 3245;
-	/** 目前有血盟成員等待著您 */
-	public static final int $3246 = 3246;
-	/** 請創設血盟並簡單的告知 */
-	public static final int $3247 = 3247;
-	/** 有血盟邀請您加入 */
-	public static final int $3248 = 3248;
-	/** \fQ"%s"\f> 道具購買的金幣不夠，無法開商店。 */
-	public static final int $3249 = 3249;
-	/** 市場內因金幣交易，個人商店清單初始化。 */
-	public static final int $3250 = 3250;
-	/** 透過"登錄"了解血盟，接受血盟成員的推薦吧！ */
-	public static final int $3251 = 3251;
-	/** 已經處理中 */
-	public static final int $3252 = 3252;
-	/** 因等級不足無法在此欄位裝備戒指。 */
-	public static final int $3253 = 3253;
-	/** 該欄位無法再購買開啟服務 */
-	public static final int $3254 = 3254;
-	/** 該欄為目前無法開啟 */
-	public static final int $3255 = 3255;
-	/** 招募一起冒險的血盟員！！\n尋找獨身一人的勇士！！\n我們需要你！ */
-	public static final int $3256 = 3256;
-	/** 提出加入申請了 */
-	public static final int $3257 = 3257;
-	/** 已經申請的血盟 */
-	public static final int $3258 = 3258;
-	/** 同意加入了 */
-	public static final int $3259 = 3259;
-	/** 不可再接受血盟員了 */
-	public static final int $3260 = 3260;
-	/** 成功登錄 */
-	public static final int $3261 = 3261;
-	/** 登錄取消 */
-	public static final int $3262 = 3262;
-	/** 該血盟的週最大同登入人數 */
-	public static final int $3263 = 3263;
-	/** 要找討伐隊員的話可以進行任務 */
-	public static final int $3264 = 3264;
-	/** 要找龍骨收集人的話可以進行任務 */
-	public static final int $3265 = 3265;
-	/** 取消加入邀請 */
-	public static final int $3266 = 3266;
-	/** 提出的加入邀請被拒絕了 */
-	public static final int $3267 = 3267;
-	/** 拒絕加入邀請 */
-	public static final int $3268 = 3268;
-	/** 拒絕加入邀請 */
-	public static final int $3269 = 3269;
-	/** 加入血盟的狀態 */
-	public static final int $3270 = 3270;
-	/** 已"登錄"透過"修正"不管何時都可以變更登錄內容 */
-	public static final int $3271 = 3271;
-	/** 使用方法：/powerbook [檢索名子] */
-	public static final int $3272 = 3272;
-	/** 使用方法：/引用 [檢索名字] */
-	public static final int $3273 = 3273;
-	/** 該道具無法在目前區域中使用。 */
-	public static final int $3274 = 3274;
-	/** 血盟成員已經滿了\n不可再登錄 */
-	public static final int $3275 = 3275;
-	/** 創設血盟後可以使用 */
-	public static final int $3276 = 3276;
-	/** 血盟創設後可以使用，血盟可透過管理NPC創設。 */
-	public static final int $3277 = 3277;
-	/** 同種類的戒指不可再裝備。 */
-	public static final int $3278 = 3278;
-	/** 活動道具戒指不可再裝備。 */
-	public static final int $3279 = 3279;
-	/** 該血盟不能\n再收血盟員的狀態 */
-	public static final int $3280 = 3280;
-	/** 不可再收血盟成員 */
-	public static final int $3281 = 3281;
-	/** 接受初心者小幫手的幫助，恢復力提升。 */
-	public static final int $3282 = 3282;
-	/** 使用加速工具故遊戲結束 */
-	public static final int $3283 = 3283;
-	/** 招集志同道合的血盟員!!\n獨身一人的勇士~? 想交朋友嗎?\n我們正等著你! */
-	public static final int $3284 = 3284;
-	/** 招集一同戰鬥的血盟員!!\n你很強嗎?!那麼加入我們吧!!\n一起戰鬥吧! */
-	public static final int $3285 = 3285;
-	/** 找不到對象 */
-	public static final int $3286 = 3286;
-	/** 請選擇想要的類型 */
-	public static final int $3287 = 3287;
-	/** 感受到中秋月兔的力量，體力上限+30、魔力上限+15。 */
-	public static final int $3288 = 3288;
-	/** 感受到中秋月兔的魔法，魔法防禦+3、傷害減免+2。 */
-	public static final int $3289 = 3289;
-	/** 感受到月餅的效果，魔力上限+80。 */
-	public static final int $3290 = 3290;
-	/** 感受到牛肉月餅的效果，體力上限+120。 */
-	public static final int $3291 = 3291;
-	/** 雙擊或選擇後按下確認即可形成新角色 */
-	public static final int $3292 = 3292;
-	/** 請確認「道具市價查詢」的資訊 */
-	public static final int $3293 = 3293;
-	/** 任務完成：下個階段-向銀騎士村莊遠征隊員報告 */
-	public static final int $3294 = 3294;
-	/** 任務完成：下個階段-向銀騎士村莊龍骨收集員報告 */
-	public static final int $3295 = 3295;
-	/** 強化：%0滲透了燦爛大自然的力量。 */
-	public static final int $3296 = 3296;
-	/** 強化：不可賦予其他屬性(屬性4階段以上) */
-	public static final int $3297 = 3297;
-	/** 該武器不可使用屬性變更卷軸 */
-	public static final int $3298 = 3298;
-	/** 新魔法力量圍繞而來 */
-	public static final int $3299 = 3299;
-	/** 甘特：小心！這裡不可復活！ */
-	public static final int $3300 = 3300;
-	/** 甘特：林德拜爾隱藏時我可以給你一點力量！ */
-	public static final int $3301 = 3301;
-	/** 甘特：勇士們！起來奮鬥吧！衝阿！ */
-	public static final int $3302 = 3302;
-	/** 甘特：我感受到林德拜爾藏在巢穴裡了！加油！ */
-	public static final int $3303 = 3303;
-	/** 甘特：竟然做到了！真為你感到自豪！ */
-	public static final int $3304 = 3304;
-	/** 王族的呼喊：不可使用血盟系統的狀態。 */
-	public static final int $3305 = 3305;
-	/** %d分後(%s)才可使用。 */
-	public static final int $3306 = 3306;
-	/** 點擊的話能登錄文字，\n輸入不符合宣傳血盟的內容時\n可能會被刪除及被制裁。 */
-	public static final int $3307 = 3307;
-	/** 王族的呼喊：血盟王族才能進行登錄和修正。 */
-	public static final int $3308 = 3308;
-	/** %s等相同單字不可包含在內。 */
-	public static final int $3309 = 3309;
-	/** %s 於 [%02d月%02d日 %02d點%02d分]解除封印。 */
-	public static final int $3310 = 3310;
-	/** 感受到神聖的力量。 */
-	public static final int $3311 = 3311;
-	/** 要消費1千萬金幣來擴充欄位嗎？(Y/N) */
-	public static final int $3312 = 3312;
-	/** 要消費3千萬金幣來擴充欄位嗎？(Y/N) */
-	public static final int $3313 = 3313;
-	/** 因受到神聖力量的保護，將不會受到物品掉落的懲罰。 */
-	public static final int $3314 = 3314;
-	/** %dLv / %d%% */
-	public static final int $3315 = 3315;
-	/** 第%d名 */
-	public static final int $3316 = 3316;
-	/** 無名次 */
-	public static final int $3317 = 3317;
-	/** %d年%d月%d日為基準。 */
-	public static final int $3318 = 3318;
-	/** 強化：不可使用相同屬性。 */
-	public static final int $3319 = 3319;
-	/** 征伐的吶喊：%1 ， %2 ， %3的領導 %0 征伐成功！ */
-	public static final int $3320 = 3320;
-	/** %0等級達成的話可以學習該魔法。 */
-	public static final int $3321 = 3321;
-	/** 注視 */
-	public static final int $3322 = 3322;
-	/** %s 血盟的注視需要解除嗎？ */
-	public static final int $3323 = 3323;
-	/** 對象血盟於戰爭狀態。 */
-	public static final int $3324 = 3324;
-	/** 請輸入目錄內容。(最多60個字/Ese=取消) */
-	public static final int $3325 = 3325;
-	/** %s(%02d/%02d) */
-	public static final int $3326 = 3326;
-	/** 無法對該對象施放起死回生術 */
-	public static final int $3327 = 3327;
-	/** 目錄內容太長。(最多60個字) */
-	public static final int $3328 = 3328;
-	/** 該道具不是充電類型的道具。 */
-	public static final int $3329 = 3329;
-	/** 目前不可對該道具進行充電。 */
-	public static final int $3330 = 3330;
-	/** 只能對剩於30分之內的道具進行充電。 */
-	public static final int $3331 = 3331;
-	/** 丹特斯的氣息：近距離、遠距離傷害+2、魔攻+1，魔力恢復量+2。 */
-	public static final int $3332 = 3332;
-	/** %s可馬上移動但需要消耗 %d金幣，要移動嗎？ */
-	public static final int $3333 = 3333;
-	/** STR_USER_PLAY_STATS_DUNGEON_TOOLTIP0 */
-	public static final int $3334 = 3334;
-	/** STR_USER_PLAY_STATS_DUNGEON_TOOLTIP1 */
-	public static final int $3335 = 3335;
-	/** STR_USER_PLAY_STATS_DUNGEON_TOOLTIP2 */
-	public static final int $3336 = 3336;
-	/** STR_USER_PLAY_STATS_DUNGEON_TOOLTIP3 */
-	public static final int $3337 = 3337;
-	/** 伊莉絲：給予的時間全部都消耗完了，所以不可再入場。 */
-	public static final int $3338 = 3338;
-	/** 該道具只能在一定時間內對可充電的道具使用。 */
-	public static final int $3339 = 3339;
-	/** 該道具可對需充電類型的道具進行充電。 */
-	public static final int $3340 = 3340;
-	/** 需要充電。 */
-	public static final int $3341 = 3341;
-	/** 丹特斯：享受痛苦吧！哈哈哈... */
-	public static final int $3342 = 3342;
-	/** %0：無限 */
-	public static final int $3343 = 3343;
-	/** 無限 */
-	public static final int $3344 = 3344;
-	/** 拉斯塔巴德副本的限制時間使用完畢。 */
-	public static final int $3345 = 3345;
-	/** 不可刪除加入血盟的角色，請確認有無加入血盟後再使用。 */
-	public static final int $3346 = 3346;
-	/** 超過一台電腦裡可執行天堂程式的數量。 */
-	public static final int $3347 = 3347;
-	/** %0 血盟想要查看您的血盟，接受嗎？ */
-	public static final int $3348 = 3348;
-	/** 對象血盟的王族為離線狀態。 */
-	public static final int $3349 = 3349;
-	/** 等級高的對象 */
-	public static final int $3350 = 3350;
-	/** 等級低的對象 */
-	public static final int $3351 = 3351;
-	/** 等級同等的對象 */
-	public static final int $3352 = 3352;
-	/** 等級高 */
-	public static final int $3353 = 3353;
-	/** 等級低 */
-	public static final int $3354 = 3354;
-	/** 等級同等 */
-	public static final int $3355 = 3355;
-	/** 黑蛇的祝福：體力上限+20，魔力上限+13，防禦-2，傷害減免+3，黑暗耐性+10。 */
-	public static final int $3356 = 3356;
-	/** 黑蛇的祝福：消失。 */
-	public static final int $3357 = 3357;
-	/** 想進入戰場的話請登錄對戰或觀戰。 */
-	public static final int $3358 = 3358;
-	/** %0 血盟不可再進行查看了。 */
-	public static final int $3359 = 3359;
-	/** %0 血盟從現在開始查看。 */
-	public static final int $3360 = 3360;
-	/** 請輸入想要查看的血盟名。 */
-	public static final int $3361 = 3361;
-	/** STR_YOU_NEED_CLIENT_UPDATE */
-	public static final int $3362 = 3362;
-	/** 修習 */
-	public static final int $3363 = 3363;
-	/** 守護 */
-	public static final int $3364 = 3364;
-	/** 副君主 */
-	public static final int $3365 = 3365;
-	/** 戰場關閉還剩 %0 秒。 */
-	public static final int $3366 = 3366;
-	/** 要送禮嗎？ */
-	public static final int $3367 = 3367;
-	/** 要索取禮物嗎？ */
-	public static final int $3368 = 3368;
-	/** STR_EXEED_MAX_TRANSACT_ADENA_AMOUNT */
-	public static final int $3369 = 3369;
-	/** 系統 */
-	public static final int $3370 = 3370;
-	/** STR_TENCENT_NO_SELECT_FRIEND */
-	public static final int $3371 = 3371;
-	/** 君主的召見：要確認推薦血盟目錄嗎？ (Y/N) */
-	public static final int $3378 = 3378;
-	/** 血盟注視：戰爭狀態中無法使用 */
-	public static final int $3383 = 3383;
-	/** 任務完成：下個階段-請找世界巨星PSY */
-	public static final int $3393 = 3393;
-	/** [日本] EXP+5%, 減少傷害+5 */
-	public static final int $3394 = 3394;
-	/** 體力上限+25、魔力上限+20、傷害減免+2。 */
-	public static final int $3395 = 3395;
-	/** 只可移動至統一村莊的安全區域。 */
-	public static final int $3396 = 3396;
-	/** [發光銅像] 莫提斯的心意送貨員 */
-	public static final int $3397 = 3397;
-	/** 等級提升獎勵: EXP +123% */
-	public static final int $3400 = 3400;
-	/** 音源 */
-	public static final int $3402 = 3402;
-	/** 遠距離攻擊+2、近距離攻擊+2、魔法攻擊+1。 */
-	public static final int $3403 = 3403;
-	/** 體力上限+50、魔力上限+30、魔法防禦+10、傷害減少+3。 */
-	public static final int $3404 = 3404;
-	/** 此為不可以開設商店的地方，請再確認。 */
-	public static final int $3405 = 3405;
-	/** 尋找商人 */
-	public static final int $3411 = 3411;
-	/** /尋找商人 "角色名"可以尋找目前販售中的商人。 */
-	public static final int $3412 = 3412;
-	/** 料理：可提升攻擊力，防禦力，恢復值。 */
-	public static final int $3420 = 3420;
-	/** 持有的道具過重，無法開設商店。 */
-	public static final int $3425 = 3425;
-	/** 未上線 */
-	public static final int $3426 = 3426;
-	/** 無 */
-	public static final int $3427 = 3427;
-	/** 結束任務：下個階段-向可疑的天空庭園基勒古報告 */
-	public static final int $3428 = 3428;
-	/** 混濁的蛇皮：體力上限+25、魔力上限MP+15、額外傷害減免+1、魔法防禦+3。 */
-	public static final int $3481 = 3481;
-	/** 數量 */
-	public static final int $3592 = 3592;
-	/** 單價 金額 */
-	public static final int $3593 = 3593;
-	/** 總 金額 */
-	public static final int $3594 = 3594;
-	/** 嫦娥羽巾: HP+50, MP+30, 體力恢復+2, 魔力恢復+2 */
-	public static final int $3600 = 3600;
+
 }

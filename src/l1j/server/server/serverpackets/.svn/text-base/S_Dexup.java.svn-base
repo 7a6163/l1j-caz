@@ -27,9 +27,7 @@ public class S_Dexup extends ServerBasePacket {
 		writeH(time);
 		writeC(pc.getDex());
 		writeC(type);
-		writeC(0);
-		writeC(0);
-		writeC(0);
+		writeD(0);
 	}
 
 	@Override

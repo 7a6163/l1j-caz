@@ -31,7 +31,7 @@ public class S_Buddy extends ServerBasePacket {
 		writeC(Opcodes.S_OPCODE_SHOWHTML);
 		writeD(objId);
 		writeS(_HTMLID);
-		writeC(0x00);
+		writeH(0x02);
 		writeH(0x02);
 
 		writeS(buddy.getBuddyListString());

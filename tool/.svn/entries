@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/tool
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/tool
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
+2013-10-20T08:01:49.675503Z
+380
 ibm99nets
-has-props
+
 
 
 
@@ -26,6 +26,9 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
+NameIdMaker
+dir
+
 L1J_Telnet
 dir
 
@@ -35,11 +38,11 @@ file
 
 
 
-2016-01-09T23:18:49.688892Z
+2016-01-09T23:18:45.349008Z
 dc465db9e455ab9768093c768c63a57c
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-02-22T11:42:41.449374Z
+20
+ibm99nets@gmail.com
 
 
 
@@ -64,8 +67,5 @@ ibm99nets
 1570
 
 Ip_Convert
-dir
-
-NameIdMaker
 dir
 

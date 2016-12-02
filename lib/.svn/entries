@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/lib
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/lib
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
+2013-10-20T08:01:49.675503Z
+380
 ibm99nets
-has-props
+
 
 
 
@@ -26,85 +26,17 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
-javolution-5.5.1.jar
-file
-
-
-
-
-2016-01-09T23:18:49.352901Z
-1b7257da4690bada3cac7293985f8588
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-395195
-
-ant.jar
-file
-
-
-
-
-2016-01-09T23:18:49.352901Z
-e46a018f08da06e099fbc041c78bf040
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1514270
-
 mysql-connector-java-5.1.14-bin.jar
 file
 
 
 
 
-2016-01-09T23:18:49.352901Z
+2016-01-09T23:18:45.009017Z
 7c763eb532f0c5bf3972dad4cfd59e75
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2010-12-17T05:49:23.120695Z
+4
+for.sqven
 has-props
 
 
@@ -134,11 +66,11 @@ file
 
 
 
-2016-01-09T23:18:49.352901Z
+2016-01-09T23:18:45.009017Z
 45db3fd891e1f22cc90109ac7e473c73
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2010-12-17T05:49:23.120695Z
+4
+for.sqven
 has-props
 
 
@@ -161,4 +93,72 @@ has-props
 
 
 610790
+
+javolution-5.5.1.jar
+file
+
+
+
+
+2016-01-09T23:18:45.009017Z
+1b7257da4690bada3cac7293985f8588
+2010-12-17T05:49:23.120695Z
+4
+for.sqven
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+395195
+
+ant.jar
+file
+
+
+
+
+2016-01-09T23:18:45.009017Z
+e46a018f08da06e099fbc041c78bf040
+2012-01-29T05:02:27.154954Z
+360
+ibm99nets
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1514270
 

@@ -57,30 +57,39 @@ public class S_OwnCharPack extends ServerBasePacket {
 			status |= STATUS_GHOST;
 		}
 
+		// int addbyte = 0;
 		writeC(Opcodes.S_OPCODE_CHARPACK);
 		writeH(pc.getX());
 		writeH(pc.getY());
 		writeD(pc.getId());
-		writeH(pc.isDead() ? pc.getTempCharGfxAtDead() : pc.getTempCharGfx());
-		writeC(pc.isDead() ? pc.getStatus() : pc.getCurrentWeapon());
+		if (pc.isDead()) {
+			writeH(pc.getTempCharGfxAtDead());
+		} else {
+			writeH(pc.getTempCharGfx());
+		}
+		if (pc.isDead()) {
+			writeC(pc.getStatus());
+		} else {
+			writeC(pc.getCurrentWeapon());
+		}
 		writeC(pc.getHeading());
+		// writeC(addbyte);
 		writeC(pc.getOwnLightSize());
 		writeC(pc.getMoveSpeed());
-		//writeD(pc.getExp());
-		writeD(1);
+		writeD(pc.getExp());
 		writeH(pc.getLawful());
 		writeS(pc.getName());
 		writeS(pc.getTitle());
 		writeC(status);
-		writeD(pc.getClanid() > 0 ? pc.getClan().getEmblemId() : 0); // 盟徽編號
+		writeD(pc.getClanid());
 		writeS(pc.getClanname()); // クラン名
 		writeS(null); // ペッホチング？
-		writeC(pc.getClanRank() > 0 ? pc.getClanRank() << 4 : 0xb0); // 階級  * 16
+		writeC(0); // ？
 		if (pc.isInParty()) // パーティー中
 		{
 			writeC(100 * pc.getCurrentHp() / pc.getMaxHp());
 		} else {
-			writeC(0xff);
+			writeC(0xFF);
 		}
 		if (pc.hasSkillEffect(STATUS_THIRD_SPEED)) {
 			writeC(0x08); // 3段加速
@@ -89,10 +98,8 @@ public class S_OwnCharPack extends ServerBasePacket {
 		}
 		writeC(0); // PC = 0, Mon = Lv
 		writeC(0); // ？
-		writeC(0xff);
-		writeC(0xff);
-		writeS(null);
-		writeC(0);
+		writeC(0xFF);
+		writeC(0xFF);
 	}
 
 	@Override

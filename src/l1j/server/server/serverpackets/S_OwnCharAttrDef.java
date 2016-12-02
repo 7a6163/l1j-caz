@@ -34,10 +34,10 @@ public class S_OwnCharAttrDef extends ServerBasePacket {
 	private void buildPacket(L1PcInstance pc) {
 		writeC(Opcodes.S_OPCODE_OWNCHARATTRDEF);
 		writeC(pc.getAc());
-		writeH(pc.getFire());
-		writeH(pc.getWater());
-		writeH(pc.getWind());
-		writeH(pc.getEarth());
+		writeC(pc.getFire());
+		writeC(pc.getWater());
+		writeC(pc.getWind());
+		writeC(pc.getEarth());
 	}
 
 	@Override

@@ -44,7 +44,7 @@ public class C_Propose extends ClientBasePacket {
 			if (pc.isGhost()) {
 				return;
 			}
-			L1PcInstance target = FaceToFace.faceToFace(pc, false);
+			L1PcInstance target = FaceToFace.faceToFace(pc);
 			if (target != null) {
 				if (pc.getPartnerId() != 0) {
 					pc.sendPackets(new S_ServerMessage(657)); // \f1あなたはすでに結婚しています。

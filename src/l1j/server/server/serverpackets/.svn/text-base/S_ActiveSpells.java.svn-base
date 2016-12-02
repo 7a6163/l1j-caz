@@ -35,9 +35,9 @@ public class S_ActiveSpells extends ServerBasePacket {
 
 		writeC(Opcodes.S_OPCODE_ACTIVESPELLS);
 		writeC(0x14);
-		
+
 		for (int i : activeSpells(pc)) {
-			if (i != 76) {
+			if (i != 72) {
 				writeC(i); 
 	         } else {
 	        	 writeD((int) (System.currentTimeMillis() / 1000)); 

@@ -116,6 +116,7 @@ public class Account {
 		Connection con = null;
 		PreparedStatement pstm = null;
 		try {
+
 			Account account = new Account();
 			account._name = name;
 			account._password = encodePassword(rawPassword);

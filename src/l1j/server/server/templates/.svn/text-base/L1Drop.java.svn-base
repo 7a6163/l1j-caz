@@ -10,6 +10,7 @@
  * HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
  * 
  */
+
 package l1j.server.server.templates;
 
 
@@ -23,16 +24,13 @@ public class L1Drop {
 	int _max;
 
 	int _chance;
-	
-	int _enchantlvl;
 
-	public L1Drop(int mobId, int itemId, int min, int max, int chance, int enchantlvl) {
+	public L1Drop(int mobId, int itemId, int min, int max, int chance) {
 		_mobId = mobId;
 		_itemId = itemId;
 		_min = min;
 		_max = max;
 		_chance = chance;
-		_enchantlvl = enchantlvl;
 	}
 
 	public int getChance() {
@@ -53,9 +51,5 @@ public class L1Drop {
 
 	public int getMobid() {
 		return _mobId;
-	}
-	
-	public int getEnchantlvl() {
-		return _enchantlvl;
 	}
 }

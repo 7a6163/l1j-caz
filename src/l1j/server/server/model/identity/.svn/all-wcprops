@@ -1,23 +1,23 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/identity
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/identity
 END
 L1SystemMessageId.java
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/identity/L1SystemMessageId.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/identity/L1SystemMessageId.java
 END
 L1ItemId.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/identity/L1ItemId.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/identity/L1ItemId.java
 END
 L1ArmorId.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/identity/L1ArmorId.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/identity/L1ArmorId.java
 END

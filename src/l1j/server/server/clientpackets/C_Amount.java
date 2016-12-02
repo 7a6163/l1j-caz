@@ -67,7 +67,8 @@ public class C_Amount extends ClientBasePacket {
 		String s = readS();
 
 		
-		L1NpcInstance npc = (L1NpcInstance) L1World.getInstance().findObject(objectId);
+		L1NpcInstance npc = (L1NpcInstance) L1World.getInstance().findObject(
+				objectId);
 		if (npc == null) {
 			return;
 		}
@@ -104,7 +105,8 @@ public class C_Amount extends ClientBasePacket {
 					boardTable.updateAuctionBoard(board);
 					if (nowBidderId != 0) {
 						// 將金幣退還給投標者
-						L1PcInstance bidPc = (L1PcInstance) L1World.getInstance().findObject(nowBidderId);
+						L1PcInstance bidPc = (L1PcInstance) L1World
+								.getInstance().findObject(nowBidderId);
 						if (bidPc != null) { // 玩家在線上
 							bidPc.getInventory().storeItem(L1ItemId.ADENA,
 									nowPrice);
@@ -113,9 +115,11 @@ public class C_Amount extends ClientBasePacket {
 							bidPc.sendPackets(new S_ServerMessage(525, String
 									.valueOf(nowPrice)));
 						} else { // 玩家離線中
-							L1ItemInstance item = ItemTable.getInstance().createItem(L1ItemId.ADENA);
+							L1ItemInstance item = ItemTable.getInstance()
+									.createItem(L1ItemId.ADENA);
 							item.setCount(nowPrice);
-							CharactersItemStorage storage = CharactersItemStorage.create();
+							CharactersItemStorage storage = CharactersItemStorage
+									.create();
 							storage.storeItem(nowBidderId, item);
 						}
 					}
@@ -155,7 +159,7 @@ public class C_Amount extends ClientBasePacket {
 			// 旅館NPC
 			int npcId = npc.getNpcId();
 			if (npcId == 70070 || npcId == 70019 || npcId == 70075 || npcId == 70012
-			 || npcId == 70031 || npcId == 70084 || npcId == 70065 || npcId == 70054 || npcId == 70096) {
+					|| npcId == 70031 || npcId == 70084 || npcId == 70065 || npcId == 70054 || npcId == 70096) {
 
 				if (pc.getInventory().checkItem(L1ItemId.ADENA, (300 * amount))) { // 所需金幣 = 鑰匙價格(300) * 鑰匙數量(amount)
 					L1Inn inn = InnTable.getInstance().getTemplate(npcId, pc.getInnRoomNumber());

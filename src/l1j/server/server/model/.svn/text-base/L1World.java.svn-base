@@ -66,7 +66,7 @@ public class L1World {
 		_allObjects = Maps.newConcurrentMap(); // 全てのオブジェクト(L1ItemInstance入り、L1Inventoryはなし)
 		_visibleObjects = new Map[MAX_MAP_ID + 1]; // マップ毎のオブジェクト(L1Inventory入り、L1ItemInstanceはなし)
 		_allWars = Lists.newConcurrentList(); // 全ての戦争
-		_allClans = Maps.newConcurrentMap(); // 所有的血盟物件 (Online/Offline)
+		_allClans = Maps.newConcurrentMap(); // 全てのクラン(Online/Offlineどちらも)
 
 		for (int i = 0; i <= MAX_MAP_ID; i++) {
 			_visibleObjects[i] = Maps.newConcurrentMap();

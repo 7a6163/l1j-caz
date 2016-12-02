@@ -18,7 +18,6 @@ import java.util.List;
 
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
-import l1j.server.server.serverpackets.S_NoSee;
 import l1j.server.server.serverpackets.S_ServerMessage;
 
 // Referenced classes of package l1j.server.server.utils:
@@ -29,7 +28,7 @@ public class FaceToFace {
 	private FaceToFace() {
 	}
 
-	public static L1PcInstance faceToFace(L1PcInstance pc, Boolean isJoinClan) {
+	public static L1PcInstance faceToFace(L1PcInstance pc) {
 		int pcX = pc.getX();
 		int pcY = pc.getY();
 		int pcHeading = pc.getHeading();
@@ -48,11 +47,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}
@@ -61,11 +56,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}
@@ -74,11 +65,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}
@@ -87,11 +74,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}
@@ -100,11 +83,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}
@@ -113,11 +92,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}
@@ -126,11 +101,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}
@@ -139,11 +110,7 @@ public class FaceToFace {
 					return target;
 				}
 				else {
-					if(isJoinClan){
-						pc.sendPackets(new S_NoSee(target.getName()));	
-					} else {
-						pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
-					}
+					pc.sendPackets(new S_ServerMessage(91, target.getName())); // \f1%0があなたを見ていません。
 					return null;
 				}
 			}

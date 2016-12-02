@@ -27,7 +27,8 @@ import l1j.server.server.model.Instance.L1NpcInstance;
 import l1j.server.server.templates.L1NpcChat;
 
 public class NpcChatTimeController implements Runnable {
-	private static Logger _log = Logger.getLogger(NpcChatTimeController.class.getName());
+	private static Logger _log = Logger.getLogger(NpcChatTimeController.class
+			.getName());
 
 	private static NpcChatTimeController _instance;
 

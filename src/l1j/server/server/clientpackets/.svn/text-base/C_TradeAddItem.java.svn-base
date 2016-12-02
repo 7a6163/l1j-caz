@@ -74,7 +74,8 @@ public class C_TradeAddItem extends ClientBasePacket {
 			}
 		}
 
-		L1PcInstance tradingPartner = (L1PcInstance) L1World.getInstance().findObject(pc.getTradeID());
+		L1PcInstance tradingPartner = (L1PcInstance) L1World.getInstance()
+				.findObject(pc.getTradeID());
 		if (tradingPartner == null) {
 			return;
 		}

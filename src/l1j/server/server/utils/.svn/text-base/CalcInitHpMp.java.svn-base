@@ -22,7 +22,7 @@ public class CalcInitHpMp {
 	}
 
 	/**
-	 * 各職業的初始HP返回
+	 * 各クラスの初期HPを返す
 	 * 
 	 * @param pc
 	 * @return hp
@@ -40,16 +40,16 @@ public class CalcInitHpMp {
 			hp = 12;
 		} else if (pc.isDarkelf()) {
 			hp = 12;
-		} else if (pc.isDragonKnight()) { // 3.70C 異動 15->16
-			hp = 16;
-		} else if (pc.isIllusionist()) {  // 3.70C 異動 15->14
-			hp = 14;     
+		} else if (pc.isDragonKnight()) {
+			hp = 15;
+		} else if (pc.isIllusionist()) {
+			hp = 15;
 		}
 		return hp;
 	}
 
 	/**
-	 * 各職業的初始MP返回
+	 * 各クラスの初期MPを返す
 	 * 
 	 * @param pc
 	 * @return mp
@@ -147,15 +147,13 @@ public class CalcInitHpMp {
 				mp = 3;
 				break;
 			}
-		} else if (pc.isDragonKnight()) { // 3.70C 異動
-			mp = 2;
-		} else if (pc.isIllusionist()) {  // 3.70C 異動
+		} else if (pc.isDragonKnight()) {
 			switch (pc.getWis()) {
 			case 12:
 			case 13:
 			case 14:
 			case 15:
-				mp = 5;
+				mp = 4;
 				break;
 			case 16:
 			case 17:
@@ -163,7 +161,24 @@ public class CalcInitHpMp {
 				mp = 6;
 				break;
 			default:
-				mp = 5;
+				mp = 4;
+				break;
+			}
+		} else if (pc.isIllusionist()) {
+			switch (pc.getWis()) {
+			case 12:
+			case 13:
+			case 14:
+			case 15:
+				mp = 4;
+				break;
+			case 16:
+			case 17:
+			case 18:
+				mp = 6;
+				break;
+			default:
+				mp = 4;
 				break;
 			}
 		}

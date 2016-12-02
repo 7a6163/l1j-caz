@@ -353,7 +353,8 @@ public class L1Inventory extends L1Object {
 					if (l1object instanceof L1FurnitureInstance) {
 						L1FurnitureInstance furniture = (L1FurnitureInstance) l1object;
 						if (furniture.getItemObjId() == item.getId()) { // 既に引き出している家具
-							FurnitureSpawnTable.getInstance().deleteFurniture(furniture);
+							FurnitureSpawnTable.getInstance().deleteFurniture(
+									furniture);
 						}
 					}
 				}
@@ -379,12 +380,14 @@ public class L1Inventory extends L1Object {
 	}
 
 	// 引数のインベントリにアイテムを移譲
-	public synchronized L1ItemInstance tradeItem(int objectId, int count,L1Inventory inventory) {
+	public synchronized L1ItemInstance tradeItem(int objectId, int count,
+			L1Inventory inventory) {
 		L1ItemInstance item = getItem(objectId);
 		return tradeItem(item, count, inventory);
 	}
 
-	public synchronized L1ItemInstance tradeItem(L1ItemInstance item,int count, L1Inventory inventory) {
+	public synchronized L1ItemInstance tradeItem(L1ItemInstance item,
+			int count, L1Inventory inventory) {
 		if (item == null) {
 			return null;
 		}
@@ -404,7 +407,8 @@ public class L1Inventory extends L1Object {
 		} else {
 			item.setCount(item.getCount() - count);
 			updateItem(item);
-			carryItem = ItemTable.getInstance().createItem(item.getItem().getItemId());
+			carryItem = ItemTable.getInstance().createItem(
+					item.getItem().getItemId());
 			carryItem.setCount(count);
 			carryItem.setEnchantLevel(item.getEnchantLevel());
 			carryItem.setIdentified(item.isIdentified());

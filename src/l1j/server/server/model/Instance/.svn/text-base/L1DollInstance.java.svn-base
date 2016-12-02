@@ -171,7 +171,8 @@ public class L1DollInstance extends L1NpcInstance {
 				actionCode = ActionCodes.ACTION_Think; // 66
 
 			broadcastPacket(new S_DoActionGFX(getId(), actionCode));
-			setSleepTime(calcSleepTime(SprTable.getInstance().getSprSpeed(getTempCharGfx(),actionCode), MOVE_SPEED)); //
+			setSleepTime(calcSleepTime(SprTable.getInstance().getSprSpeed(getTempCharGfx(),
+							actionCode), MOVE_SPEED)); //
 		}
 	}
 }

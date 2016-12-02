@@ -17,13 +17,9 @@ package l1j.server.server.clientpackets;
 import java.util.Calendar;
 
 import l1j.server.server.ClientThread;
-import l1j.server.server.datatables.ClanTable;
-import l1j.server.server.model.L1Clan;
 import l1j.server.server.model.L1DragonSlayer;
-import l1j.server.server.model.L1Teleport;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
-import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.serverpackets.S_SendLocation;
 import l1j.server.server.serverpackets.S_ServerMessage;
 import l1j.server.server.utils.L1SpawnUtil;
@@ -61,7 +57,8 @@ public class C_SendLocation extends ClientBasePacket {
 			if (target != null) {
 				L1PcInstance pc = client.getActiveChar();
 				String sender = pc.getName();
-				target.sendPackets(new S_SendLocation(type, sender, mapId, x, y, msgId));
+				target.sendPackets(new S_SendLocation(type, sender, mapId, x, y,
+						msgId));
 				// 将来的にtypeを使う可能性があるので送る
 				pc.sendPackets(new S_ServerMessage(1783, name));
 			}
@@ -102,67 +99,6 @@ public class C_SendLocation extends ClientBasePacket {
 					}
 				}
 			}
-		} else if(type == 0x2e){ // 識別盟徽 狀態
-			L1PcInstance pc = client.getActiveChar();
-			// 如果不是君主或聯盟王
-			if(pc.getClanRank() != 4 && pc.getClanRank() != 10){
-				return;
-			}
-			
-			int emblemStatus = readC(); // 0: 關閉 1:開啟
-			
-			L1Clan clan = pc.getClan();
-			clan.setEmblemStatus(emblemStatus);
-			ClanTable.getInstance().updateClan(clan);
-			
-			for(L1PcInstance member: clan.getOnlineClanMember()){
-				member.sendPackets(new S_PacketBox(S_PacketBox.PLEDGE_EMBLEM_STATUS, emblemStatus));
-			}
-		} else if(type == 0x30){ // 村莊便利傳送
-			int mapIndex = readH(); // 1: 亞丁 2:古魯丁 3: 奇岩
-			int point = readH();
-			int locx = 0;
-			int locy = 0;
-			L1PcInstance pc = client.getActiveChar();
-			if(mapIndex == 1){ 
-				if(point == 0){ // 亞丁-村莊北邊地區
-					//X34079 Y33136 右下角 X 34090 Y 33150
-					locx = 34079 + (int)(Math.random() * 12);
-					locy = 33136 + (int)(Math.random() * 15);
-				} else if(point == 1){ // 亞丁-村莊中心地區
-					//左上角 X 33970 Y 33243 右下角 X33979 Y33256 
-					locx = 33970 + (int)(Math.random() * 10);
-					locy = 33243 + (int)(Math.random() * 14);
-				} else if(point == 2){ // 亞丁-村莊教堂地區
-					// 左上 X33925 Y33351 右下 X33938 Y33359
-					locx = 33925 + (int)(Math.random() * 14);
-					locy = 33351 + (int)(Math.random() * 9);
-				}
-			} else if(mapIndex == 2){
-				if(point == 0){ // 古魯丁-北邊地區
-					//左上 X32615 Y32719 右下 X32625 Y32725
-					locx = 32615 + (int)(Math.random() * 11);
-					locy = 32719 + (int)(Math.random() * 7);
-				} else if(point == 1){ // 古魯丁-南邊地區 
-					//左上 X32621 Y32788 右下 X32629 Y32800  
-					locx = 32621 + (int)(Math.random() * 9);
-					locy = 32788 + (int)(Math.random() * 13);
-				}
-			} else if(mapIndex == 3){
-				if(point == 0){ // 奇岩-北邊地區
-					//左上 X33501 Y32765 右下 X33511 Y32773
-					locx = 33501 + (int)(Math.random() * 11);
-					locy = 32765 + (int)(Math.random() * 9);
-				} else if(point == 1){ // 奇岩-南邊地區 
-					//左上 X33440 Y32784 右下 X33450 Y32794 
-					locx = 33440 + (int)(Math.random() * 11);
-					locy = 32784 + (int)(Math.random() * 11);
-				}
-			}
-			L1Teleport.teleport(pc, locx, locy, pc.getMapId() , pc.getHeading(), true);
-			pc.sendPackets(new S_PacketBox(S_PacketBox.TOWN_TELEPORT, pc));
-		} else if(type == 0x32){
-			
 		}
 	}
 

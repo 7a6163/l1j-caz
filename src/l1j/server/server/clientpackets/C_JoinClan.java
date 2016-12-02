@@ -40,22 +40,15 @@ public class C_JoinClan extends ClientBasePacket {
 			return;
 		}
 
-		L1PcInstance target = FaceToFace.faceToFace(pc, true);
+		L1PcInstance target = FaceToFace.faceToFace(pc);
 		if (target != null) {
 			JoinClan(pc, target);
 		}
 	}
 
 	private void JoinClan(L1PcInstance player, L1PcInstance target) {
-		// 如果面對的對象不是王族或守護騎士
-		if (!target.isCrown() && (target.getClanRank() != L1Clan.CLAN_RANK_GUARDIAN)) {
+		if (!target.isCrown()) { // 如果面對的對象不是王族
 			player.sendPackets(new S_ServerMessage(92, target.getName())); // \f1%0はプリンスやプリンセスではありません。
-			return;
-		}
-		
-		if(player.getClanid() == target.getClanid()){
-			// 同一血盟
-			player.sendPackets(new S_ServerMessage(1199));
 			return;
 		}
 
@@ -71,11 +64,8 @@ public class C_JoinClan extends ClientBasePacket {
 			return;
 		}
 
-		if (target.getClanRank() != L1Clan.CLAN_RANK_PRINCE && target.getClanRank() != L1Clan.CLAN_RANK_GUARDIAN 
-				&& target.getClanRank() != L1Clan.CLAN_RANK_LEAGUE_GUARDIAN && target.getClanRank() != L1Clan.CLAN_RANK_LEAGUE_PRINCE 
-				&& target.getClanRank() != L1Clan.CLAN_RANK_LEAGUE_VICEPRINCE) { 
-			// 面對的對象不是盟主
-			player.sendPackets(new S_ServerMessage(92, target.getName()));
+		if (target.getId() != clan.getLeaderId()) { // 面對的對象不是盟主
+			player.sendPackets(new S_ServerMessage(92, target.getName())); // \f1%0はプリンスやプリンセスではありません。
 			return;
 		}
 

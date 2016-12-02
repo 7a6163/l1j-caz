@@ -37,7 +37,8 @@ import l1j.server.server.utils.collections.Maps;
 public class TextMapReader extends MapReader {
 
 	/** 紀錄用 */
-	private static Logger _log = Logger.getLogger(TextMapReader.class.getName());
+	private static Logger _log = Logger
+			.getLogger(TextMapReader.class.getName());
 
 	/** 地圖的路徑 */
 	private static final String MAP_DIR = "./maps/";
@@ -610,7 +611,6 @@ public class TextMapReader extends MapReader {
 		{ 785, 32640, 32959, 32576, 32895 },
 		{ 786, 32640, 32959, 32576, 32895 },
 		{ 787, 32640, 32959, 32576, 32895 },
-		{ 800, 32704, 32895, 32832, 33023 },
 		{ 997, 32704, 32767, 32768, 32831 },
 		{ 998, 32704, 32767, 32768, 32831 },
 		{ 1000, 32704, 32895, 32768, 32959 },

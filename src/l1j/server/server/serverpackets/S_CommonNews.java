@@ -31,9 +31,6 @@ public class S_CommonNews extends ServerBasePacket {
 	public S_CommonNews() {
 		_announcements = Lists.newList();
 		loadAnnouncements();
-		if(_announcements.isEmpty()){
-			return;
-		}
 		writeC(Opcodes.S_OPCODE_COMMONNEWS);
 		String message = "";
 		for (int i = 0; i < _announcements.size(); i++) {
@@ -68,12 +65,14 @@ public class S_CommonNews extends ServerBasePacket {
 				if (st.hasMoreTokens()) {
 					String announcement = st.nextToken();
 					_announcements.add(announcement);
-				} else {
+				}
+				else {
 					_announcements.add(" ");
 				}
-			} while (true);
-		} catch (Exception e) {
+			}
+			while (true);
 		}
+		catch (Exception e) {}
 	}
 
 	@Override

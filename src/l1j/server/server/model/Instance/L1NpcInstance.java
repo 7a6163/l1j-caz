@@ -100,7 +100,8 @@ public class L1NpcInstance extends L1Character {
 
 	public static final int CHAT_TIMING_GAME_TIME = 3;
 
-	private static Logger _log = Logger.getLogger(L1NpcInstance.class.getName());
+	private static Logger _log = Logger
+			.getLogger(L1NpcInstance.class.getName());
 
 	private L1Npc _npcTemplate;
 

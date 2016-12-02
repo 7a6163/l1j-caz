@@ -18,7 +18,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Map;
 import java.util.logging.Level;
@@ -27,10 +26,8 @@ import java.util.logging.Logger;
 import l1j.server.L1DatabaseFactory;
 import l1j.server.server.IdFactory;
 import l1j.server.server.model.L1Clan;
-import l1j.server.server.model.L1Quest;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
-import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.utils.SQLUtil;
 import l1j.server.server.utils.collections.Maps;
 
@@ -73,11 +70,7 @@ public class ClanTable {
 					clan.setLeaderName(rs.getString(4));
 					clan.setCastleId(rs.getInt(5));
 					clan.setHouseId(rs.getInt(6));
-					clan.setFoundDate(rs.getTimestamp(7));
-					clan.setAnnouncement(rs.getString(8));
-					clan.setEmblemId(rs.getInt(9));
-					clan.setEmblemStatus(rs.getInt(10));
-	
+
 					L1World.getInstance().storeClan(clan);
 					_clans.put(clan_id, clan);
 				}
@@ -137,27 +130,19 @@ public class ClanTable {
 		clan.setLeaderName(player.getName());
 		clan.setCastleId(0);
 		clan.setHouseId(0);
-		clan.setFoundDate(new Timestamp(System.currentTimeMillis()));
-		clan.setAnnouncement("");
-		clan.setEmblemId(0);
-		clan.setEmblemStatus(0);
 
 		Connection con = null;
 		PreparedStatement pstm = null;
 
 		try {
 			con = L1DatabaseFactory.getInstance().getConnection();
-			pstm = con.prepareStatement("INSERT INTO clan_data SET clan_id=?, clan_name=?, leader_id=?, leader_name=?, hascastle=?, hashouse=?, found_date=?, announcement=?, emblem_id=?, emblem_status=?");
+			pstm = con.prepareStatement("INSERT INTO clan_data SET clan_id=?, clan_name=?, leader_id=?, leader_name=?, hascastle=?, hashouse=?");
 			pstm.setInt(1, clan.getClanId());
 			pstm.setString(2, clan.getClanName());
 			pstm.setInt(3, clan.getLeaderId());
 			pstm.setString(4, clan.getLeaderName());
 			pstm.setInt(5, clan.getCastleId());
 			pstm.setInt(6, clan.getHouseId());
-			pstm.setTimestamp(7, new Timestamp(System.currentTimeMillis()));
-			pstm.setString(8, "");
-			pstm.setInt(9, 0);
-			pstm.setInt(10, 0);
 			pstm.execute();
 		}
 		catch (SQLException e) {
@@ -173,16 +158,7 @@ public class ClanTable {
 
 		player.setClanid(clan.getClanId());
 		player.setClanname(clan.getClanName());
-		
-		/** 授予一般君主權限 或者 聯盟王權限*/
-		if(player.getQuest().isEnd(L1Quest.QUEST_LEVEL45)){ // 通過45任務
-			player.setClanRank(L1Clan.CLAN_RANK_LEAGUE_PRINCE);
-			player.sendPackets(new S_PacketBox(S_PacketBox.MSG_RANK_CHANGED, L1Clan.CLAN_RANK_LEAGUE_PRINCE, player.getName())); // 你的階級變更為%s
-		} else {
-			player.setClanRank(L1Clan.CLAN_RANK_PRINCE);
-			player.sendPackets(new S_PacketBox(S_PacketBox.MSG_RANK_CHANGED, L1Clan.CLAN_RANK_PRINCE, player.getName())); // 你的階級變更為%s
-		}
-		
+		player.setClanRank(L1Clan.CLAN_RANK_PRINCE);
 		clan.addMemberName(player.getName());
 		try {
 			// DBにキャラクター情報を書き込む
@@ -199,17 +175,13 @@ public class ClanTable {
 		PreparedStatement pstm = null;
 		try {
 			con = L1DatabaseFactory.getInstance().getConnection();
-			pstm = con.prepareStatement("UPDATE clan_data SET clan_id=?, leader_id=?, leader_name=?, hascastle=?, hashouse=?, found_date=?, announcement=?, emblem_id=?, emblem_status=? WHERE clan_name=?");
+			pstm = con.prepareStatement("UPDATE clan_data SET clan_id=?, leader_id=?, leader_name=?, hascastle=?, hashouse=? WHERE clan_name=?");
 			pstm.setInt(1, clan.getClanId());
 			pstm.setInt(2, clan.getLeaderId());
 			pstm.setString(3, clan.getLeaderName());
 			pstm.setInt(4, clan.getCastleId());
 			pstm.setInt(5, clan.getHouseId());
-			pstm.setTimestamp(6, clan.getFoundDate());
-			pstm.setString(7, clan.getAnnouncement());
-			pstm.setInt(8, clan.getEmblemId());
-			pstm.setInt(9, clan.getEmblemStatus());
-			pstm.setString(10, clan.getClanName());
+			pstm.setString(6, clan.getClanName());
 			pstm.execute();
 		}
 		catch (SQLException e) {

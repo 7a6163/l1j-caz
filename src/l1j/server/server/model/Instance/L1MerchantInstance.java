@@ -219,7 +219,7 @@ public class L1MerchantInstance extends L1NpcInstance {
 					}
 				}
 			} else if (npcid == 70782) { // サーチアント
-				if (player.getTempCharGfx() == 2437) {// ジャイアントアント変身
+				if (player.getTempCharGfx() == 1037) {// ジャイアントアント変身
 					if (player.isCrown()) { // 君主
 						if (quest.get_step(L1Quest.QUEST_LEVEL30) == 1) {
 							htmlid = "ant1";
@@ -774,7 +774,7 @@ public class L1MerchantInstance extends L1NpcInstance {
 				}
 			} else if (npcid == 70824) { // アサシンマスターの追従者
 				if (player.isDarkelf()) {
-					if (player.getTempCharGfx() == 8783) { // アサシン変身
+					if (player.getTempCharGfx() == 3634) { // アサシン変身
 						int lv45_step = quest.get_step(L1Quest.QUEST_LEVEL45);
 						if (lv45_step == 1) {
 							htmlid = "assassin1";

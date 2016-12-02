@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/src/l1j/server/server/model/npc/action
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/src/l1j/server/server/model/npc/action
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-has-props
+2011-06-11T12:23:07.461744Z
+281
+intel_core_i9@yahoo.com.tw
+
 
 
 
@@ -26,221 +26,17 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
-L1NpcMakeItemAction.java
-file
-
-
-
-
-2016-01-09T23:18:47.424952Z
-2e6686b5d9bd037ad8c21c73203c0d8e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6793
-
-L1NpcSetQuestAction.java
-file
-
-
-
-
-2016-01-09T23:18:47.424952Z
-64198b00adb6d04db7aaa21e7cd43a90
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1486
-
-L1NpcTeleportAction.java
-file
-
-
-
-
-2016-01-09T23:18:47.424952Z
-23f5e73eb8d98dfd7274ae1f1be48a35
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2285
-
-L1NpcXmlParser.java
-file
-
-
-
-
-2016-01-09T23:18:47.424952Z
-2830fefcb38fd22e3c42151bc0dc0c26
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3887
-
-L1NpcAction.java
-file
-
-
-
-
-2016-01-09T23:18:47.424952Z
-b4d8f20f1899bdd1b4919f9c9a42f69a
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1200
-
-L1NpcXmlAction.java
-file
-
-
-
-
-2016-01-09T23:18:47.424952Z
-7a1987b450abe0f357bcff6ceaa26caa
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4684
-
 L1NpcListedAction.java
 file
 
 
 
 
-2016-01-09T23:18:47.424952Z
+2016-01-09T23:18:41.013123Z
 fe6a08409c5910ecbe1554a99bb5bcfa
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
 
 
 
@@ -270,11 +66,11 @@ file
 
 
 
-2016-01-09T23:18:47.424952Z
+2016-01-09T23:18:41.013123Z
 08294c4c617ec9b883d7f2fab0b51569
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-06-11T12:23:07.461744Z
+281
+intel_core_i9@yahoo.com.tw
 
 
 
@@ -304,11 +100,11 @@ file
 
 
 
-2016-01-09T23:18:47.424952Z
+2016-01-09T23:18:41.013123Z
 306aa65bb802ddb452bab328fe7067a2
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -338,11 +134,11 @@ file
 
 
 
-2016-01-09T23:18:47.424952Z
+2016-01-09T23:18:41.013123Z
 b1031f2e7a6b6dc13a4f539ddca5114a
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -365,4 +161,208 @@ ibm99nets
 
 
 2321
+
+L1NpcMakeItemAction.java
+file
+
+
+
+
+2016-01-09T23:18:41.013123Z
+2e6686b5d9bd037ad8c21c73203c0d8e
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6793
+
+L1NpcSetQuestAction.java
+file
+
+
+
+
+2016-01-09T23:18:41.013123Z
+64198b00adb6d04db7aaa21e7cd43a90
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1486
+
+L1NpcTeleportAction.java
+file
+
+
+
+
+2016-01-09T23:18:41.013123Z
+23f5e73eb8d98dfd7274ae1f1be48a35
+2011-04-13T17:54:33.085992Z
+103
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2285
+
+L1NpcXmlParser.java
+file
+
+
+
+
+2016-01-09T23:18:41.013123Z
+2830fefcb38fd22e3c42151bc0dc0c26
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3887
+
+L1NpcAction.java
+file
+
+
+
+
+2016-01-09T23:18:41.013123Z
+b4d8f20f1899bdd1b4919f9c9a42f69a
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1200
+
+L1NpcXmlAction.java
+file
+
+
+
+
+2016-01-09T23:18:41.013123Z
+7a1987b450abe0f357bcff6ceaa26caa
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4684
 

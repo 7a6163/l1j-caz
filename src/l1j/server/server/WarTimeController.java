@@ -14,9 +14,7 @@
  */
 package l1j.server.server;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 import java.util.TimeZone;
 
 import l1j.server.Config;
@@ -84,14 +82,11 @@ public class WarTimeController implements Runnable {
 		return _is_now_war[castle_id - 1];
 	}
 
-	// TODO 
 	public void checkCastleWar(L1PcInstance player) {
-		List<String> castle = new ArrayList<String>();
 		for (int i = 0; i < 8; i++) {
 			if (_is_now_war[i]) {
-				castle.add(CastleTable.getInstance().getCastleTable(i+1).getName());
-				// 攻城戰進行中。
-				player.sendPackets(new S_PacketBox(S_PacketBox.MSG_WAR_IS_GOING_ALL, castle.toArray()));
+				player.sendPackets(new S_PacketBox(S_PacketBox.MSG_WAR_GOING,
+						i + 1)); // %sの攻城戦が進行中です。
 			}
 		}
 	}
@@ -106,25 +101,31 @@ public class WarTimeController implements Runnable {
 					L1WarSpawn warspawn = new L1WarSpawn();
 					warspawn.SpawnFlag(i + 1);
 					// 修理城門並設定為關閉
-					for (L1DoorInstance door : DoorTable.getInstance().getDoorList()) {
+					for (L1DoorInstance door : DoorTable.getInstance()
+							.getDoorList()) {
 						if (L1CastleLocation.checkInWarArea(i + 1, door)) {
 							door.repairGate();
 						}
 					}
 
-					L1World.getInstance().broadcastPacketToAll(new S_PacketBox(S_PacketBox.MSG_WAR_BEGIN, i + 1)); // %sの攻城戦が始まりました。
+					L1World.getInstance().broadcastPacketToAll(
+							new S_PacketBox(S_PacketBox.MSG_WAR_BEGIN, i + 1)); // %sの攻城戦が始まりました。
 					int[] loc = new int[3];
-					for (L1PcInstance pc : L1World.getInstance().getAllPlayers()) {
+					for (L1PcInstance pc : L1World.getInstance()
+							.getAllPlayers()) {
 						int castleId = i + 1;
-						if (L1CastleLocation.checkInWarArea(castleId, pc)&& !pc.isGm()) { // 剛好在攻城範圍內
-							L1Clan clan = L1World.getInstance().getClan(pc.getClanname());
+						if (L1CastleLocation.checkInWarArea(castleId, pc)
+								&& !pc.isGm()) { // 剛好在攻城範圍內
+							L1Clan clan = L1World.getInstance().getClan(
+									pc.getClanname());
 							if (clan != null) {
 								if (clan.getCastleId() == castleId) { // 如果是城血盟
 									continue;
 								}
 							}
 							loc = L1CastleLocation.getGetBackLoc(castleId);
-							L1Teleport.teleport(pc, loc[0], loc[1],(short) loc[2], 5, true);
+							L1Teleport.teleport(pc, loc[0], loc[1],
+									(short) loc[2], 5, true);
 						}
 					}
 				}
@@ -141,7 +142,8 @@ public class WarTimeController implements Runnable {
 						// 取消攻城的旗子
 						if (l1object instanceof L1FieldObjectInstance) {
 							L1FieldObjectInstance flag = (L1FieldObjectInstance) l1object;
-							if (L1CastleLocation.checkInWarArea(castle_id, flag)) {
+							if (L1CastleLocation
+									.checkInWarArea(castle_id, flag)) {
 								flag.deleteMe();
 							}
 						}
@@ -156,7 +158,8 @@ public class WarTimeController implements Runnable {
 						// 移除守護塔
 						if (l1object instanceof L1TowerInstance) {
 							L1TowerInstance tower = (L1TowerInstance) l1object;
-							if (L1CastleLocation.checkInWarArea(castle_id,tower)) {
+							if (L1CastleLocation.checkInWarArea(castle_id,
+									tower)) {
 								tower.deleteMe();
 							}
 						}
@@ -166,7 +169,8 @@ public class WarTimeController implements Runnable {
 					warspawn.SpawnTower(castle_id);
 
 					// 移除城門
-					for (L1DoorInstance door : DoorTable.getInstance().getDoorList()) {
+					for (L1DoorInstance door : DoorTable.getInstance()
+							.getDoorList()) {
 						if (L1CastleLocation.checkInWarArea(castle_id, door)) {
 							door.repairGate();
 						}
@@ -182,8 +186,10 @@ public class WarTimeController implements Runnable {
 	}
 
 	private void WarUpdate(int i) {
-		_war_start_time[i].add(Config.ALT_WAR_INTERVAL_UNIT,Config.ALT_WAR_INTERVAL);
-		_war_end_time[i].add(Config.ALT_WAR_INTERVAL_UNIT,Config.ALT_WAR_INTERVAL);
+		_war_start_time[i].add(Config.ALT_WAR_INTERVAL_UNIT,
+				Config.ALT_WAR_INTERVAL);
+		_war_end_time[i].add(Config.ALT_WAR_INTERVAL_UNIT,
+				Config.ALT_WAR_INTERVAL);
 		_l1castle[i].setWarTime(_war_start_time[i]);
 		_l1castle[i].setTaxRate(10); // 稅率10%
 		_l1castle[i].setPublicMoney(0); // 清除城堡稅收

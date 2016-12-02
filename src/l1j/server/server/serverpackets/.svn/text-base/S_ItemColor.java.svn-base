@@ -22,7 +22,7 @@ public class S_ItemColor extends ServerBasePacket {
 	private static final String S_ITEM_COLOR = "[S] S_ItemColor";
 
 	/**
-	 * アイテムの色を変更する。祝福・呪い、封印状態が変化した時などに送る
+	 * アイテムの色を変更する。祝福・呪い状態が変化した時などに送る
 	 */
 	public S_ItemColor(L1ItemInstance item) {
 		if (item == null) {

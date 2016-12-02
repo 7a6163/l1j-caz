@@ -1,17 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet
-END
-TelnetServer.java
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet/TelnetServer.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/telnet
 END
 TelnetConnection.java
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/telnet/TelnetConnection.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/telnet/TelnetConnection.java
+END
+TelnetServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/telnet/TelnetServer.java
 END

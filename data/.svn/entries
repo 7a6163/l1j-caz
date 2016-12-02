@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/data
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/data
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
+2013-10-20T08:01:49.675503Z
+380
 ibm99nets
-has-props
+
 
 
 
@@ -26,41 +26,10 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
-announcements.txt
-file
-
-
-
-
-2016-01-09T23:18:49.400900Z
-4505d553a81543f10ef7d5cf54bfbb4f
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-73
-
 xml
+dir
+
+language
 dir
 
 announceCycle.txt
@@ -69,11 +38,12 @@ file
 
 
 
-2016-01-09T23:18:49.400900Z
-23f9241e1d5b0f882d89298db4908436
-2013-11-13T15:01:16.279159Z
-385
+2016-01-09T23:18:45.101014Z
+35755b8b6dc116aa5ab7568efe082cb8
+2011-12-05T07:06:56.274437Z
+357
 ibm99nets
+has-props
 
 
 
@@ -94,8 +64,7 @@ ibm99nets
 
 
 
-
-209
+195
 
 badnames.txt
 file
@@ -103,10 +72,10 @@ file
 
 
 
-2016-01-09T23:18:49.400900Z
+2016-01-09T23:18:45.101014Z
 b6732d51a3cfc9911756db16fb72e114
-2013-11-13T15:01:16.279159Z
-385
+2010-11-30T08:19:51.194930Z
+2
 ibm99nets
 
 
@@ -130,4 +99,38 @@ ibm99nets
 
 
 243
+
+announcements.txt
+file
+
+
+
+
+2016-01-09T23:18:45.101014Z
+4505d553a81543f10ef7d5cf54bfbb4f
+2011-02-04T13:04:23.296304Z
+12
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+73
 

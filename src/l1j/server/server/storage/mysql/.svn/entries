@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/src/l1j/server/server/storage/mysql
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/src/l1j/server/server/storage/mysql
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
+2012-01-29T15:37:29.018315Z
+362
 ibm99nets
-has-props
+
 
 
 
@@ -32,11 +32,12 @@ file
 
 
 
-2016-01-09T23:18:47.592948Z
-b15ff9b8cc979e96ac06094f80796eb9
-2013-11-13T15:01:16.279159Z
-385
+2016-01-09T23:18:41.389113Z
+9f161dc9b39b7fe77cae1aed98a59a20
+2012-01-29T15:37:29.018315Z
+362
 ibm99nets
+has-props
 
 
 
@@ -57,8 +58,7 @@ ibm99nets
 
 
 
-
-5484
+5149
 
 MySqlCharacterStorage.java
 file
@@ -66,11 +66,11 @@ file
 
 
 
-2016-01-09T23:18:47.592948Z
-2c7792c6de6550e62e49bb8039a6272d
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:41.389113Z
+d4f2658fad157279e9cf45de4e4a4662
+2011-09-03T10:25:04.662902Z
+330
+yamca2701@gmail.com
 
 
 
@@ -92,7 +92,7 @@ ibm99nets
 
 
 
-14043
+14531
 
 MySqlCharactersItemStorage.java
 file
@@ -100,11 +100,11 @@ file
 
 
 
-2016-01-09T23:18:47.592948Z
+2016-01-09T23:18:41.389113Z
 5b4e29462d6505edcbfa0d111950f015
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-05-01T03:57:12.565529Z
+158
+intel_core_i9@yahoo.com.tw
 
 
 

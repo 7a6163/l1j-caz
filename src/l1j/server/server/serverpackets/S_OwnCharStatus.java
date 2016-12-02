@@ -29,8 +29,11 @@ public class S_OwnCharStatus extends ServerBasePacket {
 	public S_OwnCharStatus(L1PcInstance pc) {
 		int time = L1GameTimeClock.getInstance().currentTime().getSeconds();
 		time = time - (time % 300);
+		// _log.warning((new
+		// StringBuilder()).append("送信時間:").append(i).toString());
 		writeC(Opcodes.S_OPCODE_OWNCHARSTATUS);
 		writeD(pc.getId());
+
 		if (pc.getLevel() < 1) {
 			writeC(1);
 		}
@@ -41,6 +44,7 @@ public class S_OwnCharStatus extends ServerBasePacket {
 			writeC(pc.getLevel());
 		}
 		writeD(pc.getExp());
+
 		writeC(pc.getStr());
 		writeC(pc.getInt());
 		writeC(pc.getWis());
@@ -56,11 +60,10 @@ public class S_OwnCharStatus extends ServerBasePacket {
 		writeC(pc.get_food());
 		writeC(pc.getInventory().getWeight242());
 		writeH(pc.getLawful());
-		writeH(pc.getFire());
-		writeH(pc.getWater());
-		writeH(pc.getWind());
-		writeH(pc.getEarth());
-		writeD(pc.getMonsKill()); // 狩獵數量
+		writeC(pc.getFire());
+		writeC(pc.getWater());
+		writeC(pc.getWind());
+		writeC(pc.getEarth());
 	}
 
 	@Override

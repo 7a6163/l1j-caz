@@ -281,7 +281,8 @@ public class L1Shop {
 	 * 販売取引
 	 */
 	private void sellItems(L1PcInventory inv, L1ShopBuyOrderList orderList) {
-		if (!inv.consumeItem(L1ItemId.ADENA,orderList.getTotalPriceTaxIncluded())) {
+		if (!inv.consumeItem(L1ItemId.ADENA,
+				orderList.getTotalPriceTaxIncluded())) {
 			throw new IllegalStateException("購入に必要なアデナを消費できませんでした。");
 		}
 		for (L1ShopBuyOrder order : orderList.getList()) {

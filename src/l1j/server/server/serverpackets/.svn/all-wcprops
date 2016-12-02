@@ -1,1013 +1,965 @@
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets
-END
-S_UseAttackSkill.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_UseAttackSkill.java
-END
-S_CastleMaster.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CastleMaster.java
-END
-S_DollPack.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DollPack.java
-END
-S_Karma.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Karma.java
-END
-S_HowManyKey.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_HowManyKey.java
-END
-S_RangeSkill.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_RangeSkill.java
-END
-S_Trade.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Trade.java
-END
-S_Party.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Party.java
-END
-S_SkillIconAura.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconAura.java
-END
-S_Pledge.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Pledge.java
-END
-S_SkillIconBlessOfEva.java
-K 25
-svn:wc:ra_dav:version-url
-V 99
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconBlessOfEva.java
-END
-S_CharAmount.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharAmount.java
-END
-S_Door.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Door.java
-END
-S_AuctionBoardRead.java
-K 25
-svn:wc:ra_dav:version-url
-V 96
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_AuctionBoardRead.java
-END
-S_WhoCharinfo.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_WhoCharinfo.java
-END
-S_SkillList.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillList.java
-END
-S_HPUpdate.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_HPUpdate.java
-END
-S_IdentifyDesc.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_IdentifyDesc.java
-END
-S_DragonGate.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DragonGate.java
-END
-S_NPCPack.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NPCPack.java
-END
-S_PacketBox.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PacketBox.java
-END
-S_SPMR.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SPMR.java
-END
-S_CharacterConfig.java
-K 25
-svn:wc:ra_dav:version-url
-V 95
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharacterConfig.java
-END
-S_RemoveObject.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_RemoveObject.java
-END
-S_TradeAddItem.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_TradeAddItem.java
-END
-S_InvList.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_InvList.java
-END
-S_MapID.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_MapID.java
-END
-S_CurseBlind.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CurseBlind.java
-END
-S_SkillBrave.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillBrave.java
-END
-S_MoveNpcPacket.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_MoveNpcPacket.java
-END
-S_SkillHaste.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillHaste.java
-END
-S_SkillIconWindShackle.java
-K 25
-svn:wc:ra_dav:version-url
-V 100
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconWindShackle.java
-END
-S_DoActionGFX.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DoActionGFX.java
-END
-S_NpcChatPacket.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NpcChatPacket.java
-END
-S_HireSoldier.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_HireSoldier.java
-END
-S_PetEquipment.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PetEquipment.java
-END
-S_ItemAmount.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ItemAmount.java
-END
-S_PetList.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PetList.java
-END
-S_ShopBuyList.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ShopBuyList.java
-END
-S_ChangeName.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ChangeName.java
-END
-S_SkillSound.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillSound.java
-END
-S_Disconnect.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Disconnect.java
-END
-S_SystemMessage.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SystemMessage.java
-END
-S_DeleteCharOK.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DeleteCharOK.java
-END
-S_ItemColor.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ItemColor.java
-END
-S_AttackPacket.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_AttackPacket.java
-END
-S_DeleteInventoryItem.java
-K 25
-svn:wc:ra_dav:version-url
-V 99
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DeleteInventoryItem.java
-END
-S_bonusstats.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_bonusstats.java
-END
-S_ChangeHeading.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ChangeHeading.java
-END
-S_PetInventory.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PetInventory.java
-END
-S_Poison.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Poison.java
-END
-S_EquipmentSlot.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_EquipmentSlot.java
-END
-S_Drawal.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Drawal.java
-END
-S_RuneSlot.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_RuneSlot.java
-END
-S_ServerMessage.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ServerMessage.java
-END
-S_ServerVersion.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ServerVersion.java
-END
-S_HouseMap.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_HouseMap.java
-END
-S_NPCTalkActionTPUrl.java
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NPCTalkActionTPUrl.java
-END
-S_SendLocation.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SendLocation.java
-END
-S_CommonNews.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CommonNews.java
-END
-S_EffectLocation.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_EffectLocation.java
-END
-S_ShopSellList.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ShopSellList.java
-END
-S_GameTime.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_GameTime.java
-END
-S_Sound.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Sound.java
-END
-S_War.java
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_War.java
-END
-S_Message_YN.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Message_YN.java
-END
-S_UseMap.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_UseMap.java
-END
-S_DoActionShop.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DoActionShop.java
-END
-S_Lawful.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Lawful.java
-END
-S_NPCTalkReturn.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NPCTalkReturn.java
-END
-S_Ability.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Ability.java
-END
-S_OwnCharPack.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_OwnCharPack.java
-END
-S_OtherCharPacks.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_OtherCharPacks.java
-END
-S_InitialAbilityGrowth.java
-K 25
-svn:wc:ra_dav:version-url
-V 100
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_InitialAbilityGrowth.java
-END
-S_ItemStatus.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ItemStatus.java
-END
-S_LoginGame.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_LoginGame.java
-END
-S_TradeStatus.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_TradeStatus.java
-END
-S_SkillIconBloodstain.java
-K 25
-svn:wc:ra_dav:version-url
-V 99
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconBloodstain.java
-END
-S_ChatPacket.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ChatPacket.java
-END
-S_LoginResult.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_LoginResult.java
-END
-S_AuctionBoard.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_AuctionBoard.java
-END
-S_OwnCharAttrDef.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_OwnCharAttrDef.java
-END
-S_SkillIconShield.java
-K 25
-svn:wc:ra_dav:version-url
-V 95
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconShield.java
-END
-S_RetrieveList.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_RetrieveList.java
-END
-S_WhoAmount.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_WhoAmount.java
-END
-S_Mail.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Mail.java
-END
-S_TrueTarget.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_TrueTarget.java
-END
-S_CharSynAck.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharSynAck.java
-END
-S_PetPack.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PetPack.java
-END
-S_Fishing.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Fishing.java
-END
-S_FixWeaponList.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_FixWeaponList.java
-END
-S_SkillBuy.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillBuy.java
-END
-S_ItemName.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ItemName.java
-END
-S_CharPacks.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharPacks.java
-END
-S_DoorPack.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DoorPack.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets
 END
 S_DelSkill.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DelSkill.java
-END
-S_ClanAttention.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ClanAttention.java
-END
-S_CharCreateStatus.java
-K 25
-svn:wc:ra_dav:version-url
-V 96
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharCreateStatus.java
-END
-S_AttackPacketForNpc.java
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_AttackPacketForNpc.java
-END
-S_Paralysis.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Paralysis.java
-END
-S_Deposit.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Deposit.java
-END
-S_ApplyAuction.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ApplyAuction.java
-END
-S_TaxRate.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_TaxRate.java
-END
-S_Race.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Race.java
-END
-S_CantMove.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CantMove.java
-END
-S_SummonPack.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SummonPack.java
-END
-S_Strup.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Strup.java
-END
-S_ClanName.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ClanName.java
-END
-S_RedMessage.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_RedMessage.java
-END
-S_MPUpdate.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_MPUpdate.java
-END
-S_SelectTarget.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SelectTarget.java
-END
-S_AddSkill.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_AddSkill.java
-END
-S_Board.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Board.java
-END
-S_GMHtml.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_GMHtml.java
-END
-S_Invis.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Invis.java
-END
-S_SkillIconWaterLife.java
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconWaterLife.java
-END
-S_Exp.java
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Exp.java
-END
-S_CloseList.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CloseList.java
-END
-S_RetrievePledgeList.java
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_RetrievePledgeList.java
-END
-S_PetCtrlMenu.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PetCtrlMenu.java
-END
-S_SkillIconWisdomPotion.java
-K 25
-svn:wc:ra_dav:version-url
-V 101
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconWisdomPotion.java
-END
-S_SkillIconThirdSpeed.java
-K 25
-svn:wc:ra_dav:version-url
-V 99
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconThirdSpeed.java
-END
-S_CharVisualUpdate.java
-K 25
-svn:wc:ra_dav:version-url
-V 96
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharVisualUpdate.java
-END
-S_NpcChangeShape.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NpcChangeShape.java
-END
-ServerBasePacket.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/ServerBasePacket.java
-END
-S_Light.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Light.java
-END
-S_WarTime.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_WarTime.java
-END
-S_RetrieveElfList.java
-K 25
-svn:wc:ra_dav:version-url
-V 95
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_RetrieveElfList.java
-END
-S_NoSee.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NoSee.java
-END
-S_HowManyMake.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_HowManyMake.java
-END
-S_Underwater.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Underwater.java
-END
-S_ShowPolyList.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ShowPolyList.java
-END
-S_BoardRead.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_BoardRead.java
-END
-S_OwnCharStatus2.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_OwnCharStatus2.java
-END
-S_SkillIconGFX.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SkillIconGFX.java
-END
-S_MoveCharPacket.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_MoveCharPacket.java
-END
-S_Teleport.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Teleport.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DelSkill.java
 END
 S_SellHouse.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SellHouse.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SellHouse.java
 END
-S_HPMeter.java
+S_CharCreateStatus.java
 K 25
 svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_HPMeter.java
+V 96
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CharCreateStatus.java
 END
 S_OwnCharStatus.java
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_OwnCharStatus.java
-END
-S_PledgeWarehouseHistory.java
-K 25
-svn:wc:ra_dav:version-url
-V 102
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PledgeWarehouseHistory.java
-END
-S_ChangeShape.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ChangeShape.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_OwnCharStatus.java
 END
 S_SignboardPack.java
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_SignboardPack.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SignboardPack.java
 END
-S_ShowSummonList.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ShowSummonList.java
-END
-S_Liquor.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Liquor.java
-END
-S_DropItem.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_DropItem.java
-END
-S_Resurrection.java
+S_ApplyAuction.java
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Resurrection.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ApplyAuction.java
+END
+S_Race.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Race.java
+END
+S_DragonGate.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DragonGate.java
+END
+S_CantMove.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CantMove.java
+END
+S_MPUpdate.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_MPUpdate.java
 END
 S_Dexup.java
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Dexup.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Dexup.java
 END
-S_PledgeRecommendation.java
+S_SelectTarget.java
 K 25
 svn:wc:ra_dav:version-url
-V 100
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PledgeRecommendation.java
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SelectTarget.java
+END
+S_AddSkill.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_AddSkill.java
 END
 S_Bookmarks.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Bookmarks.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Bookmarks.java
 END
-S_FollowerPack.java
+S_War.java
 K 25
 svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_FollowerPack.java
+V 83
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_War.java
 END
-S_AttackMissPacket.java
+S_CurseBlind.java
 K 25
 svn:wc:ra_dav:version-url
-V 96
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_AttackMissPacket.java
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CurseBlind.java
 END
-S_NoSell.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NoSell.java
-END
-S_ActiveSpells.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_ActiveSpells.java
-END
-S_Weather.java
+S_Ability.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Weather.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Ability.java
 END
-S_Letter.java
+S_SkillBrave.java
 K 25
 svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Letter.java
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillBrave.java
+END
+S_OwnCharPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_OwnCharPack.java
 END
 S_Fight.java
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Fight.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Fight.java
 END
-S_Emblem.java
+S_SkillHaste.java
 K 25
 svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Emblem.java
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillHaste.java
 END
-S_PinkName.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PinkName.java
-END
-S_PrivateShop.java
+S_TradeStatus.java
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PrivateShop.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_TradeStatus.java
+END
+S_CharVisualUpdate.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CharVisualUpdate.java
 END
 S_PetMenuPacket.java
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_PetMenuPacket.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PetMenuPacket.java
 END
 S_UseArrowSkill.java
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_UseArrowSkill.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_UseArrowSkill.java
 END
-S_Trap.java
+S_SkillIconBloodstain.java
 K 25
 svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Trap.java
+V 99
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconBloodstain.java
 END
 S_Buddy.java
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_Buddy.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Buddy.java
 END
-S_AddItem.java
+S_LoginResult.java
 K 25
 svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_AddItem.java
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_LoginResult.java
 END
 S_CharTitle.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharTitle.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CharTitle.java
 END
 S_NewCharPacket.java
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_NewCharPacket.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_NewCharPacket.java
+END
+S_ShowPolyList.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ShowPolyList.java
 END
 S_CharReset.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/serverpackets/S_CharReset.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CharReset.java
+END
+S_SkillIconShield.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconShield.java
+END
+S_ItemAmount.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ItemAmount.java
+END
+S_ChangeName.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ChangeName.java
+END
+S_PetPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PetPack.java
+END
+S_Fishing.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Fishing.java
+END
+S_SkillSound.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillSound.java
+END
+S_Disconnect.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Disconnect.java
+END
+S_Karma.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Karma.java
+END
+S_BlueMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_BlueMessage.java
+END
+S_SkillIconGFX.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconGFX.java
+END
+S_Teleport.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Teleport.java
+END
+S_Trade.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Trade.java
+END
+S_Party.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Party.java
+END
+S_SkillIconAura.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconAura.java
+END
+S_bonusstats.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_bonusstats.java
+END
+S_Deposit.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Deposit.java
+END
+S_Poison.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Poison.java
+END
+S_TaxRate.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_TaxRate.java
+END
+S_SkillList.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillList.java
+END
+S_Drawal.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Drawal.java
+END
+S_PacketBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PacketBox.java
+END
+S_NPCTalkActionTPUrl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_NPCTalkActionTPUrl.java
+END
+S_DropItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DropItem.java
+END
+S_Resurrection.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Resurrection.java
+END
+S_CommonNews.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CommonNews.java
+END
+S_EffectLocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_EffectLocation.java
+END
+S_FollowerPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_FollowerPack.java
+END
+S_MapID.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_MapID.java
+END
+S_Message_YN.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Message_YN.java
+END
+S_UseMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_UseMap.java
+END
+S_Lawful.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Lawful.java
+END
+S_AttackMissPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_AttackMissPacket.java
+END
+S_Exp.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Exp.java
+END
+S_ActiveSpells.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ActiveSpells.java
+END
+S_MoveNpcPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_MoveNpcPacket.java
+END
+S_OtherCharPacks.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_OtherCharPacks.java
+END
+S_ItemStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ItemStatus.java
+END
+S_PetCtrlMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PetCtrlMenu.java
+END
+S_PinkName.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PinkName.java
+END
+S_SkillIconThirdSpeed.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconThirdSpeed.java
+END
+S_Trap.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Trap.java
+END
+S_ChatPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ChatPacket.java
+END
+S_NpcChatPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_NpcChatPacket.java
+END
+S_WarTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_WarTime.java
+END
+S_RetrieveElfList.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_RetrieveElfList.java
+END
+S_OwnCharAttrDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_OwnCharAttrDef.java
+END
+S_HowManyMake.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_HowManyMake.java
+END
+S_TrueTarget.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_TrueTarget.java
+END
+S_CastleMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CastleMaster.java
+END
+S_DollPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DollPack.java
+END
+S_SystemMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SystemMessage.java
+END
+S_ItemColor.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ItemColor.java
+END
+S_Door.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Door.java
+END
+S_HPMeter.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_HPMeter.java
+END
+S_ChangeHeading.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ChangeHeading.java
+END
+S_AuctionBoardRead.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_AuctionBoardRead.java
+END
+S_ChangeShape.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ChangeShape.java
+END
+S_AttackPacketForNpc.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_AttackPacketForNpc.java
+END
+S_HPUpdate.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_HPUpdate.java
+END
+S_IdentifyDesc.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_IdentifyDesc.java
+END
+S_ServerMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ServerMessage.java
+END
+S_ServerVersion.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ServerVersion.java
+END
+S_SummonPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SummonPack.java
+END
+S_SPMR.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SPMR.java
+END
+S_RemoveObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_RemoveObject.java
+END
+S_TradeAddItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_TradeAddItem.java
+END
+S_GMHtml.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_GMHtml.java
+END
+S_Sound.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Sound.java
+END
+S_SkillIconWaterLife.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconWaterLife.java
+END
+S_NPCTalkReturn.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_NPCTalkReturn.java
+END
+S_Weather.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Weather.java
+END
+S_RetrievePledgeList.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_RetrievePledgeList.java
+END
+S_LoginGame.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_LoginGame.java
+END
+S_PrivateShop.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PrivateShop.java
+END
+S_SkillIconWindShackle.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconWindShackle.java
+END
+S_NpcChangeShape.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_NpcChangeShape.java
+END
+ServerBasePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/ServerBasePacket.java
+END
+S_AddItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_AddItem.java
+END
+S_Underwater.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Underwater.java
+END
+S_PetEquipment.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PetEquipment.java
+END
+S_WhoAmount.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_WhoAmount.java
+END
+S_OwnCharStatus2.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_OwnCharStatus2.java
+END
+S_DeleteCharOK.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DeleteCharOK.java
+END
+S_FixWeaponList.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_FixWeaponList.java
+END
+S_MoveCharPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_MoveCharPacket.java
+END
+S_CharPacks.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CharPacks.java
+END
+S_AttackPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_AttackPacket.java
+END
+S_SkillIconBlessOfEva.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconBlessOfEva.java
+END
+S_PetInventory.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PetInventory.java
+END
+S_WhoCharinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_WhoCharinfo.java
+END
+S_Paralysis.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Paralysis.java
+END
+S_ShowSummonList.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ShowSummonList.java
+END
+S_Liquor.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Liquor.java
+END
+S_Strup.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Strup.java
+END
+S_NPCPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_NPCPack.java
+END
+S_HouseMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_HouseMap.java
+END
+S_CharacterConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CharacterConfig.java
+END
+S_SendLocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SendLocation.java
+END
+S_ShopSellList.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ShopSellList.java
+END
+S_Board.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Board.java
+END
+S_InvList.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_InvList.java
+END
+S_GameTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_GameTime.java
+END
+S_Invis.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Invis.java
+END
+S_DoActionShop.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DoActionShop.java
+END
+S_NoSell.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_NoSell.java
+END
+S_Letter.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Letter.java
+END
+S_CloseList.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CloseList.java
+END
+S_Emblem.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Emblem.java
+END
+S_InitialAbilityGrowth.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_InitialAbilityGrowth.java
+END
+S_SkillIconWisdomPotion.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillIconWisdomPotion.java
+END
+S_DoActionGFX.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DoActionGFX.java
+END
+S_Light.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Light.java
+END
+S_HireSoldier.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_HireSoldier.java
+END
+S_AuctionBoard.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_AuctionBoard.java
+END
+S_RetrieveList.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_RetrieveList.java
+END
+S_Mail.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Mail.java
+END
+S_UseAttackSkill.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_UseAttackSkill.java
+END
+S_BoardRead.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_BoardRead.java
+END
+S_PetList.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_PetList.java
+END
+S_ShopBuyList.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ShopBuyList.java
+END
+S_HowManyKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_HowManyKey.java
+END
+S_RangeSkill.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_RangeSkill.java
+END
+S_SkillBuy.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_SkillBuy.java
+END
+S_ItemName.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_ItemName.java
+END
+S_DeleteInventoryItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DeleteInventoryItem.java
+END
+S_Pledge.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_Pledge.java
+END
+S_CharAmount.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_CharAmount.java
+END
+S_DoorPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/serverpackets/S_DoorPack.java
 END

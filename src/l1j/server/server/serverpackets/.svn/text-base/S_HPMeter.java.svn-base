@@ -32,13 +32,14 @@ public class S_HPMeter extends ServerBasePacket {
 		if (0 < cha.getMaxHp()) {
 			hpRatio = 100 * cha.getCurrentHp() / cha.getMaxHp();
 		}
+
 		buildPacket(objId, hpRatio);
 	}
 
 	private void buildPacket(int objId, int hpRatio) {
 		writeC(Opcodes.S_OPCODE_HPMETER);
 		writeD(objId);
-		writeH(hpRatio);
+		writeC(hpRatio);
 	}
 
 	@Override

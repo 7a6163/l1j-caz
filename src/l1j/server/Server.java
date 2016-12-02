@@ -49,7 +49,8 @@ public class Server {
 		logFolder.mkdir();
 
 		try {
-			InputStream is = new BufferedInputStream(new FileInputStream(LOG_PROP));
+			InputStream is = new BufferedInputStream(new FileInputStream(
+					LOG_PROP));
 			LogManager.getLogManager().readConfiguration(is);
 			is.close();
 		} catch (IOException e) {
@@ -64,7 +65,8 @@ public class Server {
 		}
 
 		// L1DatabaseFactory初期設定
-		L1DatabaseFactory.setDatabaseSettings(Config.DB_DRIVER, Config.DB_URL, Config.DB_LOGIN, Config.DB_PASSWORD);
+		L1DatabaseFactory.setDatabaseSettings(Config.DB_DRIVER, Config.DB_URL,
+				Config.DB_LOGIN, Config.DB_PASSWORD);
 		L1DatabaseFactory.getInstance();
 
 		GameServer.getInstance().initialize();

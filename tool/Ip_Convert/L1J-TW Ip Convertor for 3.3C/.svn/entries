@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/tool/Ip_Convert/L1J-TW%20Ip%20Convertor%20for%203.3C
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/tool/Ip_Convert/L1J-TW%20Ip%20Convertor%20for%203.3C
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-has-props
+2011-02-04T13:04:23.296304Z
+12
+ibm99nets@gmail.com
+
 
 
 
@@ -26,20 +26,17 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
-L1J-TW Ip Convertor for 3.3C
-dir
-
 L1J-TW Ip Convertor for 3.3C.suo
 file
 
 
 
 
-2016-01-09T23:18:49.668893Z
+2016-01-09T23:18:45.333008Z
 d89d2620005ca6a666eb4b2d3773a890
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-02-04T13:04:23.296304Z
+12
+ibm99nets@gmail.com
 has-props
 
 
@@ -69,11 +66,11 @@ file
 
 
 
-2016-01-09T23:18:49.668893Z
+2016-01-09T23:18:45.333008Z
 a63245adb9c790971bf302cda8dbb3b5
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-02-04T13:04:23.296304Z
+12
+ibm99nets@gmail.com
 
 
 
@@ -96,4 +93,7 @@ ibm99nets
 
 
 926
+
+L1J-TW Ip Convertor for 3.3C
+dir
 

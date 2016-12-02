@@ -34,7 +34,6 @@ import l1j.server.server.templates.L1ShopItem;
 public class S_ShopSellList extends ServerBasePacket {
 
 	/**
-	 * 商店販賣的物品清單
 	 * 店の品物リストを表示する。キャラクターがBUYボタンを押した時に送る。
 	 */
 	public S_ShopSellList(int objId, L1PcInstance pc) {
@@ -60,7 +59,8 @@ public class S_ShopSellList extends ServerBasePacket {
 		for (int i = 0; i < shopItems.size(); i++) {
 			L1ShopItem shopItem = shopItems.get(i);
 			L1Item item = shopItem.getItem();
-			int price = calc.layTax((int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE));
+			int price = calc
+					.layTax((int) (shopItem.getPrice() * Config.RATE_SHOP_SELLING_PRICE));
 			writeD(i);
 			writeH(shopItem.getItem().getGfxId());
 			writeD(price);
@@ -79,7 +79,8 @@ public class S_ShopSellList extends ServerBasePacket {
 				}
 			}
 
-			L1Item template = ItemTable.getInstance().getTemplate(item.getItemId());
+			L1Item template = ItemTable.getInstance().getTemplate(
+					item.getItemId());
 			if (template == null) {
 				writeC(0);
 			} else {

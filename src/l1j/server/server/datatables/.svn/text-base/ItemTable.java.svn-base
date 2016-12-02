@@ -84,10 +84,12 @@ public class ItemTable {
 		_etcItemTypes.put("furniture", new Integer(18)); // 家具
 
 		_useTypes.put("none", new Integer(-1)); // 使用不可能
+		_useTypes.put("normal", new Integer(0));
 		_useTypes.put("weapon", new Integer(1));
 		_useTypes.put("armor", new Integer(2));
 		// _useTypes.put("wand1", new Integer(3));
 		// _useTypes.put("wand", new Integer(4));
+		// ワンドを振るアクションをとる(C_RequestExtraCommandが送られる)
 		_useTypes.put("spell_long", new Integer(5)); // 地面 / オブジェクト選択(遠距離)
 		_useTypes.put("ntele", new Integer(6));
 		_useTypes.put("identify", new Integer(7));
@@ -103,6 +105,7 @@ public class ItemTable {
 		_useTypes.put("glove", new Integer(20));
 		_useTypes.put("boots", new Integer(21));
 		_useTypes.put("helm", new Integer(22));
+		_useTypes.put("ring", new Integer(23));
 		_useTypes.put("amulet", new Integer(24));
 		_useTypes.put("shield", new Integer(25));
 		_useTypes.put("guarder", new Integer(25));
@@ -123,12 +126,7 @@ public class ItemTable {
 		// 5と同じ？
 		_useTypes.put("earring", new Integer(40));
 		_useTypes.put("fishing_rod", new Integer(42));
-		_useTypes.put("rune", new Integer(43));  // add 符石/遺物 : UseType= 43(右) 44(左-目前開放) 45(上)
-		_useTypes.put("rune2", new Integer(44));
-		_useTypes.put("rune3", new Integer(45));
 		_useTypes.put("del", new Integer(46));
-		_useTypes.put("normal", new Integer(51));   // 一般類(藥水)
-		_useTypes.put("ring", new Integer(57));  // 戒指類
 
 		_armorTypes.put("none", new Integer(0));
 		_armorTypes.put("helm", new Integer(1));
@@ -144,9 +142,6 @@ public class ItemTable {
 		_armorTypes.put("ring2", new Integer(11));
 		_armorTypes.put("earring", new Integer(12));
 		_armorTypes.put("guarder", new Integer(13));
-		_armorTypes.put("rune", new Integer(14));
-		_armorTypes.put("rune2", new Integer(15));
-		_armorTypes.put("rune3", new Integer(16));
 
 		_weaponTypes.put("sword", new Integer(1));
 		_weaponTypes.put("dagger", new Integer(2));

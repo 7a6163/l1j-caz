@@ -21,28 +21,9 @@ import l1j.server.server.model.Instance.L1PcInstance;
 // ServerBasePacket, S_SendInvOnLogin
 
 public class S_OwnCharStatus2 extends ServerBasePacket {
-	
-	/**
-	 * 角色六大素質+負重更新<br>
-	 * @param pc 
-	 * @param type 0:不檢查重複的屬性  1:檢查重複的屬性次數
-	 */
-	public S_OwnCharStatus2(L1PcInstance pc, int type) {
-		if (type == 0) {
-			buildPacket(pc);
-		} else if (type == 1) {
-			int status[] = { pc.getStr(), pc.getInt(), pc.getWis(),pc.getDex(), pc.getCon(), pc.getCha() };
-			for (int i = 0; i <= status.length; i++) {
-				for (int j = i + 1; j <= status.length; j++) {
-					buildPacket(pc);
-				}
-			}
-		}
-
-	}
 
 	/** 更新六項能力值以及負重 */
-	private void buildPacket(L1PcInstance pc) {
+	public S_OwnCharStatus2(L1PcInstance pc) {
 		writeC(Opcodes.S_OPCODE_OWNCHARSTATUS2);
 		writeC(pc.getStr());
 		writeC(pc.getInt());

@@ -96,23 +96,19 @@ public abstract class L1Item implements Cloneable, Serializable {
 	 *         [etcitem]<br>
 	 *         0:arrow, 1:wand, 2:light, 3:gem, 4:totem, 5:firecracker,
 	 *         6:potion, 7:food, 8:scroll, 9:questitem, 10:spellbook,
-	 *         11:petitem, 12:other, 13:material, 14:event, 15:sting,
-	 *		   16:treasure_box, 17:magic_doll, 18:spellscroll, 19:spellwand,
-	 *         20:spellicon, 21:protect_scroll
+	 *         11:petitem, 12:other, 13:material, 14:event, 15:sting
 	 *         </p>
 	 *         <p>
 	 *         [weapon]<br>
-	 *         1:sword, 2:twohandsword, 3:dagger, 4:bow, 5:arrow, 6:spear,
-	 *		   7:blunt, 8:staff, 9:claw, 10:dualsword, 11:gauntlet, 12:sting,
-	 *		   13:chainsword, 14:kiringku
+	 *         1:sword, 2:dagger, 3:tohandsword, 4:bow, 5:spear, 6:blunt,
+	 *         7:staff, 8:throwingknife, 9:arrow, 10:gauntlet, 11:claw,
+	 *         12:edoryu, 13:singlebow, 14:singlespear, 15:tohandblunt,
+	 *         16:tohandstaff, 17:kiringku 18chainsword
 	 *         </p>
 	 *         <p>
 	 *         [armor]<br>
-	 *         1:helm, 2:t_shirts, 3:armor, 4:cloak, 5:glove, 6:boots, 7:shield,
-	 *         8:guarder, 10:amulet, 11:ring, 12:earring, 13:belt, 
-	 *		   14:pattern_back, 15:pattern_left, 16:pattern_right,
-	 *		   17:talisman_left, 18:talisman_right
-	 *         </p>
+	 *         1:helm, 2:armor, 3:T, 4:cloak, 5:glove, 6:boots, 7:shield,
+	 *         8:amulet, 9:ring, 10:belt, 11:ring2, 12:earring
 	 */
 	public int getType() {
 		return _type;
@@ -149,7 +145,7 @@ public abstract class L1Item implements Cloneable, Serializable {
 	 * アイテムの素材を返す
 	 * 
 	 * @return 0:none 1:液体 2:web 3:植物性 4:動物性 5:紙 6:布 7:皮 8:木 9:骨 10:竜の鱗 11:鉄
-	 *         12:鋼鉄 13:銅 14:銀 15:金 16:プラチナ 17:ミスリル 18:ブラックミスリル 19:玻璃 20:宝石
+	 *         12:鋼鉄 13:銅 14:銀 15:金 16:プラチナ 17:ミスリル 18:ブラックミスリル 19:ガラス 20:宝石
 	 *         21:鉱物 22:オリハルコン
 	 */
 	public int getMaterial() {
@@ -572,36 +568,6 @@ public abstract class L1Item implements Cloneable, Serializable {
 		} else {
 			return 0;
 		}
-	}
-	
-	/**
-	 * 魔法素材的種類封包
-	 */
-	public int getMagicCatalystType() {
-		int type = 0;
-		
-		switch (getItemId()) {
-		case 40318: // 魔法寶石
-			type = 166; 
-			break;
-		case 40319: // 精靈玉
-			type = 569;
-			break;
-		case 40321: // 二級黑魔石
-			type = 837;
-			break;
-		case 49158: // 生命之樹果實
-			type = 3674;
-			break;
-		case 49157: // 刻印的骨頭片
-			type = 3605;
-			break;
-		case 49156: // 屬性石
-			type = 3606;
-			break;
-		}
-		
-		return type;
 	}
 
 	// ■■■■■■ L1EtcItem でオーバーライドする項目 ■■■■■■

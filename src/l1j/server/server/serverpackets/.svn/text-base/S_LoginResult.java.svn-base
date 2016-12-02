@@ -30,8 +30,6 @@ public class S_LoginResult extends ServerBasePacket {
 	public static final int REASON_USER_OR_PASS_WRONG = 0x08;
 
 	public static final int REASON_PASS_WRONG = 0x08;
-	
-	public static final int REASON_OUT_OF_GASH = 0x1c;
 
 	// public static int REASON_SYSTEM_ERROR = 0x01;
 
@@ -47,8 +45,6 @@ public class S_LoginResult extends ServerBasePacket {
 		writeD(0x00000000);
 		writeD(0x00000000);
 		writeD(0x00000000);
-		writeD(0x00000000);
-		writeH(0x8c);
 	}
 
 	@Override

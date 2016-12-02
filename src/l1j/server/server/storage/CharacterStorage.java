@@ -19,7 +19,8 @@ import l1j.server.server.model.Instance.L1PcInstance;
 public interface CharacterStorage {
 	public void createCharacter(L1PcInstance pc) throws Exception;
 
-	public void deleteCharacter(String accountName, String charName)throws Exception;
+	public void deleteCharacter(String accountName, String charName)
+			throws Exception;
 
 	public void storeCharacter(L1PcInstance pc) throws Exception;
 

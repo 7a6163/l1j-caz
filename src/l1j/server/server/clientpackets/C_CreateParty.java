@@ -49,7 +49,9 @@ public class C_CreateParty extends ClientBasePacket {
 				if (pc.getId() == targetPc.getId()) {
 					return;
 				}
-				if ((!pc.getLocation().isInScreen(targetPc.getLocation()) || (pc.getLocation().getTileLineDistance(targetPc.getLocation()) > 7))) {
+				if ((!pc.getLocation().isInScreen(targetPc.getLocation()) || (pc
+						.getLocation().getTileLineDistance(
+								targetPc.getLocation()) > 7))) {
 					// 邀請組隊時，對象不再螢幕內或是7步內
 					pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$952));
 					return;
@@ -103,7 +105,8 @@ public class C_CreateParty extends ClientBasePacket {
 			if (pc.getId() == targetPc.getId()) {
 				return;
 			}
-			if ((!pc.getLocation().isInScreen(targetPc.getLocation()) || (pc.getLocation().getTileLineDistance(targetPc.getLocation()) > 7))) {
+			if ((!pc.getLocation().isInScreen(targetPc.getLocation()) || (pc
+					.getLocation().getTileLineDistance(targetPc.getLocation()) > 7))) {
 				// 邀請組隊時，對象不再螢幕內或是7步內
 				pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$952));
 				return;
@@ -144,10 +147,12 @@ public class C_CreateParty extends ClientBasePacket {
 			L1Object obj = L1World.getInstance().findObject(targetId);
 
 			// 判斷目標是否合理
-			if ((obj == null) || (pc.getId() == obj.getId()) || !(obj instanceof L1PcInstance)) {
+			if ((obj == null) || (pc.getId() == obj.getId())
+					|| !(obj instanceof L1PcInstance)) {
 				return;
 			}
-			if ((!pc.getLocation().isInScreen(obj.getLocation()) || (pc.getLocation().getTileLineDistance(obj.getLocation()) > 7))) {
+			if ((!pc.getLocation().isInScreen(obj.getLocation()) || (pc
+					.getLocation().getTileLineDistance(obj.getLocation()) > 7))) {
 				// 邀請組隊時，對象不再螢幕內或是7步內
 				pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$1695));
 				return;

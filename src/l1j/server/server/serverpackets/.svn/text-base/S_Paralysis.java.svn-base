@@ -69,7 +69,6 @@ public class S_Paralysis extends ServerBasePacket {
 				writeC(25);
 			}
 		}
-		
 	}
 
 	@Override

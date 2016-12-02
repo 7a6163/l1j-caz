@@ -32,7 +32,7 @@ public class S_SystemMessage extends ServerBasePacket {
 	 */
 	public S_SystemMessage(String msg) {
 		_msg = msg;
-		writeC(Opcodes.S_OPCODE_GLOBALCHAT);
+		writeC(Opcodes.S_OPCODE_SYSMSG);
 		writeC(0x09);
 		writeS(msg);
 	}

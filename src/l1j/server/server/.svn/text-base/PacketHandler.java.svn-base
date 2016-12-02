@@ -23,12 +23,12 @@ import static l1j.server.server.Opcodes.C_OPCODE_BANCLAN;
 import static l1j.server.server.Opcodes.C_OPCODE_BANPARTY;
 import static l1j.server.server.Opcodes.C_OPCODE_BOARD;
 import static l1j.server.server.Opcodes.C_OPCODE_BOARDDELETE;
+import static l1j.server.server.Opcodes.C_OPCODE_BOARDNEXT;
 import static l1j.server.server.Opcodes.C_OPCODE_BOARDREAD;
 import static l1j.server.server.Opcodes.C_OPCODE_BOARDWRITE;
 import static l1j.server.server.Opcodes.C_OPCODE_BOOKMARK;
 import static l1j.server.server.Opcodes.C_OPCODE_BOOKMARKDELETE;
 import static l1j.server.server.Opcodes.C_OPCODE_BUDDYLIST;
-import static l1j.server.server.Opcodes.C_OPCODE_BEANFUNLOGINPACKET;
 import static l1j.server.server.Opcodes.C_OPCODE_CAHTPARTY;
 import static l1j.server.server.Opcodes.C_OPCODE_CALL;
 import static l1j.server.server.Opcodes.C_OPCODE_CHANGECHAR;
@@ -40,18 +40,19 @@ import static l1j.server.server.Opcodes.C_OPCODE_CHAT;
 import static l1j.server.server.Opcodes.C_OPCODE_CHATGLOBAL;
 import static l1j.server.server.Opcodes.C_OPCODE_CHATWHISPER;
 import static l1j.server.server.Opcodes.C_OPCODE_CHECKPK;
+import static l1j.server.server.Opcodes.C_OPCODE_CLAN;
 import static l1j.server.server.Opcodes.C_OPCODE_CLIENTVERSION;
+import static l1j.server.server.Opcodes.C_OPCODE_COMMONCLICK;
 import static l1j.server.server.Opcodes.C_OPCODE_CREATECLAN;
 import static l1j.server.server.Opcodes.C_OPCODE_CREATEPARTY;
-import static l1j.server.server.Opcodes.C_OPCODE_DRAWAL;
 import static l1j.server.server.Opcodes.C_OPCODE_DELBUDDY;
-import static l1j.server.server.Opcodes.C_OPCODE_DEPOSIT;
 import static l1j.server.server.Opcodes.C_OPCODE_DELETECHAR;
 import static l1j.server.server.Opcodes.C_OPCODE_DELETEINVENTORYITEM;
+import static l1j.server.server.Opcodes.C_OPCODE_DEPOSIT;
 import static l1j.server.server.Opcodes.C_OPCODE_DOOR;
+import static l1j.server.server.Opcodes.C_OPCODE_DRAWAL;
 import static l1j.server.server.Opcodes.C_OPCODE_DROPITEM;
-import static l1j.server.server.Opcodes.C_OPCODE_EMBLEMUPLOAD;
-import static l1j.server.server.Opcodes.C_OPCODE_EMBLEMDOWNLOAD;
+import static l1j.server.server.Opcodes.C_OPCODE_EMBLEM;
 import static l1j.server.server.Opcodes.C_OPCODE_ENTERPORTAL;
 import static l1j.server.server.Opcodes.C_OPCODE_EXCLUDE;
 import static l1j.server.server.Opcodes.C_OPCODE_EXIT_GHOST;
@@ -78,12 +79,12 @@ import static l1j.server.server.Opcodes.C_OPCODE_PETMENU;
 import static l1j.server.server.Opcodes.C_OPCODE_PICKUPITEM;
 import static l1j.server.server.Opcodes.C_OPCODE_PLEDGE;
 import static l1j.server.server.Opcodes.C_OPCODE_PRIVATESHOPLIST;
-import static l1j.server.server.Opcodes.C_OPCODE_PLEDGECONTENT;
-import static l1j.server.server.Opcodes.C_OPCODE_PLEDGE_RECOMMENDATION;
 import static l1j.server.server.Opcodes.C_OPCODE_PROPOSE;
 import static l1j.server.server.Opcodes.C_OPCODE_QUITGAME;
+import static l1j.server.server.Opcodes.C_OPCODE_RANK;
 import static l1j.server.server.Opcodes.C_OPCODE_RESTART;
 import static l1j.server.server.Opcodes.C_OPCODE_RESULT;
+import static l1j.server.server.Opcodes.C_OPCODE_RETURNTOLOGIN;
 import static l1j.server.server.Opcodes.C_OPCODE_SELECTLIST;
 import static l1j.server.server.Opcodes.C_OPCODE_SELECTTARGET;
 import static l1j.server.server.Opcodes.C_OPCODE_SENDLOCATION;
@@ -91,10 +92,10 @@ import static l1j.server.server.Opcodes.C_OPCODE_SHIP;
 import static l1j.server.server.Opcodes.C_OPCODE_SHOP;
 import static l1j.server.server.Opcodes.C_OPCODE_SKILLBUY;
 import static l1j.server.server.Opcodes.C_OPCODE_SKILLBUYOK;
+import static l1j.server.server.Opcodes.C_OPCODE_TAXRATE;
 import static l1j.server.server.Opcodes.C_OPCODE_TELEPORT;
 import static l1j.server.server.Opcodes.C_OPCODE_TITLE;
 import static l1j.server.server.Opcodes.C_OPCODE_TRADE;
-import static l1j.server.server.Opcodes.C_OPCODE_TAXRATE;
 import static l1j.server.server.Opcodes.C_OPCODE_TRADEADDCANCEL;
 import static l1j.server.server.Opcodes.C_OPCODE_TRADEADDITEM;
 import static l1j.server.server.Opcodes.C_OPCODE_TRADEADDOK;
@@ -104,7 +105,6 @@ import static l1j.server.server.Opcodes.C_OPCODE_USESKILL;
 import static l1j.server.server.Opcodes.C_OPCODE_WAR;
 import static l1j.server.server.Opcodes.C_OPCODE_WAREHOUSELOCK;
 import static l1j.server.server.Opcodes.C_OPCODE_WHO;
-import static l1j.server.server.Opcodes.C_OPCODE_RESTARTMENU;
 import l1j.server.server.clientpackets.C_AddBookmark;
 import l1j.server.server.clientpackets.C_AddBuddy;
 import l1j.server.server.clientpackets.C_Amount;
@@ -114,6 +114,7 @@ import l1j.server.server.clientpackets.C_AuthLogin;
 import l1j.server.server.clientpackets.C_BanClan;
 import l1j.server.server.clientpackets.C_BanParty;
 import l1j.server.server.clientpackets.C_Board;
+import l1j.server.server.clientpackets.C_BoardBack;
 import l1j.server.server.clientpackets.C_BoardDelete;
 import l1j.server.server.clientpackets.C_BoardRead;
 import l1j.server.server.clientpackets.C_BoardWrite;
@@ -127,6 +128,8 @@ import l1j.server.server.clientpackets.C_Chat;
 import l1j.server.server.clientpackets.C_ChatParty;
 import l1j.server.server.clientpackets.C_ChatWhisper;
 import l1j.server.server.clientpackets.C_CheckPK;
+import l1j.server.server.clientpackets.C_Clan;
+import l1j.server.server.clientpackets.C_CommonClick;
 import l1j.server.server.clientpackets.C_CreateChar;
 import l1j.server.server.clientpackets.C_CreateClan;
 import l1j.server.server.clientpackets.C_CreateParty;
@@ -138,8 +141,7 @@ import l1j.server.server.clientpackets.C_Deposit;
 import l1j.server.server.clientpackets.C_Door;
 import l1j.server.server.clientpackets.C_Drawal;
 import l1j.server.server.clientpackets.C_DropItem;
-import l1j.server.server.clientpackets.C_EmblemUpload;
-import l1j.server.server.clientpackets.C_EmblemDownload;
+import l1j.server.server.clientpackets.C_Emblem;
 import l1j.server.server.clientpackets.C_EnterPortal;
 import l1j.server.server.clientpackets.C_Exclude;
 import l1j.server.server.clientpackets.C_ExitGhost;
@@ -165,12 +167,11 @@ import l1j.server.server.clientpackets.C_Party;
 import l1j.server.server.clientpackets.C_PetMenu;
 import l1j.server.server.clientpackets.C_PickUpItem;
 import l1j.server.server.clientpackets.C_Pledge;
-import l1j.server.server.clientpackets.C_PledgeContent;
-import l1j.server.server.clientpackets.C_PledgeRecommendation;
 import l1j.server.server.clientpackets.C_Propose;
+import l1j.server.server.clientpackets.C_Rank;
 import l1j.server.server.clientpackets.C_Restart;
-import l1j.server.server.clientpackets.C_RestartMenu;
 import l1j.server.server.clientpackets.C_Result;
+import l1j.server.server.clientpackets.C_ReturnToLogin;
 import l1j.server.server.clientpackets.C_SelectList;
 import l1j.server.server.clientpackets.C_SelectTarget;
 import l1j.server.server.clientpackets.C_SendLocation;
@@ -243,16 +244,8 @@ public class PacketHandler {
 				new C_UseSkill(abyte0, _client);
 				break;
 
-			case C_OPCODE_EMBLEMUPLOAD:
-				new C_EmblemUpload(abyte0, _client);
-				break;
-				
-			case C_OPCODE_TAXRATE:
-				new C_TaxRate(abyte0, _client);
-				break;
-				
-			case C_OPCODE_EMBLEMDOWNLOAD:
-				new C_EmblemDownload(abyte0, _client);
+			case C_OPCODE_EMBLEM:
+				new C_Emblem(abyte0, _client);
 				break;
 
 			case C_OPCODE_TRADEADDCANCEL:
@@ -274,14 +267,6 @@ public class PacketHandler {
 			case C_OPCODE_CLIENTVERSION:
 				new C_ServerVersion(abyte0, _client);
 				break;
-			
-			case C_OPCODE_DRAWAL:
-				new C_Drawal(abyte0, _client);
-				break;
-				
-			case C_OPCODE_DEPOSIT:
-				new C_Deposit(abyte0, _client);
-				break;
 
 			case C_OPCODE_PROPOSE:
 				new C_Propose(abyte0, _client);
@@ -289,6 +274,10 @@ public class PacketHandler {
 
 			case C_OPCODE_SKILLBUY:
 				new C_SkillBuy(abyte0, _client);
+				break;
+
+			case C_OPCODE_BOARDNEXT:
+				new C_BoardBack(abyte0, _client);
 				break;
 
 			case C_OPCODE_SHOP:
@@ -318,29 +307,37 @@ public class PacketHandler {
 			case C_OPCODE_LOGINPACKET:
 				new C_AuthLogin(abyte0, _client);
 				break;
-				
-			case C_OPCODE_BEANFUNLOGINPACKET:
-				new C_AuthLogin(abyte0, _client);
-				break;
 
 			case C_OPCODE_RESULT:
 				new C_Result(abyte0, _client);
+				break;
+
+			case C_OPCODE_DEPOSIT:
+				new C_Deposit(abyte0, _client);
+				break;
+
+			case C_OPCODE_DRAWAL:
+				new C_Drawal(abyte0, _client);
 				break;
 
 			case C_OPCODE_LOGINTOSERVEROK:
 				new C_LoginToServerOK(abyte0, _client);
 				break;
 
-		    case C_OPCODE_SKILLBUYOK:
+			case C_OPCODE_SKILLBUYOK:
 				new C_SkillBuyOK(abyte0, _client);
 				break;
 
 			case C_OPCODE_TRADEADDITEM:
 				new C_TradeAddItem(abyte0, _client);
 				break;
-				
+
 			case C_OPCODE_ADDBUDDY:
 				new C_AddBuddy(abyte0, _client);
+				break;
+
+			case C_OPCODE_RETURNTOLOGIN:
+				new C_ReturnToLogin(abyte0, _client);
 				break;
 
 			case C_OPCODE_CHAT:
@@ -355,8 +352,13 @@ public class PacketHandler {
 				new C_CheckPK(abyte0, _client);
 				break;
 
+			case C_OPCODE_TAXRATE:
+				new C_TaxRate(abyte0, _client);
+				break;
+
 			case C_OPCODE_CHANGECHAR:
 				new C_NewCharSelect(abyte0, _client);
+				new C_CommonClick(_client);
 				break;
 
 			case C_OPCODE_BUDDYLIST:
@@ -370,15 +372,7 @@ public class PacketHandler {
 			case C_OPCODE_LEAVEPARTY:
 				new C_LeaveParty(abyte0, _client);
 				break;
-				
-			case C_OPCODE_PLEDGECONTENT:
-				new C_PledgeContent(abyte0, _client);
-				break;
-				
-			case C_OPCODE_PLEDGE_RECOMMENDATION:
-				new C_PledgeRecommendation(abyte0, _client);
-				break;
-				
+
 			case C_OPCODE_ATTACK:
 			case C_OPCODE_ARROWATTACK:
 				new C_Attack(abyte0, _client);
@@ -471,6 +465,10 @@ public class PacketHandler {
 				new C_JoinClan(abyte0, _client);
 				break;
 
+			case C_OPCODE_COMMONCLICK:
+				new C_CommonClick(_client);
+				break;
+
 			case C_OPCODE_NEWCHAR:
 				new C_CreateChar(abyte0, _client);
 				break;
@@ -539,6 +537,10 @@ public class PacketHandler {
 				new C_Teleport(abyte0, _client);
 				break;
 
+			case C_OPCODE_RANK:
+				new C_Rank(abyte0, _client);
+				break;
+
 			case C_OPCODE_CAHTPARTY:
 				new C_ChatParty(abyte0, _client);
 				break;
@@ -559,16 +561,16 @@ public class PacketHandler {
 				new C_CharReset(abyte0, _client);
 				break;
 
+			case C_OPCODE_CLAN:
+				new C_Clan(abyte0, _client);
+				break;
+
 			case C_OPCODE_SENDLOCATION:
 				new C_SendLocation(abyte0, _client);
 				break;
 
 			case C_OPCODE_WAREHOUSELOCK:
 				new C_WarePassword(abyte0, _client);
-				break;
-				
-			case C_OPCODE_RESTARTMENU:
-				new C_RestartMenu(abyte0, _client);
 				break;
 
 			default:

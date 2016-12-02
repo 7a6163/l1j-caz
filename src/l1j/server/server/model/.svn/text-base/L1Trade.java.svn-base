@@ -55,7 +55,8 @@ public class L1Trade {
 		}
 	      
 		// 交易對象
-		L1PcInstance trading_partner = (L1PcInstance) L1World.getInstance().findObject(player.getTradeID());
+		L1PcInstance trading_partner = (L1PcInstance) L1World.getInstance()
+				.findObject(player.getTradeID());
 		if (trading_partner == null) {
 			TradeCancel(player);
 	        return;
@@ -89,9 +90,12 @@ public class L1Trade {
 			trading_partner.setTradeID(0);
 			return;
 		}
-		player.getInventory().tradeItem(l1iteminstance, itemcount,player.getTradeWindowInventory());
-		player.sendPackets(new S_TradeAddItem(l1iteminstance,itemcount, 0));
-		trading_partner.sendPackets(new S_TradeAddItem(l1iteminstance,itemcount, 1));
+		player.getInventory().tradeItem(l1iteminstance, itemcount,
+				player.getTradeWindowInventory());
+		player.sendPackets(new S_TradeAddItem(l1iteminstance,
+				itemcount, 0));
+		trading_partner.sendPackets(new S_TradeAddItem(l1iteminstance,
+				itemcount, 1));
 	}
 
 	/**

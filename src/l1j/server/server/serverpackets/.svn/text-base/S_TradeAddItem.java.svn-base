@@ -33,8 +33,6 @@ public class S_TradeAddItem extends ServerBasePacket {
 		if (!item.isIdentified()) {
 			writeC(3);
 			writeC(0);
-			writeC(7);
-			writeC(0);
 		} else {
 			writeC(item.getBless());
 			byte[] status = item.getStatusBytes();
@@ -42,7 +40,6 @@ public class S_TradeAddItem extends ServerBasePacket {
 		      for (byte b : status) {
 		    	  writeC(b);
 		      }
-		      writeH(0);
 		}
 	}
 

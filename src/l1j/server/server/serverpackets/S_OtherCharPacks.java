@@ -80,13 +80,13 @@ public class S_OtherCharPacks extends ServerBasePacket {
 		// writeC(0); // makes char invis (0x01), cannot move. spells display
 		writeC(pc.getChaLightSize());
 		writeC(pc.getMoveSpeed());
-		writeD(1); // exp
+		writeD(0x0000); // exp
 		// writeC(0x00);
 		writeH(pc.getLawful());
 		writeS(pc.getName());
 		writeS(pc.getTitle());
 		writeC(status);
-		writeD(pc.getClanid() > 0 ? pc.getClan().getEmblemId() : 0); // 盟徽編號
+		writeD(pc.getClanid());
 		writeS(pc.getClanname()); // クラン名
 		writeS(null); // ペッホチング？
 		writeC(0); // ？
@@ -102,11 +102,7 @@ public class S_OtherCharPacks extends ServerBasePacket {
 			writeC(0);
 		}
 		writeC(0); // PC = 0, Mon = Lv
-		if(pc.isPrivateShop()){
-			
-		} else {
-			writeS(null);
-		}
+		writeC(0); // ？
 		writeC(0xFF);
 		writeC(0xFF);
 	}

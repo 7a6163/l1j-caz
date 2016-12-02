@@ -15,15 +15,11 @@
 package l1j.server.server.clientpackets;
 
 import l1j.server.server.ClientThread;
-import l1j.server.server.datatables.ClanMembersTable;
 import l1j.server.server.datatables.ClanTable;
 import l1j.server.server.model.L1Clan;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
 import l1j.server.server.model.identity.L1ItemId;
-import l1j.server.server.serverpackets.S_ClanAttention;
-import l1j.server.server.serverpackets.S_ClanName;
-import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.serverpackets.S_ServerMessage;
 
 // Referenced classes of package l1j.server.server.clientpackets:
@@ -55,13 +51,9 @@ public class C_CreateClan extends ClientBasePacket {
 				}
 				if (pc.getInventory().checkItem(L1ItemId.ADENA, 30000)) { // 身上有金幣3萬
 					L1Clan clan = ClanTable.getInstance().createClan(pc, s); // 建立血盟
-					ClanMembersTable.getInstance().newMember(pc);
 					if (clan != null) {
-						pc.getInventory().consumeItem(L1ItemId.ADENA, 30000);
 						pc.sendPackets(new S_ServerMessage(84, s)); // 創立\f1%0  血盟。
-						pc.sendPackets(new S_ClanName(pc, true));
-						pc.sendPackets(new S_PacketBox(S_PacketBox.PLEDGE_EMBLEM_STATUS, pc.getClan().getEmblemStatus()));
-						pc.sendPackets(new S_ClanAttention());
+						pc.getInventory().consumeItem(L1ItemId.ADENA, 30000);
 					}
 				} else {
 					pc.sendPackets(new S_ServerMessage(189)); // \f1金幣不足。

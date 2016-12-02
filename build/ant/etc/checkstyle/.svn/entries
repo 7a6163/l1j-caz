@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/build/ant/etc/checkstyle
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/build/ant/etc/checkstyle
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-has-props
+2011-03-23T06:57:01.337086Z
+30
+for.sqven
+
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2016-01-09T23:18:49.004910Z
+2016-01-09T23:18:44.201038Z
 9c95f5245cc39571475615b2d9c81615
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-23T06:57:01.337086Z
+30
+for.sqven
 
 
 
@@ -66,11 +66,11 @@ file
 
 
 
-2016-01-09T23:18:49.004910Z
+2016-01-09T23:18:44.201038Z
 0cba076e4da63313aea435ba85d3673c
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-23T06:57:01.337086Z
+30
+for.sqven
 
 
 
@@ -100,11 +100,11 @@ file
 
 
 
-2016-01-09T23:18:49.004910Z
+2016-01-09T23:18:44.201038Z
 44249194f5602d3350fdea061ac12e84
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-23T06:57:01.337086Z
+30
+for.sqven
 
 
 

@@ -25,10 +25,8 @@ import l1j.server.server.model.Instance.L1MonsterInstance;
 import l1j.server.server.model.Instance.L1PcInstance;
 import l1j.server.server.model.npc.action.L1NpcDefaultAction;
 import l1j.server.server.serverpackets.S_ChangeShape;
-import l1j.server.server.serverpackets.S_CharVisualUpdate;
 import l1j.server.server.serverpackets.S_CloseList;
 import l1j.server.server.serverpackets.S_NpcChangeShape;
-import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.serverpackets.S_ServerMessage;
 import l1j.server.server.serverpackets.S_SkillIconGFX;
 import l1j.server.server.utils.collections.Maps;
@@ -225,12 +223,14 @@ public class L1PolyMorph {
 	}
 
 	// 變身
-	public static void doPoly(L1Character cha, int polyId, int timeSecs, int cause) {
+	public static void doPoly(L1Character cha, int polyId, int timeSecs,
+			int cause) {
 		doPoly(cha, polyId, timeSecs, cause, true);
 	}
 
 	// 變身
-	public static void doPoly(L1Character cha, int polyId, int timeSecs, int cause, boolean cantPolyMessage) {
+	public static void doPoly(L1Character cha, int polyId, int timeSecs,
+			int cause, boolean cantPolyMessage) {
 		if ((cha == null) || cha.isDead()) {
 			return;
 		}
@@ -294,61 +294,6 @@ public class L1PolyMorph {
 				mob.broadcastPacket(new S_NpcChangeShape(mob.getId(), polyId, mob.getLawful(), mob.getStatus())); // 更新NPC外觀
 			}
 		}
-	}
-	
-	/**
-	 * 3.80c 個人商店變身
-	 * @param cha
-	 * @param polyIndex 1-8
-	 */
-	public static void doPolyPraivateShop(L1Character cha, int polyIndex){
-		if ((cha == null) || cha.isDead()) {
-			return;
-		}
-		if (cha instanceof L1PcInstance) {
-			L1PcInstance pc = (L1PcInstance) cha;
-			/** 3.80 個人商店變身清單 */
-			int PolyList[] = { 11479, 11427, 10047, 9688, 11322, 10069, 10034,10032 };
-			if (pc.getTempCharGfx() != PolyList[polyIndex - 1]) {
-				L1ItemInstance weapon = pc.getWeapon();
-				boolean weaponTakeoff = (weapon != null && !isEquipableWeapon(PolyList[polyIndex - 1], weapon.getItem().getType()));
-				if (weaponTakeoff) { // 解除武器時
-					pc.setCurrentWeapon(0);
-				}
-				pc.setTempCharGfx(PolyList[polyIndex - 1]);
-				pc.sendPackets(new S_ChangeShape(pc.getId(), PolyList[polyIndex - 1], 0x46));
-				if (pc.isGmInvis()) { // GM隱身
-				} else if (pc.isInvisble()) { // 一般隱身
-					pc.broadcastPacketForFindInvis(new S_ChangeShape(pc.getId(),PolyList[polyIndex - 1], 0x46), true);
-				} else {
-					pc.broadcastPacket(new S_ChangeShape(pc.getId(),PolyList[polyIndex - 1], 0x46));
-				}
-				pc.getInventory().takeoffEquip(PolyList[polyIndex - 1]); // 是否將裝備的武器強制解除。
-			}
-			pc.sendPackets(new S_SkillIconGFX(PolyList[polyIndex - 1]));
-			pc.sendPackets(new S_CharVisualUpdate(pc, 0x46));
-			pc.broadcastPacket(new S_CharVisualUpdate(pc, 0x46));
-		}
-	}
-	
-	/**
-	 * 3.80c 個人商店 取消變身
-	 * @param cha
-	 */
-	public static void undoPolyPrivateShop(L1Character cha){
-		if (cha instanceof L1PcInstance) {
-			L1PcInstance pc = (L1PcInstance) cha;
-			int classId = pc.getClassId();
-			pc.setTempCharGfx(classId);
-			if (!pc.isDead()) {
-				pc.sendPackets(new S_ChangeShape(pc.getId(), classId, pc.getCurrentWeapon()));
-				pc.broadcastPacket(new S_ChangeShape(pc.getId(), classId, pc.getCurrentWeapon()));
-				pc.sendPackets(new S_SkillIconGFX(classId));
-				pc.sendPackets(new S_CharVisualUpdate(pc, pc.getCurrentWeapon()));
-				pc.broadcastPacket(new S_CharVisualUpdate(pc, pc.getCurrentWeapon()));
-			}
-		}
-		
 	}
 
 	// 解除變身

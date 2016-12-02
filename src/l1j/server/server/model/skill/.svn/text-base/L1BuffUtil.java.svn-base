@@ -54,6 +54,7 @@ import l1j.server.server.serverpackets.S_RemoveObject;
 import l1j.server.server.serverpackets.S_SPMR;
 import l1j.server.server.serverpackets.S_ServerMessage;
 import l1j.server.server.serverpackets.S_ShowPolyList;
+import l1j.server.server.serverpackets.S_ShowSummonList;
 import l1j.server.server.serverpackets.S_SkillBrave;
 import l1j.server.server.serverpackets.S_SkillHaste;
 import l1j.server.server.serverpackets.S_SkillIconAura;
@@ -65,6 +66,7 @@ import l1j.server.server.serverpackets.S_SkillSound;
 import l1j.server.server.serverpackets.S_Strup;
 import l1j.server.server.templates.L1Npc;
 import l1j.server.server.utils.Random;
+
 import static l1j.server.server.model.skill.L1SkillId.*;
 
 public class L1BuffUtil {
@@ -147,11 +149,11 @@ public class L1BuffUtil {
 		}
 
 		pc.setSkillEffect(STATUS_THIRD_SPEED, 600 * 1000);
-		
+
+		pc.sendPackets(new S_SkillSound(pc.getId(), 8031));
+		pc.broadcastPacket(new S_SkillSound(pc.getId(), 8031));
 		pc.sendPackets(new S_Liquor(pc.getId(), 8)); // 人物 * 1.15
 		pc.broadcastPacket(new S_Liquor(pc.getId(), 8)); // 人物 * 1.15
-		pc.sendPackets(new S_SkillSound(pc.getId(), 7976));
-		pc.broadcastPacket(new S_SkillSound(pc.getId(), 7976));
 		pc.sendPackets(new S_ServerMessage(1065)); // 將發生神秘的奇蹟力量。
 	}
 
@@ -220,13 +222,14 @@ public class L1BuffUtil {
 				pc.getParty().updateMiniHP(pc);
 			}
 			pc.sendPackets(new S_MPUpdate(pc.getCurrentMp(), pc.getMaxMp()));
-			pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+			pc.sendPackets(new S_OwnCharStatus2(pc));
 			pc.sendPackets(new S_OwnCharAttrDef(pc));
 		}
 		pc.setSkillEffect(skillId, (time * 1000));
 	}
 
-	public static int skillEffect(L1Character _user, L1Character cha, L1Character _target, int skillId, int _getBuffIconDuration, int dmg) {
+	public static int skillEffect(L1Character _user, L1Character cha,
+			L1Character _target, int skillId, int _getBuffIconDuration, int dmg) {
 		L1PcInstance _player = null;
 		if (_user instanceof L1PcInstance) {
 			L1PcInstance _pc = (L1PcInstance) _user;
@@ -271,7 +274,8 @@ public class L1BuffUtil {
 								pc.setGres(true);
 							}
 							pc.setTempID(_player.getId());
-							pc.sendPackets(new S_Message_YN(322, "")); // 是否要復活？(Y/N)
+							pc.sendPackets(new S_Message_YN(322, "")); // 是否要復活？
+																		// (Y/N)
 						}
 					}
 				}
@@ -418,8 +422,7 @@ public class L1BuffUtil {
 					3151, 3871, 4125, 2323, 3892, 3895, 3898, 3901, 4917, 4918,
 					4919, 4950, 6087, 6140, 6145, 6150, 6155, 6160, 6269, 6272,
 					6275, 6278, 6826, 6827, 6836, 6837, 6846, 6847, 6856, 6857,
-					6866, 6867, 6876, 6877, 6886, 6887, 8719, 8786, 8792, 8798,
-					8804, 8808, 8900, 8913 };
+					6866, 6867, 6876, 6877, 6886, 6887, 8719 };
 			int playerGFX = _player.getTempCharGfx();
 			for (int gfx : BowGFX) {
 				if (playerGFX == gfx) {
@@ -552,7 +555,8 @@ public class L1BuffUtil {
 				if (npcId == 71092) { // 調査員
 					if (npc.getGfxId() == npc.getTempCharGfx()) {
 						npc.setTempCharGfx(1314);
-						npc.broadcastPacket(new S_NpcChangeShape(npc.getId(),1314, npc.getLawful(), npc.getStatus()));
+						npc.broadcastPacket(new S_NpcChangeShape(npc.getId(),
+								1314, npc.getLawful(), npc.getStatus()));
 						return 0;
 					} else {
 						return 0;
@@ -566,7 +570,8 @@ public class L1BuffUtil {
 								2332, npc.getLawful(), npc.getStatus()));
 						npc.setName("$2103");
 						npc.setNameId("$2103");
-						npc.broadcastPacket(new S_ChangeName(npc.getId(),"$2103"));
+						npc.broadcastPacket(new S_ChangeName(npc.getId(),
+								"$2103"));
 					} else if (npc.getTempCharGfx() == 2332) {
 						npc.setCurrentHp(npc.getMaxHp());
 						npc.setTempCharGfx(2755);
@@ -754,8 +759,8 @@ public class L1BuffUtil {
 				pc.addHitup(5);
 				pc.addBowHitup(5);
 				pc.addMr(20);
-				pc.sendPackets(new S_SkillIconAura(113, _getBuffIconDuration));
 				pc.sendPackets(new S_SPMR(pc));
+				pc.sendPackets(new S_SkillIconAura(113, _getBuffIconDuration));
 			}
 			break;
 		// 鋼鐵士氣
@@ -779,7 +784,7 @@ public class L1BuffUtil {
 			if (cha instanceof L1PcInstance) {
 				L1PcInstance pc = (L1PcInstance) cha;
 				pc.addAc(-2);
-				pc.sendPackets(new S_SkillIconShield(2, _getBuffIconDuration));
+				pc.sendPackets(new S_SkillIconShield(5, _getBuffIconDuration));
 			}
 			break;
 		// 影之防護
@@ -1004,7 +1009,8 @@ public class L1BuffUtil {
 			if (cha instanceof L1PcInstance) {
 				L1PcInstance pc = (L1PcInstance) cha;
 				pc.setBraveSpeed(4);
-				pc.sendPackets(new S_SkillBrave(pc.getId(), 4,_getBuffIconDuration));
+				pc.sendPackets(new S_SkillBrave(pc.getId(), 4,
+						_getBuffIconDuration));
 				pc.broadcastPacket(new S_SkillBrave(pc.getId(), 4, 0));
 			}
 			break;
@@ -1013,7 +1019,8 @@ public class L1BuffUtil {
 			if (cha instanceof L1PcInstance) {
 				L1PcInstance pc = (L1PcInstance) cha;
 				pc.setBraveSpeed(6);
-				pc.sendPackets(new S_SkillBrave(pc.getId(), 6, _getBuffIconDuration));
+				pc.sendPackets(new S_SkillBrave(pc.getId(), 6,
+						_getBuffIconDuration));
 				pc.broadcastPacket(new S_SkillBrave(pc.getId(), 6, 0));
 			}
 			break;
@@ -1118,7 +1125,8 @@ public class L1BuffUtil {
 					L1Teleport.teleport(pc, 33051, 32337, (short) 4, 5, true);
 				} else {
 					pc.sendPackets(new S_ServerMessage(276)); // \f1在此無法使用傳送。
-					pc.sendPackets(new S_Paralysis(S_Paralysis.TYPE_TELEPORT_UNLOCK, true));
+					pc.sendPackets(new S_Paralysis(
+							S_Paralysis.TYPE_TELEPORT_UNLOCK, true));
 				}
 			}
 			break;
@@ -1131,19 +1139,25 @@ public class L1BuffUtil {
 				int level = pc.getLevel();
 				int[] summons;
 				if (pc.getMap().isRecallPets()) {
-					if (pc.getInventory().checkEquipped(20284)) { // 召喚戒指
+					if (pc.getInventory().checkEquipped(20284)) {
+						pc.sendPackets(new S_ShowSummonList(pc.getId()));
 						if (!pc.isSummonMonster()) {
 							pc.setSummonMonster(true);
 						}
-						String SummonString = String.valueOf(pc.getSummonId());
-						summonMonster(pc, SummonString);
 					} else {
-						summons = new int[] { 81210, 81213, 81216, 81219,81222, 81225, 81228 };
+						/*
+						 * summons = new int[] { 81083, 81084, 81085, 81086,
+						 * 81087, 81088, 81089 };
+						 */
+						summons = new int[] { 81210, 81213, 81216, 81219,
+								81222, 81225, 81228 };
 						int summonid = 0;
+						// int summoncost = 6;
 						int summoncost = 8;
 						int levelRange = 32;
 						for (int i = 0; i < summons.length; i++) { // 該当ＬＶ範囲検索
-							if ((level < levelRange)|| (i == summons.length - 1)) {
+							if ((level < levelRange)
+									|| (i == summons.length - 1)) {
 								summonid = summons[i];
 								break;
 							}
@@ -1163,13 +1177,14 @@ public class L1BuffUtil {
 						int charisma = pcCha + 6 - petcost;
 						// int charisma = pc.getCha() + 6 - petcost;
 						int summoncount = charisma / summoncost;
-						L1Npc npcTemp = NpcTable.getInstance().getTemplate(summonid);
+						L1Npc npcTemp = NpcTable.getInstance().getTemplate(
+								summonid);
 						for (int i = 0; i < summoncount; i++) {
-							L1SummonInstance summon = new L1SummonInstance(npcTemp, pc);
+							L1SummonInstance summon = new L1SummonInstance(
+									npcTemp, pc);
 							summon.setPetcost(summoncost);
 						}
 					}
-					pc.setSummonMonster(false);
 				} else {
 					pc.sendPackets(new S_ServerMessage(79));
 				}
@@ -1335,75 +1350,5 @@ public class L1BuffUtil {
 				|| (skillNum == AWAKEN_FAFURION)
 				|| (skillNum == AWAKEN_VALAKAS)
 				|| (skillNum == COOKING_WONDER_DRUG);
-	}
-	
-	private static void summonMonster(L1PcInstance pc, String s) {
-		String[] summonstr_list;
-		int[] summonid_list;
-		int[] summonlvl_list;
-		int[] summoncha_list;
-		int summonid = 0;
-		int levelrange = 0;
-		int summoncost = 0;
-		summonstr_list = new String[] { "7", "263", "519", "8", "264", "520",
-				"9", "265", "521", "10", "266", "522", "11", "267", "523",
-				"12", "268", "524", "13", "269", "525", "14", "270", "526",
-				"15", "271", "527", "16", "17", "18", "274" };
-		summonid_list = new int[] { 81210, 81211, 81212, 81213, 81214, 81215,
-				81216, 81217, 81218, 81219, 81220, 81221, 81222, 81223, 81224,
-				81225, 81226, 81227, 81228, 81229, 81230, 81231, 81232, 81233,
-				81234, 81235, 81236, 81237, 81238, 81239, 81240 };
-		summonlvl_list = new int[] { 28, 28, 28, 32, 32, 32, 36, 36, 36, 40,
-				40, 40, 44, 44, 44, 48, 48, 48, 52, 52, 52, 56, 56, 56, 60, 60,
-				60, 64, 68, 72, 72 };
-		summoncha_list = new int[] { 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
-				8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 14, 36, 36, 44 };
-		// サモンの種類、必要Lv、ペットコストを得る
-		for (int loop = 0; loop < summonstr_list.length; loop++) {
-			if (s.equalsIgnoreCase(summonstr_list[loop])) {
-				summonid = summonid_list[loop];
-				levelrange = summonlvl_list[loop];
-				summoncost = summoncha_list[loop];
-				break;
-			}
-		}
-		// Lv不足
-		if (pc.getLevel() < levelrange) {
-			// レベルが低くて該当のモンスターを召還することができません。
-			pc.sendPackets(new S_ServerMessage(743));
-			return;
-		}
-
-		int petcost = 0;
-		for (L1NpcInstance petNpc : pc.getPetList().values()) {
-			// 現在のペットコスト
-			petcost += petNpc.getPetcost();
-		}
-
-		int pcCha = pc.getCha();
-		int charisma = 0;
-		int summoncount = 0;
-		if ((levelrange <= 56) // max count = 5
-				|| (levelrange == 64)) { // max count = 2
-			if (pcCha > 34) {
-				pcCha = 34;
-			}
-		} else if (levelrange == 60) {
-			if (pcCha > 30) { // max count = 3
-				pcCha = 30;
-			}
-		} else if (levelrange > 64) {
-			if (pcCha > 44) { // max count = 1
-				pcCha = 44;
-			}
-		}
-		charisma = pcCha + 6 - petcost;
-		summoncount = charisma / summoncost;
-
-		L1Npc npcTemp = NpcTable.getInstance().getTemplate(summonid);
-		for (int cnt = 0; cnt < summoncount; cnt++) {
-			L1SummonInstance summon = new L1SummonInstance(npcTemp, pc);
-			summon.setPetcost(summoncost);
-		}
 	}
 }

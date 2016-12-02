@@ -35,6 +35,8 @@ public class S_SkillSound extends ServerBasePacket {
 		writeC(Opcodes.S_OPCODE_SKILLSOUNDGFX);
 		writeD(objid);
 		writeH(gfxid);
+		writeH(0);
+		writeD(0x00000000);
 	}
 
 	@Override

@@ -118,17 +118,17 @@ public class C_WarePassword extends ClientBasePacket {
 							return;
 						}
 						int rank = pc.getClanRank();
-						if (rank == L1Clan.CLAN_RANK_PUBLIC) {
+						if (rank == L1Clan.CLAN_RANK_PROBATION) {
 							// 只有收到稱謂的人才能使用血盟倉庫。
-							pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$728));
+							pc.sendPackets(new S_ServerMessage(
+									L1SystemMessageId.$728));
 							return;
 						}
-						if ((rank != L1Clan.CLAN_RANK_PROBATION) && (rank != L1Clan.CLAN_RANK_GUARDIAN)
-						  &&(rank != L1Clan.CLAN_RANK_LEAGUE_PROBATION) && (rank != L1Clan.CLAN_RANK_PRINCE) 
-						  &&(rank != L1Clan.CLAN_RANK_LEAGUE_VICEPRINCE) && (rank != L1Clan.CLAN_RANK_LEAGUE_GUARDIAN) 
-						  &&(rank != L1Clan.CLAN_RANK_LEAGUE_PRINCE)) {
+						if ((rank != L1Clan.CLAN_RANK_PRINCE)
+								&& pc.getTitle().equalsIgnoreCase("")) {
 							// 只有收到稱謂的人才能使用血盟倉庫。
-							pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$728));
+							pc.sendPackets(new S_ServerMessage(
+									L1SystemMessageId.$728));
 							return;
 						}
 						pc.sendPackets(new S_RetrievePledgeList(objid, pc));

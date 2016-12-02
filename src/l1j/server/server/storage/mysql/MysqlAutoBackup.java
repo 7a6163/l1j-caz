@@ -14,10 +14,8 @@
  */
 package l1j.server.server.storage.mysql;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.StringTokenizer;
@@ -25,7 +23,6 @@ import java.util.TimerTask;
 
 import l1j.server.Config;
 import l1j.server.L1Message;
-import l1j.server.server.utils.LogRecorder;
 import l1j.server.server.utils.SystemUtil;
 import l1j.server.server.utils.UnZipUtil;
 
@@ -57,10 +54,7 @@ public class MysqlAutoBackup extends TimerTask {
 	public MysqlAutoBackup() {
 		L1Message.getInstance();
 		Database = DatabaseName();
-		if (!dir.isDirectory()) {
-			dir.mkdir();
-			dir.setWritable(true);
-		}
+		if (!dir.isDirectory()) dir.mkdir();
 
 		// 壓縮是否開啟
 		GzipCmd = GzipUse ? " | gzip" : "";
@@ -91,17 +85,14 @@ public class MysqlAutoBackup extends TimerTask {
 				exeText.append(Passwords + " ");
 				exeText.append(Database+ " --opt --skip-extended-insert --skip-quick");
 				exeText.append(GzipCmd + " > ");
-				exeText.append(dir.getCanonicalPath() + new SimpleDateFormat("\\yyyy-MM-dd-kkmm").format(new Date()) + FilenameEx);
+				exeText.append(dir.getAbsolutePath()
+						+ new SimpleDateFormat("\\yyyy-MM-dd-kkmm").format(new Date()) + FilenameEx);
 				try {
 					Runtime rt = Runtime.getRuntime();
-					Process p = rt.exec("cmd /c " + exeText.toString());
-					BufferedReader bf = new BufferedReader (new InputStreamReader(p.getInputStream()));
-					String msg = null;
-					while((msg = bf.readLine()) != null){
-						LogRecorder.writeLog(msg);
-					}
+					rt.exec("cmd /c " + exeText.toString());
 				} finally {
-					System.out.println("(MYSQL is backed over.)" + "\n" + L1Message.waitingforuser);// 等待玩家連線
+					System.out.println("(MYSQL is backed over.)" + "\n"
+							+ L1Message.waitingforuser);// 等待玩家連線
 				}
 			} catch (IOException ioe) {
 				ioe.printStackTrace();
@@ -121,12 +112,14 @@ public class MysqlAutoBackup extends TimerTask {
 				exeText.append(Passwords + " ");
 				exeText.append(Database+ " --opt --skip-extended-insert --skip-quick");
 				exeText.append(GzipCmd + " > ");
-				exeText.append(dir.getCanonicalPath() + new SimpleDateFormat("\\yyyy-MM-dd-kkmm").format(new Date()) + FilenameEx);
+				exeText.append(dir.getAbsolutePath()
+						+ new SimpleDateFormat("\\yyyy-MM-dd-kkmm").format(new Date()) + FilenameEx);
 				try {
 					Runtime rt = Runtime.getRuntime();
 					rt.exec(exeText.toString());
 				} finally {
-					System.out.println("(MYSQL is backed over.)" + "\n" + L1Message.waitingforuser);// 等待玩家連線
+					System.out.println("(MYSQL is backed over.)" + "\n"
+							+ L1Message.waitingforuser);// 等待玩家連線
 				}
 			} catch (IOException ioe) {
 				ioe.printStackTrace();

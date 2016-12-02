@@ -14,8 +14,6 @@
  */
 package l1j.server.server.templates;
 
-import java.sql.Timestamp;
-
 public class L1Mail {
 	public L1Mail() {
 	}
@@ -60,13 +58,13 @@ public class L1Mail {
 		_receiverName = s;
 	}
 
-	private Timestamp _date = null;
+	private String _date = null; // yy/mm/dd
 
-	public Timestamp getDate() {
+	public String getDate() {
 		return _date;
 	}
 
-	public void setDate(Timestamp s) {
+	public void setDate(String s) {
 		_date = s;
 	}
 
@@ -98,16 +96,6 @@ public class L1Mail {
 
 	public void setContent(byte[] arg) {
 		_content = arg;
-	}
-	
-	private int _inBoxId = 0;
-
-	public int getInBoxId() {
-		return _inBoxId;
-	}
-
-	public void setInBoxId(int i) {
-		_inBoxId = i;
 	}
 
 }

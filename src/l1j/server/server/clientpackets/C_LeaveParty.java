@@ -34,8 +34,8 @@ public class C_LeaveParty extends ClientBasePacket {
 		if (player == null) {
 			return;
 		}
-		// 組隊中
-		if (player.isInParty()) {
+		if (player.isInParty()) // 組隊中
+		{
 			player.getParty().leaveMember(player);
 		}
 	}

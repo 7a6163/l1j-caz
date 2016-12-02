@@ -29,7 +29,8 @@ public class S_RetrievePledgeList extends ServerBasePacket {
 			return;
 		}
 
-		if (clan.getWarehouseUsingChar() != 0 && clan.getWarehouseUsingChar() != pc.getId()) // 自キャラ以外がクラン倉庫使用中
+		if (clan.getWarehouseUsingChar() != 0
+				&& clan.getWarehouseUsingChar() != pc.getId()) // 自キャラ以外がクラン倉庫使用中
 		{
 			pc.sendPackets(new S_ServerMessage(209)); // \f1他の血盟員が倉庫を使用中です。しばらく経ってから利用してください。
 			return;
@@ -43,17 +44,18 @@ public class S_RetrievePledgeList extends ServerBasePacket {
 				writeD(objid);
 				writeH(size);
 				writeC(5); // 血盟倉庫
-				for (Object itemObject : clan.getDwarfForClanInventory().getItems()) {
+				for (Object itemObject : clan.getDwarfForClanInventory()
+						.getItems()) {
 					L1ItemInstance item = (L1ItemInstance) itemObject;
 					writeD(item.getId());
-					writeC(item.getItem().getUseType());
+					writeC(0);
 					writeH(item.get_gfxid());
 					writeC(item.getBless());
 					writeD(item.getCount());
 					writeC(item.isIdentified() ? 1 : 0);
 					writeS(item.getViewName());
 				}
-				writeD(0x0000001e); // 金幣30
+				writeH(0x001e); // 金幣30
 			} else {
 				pc.sendPackets(new S_ServerMessage(1625));
 			}

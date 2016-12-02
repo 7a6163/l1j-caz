@@ -66,15 +66,5 @@ public class L1Castle {
 	public void setPublicMoney(int i) {
 		_publicMoney = i;
 	}
-	
-	private int heldByClan;
-	
-	public int getHeldClanId(){
-		return heldByClan;
-	}
-	
-	public void setHeldClan(int i) {
-		heldByClan = i;
-	}
 
 }

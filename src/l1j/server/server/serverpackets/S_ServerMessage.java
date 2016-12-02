@@ -69,21 +69,12 @@ public class S_ServerMessage extends ServerBasePacket {
 
 		if (check == 0) {
 			writeC(0);
-			if(type == 0x01a2){ // 隊伍解散
-				writeH(0x0a00); // 關閉組隊介面
-			} 
 		}
 		else if (check == 1) {
-			if(type == 0x09b9){ // 沙漠紅色訊息
-				writeC(2);
-				writeD(4);
-				writeS(msg1);
-				return;
-			}
 			writeC(1);
 			writeS(msg1);
 		}
-        else if (check == 2) {
+		else if (check == 2) {
 			writeC(2);
 			writeS(msg1);
 			writeS(msg2);

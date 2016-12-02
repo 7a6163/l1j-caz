@@ -35,7 +35,7 @@ public class S_PetMenuPacket extends ServerBasePacket {
 			writeD(pet.getId());
 			writeS("anicom");
 			writeC(0x00);
-			writeH(0x000b);
+			writeH(10);
 			switch (pet.getCurrentPetStatus()) {
 			case 1:
 				writeS("$469"); // 攻撃態勢

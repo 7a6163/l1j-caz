@@ -22,7 +22,6 @@ import l1j.server.Config;
 import l1j.server.server.ClientThread;
 import l1j.server.server.WarTimeController;
 import l1j.server.server.datatables.CharacterTable;
-import l1j.server.server.datatables.ClanMembersTable;
 import l1j.server.server.datatables.ClanTable;
 import l1j.server.server.datatables.HouseTable;
 import l1j.server.server.datatables.NpcTable;
@@ -43,11 +42,8 @@ import l1j.server.server.model.Instance.L1PetInstance;
 import l1j.server.server.model.identity.L1ItemId;
 import l1j.server.server.model.map.L1Map;
 import l1j.server.server.serverpackets.S_ChangeName;
-import l1j.server.server.serverpackets.S_CharReset;
 import l1j.server.server.serverpackets.S_CharTitle;
 import l1j.server.server.serverpackets.S_CharVisualUpdate;
-import l1j.server.server.serverpackets.S_ClanAttention;
-import l1j.server.server.serverpackets.S_ClanName;
 import l1j.server.server.serverpackets.S_OwnCharStatus2;
 import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.serverpackets.S_Resurrection;
@@ -101,7 +97,8 @@ public class C_Attr extends ClientBasePacket {
 			pc.setTempID(0);
 			if (joinPc != null) {
 				if (c == 0) { // No
-					joinPc.sendPackets(new S_ServerMessage(96, pc.getName())); //  拒絕你的請求。
+					joinPc.sendPackets(new S_ServerMessage(96, pc.getName())); // \f1%0%s
+																				// 拒絕你的請求。
 				} else if (c == 1) { // Yes
 					int clan_id = pc.getClanid();
 					String clanName = pc.getClanname();
@@ -110,7 +107,7 @@ public class C_Attr extends ClientBasePacket {
 						int maxMember = 0;
 						int charisma = pc.getCha();
 						// 公式
-						maxMember = charisma * 3 *( 2+ pc.getLevel() / 50 );
+						maxMember = charisma * 3*( 2+ pc.getLevel() / 50 );
 						// 未過45 人數/3
 						if (!pc.getQuest().isEnd(L1Quest.QUEST_LEVEL45)) 
 							maxMember /= 3;						
@@ -126,36 +123,23 @@ public class C_Attr extends ClientBasePacket {
 								new S_ServerMessage(188, pc.getName()));
 								return;
 							}
-							if(joinPc.isCrown()){ // 如果是王加入，判定收人方是否通過45試煉
-								if(!pc.getQuest().isEnd(L1Quest.QUEST_LEVEL45)){
-									return;
-								}
-							}
 							for (L1PcInstance clanMembers : clan.getOnlineClanMember()) {
-								clanMembers.sendPackets(new S_ServerMessage(94,joinPc.getName())); // \f1你接受%0當你的血盟成員。
+								clanMembers.sendPackets(new S_ServerMessage(94,
+										joinPc.getName())); // \f1你接受%0當你的血盟成員。
 							}
 							joinPc.setClanid(clan_id);
 							joinPc.setClanname(clanName);
 							joinPc.setClanRank(L1Clan.CLAN_RANK_PUBLIC);
-							joinPc.setClanMemberNotes("");
 							joinPc.setTitle("");
-							joinPc.sendPackets(new S_CharTitle(joinPc.getId(),""));
-							joinPc.broadcastPacket(new S_CharTitle(joinPc.getId(), ""));
+							joinPc.sendPackets(new S_CharTitle(joinPc.getId(),
+									""));
+							joinPc.broadcastPacket(new S_CharTitle(joinPc
+									.getId(), ""));
 							joinPc.save(); // 儲存加入的玩家資料
 							clan.addMemberName(joinPc.getName());
-							ClanMembersTable.getInstance().newMember(joinPc);
-							joinPc.sendPackets(new S_PacketBox(S_PacketBox.MSG_RANK_CHANGED, L1Clan.CLAN_RANK_PUBLIC, joinPc.getName())); // 你的階級變更為
 							joinPc.sendPackets(new S_ServerMessage(95, clanName)); // \f1加入%0血盟。
-							joinPc.sendPackets(new S_ClanName(joinPc, true));
-							joinPc.sendPackets(new S_CharReset(joinPc.getId(), clan.getClanId()));
-							joinPc.sendPackets(new S_PacketBox(S_PacketBox.PLEDGE_EMBLEM_STATUS, pc.getClan().getEmblemStatus())); // TODO
-							joinPc.sendPackets(new S_ClanAttention());
-							for(L1PcInstance player : clan.getOnlineClanMember()){
-								player.sendPackets(new S_CharReset(joinPc.getId(), joinPc.getClan().getEmblemId()));
-								player.broadcastPacket(new S_CharReset(player.getId(), joinPc.getClan().getEmblemId()));
-							}
-						} else { // 如果是有血盟的聯盟王加入（聯合血盟）
-							if (Config.CLAN_ALLIANCE && pc.getQuest().isEnd(L1Quest.QUEST_LEVEL45)) {
+						} else { // 如果是王族加入（聯合血盟）
+							if (Config.CLAN_ALLIANCE) {
 								changeClan(clientthread, pc, joinPc, maxMember);
 							} else {
 								joinPc.sendPackets(new S_ServerMessage(89)); // \f1你已經有血盟了。
@@ -165,6 +149,7 @@ public class C_Attr extends ClientBasePacket {
 				}
 			}
 			break;
+
 		case 217: // %0 血盟向你的血盟宣戰。是否接受？(Y/N)
 		case 221: // %0 血盟要向你投降。是否接受？(Y/N)
 		case 222: // %0 血盟要結束戰爭。是否接受？(Y/N)
@@ -210,8 +195,9 @@ public class C_Attr extends ClientBasePacket {
 			if (trading_partner != null) {
 				if (c == 0) // No
 				{
-					trading_partner.sendPackets(new S_ServerMessage(253, pc.getName())); // %0%d
-											                                            // 拒絕與你交易。
+					trading_partner.sendPackets(new S_ServerMessage(253, pc
+							.getName())); // %0%d
+											// 拒絕與你交易。
 					pc.setTradeID(0);
 					trading_partner.setTradeID(0);
 				} else if (c == 1) // Yes
@@ -246,7 +232,8 @@ public class C_Attr extends ClientBasePacket {
 					resurrection( pc, resusepc2, pc.getMaxHp());
 					// EXPロストしている、G-RESを掛けられた、EXPロストした死亡
 					// 全てを満たす場合のみEXP復旧
-					if ((pc.getExpRes() == 1) && pc.isGres() && pc.isGresValid()) {
+					if ((pc.getExpRes() == 1) && pc.isGres()
+							&& pc.isGresValid()) {
 						pc.resExp();
 						pc.setExpRes(0);
 						pc.setGres(false);
@@ -285,8 +272,10 @@ public class C_Attr extends ClientBasePacket {
 				fightPc.setFightId(0);
 				fightPc.sendPackets(new S_ServerMessage(631, pc.getName())); // %0%dがあなたとの決闘を断りました。
 			} else if (c == 1) {
-				fightPc.sendPackets(new S_PacketBox(S_PacketBox.MSG_DUEL,fightPc.getFightId(), fightPc.getId()));
-				pc.sendPackets(new S_PacketBox(S_PacketBox.MSG_DUEL, pc.getFightId(), pc.getId()));
+				fightPc.sendPackets(new S_PacketBox(S_PacketBox.MSG_DUEL,
+						fightPc.getFightId(), fightPc.getId()));
+				pc.sendPackets(new S_PacketBox(S_PacketBox.MSG_DUEL, pc
+						.getFightId(), pc.getId()));
 			}
 			break;
 
@@ -316,17 +305,26 @@ public class C_Attr extends ClientBasePacket {
 			pc.setTempID(0);
 			if (partner != null) {
 				if (c == 0) { // No
-					partner.sendPackets(new S_ServerMessage(656, pc.getName())); // %0 拒絕你(妳)的求婚。
+					partner.sendPackets(new S_ServerMessage( // %0
+																// 拒絕你(妳)的求婚。
+							656, pc.getName()));
 				} else if (c == 1) { // Yes
 					pc.setPartnerId(partner.getId());
 					pc.save();
-					pc.sendPackets(new S_ServerMessage(790)); // 倆人的結婚在所有人的祝福下完成
-					pc.sendPackets(new S_ServerMessage(655, partner.getName())); // 恭喜!! %0  已接受你(妳)的求婚。
+					pc.sendPackets(new S_ServerMessage( // 倆人的結婚在所有人的祝福下完成
+							790));
+					pc.sendPackets(new S_ServerMessage( // 恭喜!! %0
+														// 已接受你(妳)的求婚。
+							655, partner.getName()));
 
 					partner.setPartnerId(pc.getId());
 					partner.save();
-					partner.sendPackets(new S_ServerMessage(790)); // 恭喜!! %0 已接受你(妳)的求婚。
-					partner.sendPackets(new S_ServerMessage(655, pc.getName())); // 恭喜!! %0 已接受你(妳)的求婚。
+					partner.sendPackets(new S_ServerMessage( // 恭喜!! %0
+																// 已接受你(妳)的求婚。
+							790));
+					partner.sendPackets(new S_ServerMessage( // 恭喜!! %0
+																// 已接受你(妳)的求婚。
+							655, pc.getName()));
 				}
 			}
 			break;
@@ -383,7 +381,9 @@ public class C_Attr extends ClientBasePacket {
 						L1ChatParty chatParty = new L1ChatParty();
 						chatParty.addMember(chatPc);
 						chatParty.addMember(pc);
-						chatPc.sendPackets(new S_ServerMessage(424, pc.getName())); // %0%s加入了您的隊伍。
+						chatPc.sendPackets(new S_ServerMessage(424, pc
+								.getName())); // %0%s
+												// 加入了您的隊伍。
 					}
 				}
 			}
@@ -395,7 +395,8 @@ public class C_Attr extends ClientBasePacket {
 			if (target != null) {
 				if (c == 0) // No
 				{
-					target.sendPackets(new S_ServerMessage(423, pc.getName())); // %0%s 拒絕了您的邀請。
+					target.sendPackets(new S_ServerMessage(423, pc.getName())); // %0%s
+																				// 拒絕了您的邀請。
 					pc.setPartyID(0);
 				} else if (c == 1) // Yes
 				{
@@ -413,7 +414,8 @@ public class C_Attr extends ClientBasePacket {
 						L1Party party = new L1Party();
 						party.addMember(target);
 						party.addMember(pc);
-						target.sendPackets(new S_ServerMessage(424, pc.getName())); // %0%s
+						target.sendPackets(new S_ServerMessage(424, pc
+								.getName())); // %0%s
 												// 加入了您的隊伍。
 					}
 				}
@@ -464,7 +466,7 @@ public class C_Attr extends ClientBasePacket {
 					if (pc.getBaseStr() < 35) {
 						pc.addBaseStr((byte) 1); // 素のSTR値に+1
 						pc.setBonusStats(pc.getBonusStats() + 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.sendPackets(new S_CharVisualUpdate(pc));
 						pc.save(); // 將玩家資料儲存到資料庫中
 					} else {
@@ -477,7 +479,7 @@ public class C_Attr extends ClientBasePacket {
 						pc.addBaseDex((byte) 1); // 素のDEX値に+1
 						pc.resetBaseAc();
 						pc.setBonusStats(pc.getBonusStats() + 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.sendPackets(new S_CharVisualUpdate(pc));
 						pc.save(); // 將玩家資料儲存到資料庫中
 					} else {
@@ -489,7 +491,7 @@ public class C_Attr extends ClientBasePacket {
 					if (pc.getBaseCon() < 35) {
 						pc.addBaseCon((byte) 1); // 素のCON値に+1
 						pc.setBonusStats(pc.getBonusStats() + 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.sendPackets(new S_CharVisualUpdate(pc));
 						pc.save(); // 將玩家資料儲存到資料庫中
 					} else {
@@ -501,7 +503,7 @@ public class C_Attr extends ClientBasePacket {
 					if (pc.getBaseInt() < 35) {
 						pc.addBaseInt((byte) 1); // 素のINT値に+1
 						pc.setBonusStats(pc.getBonusStats() + 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.sendPackets(new S_CharVisualUpdate(pc));
 						pc.save(); // 將玩家資料儲存到資料庫中
 					} else {
@@ -514,7 +516,7 @@ public class C_Attr extends ClientBasePacket {
 						pc.addBaseWis((byte) 1); // 素のWIS値に+1
 						pc.resetBaseMr();
 						pc.setBonusStats(pc.getBonusStats() + 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.sendPackets(new S_CharVisualUpdate(pc));
 						pc.save(); // 將玩家資料儲存到資料庫中
 					} else {
@@ -526,7 +528,7 @@ public class C_Attr extends ClientBasePacket {
 					if (pc.getBaseCha() < 35) {
 						pc.addBaseCha((byte) 1); // 素のCHA値に+1
 						pc.setBonusStats(pc.getBonusStats() + 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.sendPackets(new S_CharVisualUpdate(pc));
 						pc.save(); // 將玩家資料儲存到資料庫中
 					} else {
@@ -544,7 +546,8 @@ public class C_Attr extends ClientBasePacket {
 		}
 	}
 
-	private void resurrection(L1PcInstance pc, L1PcInstance resusepc, short resHp) {
+	private void resurrection(L1PcInstance pc, L1PcInstance resusepc,
+			short resHp) {
 		// 由其他角色復活
 		pc.sendPackets(new S_SkillSound(pc.getId(), '\346'));
 		pc.broadcastPacket(new S_SkillSound(pc.getId(), '\346'));
@@ -557,45 +560,44 @@ public class C_Attr extends ClientBasePacket {
 		pc.stopPcDeleteTimer();
 		pc.sendPackets(new S_Resurrection(pc, resusepc, 0));
 		pc.broadcastPacket(new S_Resurrection(pc, resusepc, 0));
-		pc.sendPackets(new S_CharVisualUpdate(pc));        // 3.80C可能已經不需要
-		pc.broadcastPacket(new S_CharVisualUpdate(pc));    // 3.80C可能已經不需要
+		pc.sendPackets(new S_CharVisualUpdate(pc));
+		pc.broadcastPacket(new S_CharVisualUpdate(pc));
 	}
 
-	private void changeClan(ClientThread clientthread, L1PcInstance pc, L1PcInstance joinPc, int maxMember) {
+	private void changeClan(ClientThread clientthread, L1PcInstance pc,
+			L1PcInstance joinPc, int maxMember) {
 		int clanId = pc.getClanid();
 		String clanName = pc.getClanname();
 		L1Clan clan = L1World.getInstance().getClan(clanName);
 
+		int oldClanId = joinPc.getClanid();
 		String oldClanName = joinPc.getClanname();
 		L1Clan oldClan = L1World.getInstance().getClan(oldClanName);
 		
-		if ((clan != null) && (oldClan != null) && joinPc.isCrown() && (joinPc.getId() == oldClan.getLeaderId())) {
+		if ((clan != null) && (oldClan != null) && joinPc.isCrown() && // 自己的王族
+				(joinPc.getId() == oldClan.getLeaderId())) {
 			if (maxMember < clan.getAllMembers().length + oldClan.getAllMembers().length) { // 沒有空缺
 				joinPc.sendPackets( // %0%s 無法接受你成為該血盟成員。
 				new S_ServerMessage(188, pc.getName()));
 				return;
 			}
-			
 			for (L1PcInstance element : clan.getOnlineClanMember()) {
 				element.sendPackets(new S_ServerMessage(94, joinPc.getName())); // \f1你接受%0當你的血盟成員。
-			}
-			
-			/** 變更為聯盟王 */
-			pc.setClanRank(L1Clan.CLAN_RANK_LEAGUE_PRINCE);
-			pc.sendPackets(new S_PacketBox(S_PacketBox.MSG_RANK_CHANGED, L1Clan.CLAN_RANK_LEAGUE_PRINCE, pc.getName())); // 你的階級變更為
-			try {
-				pc.save();
-			} catch (Exception e1) {
-				e1.printStackTrace();
 			}
 
 			for (String element : oldClan.getAllMembers()) {
 				L1PcInstance oldClanMember = L1World.getInstance().getPlayer(element);
 				if (oldClanMember != null) { // 舊血盟成員在線上
-					ClanMembersTable.getInstance().deleteMember(oldClanMember.getId());
 					oldClanMember.setClanid(clanId);
 					oldClanMember.setClanname(clanName);
-					oldClanMember.setClanRank(L1Clan.CLAN_RANK_LEAGUE_PUBLIC);
+					// TODO: 翻譯
+					// 血盟連合に加入した君主はガーディアン
+					// 君主が連れてきた血盟員は見習い
+					if (oldClanMember.getId() == joinPc.getId()) {
+						oldClanMember.setClanRank(L1Clan.CLAN_RANK_GUARDIAN);
+					} else {
+						oldClanMember.setClanRank(L1Clan.CLAN_RANK_PROBATION);
+					}
 					try {
 						// 儲存玩家資料到資料庫中
 						oldClanMember.save();
@@ -603,34 +605,24 @@ public class C_Attr extends ClientBasePacket {
 						_log.log(Level.SEVERE, e.getLocalizedMessage(), e);
 					}
 					clan.addMemberName(oldClanMember.getName());
-					ClanMembersTable.getInstance().newMember(oldClanMember); // 加入成員資料
-					oldClanMember.sendPackets(new S_PacketBox(S_PacketBox.MSG_RANK_CHANGED, L1Clan.CLAN_RANK_PUBLIC, oldClanMember.getName())); // 你的階級變更為
-					oldClanMember.sendPackets(new S_ServerMessage(95, clanName)); // \f1加入%0血盟。
-					oldClanMember.sendPackets(new S_ClanName(oldClanMember, true));
-					oldClanMember.sendPackets(new S_CharReset(oldClanMember.getId(), clan.getClanId()));
-					oldClanMember.sendPackets(new S_PacketBox(S_PacketBox.PLEDGE_EMBLEM_STATUS, pc.getClan().getEmblemStatus()));
-					oldClanMember.sendPackets(new S_ClanAttention());
-					for(L1PcInstance player : clan.getOnlineClanMember()){
-						player.sendPackets(new S_CharReset(oldClanMember.getId(), oldClanMember.getClan().getEmblemId()));
-						player.broadcastPacket(new S_CharReset(player.getId(), oldClanMember.getClan().getEmblemId()));
-					}
+					oldClanMember
+							.sendPackets(new S_ServerMessage(95, clanName)); // \f1加入%0血盟。
 				} else { // 舊血盟成員不在線上
 					try {
-						L1PcInstance offClanMember = CharacterTable.getInstance().restoreCharacter(element);
-						ClanMembersTable.getInstance().deleteMember(offClanMember.getId());
+						L1PcInstance offClanMember = CharacterTable
+								.getInstance().restoreCharacter(element);
 						offClanMember.setClanid(clanId);
 						offClanMember.setClanname(clanName);
-						offClanMember.setClanRank(L1Clan.CLAN_RANK_LEAGUE_PUBLIC);
+						offClanMember.setClanRank(L1Clan.CLAN_RANK_PROBATION);
 						offClanMember.save(); // 儲存玩家資料到資料庫中
 						clan.addMemberName(offClanMember.getName());
-						ClanMembersTable.getInstance().newMember(offClanMember); // 加入成員資料
 					} catch (Exception e) {
 						_log.log(Level.SEVERE, e.getLocalizedMessage(), e);
 					}
 				}
 			}
 			// 刪除舊盟徽
-			String emblem_file = String.valueOf(oldClan.getEmblemId());
+			String emblem_file = String.valueOf(oldClanId);
 			File file = new File("emblem/" + emblem_file);
 			file.delete();
 			ClanTable.getInstance().deleteClan(oldClanName);

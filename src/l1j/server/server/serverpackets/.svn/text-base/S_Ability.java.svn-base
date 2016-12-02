@@ -25,29 +25,20 @@ public class S_Ability extends ServerBasePacket {
 
 	private byte[] _byte = null;
 
-	/**
-	 * @param type
-	 * 1, 傳送控制戒指
-	 * 2, 變形控制戒指
-	 * 3, 全白天
-	 * 4, 夜視功能
-	 * 5, 召喚控制戒指
-	 * @param equipped 是否裝備
-	 */
 	public S_Ability(int type, boolean equipped) {
 		buildPacket(type, equipped);
 	}
 
 	private void buildPacket(int type, boolean equipped) {
 		writeC(Opcodes.S_OPCODE_ABILITY);
-		writeC(type);
+		writeC(type); // 1:ROTC 5:ROSC
 		if (equipped) {
 			writeC(0x01);
 		}
 		else {
 			writeC(0x00);
 		}
-		writeC(0x00);
+		writeC(0x02);
 		writeH(0x0000);
 	}
 

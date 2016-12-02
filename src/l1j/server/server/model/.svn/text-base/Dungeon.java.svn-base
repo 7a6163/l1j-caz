@@ -229,14 +229,16 @@ public class Dungeon {
 						teleportable = true;
 					}
 				}
-				else if (((nowtime >= 15 * 360) && (nowtime < 25 * 360))    // 1.30~2.30
-						|| ((nowtime >= 45 * 360) && (nowtime < 55 * 360))  // 4.30~5.30
-						|| ((nowtime >= 75 * 360) && (nowtime < 85 * 360))  // 7.30~8.30
-						|| ((nowtime >= 105 * 360) && (nowtime < 115 * 360))// 10.30~11.30 
-						|| ((nowtime >= 135 * 360) && (nowtime < 145 * 360))// 13.30~14.30 
-						|| ((nowtime >= 165 * 360) && (nowtime < 175 * 360))// 16.30~17.30
-						|| ((nowtime >= 195 * 360) && (nowtime < 205 * 360))// 19.30~20.30
-						|| ((nowtime >= 225 * 360) && (nowtime < 235 * 360))) {
+				else if (((nowtime >= 15 * 360) && (nowtime < 25 * 360 // 1.30~2.30
+						))
+						|| ((nowtime >= 45 * 360) && (nowtime < 55 * 360 // 4.30~5.30
+						))
+						|| ((nowtime >= 75 * 360) && (nowtime < 85 * 360 // 7.30~8.30
+						))
+						|| ((nowtime >= 105 * 360) && (nowtime < 115 * 360 // 10.30~11.30
+						)) || ((nowtime >= 135 * 360) && (nowtime < 145 * 360))
+						|| ((nowtime >= 165 * 360) && (nowtime < 175 * 360))
+						|| ((nowtime >= 195 * 360) && (nowtime < 205 * 360)) || ((nowtime >= 225 * 360) && (nowtime < 235 * 360))) {
 					if ((pc.getInventory().checkItem(40299, 1) && (dungeonType == DungeonType.SHIP_FOR_GLUDIN)) // TalkingIslandShiptoAdenMainland
 							|| (pc.getInventory().checkItem(40301, 1) && (dungeonType == DungeonType.SHIP_FOR_HEINE)) // AdenMainlandShiptoForgottenIsland
 							|| (pc.getInventory().checkItem(40302, 1) && (dungeonType == DungeonType.SHIP_FOR_PI))) { // ShipPirateislandtoHiddendock

@@ -37,7 +37,7 @@ public class C_Fight extends ClientBasePacket {
 		if ((pc == null) || pc.isGhost()) {
 			return;
 		}
-		L1PcInstance target = FaceToFace.faceToFace(pc, false);
+		L1PcInstance target = FaceToFace.faceToFace(pc);
 		if (target != null) {
 			if (!target.isParalyzed()) {
 				if (pc.getFightId() != 0) {
@@ -50,7 +50,8 @@ public class C_Fight extends ClientBasePacket {
 				}
 				pc.setFightId(target.getId());
 				target.setFightId(pc.getId());
-				target.sendPackets(new S_Message_YN(630, pc.getName())); // 要與你決鬥。你是否同意？(Y/N)
+				target.sendPackets(new S_Message_YN(630, pc.getName())); // %0%s
+																			// 要與你決鬥。你是否同意？(Y/N)
 			}
 		}
 	}

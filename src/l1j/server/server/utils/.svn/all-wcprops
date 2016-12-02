@@ -1,173 +1,173 @@
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils
-END
-ByteArrayUtil.java
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/ByteArrayUtil.java
-END
-TimePeriod.java
-K 25
-svn:wc:ra_dav:version-url
-V 80
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/TimePeriod.java
-END
-PerformanceTimer.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/PerformanceTimer.java
-END
-UnZipUtil.java
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/UnZipUtil.java
-END
-LeakCheckedConnection.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/LeakCheckedConnection.java
-END
-MoveUtil.java
-K 25
-svn:wc:ra_dav:version-url
-V 78
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/MoveUtil.java
-END
-Dice.java
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/Dice.java
-END
-LogRecorder.java
-K 25
-svn:wc:ra_dav:version-url
-V 81
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/LogRecorder.java
-END
-IntRange.java
-K 25
-svn:wc:ra_dav:version-url
-V 78
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/IntRange.java
-END
-TimerPool.java
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/TimerPool.java
-END
-CalcInitHpMp.java
-K 25
-svn:wc:ra_dav:version-url
-V 82
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/CalcInitHpMp.java
-END
-FileUtil.java
-K 25
-svn:wc:ra_dav:version-url
-V 78
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/FileUtil.java
-END
-CalcExp.java
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/CalcExp.java
-END
-FaceToFace.java
-K 25
-svn:wc:ra_dav:version-url
-V 80
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/FaceToFace.java
-END
-BinaryInputStream.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/BinaryInputStream.java
-END
-Random.java
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/Random.java
-END
-BinaryOutputStream.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/BinaryOutputStream.java
-END
-SystemUtil.java
-K 25
-svn:wc:ra_dav:version-url
-V 80
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/SystemUtil.java
-END
-L1SpawnUtil.java
-K 25
-svn:wc:ra_dav:version-url
-V 81
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/L1SpawnUtil.java
-END
-MysqlAutoBackupTimer.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/MysqlAutoBackupTimer.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils
 END
 NumberUtil.java
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/NumberUtil.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/NumberUtil.java
 END
 Teleportation.java
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/Teleportation.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/Teleportation.java
 END
 IterableNodeList.java
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/IterableNodeList.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/IterableNodeList.java
 END
 StreamUtil.java
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/StreamUtil.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/StreamUtil.java
 END
 SQLUtil.java
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/SQLUtil.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/SQLUtil.java
 END
 IterableElementList.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/IterableElementList.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/IterableElementList.java
 END
 CalcStat.java
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/CalcStat.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/CalcStat.java
 END
 Weather.java
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/Weather.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/Weather.java
+END
+ByteArrayUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/ByteArrayUtil.java
+END
+TimePeriod.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/TimePeriod.java
+END
+PerformanceTimer.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/PerformanceTimer.java
+END
+UnZipUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/UnZipUtil.java
+END
+LeakCheckedConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/LeakCheckedConnection.java
+END
+MoveUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/MoveUtil.java
+END
+Dice.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/Dice.java
+END
+LogRecorder.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/LogRecorder.java
+END
+IntRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/IntRange.java
+END
+TimerPool.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/TimerPool.java
+END
+CalcInitHpMp.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/CalcInitHpMp.java
+END
+FileUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/FileUtil.java
+END
+CalcExp.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/CalcExp.java
+END
+FaceToFace.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/FaceToFace.java
+END
+BinaryInputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/BinaryInputStream.java
+END
+Random.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/Random.java
+END
+BinaryOutputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/BinaryOutputStream.java
+END
+SystemUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/SystemUtil.java
+END
+L1SpawnUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/L1SpawnUtil.java
+END
+MysqlAutoBackupTimer.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/MysqlAutoBackupTimer.java
 END

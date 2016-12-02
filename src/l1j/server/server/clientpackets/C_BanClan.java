@@ -19,7 +19,6 @@ import java.util.logging.Logger;
 
 import l1j.server.server.ClientThread;
 import l1j.server.server.datatables.CharacterTable;
-import l1j.server.server.datatables.ClanMembersTable;
 import l1j.server.server.model.L1Clan;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
@@ -36,7 +35,8 @@ public class C_BanClan extends ClientBasePacket {
 	private static final String C_BAN_CLAN = "[C] C_BanClan";
 	private static Logger _log = Logger.getLogger(C_BanClan.class.getName());
 
-	public C_BanClan(byte abyte0[], ClientThread clientthread) throws Exception {
+	public C_BanClan(byte abyte0[], ClientThread clientthread)
+			throws Exception {
 		super(abyte0);
 		
 		L1PcInstance pc = clientthread.getActiveChar();
@@ -62,27 +62,28 @@ public class C_BanClan extends ClientBasePacket {
 						tempPc.setClanid(0);
 						tempPc.setClanname("");
 						tempPc.setClanRank(0);
-						tempPc.setClanMemberId(0);
 						tempPc.save(); // 儲存玩家的資料到資料庫中
 						clan.delMemberName(tempPc.getName());
-						ClanMembersTable.getInstance().deleteMember(tempPc.getId());
-						tempPc.sendPackets(new S_ServerMessage(238, pc.getClanname())); // 你被 %0 血盟驅逐了。
-						pc.sendPackets(new S_ServerMessage(240, tempPc.getName())); // %0%o 被你從你的血盟驅逐了。
+						tempPc.sendPackets(new S_ServerMessage(238, pc
+								.getClanname())); // 你被 %0 血盟驅逐了。
+						pc.sendPackets(new S_ServerMessage(240, tempPc
+								.getName())); // %0%o 被你從你的血盟驅逐了。
 					} else {
 						pc.sendPackets(new S_ServerMessage(109, s)); // 沒有叫%0的人。
 					}
 				} else { // 玩家離線中
 					try {
-						L1PcInstance restorePc = CharacterTable.getInstance().restoreCharacter(s);
-						if (restorePc != null&& restorePc.getClanid() == pc.getClanid()) { // 確定同血盟
+						L1PcInstance restorePc = CharacterTable.getInstance()
+								.restoreCharacter(s);
+						if (restorePc != null
+								&& restorePc.getClanid() == pc.getClanid()) { // 確定同血盟
 							restorePc.setClanid(0);
 							restorePc.setClanname("");
 							restorePc.setClanRank(0);
-							restorePc.setClanMemberId(0);
 							restorePc.save(); // 儲存玩家的資料到資料庫中
 							clan.delMemberName(restorePc.getName());
-							ClanMembersTable.getInstance().deleteMember(restorePc.getId());
-							pc.sendPackets(new S_ServerMessage(240, restorePc.getName())); // %0%o 被你從你的血盟驅逐了。
+							pc.sendPackets(new S_ServerMessage(240, restorePc
+									.getName())); // %0%o 被你從你的血盟驅逐了。
 						} else {
 							pc.sendPackets(new S_ServerMessage(109, s)); // %0%o 被你從你的血盟驅逐了。
 						}

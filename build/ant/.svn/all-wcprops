@@ -1,53 +1,53 @@
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant
-END
-INSTALL
-K 25
-svn:wc:ra_dav:version-url
-V 54
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/INSTALL
-END
-fetch.xml
-K 25
-svn:wc:ra_dav:version-url
-V 56
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/fetch.xml
-END
-get-m2.xml
-K 25
-svn:wc:ra_dav:version-url
-V 57
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/get-m2.xml
-END
-KEYS
-K 25
-svn:wc:ra_dav:version-url
-V 51
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/KEYS
-END
-README
-K 25
-svn:wc:ra_dav:version-url
-V 53
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/README
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant
 END
 WHATSNEW
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/WHATSNEW
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/WHATSNEW
 END
 NOTICE
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/NOTICE
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/NOTICE
 END
 LICENSE
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/LICENSE
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/LICENSE
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/INSTALL
+END
+fetch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/fetch.xml
+END
+get-m2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/get-m2.xml
+END
+KEYS
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/KEYS
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/README
 END

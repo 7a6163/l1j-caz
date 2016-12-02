@@ -1,77 +1,77 @@
 K 25
 svn:wc:ra_dav:version-url
 V 50
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc
-END
-mmetrics-frames.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/mmetrics-frames.xsl
-END
-maudit-frames.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/maudit-frames.xsl
-END
-log.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 58
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/log.xsl
-END
-junit-noframes.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/junit-noframes.xsl
-END
-ant-bootstrap.jar
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/ant-bootstrap.jar
-END
-jdepend-frames.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/jdepend-frames.xsl
-END
-tagdiff.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/tagdiff.xsl
-END
-junit-frames.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/junit-frames.xsl
-END
-coverage-frames.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/coverage-frames.xsl
-END
-junit-frames-xalan1.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/junit-frames-xalan1.xsl
-END
-changelog.xsl
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/changelog.xsl
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc
 END
 jdepend.xsl
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/build/ant/etc/jdepend.xsl
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/jdepend.xsl
+END
+mmetrics-frames.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/mmetrics-frames.xsl
+END
+maudit-frames.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/maudit-frames.xsl
+END
+log.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/log.xsl
+END
+junit-noframes.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/junit-noframes.xsl
+END
+ant-bootstrap.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/ant-bootstrap.jar
+END
+jdepend-frames.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/jdepend-frames.xsl
+END
+tagdiff.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/tagdiff.xsl
+END
+junit-frames.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/junit-frames.xsl
+END
+coverage-frames.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/coverage-frames.xsl
+END
+junit-frames-xalan1.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/junit-frames-xalan1.xsl
+END
+changelog.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/build/ant/etc/changelog.xsl
 END

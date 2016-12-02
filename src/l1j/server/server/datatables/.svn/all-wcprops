@@ -1,323 +1,311 @@
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables
-END
-GetBackRestartTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/GetBackRestartTable.java
-END
-TrapTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/TrapTable.java
-END
-UBTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 82
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/UBTable.java
-END
-ClanRecommendTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ClanRecommendTable.java
-END
-AuctionBoardTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/AuctionBoardTable.java
-END
-ClanTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ClanTable.java
-END
-RaceTicketTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/RaceTicketTable.java
-END
-NpcActionTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/NpcActionTable.java
-END
-BossSpawnTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/BossSpawnTable.java
-END
-UBSpawnTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/UBSpawnTable.java
-END
-LightSpawnTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/LightSpawnTable.java
-END
-CharBuffTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/CharBuffTable.java
-END
-ChatLogTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ChatLogTable.java
-END
-ResolventTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ResolventTable.java
-END
-MailTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/MailTable.java
-END
-LogEnchantTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/LogEnchantTable.java
-END
-HouseTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/HouseTable.java
-END
-DropItemTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/DropItemTable.java
-END
-TownTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/TownTable.java
-END
-PetTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/PetTable.java
-END
-ArmorSetTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ArmorSetTable.java
-END
-FurnitureSpawnTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/FurnitureSpawnTable.java
-END
-CharacterTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/CharacterTable.java
-END
-InnKeyTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/InnKeyTable.java
-END
-ItemTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ItemTable.java
-END
-LetterTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/LetterTable.java
-END
-BuddyTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/BuddyTable.java
-END
-SpawnTimeTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/SpawnTimeTable.java
-END
-PetItemTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/PetItemTable.java
-END
-IpTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 82
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/IpTable.java
-END
-ShopTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ShopTable.java
-END
-CastleTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/CastleTable.java
-END
-MobSkillTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/MobSkillTable.java
-END
-NpcTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/NpcTable.java
-END
-NpcChatTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/NpcChatTable.java
-END
-CharacterConfigTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 95
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/CharacterConfigTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables
 END
 PolyTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/PolyTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/PolyTable.java
 END
 InnTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/InnTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/InnTable.java
 END
 NPCTalkDataTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/NPCTalkDataTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/NPCTalkDataTable.java
 END
 SpawnTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/SpawnTable.java
-END
-ClanMembersTable.java
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ClanMembersTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/SpawnTable.java
 END
 WeaponSkillTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/WeaponSkillTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/WeaponSkillTable.java
 END
 NpcSpawnTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/NpcSpawnTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/NpcSpawnTable.java
 END
 PetTypeTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/PetTypeTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/PetTypeTable.java
 END
 MobGroupTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/MobGroupTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/MobGroupTable.java
 END
 MagicDollTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/MagicDollTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/MagicDollTable.java
 END
 ExpTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/ExpTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/ExpTable.java
 END
 MapsTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/MapsTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/MapsTable.java
 END
 SkillsTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/SkillsTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/SkillsTable.java
 END
 FurnitureItemTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/FurnitureItemTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/FurnitureItemTable.java
 END
 DoorTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/DoorTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/DoorTable.java
 END
 DropTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/DropTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/DropTable.java
 END
 SprTable.java
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables/SprTable.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/SprTable.java
+END
+GetBackRestartTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/GetBackRestartTable.java
+END
+UBTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/UBTable.java
+END
+TrapTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/TrapTable.java
+END
+AuctionBoardTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/AuctionBoardTable.java
+END
+ClanTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/ClanTable.java
+END
+RaceTicketTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/RaceTicketTable.java
+END
+NpcActionTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/NpcActionTable.java
+END
+UBSpawnTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/UBSpawnTable.java
+END
+BossSpawnTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/BossSpawnTable.java
+END
+LightSpawnTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/LightSpawnTable.java
+END
+CharBuffTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/CharBuffTable.java
+END
+ChatLogTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/ChatLogTable.java
+END
+ResolventTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/ResolventTable.java
+END
+MailTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/MailTable.java
+END
+LogEnchantTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/LogEnchantTable.java
+END
+HouseTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/HouseTable.java
+END
+DropItemTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/DropItemTable.java
+END
+TownTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/TownTable.java
+END
+PetTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/PetTable.java
+END
+FurnitureSpawnTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/FurnitureSpawnTable.java
+END
+ArmorSetTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/ArmorSetTable.java
+END
+CharacterTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/CharacterTable.java
+END
+InnKeyTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/InnKeyTable.java
+END
+ItemTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/ItemTable.java
+END
+LetterTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/LetterTable.java
+END
+BuddyTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/BuddyTable.java
+END
+SpawnTimeTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/SpawnTimeTable.java
+END
+PetItemTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/PetItemTable.java
+END
+IpTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/IpTable.java
+END
+ShopTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/ShopTable.java
+END
+CastleTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/CastleTable.java
+END
+MobSkillTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/MobSkillTable.java
+END
+NpcTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/NpcTable.java
+END
+NpcChatTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/NpcChatTable.java
+END
+CharacterConfigTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables/CharacterConfigTable.java
 END

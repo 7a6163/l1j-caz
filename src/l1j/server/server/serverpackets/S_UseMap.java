@@ -22,7 +22,7 @@ public class S_UseMap extends ServerBasePacket {
 
 	public S_UseMap(L1PcInstance pc, int objid, int itemid) {
 
-		//writeC(Opcodes.S_OPCODE_USEMAP);
+		writeC(Opcodes.S_OPCODE_USEMAP);
 		writeD(objid);
 
 		switch (itemid) {

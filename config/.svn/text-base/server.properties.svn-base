@@ -11,7 +11,7 @@ GameserverPort=2000
 #LoginとPasswordは変更すべきだが、わからなければ変えない
 # Database info
 Driver=com.mysql.jdbc.Driver
-URL=jdbc:mysql://localhost/l1jtw?useUnicode=true&characterEncoding=utf8
+URL=jdbc:mysql://localhost/l1jdb?useUnicode=true&characterEncoding=utf8
 Login=root
 Password=root
 
@@ -80,10 +80,10 @@ InjusticeCount = 10
 JusticeCount = 4
 
 # 加速器檢查嚴密度,為免除錯誤檢測設定數值允許幾%加速。(如果常常誤報，請將數值稍微調大)
-CheckStrictness = 200
+CheckStrictness = 102
 
 # 加速處罰機制 ( 0:剔除遊戲   1:鎖定人物10秒   2:傳到地域   3:傳到GM房，30秒後傳回  )
-Punishment = 2
+Punishment = 0
 
 #是否再登入畫面即可創建帳號 True=是 False=否
 #如果需要變更:

@@ -24,10 +24,8 @@ import l1j.server.server.datatables.MailTable;
 import l1j.server.server.model.L1Clan;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
-import l1j.server.server.model.identity.L1SystemMessageId;
 import l1j.server.server.serverpackets.S_Mail;
 import l1j.server.server.serverpackets.S_ServerMessage;
-import l1j.server.server.serverpackets.S_SkillSound;
 import l1j.server.server.templates.L1Mail;
 import l1j.server.server.utils.collections.Lists;
 
@@ -58,9 +56,9 @@ public class C_Mail extends ClientBasePacket {
 		}
 		
 		int type = readC();
-		
+
 		if ((type == 0x00) || (type == 0x01) || (type == 0x02)) { // 開啟
-			pc.sendPackets(new S_Mail(pc , type));
+			pc.sendPackets(new S_Mail(pc.getName(), type));
 		}
 		else if ((type == 0x10) || (type == 0x11) || (type == 0x12)) { // 讀取
 			int mailId = readD();
@@ -72,47 +70,31 @@ public class C_Mail extends ClientBasePacket {
 			pc.sendPackets(new S_Mail(mailId, type));
 		}
 		else if (type == 0x20) { // 一般信紙
-			if (pc.getInventory().checkItem(40308, 50)) {
-				pc.getInventory().consumeItem(40308, 50);
-			} else {
-				pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$189));
-				return;
-			}
-			readH(); // 世界寄信次數紀錄
+			readH();
 			String receiverName = readS();
 			byte[] text = readByte();
 			L1PcInstance receiver = L1World.getInstance().getPlayer(receiverName);
-			
 			if (receiver != null) { // 對方在線上
-				if (getMailSizeByPc(receiver, TYPE_NORMAL_MAIL) >= 40) { 
-					pc.sendPackets(new S_Mail(type, false));
+				if (getMailSizeByReceiver(receiverName, TYPE_NORMAL_MAIL) >= 20) {
+					pc.sendPackets(new S_Mail(type));
 					return;
 				}
-				
-				/* 寄件備份*/
-				int mailId = MailTable.getInstance().writeMail(TYPE_NORMAL_MAIL, receiverName, pc, text, pc.getId());
-				pc.sendPackets(new S_Mail(receiver, mailId, true));
-				
-				int mailId2 = MailTable.getInstance().writeMail(TYPE_NORMAL_MAIL, receiverName, pc, text, receiver.getId());
-				
+				MailTable.getInstance().writeMail(TYPE_NORMAL_MAIL, receiverName, pc, text);
 				if (receiver.getOnlineStatus() == 1) {
-					receiver.sendPackets(new S_Mail(pc, mailId2, false));
-					receiver.sendPackets(new S_SkillSound(receiver.getId(), 1091));
+					receiver.sendPackets(new S_Mail(receiverName, TYPE_NORMAL_MAIL));
 				}
-			} else { // 對方離線中
+			}
+			else { // 對方離線中
 				try {
 					L1PcInstance restorePc = CharacterTable.getInstance().restoreCharacter(receiverName);
 					if (restorePc != null) {
-						if (getMailSizeByPc(restorePc, TYPE_NORMAL_MAIL) >= 40) {
-							pc.sendPackets(new S_Mail(type, false));
+						if (getMailSizeByReceiver(receiverName, TYPE_NORMAL_MAIL) >= 20) {
+							pc.sendPackets(new S_Mail(type));
 							return;
 						}
-						/* 寄件備份*/
-						int mailId = MailTable.getInstance().writeMail(TYPE_NORMAL_MAIL, receiverName, pc, text, pc.getId());
-						pc.sendPackets(new S_Mail(restorePc, mailId, true));
-						
-						MailTable.getInstance().writeMail(TYPE_NORMAL_MAIL, receiverName, pc, text, restorePc.getId());
-					} else {
+						MailTable.getInstance().writeMail(TYPE_NORMAL_MAIL, receiverName, pc, text);
+					}
+					else {
 						pc.sendPackets(new S_ServerMessage(109, receiverName)); // %0という名前の人はいません。
 					}
 				}
@@ -120,56 +102,43 @@ public class C_Mail extends ClientBasePacket {
 					_log.log(Level.SEVERE, e.getLocalizedMessage(), e);
 				}
 			}
-			pc.sendPackets(new S_Mail(type, true));
 		}
 		else if (type == 0x21) { // 血盟信紙
-			if (pc.getClanid() > 0) {
-				pc.getInventory().consumeItem(40308, 50);
-			} else {
-				pc.sendPackets(new S_ServerMessage(L1SystemMessageId.$1262));
-				return;
-			}
 			readH();
 			String clanName = readS();
 			byte[] text = readByte();
 			L1Clan clan = L1World.getInstance().getClan(clanName);
 			if (clan != null) {
 				for (String name : clan.getAllMembers()) {
-					L1PcInstance clanPc = L1World.getInstance().getPlayer(name);
-					int size = getMailSizeByPc(clanPc, TYPE_CLAN_MAIL);
+					int size = getMailSizeByReceiver(name, TYPE_CLAN_MAIL);
 					if (size >= 50) {
 						continue;
 					}
-					MailTable.getInstance().writeMail(TYPE_CLAN_MAIL, name, pc, text, clanPc.getId());
+					MailTable.getInstance().writeMail(TYPE_CLAN_MAIL, name, pc, text);
+					L1PcInstance clanPc = L1World.getInstance().getPlayer(name);
 					if (clanPc != null) { // 在線上
-						clanPc.sendPackets(new S_Mail(clanPc, TYPE_CLAN_MAIL));
-						clanPc.sendPackets(new S_SkillSound(clanPc.getId(), 1091));
+						clanPc.sendPackets(new S_Mail(name, TYPE_CLAN_MAIL));
 					}
 				}
 			}
-		} else if ((type == 0x30) || (type == 0x31) || (type == 0x32)) { // 刪除
+		}
+		else if ((type == 0x30) || (type == 0x31) || (type == 0x32)) { // 刪除
 			int mailId = readD();
 			MailTable.getInstance().deleteMail(mailId);
 			pc.sendPackets(new S_Mail(mailId, type));
-		} else if (type == 0x60) { // 多選刪除
-			int count = readD();
-			for (int i = 0; i < count; i++) {
-				int mailId = readD();
-				pc.sendPackets(new S_Mail(mailId, (MailTable.getMail(mailId).getType() + 0x30)));
-				MailTable.getInstance().deleteMail(mailId);
-			}
-		} else if (type == 0x40) { // 保管箱儲存
+		}
+		else if (type == 0x40) { // 保管箱儲存
 			int mailId = readD();
 			MailTable.getInstance().setMailType(mailId, TYPE_MAIL_BOX);
 			pc.sendPackets(new S_Mail(mailId, type));
 		}
 	}
 
-	private int getMailSizeByPc(L1PcInstance pc, int type) {
+	private int getMailSizeByReceiver(String receiverName, int type) {
 		List<L1Mail> mails = Lists.newList();
 		MailTable.getInstance();
 		for (L1Mail mail : MailTable.getAllMail()) {
-			if (mail.getInBoxId() == pc.getId()) {
+			if (mail.getReceiverName().equalsIgnoreCase(receiverName)) {
 				if (mail.getType() == type) {
 					mails.add(mail);
 				}

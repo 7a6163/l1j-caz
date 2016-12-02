@@ -80,9 +80,9 @@ public class L1TeleporterInstance extends L1NpcInstance {
 					}
 				}
 			} else if (npcid == 70779) { // ゲートアント
-				if (player.getTempCharGfx() == 2437) { // ジャイアントアント変身
+				if (player.getTempCharGfx() == 1037) { // ジャイアントアント変身
 					htmlid = "ants3";
-				} else if (player.getTempCharGfx() == 2438) {// ジャイアントアントソルジャー変身
+				} else if (player.getTempCharGfx() == 1039) {// ジャイアントアントソルジャー変身
 					if (player.isCrown()) { // 君主
 						if (quest.get_step(L1Quest.QUEST_LEVEL30) == 1) {
 							if (player.getInventory().checkItem(40547)) { // 住民たちの遺品

@@ -27,7 +27,7 @@ public class S_ChatPacket extends ServerBasePacket {
 
 	public S_ChatPacket(L1PcInstance pc, String chat, int opcode, int type) {
 
-		if (type == 0) { // 一般頻道
+		if (type == 0) { // 通常チャット
 			writeC(opcode);
 			writeC(type);
 			if (pc.isInvisble()) {
@@ -38,7 +38,7 @@ public class S_ChatPacket extends ServerBasePacket {
 			}
 			writeS(pc.getName() + ": " + chat);
 		}
-		else if (type == 2) { // 大喊
+		else if (type == 2) { // 叫び
 			writeC(opcode);
 			writeC(type);
 			if (pc.isInvisble()) {
@@ -51,7 +51,7 @@ public class S_ChatPacket extends ServerBasePacket {
 			writeH(pc.getX());
 			writeH(pc.getY());
 		}
-		else if (type == 3) { // 世界頻道
+		else if (type == 3) { // 全体チャット
 			writeC(opcode);
 			writeC(type);
 			if (pc.isGm() == true) {
@@ -61,32 +61,32 @@ public class S_ChatPacket extends ServerBasePacket {
 				writeS("[" + pc.getName() + "] " + chat);
 			}
 		}
-		else if (type == 4) { // 血盟騎士頻道
+		else if (type == 4) { // 血盟チャット
 			writeC(opcode);
 			writeC(type);
 			writeS("{" + pc.getName() + "} " + chat);
 		}
-		else if (type == 9) { // 密語頻道
+		else if (type == 9) { // ウィスパー
 			writeC(opcode);
 			writeC(type);
 			writeS("-> (" + pc.getName() + ") " + chat);
 		}
-		else if (type == 11) { // 血盟頻道
+		else if (type == 11) { // パーティーチャット
 			writeC(opcode);
 			writeC(type);
 			writeS("(" + pc.getName() + ") " + chat);
 		}
-		else if (type == 12) { // 交易頻道
+		else if (type == 12) { // トレードチャット
 			writeC(opcode);
 			writeC(type);
 			writeS("[" + pc.getName() + "] " + chat);
 		}
-		else if (type == 13) { // 聯盟頻道
+		else if (type == 13) { // 連合チャット
 			writeC(opcode);
-			writeC(0x04);
+			writeC(type);
 			writeS("{{" + pc.getName() + "}} " + chat);
 		}
-		else if (type == 14) { // 隊伍頻道
+		else if (type == 14) { // チャットパーティー
 			writeC(opcode);
 			writeC(type);
 			if (pc.isInvisble()) {
@@ -97,15 +97,10 @@ public class S_ChatPacket extends ServerBasePacket {
 			}
 			writeS("(" + pc.getName() + ") " + chat);
 		}
-		else if (type == 16) { // 密語頻道
+		else if (type == 16) { // ウィスパー
 			writeC(opcode);
 			writeS(pc.getName());
 			writeS(chat);
-		}
-		else if(type == 17) { // 血盟王族公告頻道
-			writeC(opcode);
-			writeC(type);
-			writeS("{" + pc.getName() + "}" + chat);
 		}
 	}
 

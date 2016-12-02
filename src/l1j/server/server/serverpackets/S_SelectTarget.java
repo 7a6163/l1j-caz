@@ -30,7 +30,7 @@ public class S_SelectTarget extends ServerBasePacket {
 		writeD(ObjectId);
 		writeC(0x00);
 		writeC(0x00);
-		writeC(0x00);
+		writeC(0x02);
 	}
 
 	@Override

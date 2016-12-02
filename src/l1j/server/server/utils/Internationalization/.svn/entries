@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/src/l1j/server/server/utils/Internationalization
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/src/l1j/server/server/utils/Internationalization
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
+2011-09-03T07:53:06.784081Z
+327
 ibm99nets
-has-props
+
 
 
 
@@ -26,86 +26,86 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
-messages_ja_JP.java
-file
-
-
-
-
-2016-01-09T23:18:48.252930Z
-02567df7c35a50765fcab4be5485e6d6
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3145
-
-messages_en_US.java
-file
-
-
-
-
-2016-01-09T23:18:48.252930Z
-1285824cec742719b5a6e85114732ad2
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2967
-
 messages_zh_TW.java
 file
 
 
 
 
-2016-01-09T23:18:48.252930Z
-2f7551bcabd194d1cbfc529a1f6723fd
-2013-11-13T15:01:16.279159Z
-385
+2016-01-09T23:18:42.789075Z
+6c9f2727c8c0089ea61c58c251190143
+2011-09-03T07:53:06.784081Z
+327
 ibm99nets
+has-props
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2999
+
+messages.java
+file
+
+
+
+
+2016-01-09T23:18:42.789075Z
+b84216a78840c305bacdf47564a8534f
+2011-09-03T07:53:06.784081Z
+327
+ibm99nets
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3001
+
+messages_zh_CN.java
+file
+
+
+
+
+2016-01-09T23:18:42.789075Z
+7e1bbbb4bdb79ad3ec86864bb59cbf3c
+2011-09-03T07:53:06.784081Z
+327
+ibm99nets
+has-props
 
 
 
@@ -128,17 +128,18 @@ ibm99nets
 
 3000
 
-messages.java
+messages_ja_JP.java
 file
 
 
 
 
-2016-01-09T23:18:48.252930Z
-8e2cb6578b384db3ebd42f70dfbd9b47
-2013-11-13T15:01:16.279159Z
-385
+2016-01-09T23:18:42.789075Z
+a12c642bb12a51ce06a5fc383c8a9d56
+2011-09-03T07:53:06.784081Z
+327
 ibm99nets
+has-props
 
 
 
@@ -159,20 +160,20 @@ ibm99nets
 
 
 
-
-3002
+3144
 
-messages_zh_CN.java
+messages_en_US.java
 file
 
 
 
 
-2016-01-09T23:18:48.252930Z
-f73bb33ad75db9b85382c9ba2263b3be
-2013-11-13T15:01:16.279159Z
-385
+2016-01-09T23:18:42.789075Z
+3dbaa937208de96891e968cf3e399858
+2011-09-03T07:53:06.784081Z
+327
 ibm99nets
+has-props
 
 
 
@@ -193,6 +194,5 @@ ibm99nets
 
 
 
-
-3001
+2966
 

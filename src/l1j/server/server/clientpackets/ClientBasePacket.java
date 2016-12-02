@@ -22,9 +22,11 @@ import l1j.server.Config;
 import l1j.server.server.ClientThread;
 
 public abstract class ClientBasePacket {
-	private static Logger _log = Logger.getLogger(ClientBasePacket.class.getName());
+	private static Logger _log = Logger.getLogger(ClientBasePacket.class
+			.getName());
 
-	private static final String CLIENT_LANGUAGE_CODE = Config.CLIENT_LANGUAGE_CODE;
+	private static final String CLIENT_LANGUAGE_CODE = Config
+			.CLIENT_LANGUAGE_CODE;
 
 	private byte _decrypt[];
 
@@ -80,7 +82,8 @@ public abstract class ClientBasePacket {
 	public String readS() {
 		String s = null;
 		try {
-			s = new String(_decrypt, _off, _decrypt.length - _off, CLIENT_LANGUAGE_CODE);
+			s = new String(_decrypt, _off, _decrypt.length - _off,
+					CLIENT_LANGUAGE_CODE);
 			s = s.substring(0, s.indexOf('\0'));
 			_off += s.getBytes(CLIENT_LANGUAGE_CODE).length + 1;
 		} catch (Exception e) {
@@ -101,7 +104,7 @@ public abstract class ClientBasePacket {
 	}
 
 	/**
-	 * 返回客戶端的封包類型。("[C] C_DropItem" 等)
+	 * クライアントパケットの種類を表す文字列を返す。("[C] C_DropItem" 等)
 	 */
 	public String getType() {
 		return "[C] " + this.getClass().getSimpleName();

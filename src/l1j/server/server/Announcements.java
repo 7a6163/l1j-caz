@@ -31,7 +31,8 @@ import l1j.server.server.utils.StreamUtil;
 import l1j.server.server.utils.collections.Lists;
 
 public class Announcements {
-	private static Logger _log = Logger.getLogger(Announcements.class.getName());
+	private static Logger _log = Logger
+			.getLogger(Announcements.class.getName());
 
 	private static Announcements _instance;
 

@@ -21,7 +21,8 @@ import l1j.server.server.model.Instance.L1PcInstance;
 
 public class S_WhoCharinfo extends ServerBasePacket {
 	private static final String S_WHO_CHARINFO = "[S] S_WhoCharinfo";
-	private static Logger _log = Logger.getLogger(S_WhoCharinfo.class.getName());
+	private static Logger _log = Logger
+			.getLogger(S_WhoCharinfo.class.getName());
 
 	private byte[] _byte = null;
 
@@ -38,7 +39,7 @@ public class S_WhoCharinfo extends ServerBasePacket {
 			lawfulness = "(Lawful)";
 		}
 
-		writeC(Opcodes.S_OPCODE_GLOBALCHAT);
+		writeC(Opcodes.S_OPCODE_SYSMSG);
 		writeC(0x08);
 
 		String title = "";

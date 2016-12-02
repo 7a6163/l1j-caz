@@ -118,11 +118,13 @@ public class L1MonsterInstance extends L1NpcInstance {
 				for (L1PcInstance pc : L1World.getInstance()
 						.getRecognizePlayer(this)) {
 					if (!isChangeShape) {
-						pc.sendPackets(new S_ChangeName(getId(),getNpcTemplate().get_nameid()));
+						pc.sendPackets(new S_ChangeName(getId(),
+								getNpcTemplate().get_nameid()));
 					} else {
 						pc.sendPackets(new S_ChangeName(getId(), getNameId()));
 					}
-					pc.sendPackets(new S_NpcChangeShape(getId(), getGfxId(),getTempLawful(), getStatus()));
+					pc.sendPackets(new S_NpcChangeShape(getId(), getGfxId(),
+							getTempLawful(), getStatus()));
 				}
 			}
 		}

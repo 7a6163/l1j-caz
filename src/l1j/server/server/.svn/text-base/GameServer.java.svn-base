@@ -84,17 +84,18 @@ import l1j.server.server.utils.SystemUtil;
 // IpTable, Shutdown, NpcTable, MobGroupTable, NpcShoutTable
 
 public class GameServer extends Thread {
+	private ServerSocket _serverSocket;
 	private static Logger _log = Logger.getLogger(GameServer.class.getName());
 	private static int YesNoCount = 0;
-	public final int startTime = (int) (System.currentTimeMillis() / 1000);
-	private ServerSocket _serverSocket;
 	private int _port;
+	// private Logins _logins;
 	private LoginController _loginController;
 	private int chatlvl;
 
 	@Override
 	public void run() {
-		System.out.println(L1Message.memoryUse + SystemUtil.getUsedMemoryMB() + L1Message.memory);
+		System.out.println(L1Message.memoryUse + SystemUtil.getUsedMemoryMB()
+				+ L1Message.memory);
 		System.out.println(L1Message.waitingforuser);
 		while (true) {
 			try {
@@ -193,11 +194,11 @@ public class GameServer extends Thread {
 		// 初始化無限大戰
 		UbTimeController ubTimeContoroller = UbTimeController.getInstance();
 		GeneralThreadPool.getInstance().execute(ubTimeContoroller);
-		
+
 		// 初始化攻城
 		WarTimeController warTimeController = WarTimeController.getInstance();
 		GeneralThreadPool.getInstance().execute(warTimeController);
-		
+
 		// 設定精靈石的產生
 		if (Config.ELEMENTAL_STONE_AMOUNT > 0) {
 			ElementalStoneGenerator elementalStoneGenerator = ElementalStoneGenerator.getInstance();

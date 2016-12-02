@@ -43,9 +43,7 @@ import static l1j.server.server.model.skill.L1SkillId.WIND_SHACKLE;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Timer;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
@@ -58,7 +56,6 @@ import l1j.server.server.GeneralThreadPool;
 import l1j.server.server.PacketOutput;
 import l1j.server.server.WarTimeController;
 import l1j.server.server.command.executor.L1HpBar;
-import l1j.server.server.datatables.CastleTable;
 import l1j.server.server.datatables.CharacterTable;
 import l1j.server.server.datatables.ExpTable;
 import l1j.server.server.datatables.ItemTable;
@@ -102,12 +99,12 @@ import l1j.server.server.model.monitor.L1PcHellMonitor;
 import l1j.server.server.model.monitor.L1PcInvisDelay;
 import l1j.server.server.model.skill.L1SkillId;
 import l1j.server.server.model.skill.L1SkillUse;
-import l1j.server.server.serverpackets.S_RedMessage;
+import l1j.server.server.serverpackets.S_BlueMessage;
 import l1j.server.server.serverpackets.S_CastleMaster;
 import l1j.server.server.serverpackets.S_Disconnect;
 import l1j.server.server.serverpackets.S_DoActionGFX;
 import l1j.server.server.serverpackets.S_DoActionShop;
-import l1j.server.server.serverpackets.S_EquipmentSlot;
+import l1j.server.server.serverpackets.S_Exp;
 import l1j.server.server.serverpackets.S_Fight;
 import l1j.server.server.serverpackets.S_Fishing;
 import l1j.server.server.serverpackets.S_HPMeter;
@@ -127,7 +124,6 @@ import l1j.server.server.serverpackets.S_SystemMessage;
 import l1j.server.server.serverpackets.S_bonusstats;
 import l1j.server.server.serverpackets.ServerBasePacket;
 import l1j.server.server.templates.L1BookMark;
-import l1j.server.server.templates.L1Castle;
 import l1j.server.server.templates.L1Item;
 import l1j.server.server.templates.L1MagicDoll;
 import l1j.server.server.templates.L1PrivateShopBuyList;
@@ -385,8 +381,8 @@ public class L1PcInstance extends L1Character {
 		int char_level = getLevel();
 		int gap = level - char_level;
 		if (gap == 0) {
-			sendPackets(new S_OwnCharStatus(this));
-			//sendPackets(new S_Exp(this));
+			// sendPackets(new S_OwnCharStatus(this));
+			sendPackets(new S_Exp(this));
 			return;
 		}
 
@@ -510,15 +506,16 @@ public class L1PcInstance extends L1Character {
 	}
 
 	public void sendVisualEffectAtLogin() {
-		for (L1Castle ca : CastleTable.getInstance().getCastleTableList()) {
-			sendPackets(new S_CastleMaster(ca.getId(), ca.getHeldClanId() > 0 ? ca.getHeldClanId() : 0));
-		}
-		
+		// S_Emblemの送信はC_Clanに移行
+		// for (L1Clan clan : L1World.getInstance().getAllClans()) {
+		// sendPackets(new S_Emblem(clan.getClanId()));
+		// }
+
 		if (getClanid() != 0) { // クラン所属
 			L1Clan clan = L1World.getInstance().getClan(getClanname());
 			if (clan != null) {
-				// プリンスまたはプリンセス、かつ、血盟主で自クランが城主
-				if (isCrown() && (getId() == clan.getLeaderId()) && (clan.getCastleId() != 0)) {
+				if (isCrown() && (getId() == clan.getLeaderId()) && // プリンスまたはプリンセス、かつ、血盟主で自クランが城主
+						(clan.getCastleId() != 0)) {
 					sendPackets(new S_CastleMaster(clan.getCastleId(), getId()));
 				}
 			}
@@ -756,7 +753,7 @@ public class L1PcInstance extends L1Character {
 		return L1World.getInstance().getClan(getClanname());
 	}
 
-	private int _clanRank; // ● クラン内のランク(血盟君主、守護騎士、一般、見習)
+	private int _clanRank; // ● クラン内のランク(血盟君主、ガーディアン、一般、見習い)
 
 	public int getClanRank() {
 		return _clanRank;
@@ -765,27 +762,6 @@ public class L1PcInstance extends L1Character {
 	public void setClanRank(int i) {
 		_clanRank = i;
 	}
-	
-	private int _clanMemberId; // 血盟成員Id
-
-	public int getClanMemberId() {
-		return _clanMemberId;
-	}
-
-	public void setClanMemberId(int i) {
-		_clanMemberId = i;
-	}
-	
-	private String _clanMemberNotes; // 血盟成員備註
-
-	public String getClanMemberNotes() {
-		return _clanMemberNotes;
-	}
-
-	public void setClanMemberNotes(String s) {
-		_clanMemberNotes = s;
-	}
-	
 
 	// 角色生日
 	private Timestamp _birthday;
@@ -795,7 +771,7 @@ public class L1PcInstance extends L1Character {
 	}
 
 	public int getSimpleBirthday(){
-		if (_birthday != null){
+		if (_birthday !=null){
 			SimpleDateFormat SimpleDate = new SimpleDateFormat("yyyyMMdd");
 			int BornTime = Integer.parseInt(SimpleDate.format(_birthday.getTime()));
 			return BornTime;
@@ -1606,7 +1582,7 @@ public class L1PcInstance extends L1Character {
 
 					if (isChangePkCount && (player.get_PKcount() >= 5) && (player.get_PKcount() < 10)) {
 						// あなたのPK回数が%0になりました。回数が%1になると地獄行きです。
-						player.sendPackets(new S_RedMessage(551, String.valueOf(player.get_PKcount()), "10"));
+						player.sendPackets(new S_BlueMessage(551, String.valueOf(player.get_PKcount()), "10"));
 					}
 					else if (isChangePkCount && (player.get_PKcount() >= 10)) {
 						player.beginHell(true);
@@ -2423,42 +2399,6 @@ public class L1PcInstance extends L1Character {
 	public L1EquipmentSlot getEquipSlot() {
 		return _equipSlot;
 	}
-	
-	@Override
-	public void set_food(int i) {
-		super.set_food(i);
-		setCryOfSurvivalTime();
-	}
-	
-	// 生存吶喊 飽食度 100% 充電時間
-	private long _cryofsurvivaltime;
-
-	public long getCryOfSurvivalTime() {
-		return _cryofsurvivaltime;
-	}
-
-	public void setCryOfSurvivalTime() {
-		if (get_food() >= 225) {
-			_cryofsurvivaltime = System.currentTimeMillis() / 1000;
-		}
-	}
-	
-	// 殺怪數紀錄
-	private int _monskill = 0;
-	
-	public int getMonsKill(){
-		return _monskill;
-	}
-	
-	public void setMonsKill(int i){
-		_monskill = i;
-		sendPackets(new S_OwnCharStatus(this));
-	}
-	
-	public void addMonsKill(){
-		_monskill += 1;
-		sendPackets(new S_OwnCharStatus(this));
-	}
 
 	public static L1PcInstance load(String charName) {
 		L1PcInstance result = null;
@@ -2787,11 +2727,11 @@ public class L1PcInstance extends L1Character {
 				setHellTime(300 * (get_PKcount() - 10) + 300);
 			}
 			// あなたのPK回数が%0になり、地獄に落とされました。あなたはここで%1分間反省しなければなりません。
-			sendPackets(new S_RedMessage(552, String.valueOf(get_PKcount()), String.valueOf(getHellTime() / 60)));
+			sendPackets(new S_BlueMessage(552, String.valueOf(get_PKcount()), String.valueOf(getHellTime() / 60)));
 		}
 		else {
 			// あなたは%0秒間ここにとどまらなければなりません。
-			sendPackets(new S_RedMessage(637, String.valueOf(getHellTime())));
+			sendPackets(new S_BlueMessage(637, String.valueOf(getHellTime())));
 		}
 		if (_hellFuture == null) {
 			_hellFuture = GeneralThreadPool.getInstance().pcScheduleAtFixedRate(new L1PcHellMonitor(getId()), 0L, 1000L);
@@ -4438,8 +4378,11 @@ public class L1PcInstance extends L1Character {
 	public void stopRefreshParty() {// 組隊暫停更新 3.3C
 
 		if (_rpActive) {
+
 			_rp.cancel();
+
 			_rp = null;
+
 			_rpActive = false;
 
 		}
@@ -4702,16 +4645,6 @@ public class L1PcInstance extends L1Character {
 	public boolean isSummonMonster() {
 		return _isSummonMonster;
 	}
-	
-	private int _SummonId = 0;
-	
-	public void setSummonId(int SummonId) {
-		_SummonId = SummonId;
-	}
-
-	public int getSummonId() {
-		return _SummonId;
-	}
 
 	private boolean _isShapeChange = false;
 
@@ -4848,60 +4781,4 @@ public class L1PcInstance extends L1Character {
 			}
 		}
 	}
-	
-	/**
-	 * 登入時載入所有裝備欄位
-	 */
-	public void setEquipments(){
-		Map<Integer, Integer> items = new HashMap<Integer, Integer>();
-		for (L1ItemInstance item : getInventory().getItems()) {
-			if(item.isEquipped() && item.getItem().getType2() == 1){ // L1Weapon
-				items.put(8, item.getId());
-			} else if (item.isEquipped() && item.getItem().getType2() == 2) { // L1Armor
-				if ((item.getItem().getType() == 1)) {
-					items.put(1, item.getId());
-				} else if ((item.getItem().getType() == 2)) {
-					items.put(2, item.getId());
-				} else if ((item.getItem().getType() == 3)) {
-					items.put(3, item.getId());
-				} else if ((item.getItem().getType() == 4)) {
-					items.put(4, item.getId());
-				} else if ((item.getItem().getType() == 5)) {
-					items.put(6, item.getId());
-				} else if ((item.getItem().getType() == 6)) {
-					items.put(5, item.getId());
-				} else if ((item.getItem().getType() == 7)) {
-					items.put(7, item.getId());
-				} else if ((item.getItem().getType() == 8)) {
-					items.put(10, item.getId());
-				} else if ((item.getItem().getType() == 9)) {
-					items.put(18, item.getId());
-				} else if ((item.getItem().getType() == 10)) {
-					items.put(11, item.getId());
-				} else if ((item.getItem().getType() == 11)) {
-					items.put(19, item.getId());
-				} else if ((item.getItem().getType() == 12)) {
-					items.put(12, item.getId());
-				} else if ((item.getItem().getType() == 13)) {
-					items.put(7, item.getId());
-				} else if ((item.getItem().getType() == 14)) {
-					items.put(22, item.getId());
-				} else if ((item.getItem().getType() == 15)) {
-					items.put(23, item.getId());
-				} else if ((item.getItem().getType() == 16)) {
-					items.put(24, item.getId());
-				} else if ((item.getItem().getType() == 17)) {
-					items.put(25, item.getId());
-				} else if ((item.getItem().getType() == 18)) {
-					items.put(26, item.getId());
-				} else if ((item.getItem().getType() == 19)) {
-					items.put(20, item.getId());
-				} else if ((item.getItem().getType() == 20)) {
-					items.put(21, item.getId());
-				}
-			}
-		}
-		sendPackets(new S_EquipmentSlot(items));
-	}
-	
 }

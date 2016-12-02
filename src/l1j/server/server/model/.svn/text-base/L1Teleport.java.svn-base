@@ -34,9 +34,11 @@ public class L1Teleport {
 	public static final int CALL_CLAN = 3;
 
 	// 順番にteleport(白), change position e(青), ad mass teleport e(赤), call clan(緑)
-	public static final int[] EFFECT_SPR =  { 169, 2235, 2236, 2281 };
+	public static final int[] EFFECT_SPR =
+	{ 169, 2235, 2236, 2281 };
 
-	public static final int[] EFFECT_TIME = { 280, 440, 440, 1120 };
+	public static final int[] EFFECT_TIME =
+	{ 280, 440, 440, 1120 };
 
 	private L1Teleport() {
 	}

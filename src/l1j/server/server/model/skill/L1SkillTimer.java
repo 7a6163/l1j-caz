@@ -104,7 +104,7 @@ class L1SkillStop {
 			cha.addAc(2);
 			if (cha instanceof L1PcInstance) {
 				L1PcInstance pc = (L1PcInstance) cha;
-				pc.sendPackets(new S_SkillIconShield(2, 0));
+				pc.sendPackets(new S_SkillIconShield(5, 0));
 			}
 		}
 		else if (skillId == BLIND_HIDING) { // ブラインドハイディング

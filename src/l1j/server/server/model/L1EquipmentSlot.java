@@ -57,6 +57,7 @@ public class L1EquipmentSlot {
 
 	public L1EquipmentSlot(L1PcInstance owner) {
 		_owner = owner;
+
 		_armors = Lists.newList();
 		_currentArmorSet = Lists.newList();
 	}
@@ -105,7 +106,8 @@ public class L1EquipmentSlot {
 
 		for (L1ArmorSet armorSet : L1ArmorSet.getAllSet()) {
 			if (armorSet.isPartOfSet(itemId) && armorSet.isValid(_owner)) {
-				if ((armor.getItem().getType2() == 2) && (armor.getItem().getType() == 9)) { // ring
+				if ((armor.getItem().getType2() == 2)
+						&& (armor.getItem().getType() == 9)) { // ring
 					if (!armorSet.isEquippedRingOfArmorSet(_owner)) {
 						armorSet.giveEffect(_owner);
 						_currentArmorSet.add(armorSet);
@@ -122,21 +124,19 @@ public class L1EquipmentSlot {
 				_owner.killSkillEffectTimer(BLIND_HIDING);
 				_owner.setSkillEffect(INVISIBILITY, 0);
 				_owner.sendPackets(new S_Invis(_owner.getId(), 1));
-				_owner.broadcastPacketForFindInvis(new S_RemoveObject(_owner),false);
-				_owner.broadcastPacket(new S_RemoveObject(_owner));
+				_owner.broadcastPacketForFindInvis(new S_RemoveObject(_owner),
+						false);
+				// _owner.broadcastPacket(new S_RemoveObject(_owner));
 			}
 		}
-		if (itemId == 20281){ // 變形控制戒指
-			_owner.sendPackets(new S_Ability(2, true));
-		} else if (itemId == 20288) { // 傳送控制戒指
+		if (itemId == 20288) { // ROTC
 			_owner.sendPackets(new S_Ability(1, true));
-		} else if(itemId == 20284){ // 召喚控制戒指
-			_owner.sendPackets(new S_Ability(5, true));
-		} 
+		}
 		if (itemId == 20383) { // 騎馬用ヘルム
 			if (armor.getChargeCount() != 0) {
 				armor.setChargeCount(armor.getChargeCount() - 1);
-				_owner.getInventory().updateItem(armor,L1PcInventory.COL_CHARGE_COUNT);
+				_owner.getInventory().updateItem(armor,
+						L1PcInventory.COL_CHARGE_COUNT);
 			}
 		}
 		armor.startEquipmentTimer(_owner);
@@ -160,10 +160,12 @@ public class L1EquipmentSlot {
 		L1Item item = armor.getItem();
 		int itemId = armor.getItem().getItemId();
 		// 飾品不加防判斷
-		if (armor.getItem().getType2() == 2 && armor.getItem().getType() >= 8 && armor.getItem().getType() <= 12) {
+		if (armor.getItem().getType2() == 2 && armor.getItem().getType() >= 8
+				&& armor.getItem().getType() <= 12) {
 			_owner.addAc(-(item.get_ac() - armor.getAcByMagic()));
 		} else {
-			_owner.addAc(-(item.get_ac() - armor.getEnchantLevel() - armor.getAcByMagic()));
+			_owner.addAc(-(item.get_ac() - armor.getEnchantLevel() - armor
+					.getAcByMagic()));
 		}
 		_owner.addDamageReductionByArmor(-item.getDamageReduction());
 		_owner.addWeightReduction(-item.getWeightReduction());
@@ -184,7 +186,9 @@ public class L1EquipmentSlot {
 		_owner.addFire(-item.get_defense_fire() - armor.getFireMr());
 
 		for (L1ArmorSet armorSet : L1ArmorSet.getAllSet()) {
-			if (armorSet.isPartOfSet(itemId) && _currentArmorSet.contains(armorSet) && !armorSet.isValid(_owner)) {
+			if (armorSet.isPartOfSet(itemId)
+					&& _currentArmorSet.contains(armorSet)
+					&& !armorSet.isValid(_owner)) {
 				armorSet.cancelEffect(_owner);
 				_currentArmorSet.remove(armorSet);
 			}
@@ -193,12 +197,8 @@ public class L1EquipmentSlot {
 		if ((itemId == 20077) || (itemId == 20062) || (itemId == 120077)) {
 			_owner.delInvis(); // インビジビリティ状態解除
 		}
-		if (itemId == 20281){ // 變形控制戒指
-			_owner.sendPackets(new S_Ability(2, false));
-		} else if (itemId == 20288) { // 傳送控制戒指
+		if (itemId == 20288) { // ROTC
 			_owner.sendPackets(new S_Ability(1, false));
-		} else if(itemId == 20284){ // 召喚控制戒指
-			_owner.sendPackets(new S_Ability(5, false));
 		}
 		armor.stopEquipmentTimer(_owner);
 
@@ -369,7 +369,8 @@ public class L1EquipmentSlot {
 	public void removeMagicHelm(int objectId, L1ItemInstance item) {
 		switch (item.getItemId()) {
 		case 20013: // 敏捷魔法頭盔
-			if (!SkillsTable.getInstance().spellCheck(objectId,PHYSICAL_ENCHANT_DEX)) {
+			if (!SkillsTable.getInstance().spellCheck(objectId,
+					PHYSICAL_ENCHANT_DEX)) {
 				_owner.removeSkillMastery(PHYSICAL_ENCHANT_DEX);
 				_owner.sendPackets(new S_DelSkill(0, 0, 0, 2, 0, 0, 0, 0, 0, 0,
 						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));

@@ -73,13 +73,12 @@ public class ClientThread implements Runnable, PacketOutput {
 	private Socket _csocket;
 
 	private int _loginStatus = 0;
-	
-	// 3.80C Taiwan Server First Packet
-	private static final byte[] FIRST_PACKET = {
-	    (byte) 0x9d, (byte) 0xd1, (byte) 0xd6, (byte) 0x7a, (byte) 0xf4, 
-	    (byte) 0x62, (byte) 0xe7, (byte) 0xa0, (byte) 0x66, (byte) 0x02, 
-	    (byte) 0xfa
-	};
+
+	private static final byte[] FIRST_PACKET = { // 3.5C Taiwan Server 
+		    (byte) 0xf4, (byte) 0x0a, (byte) 0x8d, (byte) 0x23, (byte) 0x6f, 
+		    (byte) 0x7f, (byte) 0x04, (byte) 0x00, (byte) 0x05, (byte) 0x08, 
+		    (byte) 0x00 
+    };
 
 	/**
 	 * for Test
@@ -165,13 +164,15 @@ public class ClientThread implements Runnable, PacketOutput {
 		}
 		try {
 			// 自動儲存角色資料
-			if (Config.AUTOSAVE_INTERVAL * 1000 < System.currentTimeMillis() - _lastSavedTime) {
+			if (Config.AUTOSAVE_INTERVAL * 1000 < System.currentTimeMillis()
+					- _lastSavedTime) {
 				_activeChar.save();
 				_lastSavedTime = System.currentTimeMillis();
 			}
 
 			// 自動儲存身上道具資料
-			if (Config.AUTOSAVE_INTERVAL_INVENTORY * 1000 < System.currentTimeMillis() - _lastSavedTime_inventory) {
+			if (Config.AUTOSAVE_INTERVAL_INVENTORY * 1000 < System
+					.currentTimeMillis() - _lastSavedTime_inventory) {
 				_activeChar.saveInventory();
 				_lastSavedTime_inventory = System.currentTimeMillis();
 			}
@@ -211,7 +212,7 @@ public class ClientThread implements Runnable, PacketOutput {
 			Bogus = (byte) (FIRST_PACKET.length + 7);
 			_out.write(Bogus & 0xFF);
 			_out.write(Bogus >> 8 & 0xFF);
-			_out.write(Opcodes.S_OPCODE_INITPACKET);// 3.7C Taiwan Server
+			_out.write(Opcodes.S_OPCODE_INITPACKET);// 3.5C Taiwan Server
 			_out.write((byte) (key & 0xFF));
 			_out.write((byte) (key >> 8 & 0xFF));
 			_out.write((byte) (key >> 16 & 0xFF));
@@ -245,7 +246,8 @@ public class ClientThread implements Runnable, PacketOutput {
 			System.out.println("使用了 " + SystemUtil.getUsedMemoryMB() + "MB 的記憶體");
 			System.out.println("等待客戶端連接...");
 			
-			ClientThreadObserver observer = new ClientThreadObserver(Config.AUTOMATIC_KICK * 60 * 1000); // 自動斷線的時間（單位:毫秒）
+			ClientThreadObserver observer = new ClientThreadObserver(
+					Config.AUTOMATIC_KICK * 60 * 1000); // 自動斷線的時間（單位:毫秒）
 
 			// 是否啟用自動踢人
 			if (Config.AUTOMATIC_KICK > 0) {
@@ -269,7 +271,8 @@ public class ClientThread implements Runnable, PacketOutput {
 				int opcode = data[0] & 0xFF;
 
 				// 處理多重登入
-				if (opcode == Opcodes.C_OPCODE_BEANFUNLOGINPACKET || opcode == Opcodes.C_OPCODE_CHANGECHAR) {
+				if (opcode == Opcodes.C_OPCODE_COMMONCLICK
+						|| opcode == Opcodes.C_OPCODE_CHANGECHAR) {
 					_loginStatus = 1;
 				}
 				if (opcode == Opcodes.C_OPCODE_LOGINTOSERVER) {
@@ -277,7 +280,8 @@ public class ClientThread implements Runnable, PacketOutput {
 						continue;
 					}
 				}
-				if (opcode == Opcodes.C_OPCODE_LOGINTOSERVEROK) {
+				if (opcode == Opcodes.C_OPCODE_LOGINTOSERVEROK
+						|| opcode == Opcodes.C_OPCODE_RETURNTOLOGIN) {
 					_loginStatus = 0;
 				}
 
@@ -432,7 +436,8 @@ public class ClientThread implements Runnable, PacketOutput {
 		}
 
 		public void start() {
-			_observerTimer.scheduleAtFixedRate(ClientThreadObserver.this, 0, _disconnectTimeMillis);
+			_observerTimer.scheduleAtFixedRate(ClientThreadObserver.this, 0,
+					_disconnectTimeMillis);
 		}
 
 		@Override
@@ -541,7 +546,8 @@ public class ClientThread implements Runnable, PacketOutput {
 
 		// 終止決鬥
 		if (pc.getFightId() != 0) {
-			L1PcInstance fightPc = (L1PcInstance) L1World.getInstance().findObject(pc.getFightId());
+			L1PcInstance fightPc = (L1PcInstance) L1World.getInstance()
+					.findObject(pc.getFightId());
 			pc.setFightId(0);
 			if (fightPc != null) {
 				fightPc.setFightId(0);
@@ -571,8 +577,10 @@ public class ClientThread implements Runnable, PacketOutput {
 				pet.deleteMe();
 			} else if (petNpc instanceof L1SummonInstance) {
 				L1SummonInstance summon = (L1SummonInstance) petNpc;
-				for (L1PcInstance visiblePc : L1World.getInstance().getVisiblePlayer(summon)) {
-					visiblePc.sendPackets(new S_SummonPack(summon, visiblePc,false));
+				for (L1PcInstance visiblePc : L1World.getInstance()
+						.getVisiblePlayer(summon)) {
+					visiblePc.sendPackets(new S_SummonPack(summon, visiblePc,
+							false));
 				}
 			}
 		}
@@ -584,7 +592,9 @@ public class ClientThread implements Runnable, PacketOutput {
 		// 重新建立跟隨者
 		for (L1FollowerInstance follower : pc.getFollowerList().values()) {
 			follower.setParalyzed(true);
-			follower.spawn(follower.getNpcTemplate().get_npcId(),follower.getX(), follower.getY(), follower.getHeading(),follower.getMapId());
+			follower.spawn(follower.getNpcTemplate().get_npcId(),
+					follower.getX(), follower.getY(), follower.getHeading(),
+					follower.getMapId());
 			follower.deleteMe();
 		}
 
@@ -597,7 +607,8 @@ public class ClientThread implements Runnable, PacketOutput {
 		CharBuffTable.DeleteBuff(pc);
 		CharBuffTable.SaveBuff(pc);
 		pc.clearSkillEffectTimer();
-		l1j.server.server.model.game.L1PolyRace.getInstance().checkLeaveGame(pc);
+		l1j.server.server.model.game.L1PolyRace.getInstance()
+				.checkLeaveGame(pc);
 
 		// 停止玩家的偵測
 		pc.stopEtcMonitor();

@@ -25,7 +25,6 @@ import l1j.server.server.model.Instance.L1ItemInstance;
 import l1j.server.server.model.Instance.L1PcInstance;
 import l1j.server.server.serverpackets.S_CharReset;
 import l1j.server.server.serverpackets.S_OwnCharStatus;
-import l1j.server.server.serverpackets.S_OwnCharStatus2;
 import l1j.server.server.utils.CalcInitHpMp;
 import l1j.server.server.utils.CalcStat;
 
@@ -72,12 +71,6 @@ public class C_CharReset extends ClientBasePacket {
 			int cha = readC();
 			int hp = CalcInitHpMp.calcInitHp(pc);
 			int mp = CalcInitHpMp.calcInitMp(pc);
-			pc.sendPackets(new S_OwnCharStatus2(pc, 0));
-			/**
-			 * 『來源:伺服器』<位址:64>{長度:8}(時間:1233793211)
-             *  0000:  40 04 00 00 04 01 8b df   @.......
-             *  尚未知的封包
-			 */
 			pc.sendPackets(new S_CharReset(pc, 1, hp, mp, 10, str, intel, wis, dex, con, cha));
 			initCharStatus(pc, hp, mp, str, intel, wis, dex, con, cha);
 			CharacterTable.getInstance();
@@ -212,8 +205,8 @@ public class C_CharReset extends ClientBasePacket {
 			pc.addBaseMaxMp(randomMp);
 		}
 		int newAc = CalcStat.calcAc(pc.getTempLevel(), pc.getBaseDex());
-		pc.sendPackets(new S_CharReset(pc, pc.getTempLevel(), pc.getBaseMaxHp(), pc.getBaseMaxMp(), newAc, pc.getBaseStr(), pc.getBaseInt(), 
-				          pc.getBaseWis(), pc.getBaseDex(), pc.getBaseCon(), pc.getBaseCha()));
+		pc.sendPackets(new S_CharReset(pc, pc.getTempLevel(), pc.getBaseMaxHp(), pc.getBaseMaxMp(), newAc, pc.getBaseStr(), pc.getBaseInt(), pc
+				.getBaseWis(), pc.getBaseDex(), pc.getBaseCon(), pc.getBaseCha()));
 	}
 
 	@Override

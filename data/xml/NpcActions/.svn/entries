@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/data/xml/NpcActions
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/data/xml/NpcActions
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-has-props
+2012-06-29T04:03:06.710608Z
+372
+ji3g4al6al6@gmail.com
+
 
 
 
@@ -26,54 +26,17 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
-Quest.xml
-file
-
-
-
-
-2016-01-09T23:18:49.384900Z
-76cec4bd9ab52d5550d6fd06960b8f72
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-60223
-
-users
-dir
-
 ItemMaking.xml
 file
 
 
 
 
-2016-01-09T23:18:49.384900Z
+2016-01-09T23:18:45.081015Z
 0cffad17faf11fdeaa6a95819cc790c2
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-07-26T22:47:31.896671Z
+313
+ji3g4al6al6@gmail.com
 
 
 
@@ -103,11 +66,11 @@ file
 
 
 
-2016-01-09T23:18:49.384900Z
+2016-01-09T23:18:45.081015Z
 f45682edbd9c7b6fff9e846659a83e47
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2012-06-29T04:03:06.710608Z
+372
+ji3g4al6al6@gmail.com
 
 
 
@@ -137,11 +100,11 @@ file
 
 
 
-2016-01-09T23:18:49.384900Z
+2016-01-09T23:18:45.081015Z
 f71579b2364fa45baac6087766c7e04a
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-07-26T22:47:31.896671Z
+313
+ji3g4al6al6@gmail.com
 
 
 
@@ -164,4 +127,41 @@ ibm99nets
 
 
 58421
+
+Quest.xml
+file
+
+
+
+
+2016-01-09T23:18:45.081015Z
+76cec4bd9ab52d5550d6fd06960b8f72
+2011-08-15T04:26:45.428404Z
+325
+ji3g4al6al6@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+60223
+
+users
+dir
 

@@ -83,6 +83,7 @@ import l1j.server.server.model.skill.L1SkillUse;
 import l1j.server.server.serverpackets.S_ApplyAuction;
 import l1j.server.server.serverpackets.S_AuctionBoardRead;
 import l1j.server.server.serverpackets.S_CharReset;
+import l1j.server.server.serverpackets.S_CloseList;
 import l1j.server.server.serverpackets.S_DelSkill;
 import l1j.server.server.serverpackets.S_Deposit;
 import l1j.server.server.serverpackets.S_Drawal;
@@ -96,7 +97,6 @@ import l1j.server.server.serverpackets.S_NPCTalkReturn;
 import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.serverpackets.S_PetCtrlMenu;
 import l1j.server.server.serverpackets.S_PetList;
-import l1j.server.server.serverpackets.S_PledgeWarehouseHistory;
 import l1j.server.server.serverpackets.S_RetrieveElfList;
 import l1j.server.server.serverpackets.S_RetrieveList;
 import l1j.server.server.serverpackets.S_RetrievePledgeList;
@@ -114,6 +114,7 @@ import l1j.server.server.templates.L1Castle;
 import l1j.server.server.templates.L1House;
 import l1j.server.server.templates.L1Inn;
 import l1j.server.server.templates.L1Item;
+import l1j.server.server.templates.L1Npc;
 import l1j.server.server.templates.L1Skills;
 import l1j.server.server.templates.L1Town;
 import l1j.server.server.utils.Random;
@@ -173,32 +174,44 @@ public class C_NPCAction extends ClientBasePacket {
 				L1NpcInstance npc = (L1NpcInstance) obj;
 				int difflocx = Math.abs(pc.getX() - npc.getX());
 				int difflocy = Math.abs(pc.getY() - npc.getY());
-				if (!(obj instanceof L1PetInstance) && !(obj instanceof L1SummonInstance)) {
-					if ((difflocx > 5) || (difflocy > 5)) { // 5格以上的距離對話無效
+				if (!(obj instanceof L1PetInstance)
+						&& !(obj instanceof L1SummonInstance)) {
+					if ((difflocx > 3) || (difflocy > 3)) { // 3格以上的距離對話無效
 						return;
 					}
 				}
 				npc.onFinalAction(pc, s);
 			} else if (obj instanceof L1PcInstance) {
 				target = (L1PcInstance) obj;
-				int awakeSkillId = target.getAwakeSkillId();
-				if ((awakeSkillId == AWAKEN_ANTHARAS)
-						|| (awakeSkillId == AWAKEN_FAFURION)
-						|| (awakeSkillId == AWAKEN_VALAKAS)) {
-					target.sendPackets(new S_ServerMessage(1384)); // 現在の状態では変身できません。
-					return;
-				}
-				if (target.isShapeChange()) {
-					L1PolyMorph.handleCommands(target, s);
-					target.setShapeChange(false);
+				if (s.matches("[0-9]+")) {
+					if (target.isSummonMonster()) {
+						summonMonster(target, s);
+						target.setSummonMonster(false);
+					}
 				} else {
-					L1PolyMorph poly = PolyTable.getInstance().getTemplate(s);
-					if ((poly != null) || s.equals("none")) {
-						if (target.getInventory().checkItem(40088) && usePolyScroll(target, 40088, s)) {
-						}
-						if (target.getInventory().checkItem(40096) && usePolyScroll(target, 40096, s)) {
-						}
-						if (target.getInventory().checkItem(140088) && usePolyScroll(target, 140088, s)) {
+					int awakeSkillId = target.getAwakeSkillId();
+					if ((awakeSkillId == AWAKEN_ANTHARAS)
+							|| (awakeSkillId == AWAKEN_FAFURION)
+							|| (awakeSkillId == AWAKEN_VALAKAS)) {
+						target.sendPackets(new S_ServerMessage(1384)); // 現在の状態では変身できません。
+						return;
+					}
+					if (target.isShapeChange()) {
+						L1PolyMorph.handleCommands(target, s);
+						target.setShapeChange(false);
+					} else {
+						L1PolyMorph poly = PolyTable.getInstance().getTemplate(
+								s);
+						if ((poly != null) || s.equals("none")) {
+							if (target.getInventory().checkItem(40088)
+									&& usePolyScroll(target, 40088, s)) {
+							}
+							if (target.getInventory().checkItem(40096)
+									&& usePolyScroll(target, 40096, s)) {
+							}
+							if (target.getInventory().checkItem(140088)
+									&& usePolyScroll(target, 140088, s)) {
+							}
 						}
 					}
 				}
@@ -298,14 +311,15 @@ public class C_NPCAction extends ClientBasePacket {
 					return;
 				}
 				int rank = pc.getClanRank();
-				if ((rank != L1Clan.CLAN_RANK_PROBATION)
+				if ((rank != L1Clan.CLAN_RANK_PUBLIC)
 						&& (rank != L1Clan.CLAN_RANK_GUARDIAN)
-						&& (rank != L1Clan.CLAN_RANK_PRINCE)
-						&& (rank != L1Clan.CLAN_RANK_LEAGUE_PUBLIC)
-						&& (rank != L1Clan.CLAN_RANK_LEAGUE_PROBATION)
-						&& (rank != L1Clan.CLAN_RANK_LEAGUE_GUARDIAN)
-						&& (rank != L1Clan.CLAN_RANK_LEAGUE_VICEPRINCE)
-						&& (rank != L1Clan.CLAN_RANK_LEAGUE_PRINCE)) {
+						&& (rank != L1Clan.CLAN_RANK_PRINCE)) {
+					// タイトルのない血盟員もしくは、見習い血盟員の場合は、血盟倉庫を利用することはできません。
+					pc.sendPackets(new S_ServerMessage(728));
+					return;
+				}
+				if ((rank != L1Clan.CLAN_RANK_PRINCE)
+						&& pc.getTitle().equalsIgnoreCase("")) {
 					// タイトルのない血盟員もしくは、見習い血盟員の場合は、血盟倉庫を利用することはできません。
 					pc.sendPackets(new S_ServerMessage(728));
 					return;
@@ -316,8 +330,6 @@ public class C_NPCAction extends ClientBasePacket {
 					pc.sendPackets(new S_RetrievePledgeList(objid, pc));
 				}
 			}
-		} else if(s.equalsIgnoreCase("history")){ // 確認血盟倉庫使用記錄 
-			pc.sendPackets(new S_PledgeWarehouseHistory(pc.getClanid()));
 		} else if (s.equalsIgnoreCase("get")) {
 			L1NpcInstance npc = (L1NpcInstance) obj;
 			int npcId = npc.getNpcTemplate().get_npcId();
@@ -405,7 +417,8 @@ public class C_NPCAction extends ClientBasePacket {
 				if (inn != null) { // 此旅館NPC資訊不為空值
 					Timestamp dueTime = inn.getDueTime();
 					Calendar cal = Calendar.getInstance();
-					long checkDueTime = (cal.getTimeInMillis() - dueTime.getTime()) / 1000;
+					long checkDueTime = (cal.getTimeInMillis() - dueTime
+							.getTime()) / 1000;
 					if (inn.getLodgerId() == pc.getId() && checkDueTime < 0) { // 出租時間未到的房間租用人判斷
 						if (inn.isHall()) { // 租用的是會議室
 							isHall = true;
@@ -677,8 +690,6 @@ public class C_NPCAction extends ClientBasePacket {
 
 		} else if (s.equalsIgnoreCase("arrange")) { // 雇用した傭兵の配置
 
-		} else if (s.equalsIgnoreCase("arrange")) { // 配置弓箭手在城牆上
-
 		} else if (s.equalsIgnoreCase("castlegate")) { // 城門を管理する
 			repairGate(pc);
 			htmlid = ""; // ウィンドウを消す
@@ -719,6 +730,19 @@ public class C_NPCAction extends ClientBasePacket {
 					pet.deleteMe();
 				}
 			}
+			/*if (pc.getPetList().isEmpty()) {
+				pc.sendPackets(new S_PetCtrlMenu(pc, null, false));// 關閉寵物控制圖形介面
+			} else {
+				// 更新寵物控制介面
+				for (L1NpcInstance petNpc : pc.getPetList().values()) {
+					if (petNpc instanceof L1SummonInstance) {
+						L1SummonInstance summon = (L1SummonInstance) petNpc;
+						pc.sendPackets(new S_SummonPack(summon, pc));
+						pc.sendPackets(new S_ServerMessage(79));
+						break;
+					}
+				}
+			}*/
 			htmlid = ""; // ウィンドウを消す
 		} else if (s.equalsIgnoreCase("withdrawnpc")) { // 領取寵物
 			pc.sendPackets(new S_PetList(objid, pc));
@@ -2012,8 +2036,10 @@ public class C_NPCAction extends ClientBasePacket {
 					pc.setCurrentMp(pc.getMaxMp());
 					pc.sendPackets(new S_ServerMessage(77));
 					pc.sendPackets(new S_SkillSound(pc.getId(), 830));
-					pc.sendPackets(new S_HPUpdate(pc.getCurrentHp(), pc.getMaxHp()));
-					pc.sendPackets(new S_MPUpdate(pc.getCurrentMp(), pc.getMaxMp()));
+					pc.sendPackets(new S_HPUpdate(pc.getCurrentHp(), pc
+							.getMaxHp()));
+					pc.sendPackets(new S_MPUpdate(pc.getCurrentMp(), pc
+							.getMaxMp()));
 					if (pc.isInParty()) { // パーティー中
 						pc.getParty().updateMiniHP(pc);
 					}
@@ -2653,7 +2679,8 @@ public class C_NPCAction extends ClientBasePacket {
 									20383);
 							if ((item != null) && (item.getChargeCount() != 50)) {
 								item.setChargeCount(50);
-								pc.getInventory().updateItem(item, L1PcInventory.COL_CHARGE_COUNT);
+								pc.getInventory().updateItem(item,
+										L1PcInventory.COL_CHARGE_COUNT);
 								pc.getInventory().consumeItem(L1ItemId.ADENA,
 										100000);
 								htmlid = "";
@@ -5136,7 +5163,8 @@ public class C_NPCAction extends ClientBasePacket {
 		if (pc.getInventory().consumeItem(L1ItemId.ADENA, 100)) {
 			try {
 				pc.save();
-				pc.beginGhost(loc.getX(), loc.getY(), (short) loc.getMapId(), true);
+				pc.beginGhost(loc.getX(), loc.getY(), (short) loc.getMapId(),
+						true);
 			} catch (Exception e) {
 				_log.log(Level.SEVERE, e.getLocalizedMessage(), e);
 			}
@@ -5188,6 +5216,106 @@ public class C_NPCAction extends ClientBasePacket {
 			pc.sendPackets(new S_ServerMessage(1182)); // もうゲームは始まってるよ。
 		}
 		return "";
+	}
+
+	private void summonMonster(L1PcInstance pc, String s) {
+		String[] summonstr_list;
+		int[] summonid_list;
+		int[] summonlvl_list;
+		int[] summoncha_list;
+		int summonid = 0;
+		int levelrange = 0;
+		int summoncost = 0;
+		/*
+		 * summonstr_list = new String[] { "7", "263", "8", "264", "9", "265",
+		 * "10", "266", "11", "267", "12", "268", "13", "269", "14", "270",
+		 * "526", "15", "271", "527", "17", "18" }; summonid_list = new int[] {
+		 * 81083, 81090, 81084, 81091, 81085, 81092, 81086, 81093, 81087, 81094,
+		 * 81088, 81095, 81089, 81096, 81097, 81098, 81099, 81100, 81101, 81102,
+		 * 81103, 81104 }; summonlvl_list = new int[] { 28, 28, 32, 32, 36, 36,
+		 * 40, 40, 44, 44, 48, 48, 52, 52, 56, 56, 56, 60, 60, 60, 68, 72 }; //
+		 * ドッペルゲンガーボス、クーガーにはペットボーナスが付かないので+6しておく summoncha_list = new int[] { 6,
+		 * 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 36, 40 };
+		 */
+		summonstr_list = new String[] { "7", "263", "519", "8", "264", "520",
+				"9", "265", "521", "10", "266", "522", "11", "267", "523",
+				"12", "268", "524", "13", "269", "525", "14", "270", "526",
+				"15", "271", "527", "16", "17", "18", "274" };
+		summonid_list = new int[] { 81210, 81211, 81212, 81213, 81214, 81215,
+				81216, 81217, 81218, 81219, 81220, 81221, 81222, 81223, 81224,
+				81225, 81226, 81227, 81228, 81229, 81230, 81231, 81232, 81233,
+				81234, 81235, 81236, 81237, 81238, 81239, 81240 };
+		summonlvl_list = new int[] { 28, 28, 28, 32, 32, 32, 36, 36, 36, 40,
+				40, 40, 44, 44, 44, 48, 48, 48, 52, 52, 52, 56, 56, 56, 60, 60,
+				60, 64, 68, 72, 72 };
+		// ドッペルゲンガーボス、クーガーにはペットボーナスが付かないので+6しておく
+		// summoncha_list = new int[] { 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+		// 8,
+		// 8, 8, 8, 8, 8, 8, 8, 10, 10, 10, 12, 12, 12, 20, 42, 42, 50 };
+		summoncha_list = new int[] { 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+				8, // 28 ~
+					// 44
+				8, 8, 8, 8, 8, 8, 10, 10, 10, 12, 12, 12, // 48 ~ 60
+				20, 36, 36, 44 }; // 64,68,72,72
+		// サモンの種類、必要Lv、ペットコストを得る
+		for (int loop = 0; loop < summonstr_list.length; loop++) {
+			if (s.equalsIgnoreCase(summonstr_list[loop])) {
+				summonid = summonid_list[loop];
+				levelrange = summonlvl_list[loop];
+				summoncost = summoncha_list[loop];
+				break;
+			}
+		}
+		// Lv不足
+		if (pc.getLevel() < levelrange) {
+			// レベルが低くて該当のモンスターを召還することができません。
+			pc.sendPackets(new S_ServerMessage(743));
+			return;
+		}
+
+		int petcost = 0;
+		for (L1NpcInstance petNpc : pc.getPetList().values()) {
+			// 現在のペットコスト
+			petcost += petNpc.getPetcost();
+		}
+
+		/*
+		 * // 既にペットがいる場合は、ドッペルゲンガーボス、クーガーは呼び出せない if ((summonid == 81103 ||
+		 * summonid == 81104) && petcost != 0) { pc.sendPackets(new
+		 * S_CloseList(pc.getId())); return; } int charisma = pc.getCha() + 6 -
+		 * petcost; int summoncount = charisma / summoncost;
+		 */
+		int pcCha = pc.getCha();
+		int charisma = 0;
+		int summoncount = 0;
+		if ((levelrange <= 56 // max count = 5
+				)
+				|| (levelrange == 64)) { // max count = 2
+			if (pcCha > 34) {
+				pcCha = 34;
+			}
+		} else if (levelrange == 60) {
+			if (pcCha > 30) { // max count = 3
+				pcCha = 30;
+			}
+		} else if (levelrange > 64) {
+			if (pcCha > 44) { // max count = 1
+				pcCha = 44;
+			}
+		}
+		charisma = pcCha + 6 - petcost;
+		summoncount = charisma / summoncost;
+
+		L1Npc npcTemp = NpcTable.getInstance().getTemplate(summonid);
+		for (int cnt = 0; cnt < summoncount; cnt++) {
+			L1SummonInstance summon = new L1SummonInstance(npcTemp, pc);
+			// if (summonid == 81103 || summonid == 81104) {
+			// summon.setPetcost(pc.getCha() + 7);
+			// } else {
+			summon.setPetcost(summoncost);
+			// }
+		}
+		pc.sendPackets(new S_CloseList(pc.getId()));
 	}
 
 	private void poly(ClientThread clientthread, int polyId) {

@@ -20,17 +20,12 @@ import java.util.logging.Logger;
 
 import l1j.server.server.ClientThread;
 import l1j.server.server.datatables.CharacterTable;
-import l1j.server.server.datatables.ClanMembersTable;
 import l1j.server.server.datatables.ClanTable;
 import l1j.server.server.model.L1Clan;
 import l1j.server.server.model.L1War;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
-import l1j.server.server.serverpackets.S_CharReset;
 import l1j.server.server.serverpackets.S_CharTitle;
-import l1j.server.server.serverpackets.S_ClanAttention;
-import l1j.server.server.serverpackets.S_ClanName;
-import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.serverpackets.S_ServerMessage;
 
 // Referenced classes of package l1j.server.server.clientpackets:
@@ -44,10 +39,9 @@ public class C_LeaveClan extends ClientBasePacket {
 	private static final String C_LEAVE_CLAN = "[C] C_LeaveClan";
 	private static Logger _log = Logger.getLogger(C_LeaveClan.class.getName());
 
-	public C_LeaveClan(byte abyte0[], ClientThread clientthread) throws Exception {
+	public C_LeaveClan(byte abyte0[], ClientThread clientthread)
+			throws Exception {
 		super(abyte0);
-		
-		String clan_name = readS();
 
 		L1PcInstance player = clientthread.getActiveChar();
 		if (player == null) {
@@ -55,6 +49,7 @@ public class C_LeaveClan extends ClientBasePacket {
 		}
 		
 		String player_name = player.getName();
+		String clan_name = player.getClanname();
 		int clan_id = player.getClanid();
 		if (clan_id == 0) {// 還沒加入血盟
 			return;
@@ -79,27 +74,25 @@ public class C_LeaveClan extends ClientBasePacket {
 				}
 
 				for (i = 0; i < clan_member_name.length; i++) { // 取得所有血盟成員
-					L1PcInstance online_pc = L1World.getInstance().getPlayer(clan_member_name[i]);
+					L1PcInstance online_pc = L1World.getInstance().getPlayer(
+							clan_member_name[i]);
 					if (online_pc != null) { // 在線上的血盟成員
-						online_pc.sendPackets(new S_ClanAttention());
-						online_pc.sendPackets(new S_ServerMessage(269, player_name, clan_name)); // 血盟的盟主%0%s解散了血盟
-						online_pc.sendPackets(new S_PacketBox(S_PacketBox.MSG_RANK_CHANGED, 0x0b, ""));
-						online_pc.sendPackets(new S_CharReset(online_pc.getId(), 0));
-						online_pc.sendPackets(new S_ClanName(online_pc, false));
-						online_pc.sendPackets(new S_ClanAttention());
 						online_pc.setClanid(0);
 						online_pc.setClanname("");
 						online_pc.setClanRank(0);
-						online_pc.setClanMemberId(0);
-						online_pc.setClanMemberNotes("");
 						online_pc.setTitle("");
-						online_pc.sendPackets(new S_CharTitle(online_pc.getId(), ""));
-						online_pc.broadcastPacket(new S_CharTitle(online_pc.getId(), ""));
-						online_pc.broadcastPacket(new S_CharReset(online_pc.getId(), 0));
+						online_pc.sendPackets(new S_CharTitle(online_pc
+								.getId(), ""));
+						online_pc.broadcastPacket(new S_CharTitle(online_pc
+								.getId(), ""));
 						online_pc.save(); // 儲存玩家資料到資料庫中
+						online_pc.sendPackets(new S_ServerMessage(269,
+								player_name, clan_name)); // %1血盟の血盟主%0が血盟を解散させました。
 					} else { // 非線上的血盟成員
 						try {
-							L1PcInstance offline_pc = CharacterTable.getInstance().restoreCharacter(clan_member_name[i]);
+							L1PcInstance offline_pc = CharacterTable
+									.getInstance().restoreCharacter(
+											clan_member_name[i]);
 							offline_pc.setClanid(0);
 							offline_pc.setClanname("");
 							offline_pc.setClanRank(0);
@@ -110,51 +103,40 @@ public class C_LeaveClan extends ClientBasePacket {
 						}
 					}
 				}
-				String emblem_file = String.valueOf(clan.getEmblemId());
+				String emblem_file = String.valueOf(clan_id);
 				File file = new File("emblem/" + emblem_file);
 				file.delete();
 				ClanTable.getInstance().deleteClan(clan_name);
-				ClanMembersTable.getInstance().deleteAllMember(clan.getClanId()); // 刪除所有成員資料
-			} else { // 除了聯盟王之外
+			} else { // 除了聯盟主之外
 				L1PcInstance clanMember[] = clan.getOnlineClanMember();
 				for (i = 0; i < clanMember.length; i++) {
-					clanMember[i].sendPackets(new S_ServerMessage(178, player_name, clan_name)); // \f1%0が%1血盟を脱退しました。
+					clanMember[i].sendPackets(new S_ServerMessage(178,
+							player_name, clan_name)); // \f1%0が%1血盟を脱退しました。
 				}
 				if (clan.getWarehouseUsingChar() // 血盟成員使用血盟倉庫中
-						== player.getId()) {clan.setWarehouseUsingChar(0); // 移除使用血盟倉庫的成員
+						== player.getId()) {
+					clan.setWarehouseUsingChar(0); // 移除使用血盟倉庫的成員
 				}
 				player.setClanid(0);
 				player.setClanname("");
 				player.setClanRank(0);
-				player.setClanMemberId(0);
-				player.setClanMemberNotes("");
 				player.setTitle("");
 				player.sendPackets(new S_CharTitle(player.getId(), ""));
 				player.broadcastPacket(new S_CharTitle(player.getId(), ""));
 				player.save(); // 儲存玩家資料到資料庫中
-				player.sendPackets(new S_ClanAttention());
-				player.sendPackets(new S_PacketBox(S_PacketBox.MSG_RANK_CHANGED, 0x0b, ""));
-				player.sendPackets(new S_CharReset(player.getId(), 0));
-				player.broadcastPacket(new S_CharReset(player.getId(), 0));
-				player.sendPackets(new S_ClanName(player, false));
-		
 				clan.delMemberName(player_name);
-				ClanMembersTable.getInstance().deleteMember(player.getId());
 			}
 		} else {
 			player.setClanid(0);
 			player.setClanname("");
 			player.setClanRank(0);
-			player.setClanMemberId(0);
-			player.setClanMemberNotes("");
 			player.setTitle("");
 			player.sendPackets(new S_CharTitle(player.getId(), ""));
 			player.broadcastPacket(new S_CharTitle(player.getId(), ""));
-			player.sendPackets(new S_CharReset(player.getId(), 0));
-			player.broadcastPacket(new S_CharReset(player.getId(), 0));
 			player.save(); // 儲存玩家資料到資料庫中
-			player.sendPackets(new S_ServerMessage(178, player_name, clan_name)); // \f1%0が%1血盟を脱退しました。
-			ClanMembersTable.getInstance().deleteMember(player.getId());
+			player
+					.sendPackets(new S_ServerMessage(178, player_name,
+							clan_name)); // \f1%0が%1血盟を脱退しました。
 		}
 	}
 

@@ -1,4 +1,4 @@
-﻿#-------------------------------------------------------------
+#-------------------------------------------------------------
 # record config
 # 紀錄設定
 #-------------------------------------------------------------
@@ -41,6 +41,7 @@ MysqlAutoBackup = 0
 #Compress the output sql by Gzip [if the output data is too big,you can open it]
 #  *Watch out! If open this function, please put gzip.exe into C:\Windows\System32.
 CompressGzip = false
+
 
 
 

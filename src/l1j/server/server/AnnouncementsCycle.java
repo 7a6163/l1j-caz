@@ -26,6 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import javolution.util.FastList;
+
 import l1j.server.Config;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
@@ -34,8 +35,7 @@ import l1j.server.server.serverpackets.S_SystemMessage;
 public class AnnouncementsCycle {
 	private int round = 0;
 	private String line = null;
-	private boolean firstboot = true;
-	private boolean firstLine = true;
+	private boolean firstboot = true;;
 	private StringBuffer sb = new StringBuffer();
 	private static AnnouncementsCycle _instance;
 
@@ -73,14 +73,9 @@ public class AnnouncementsCycle {
 			fileEnsure(); // 先確保檔案存在
 			if (dir.lastModified() > lastmodify || firstboot) { // 如果有修改過
 				list.clear(); // 清空容器
-				buf = new BufferedReader(new InputStreamReader(new FileInputStream(dir), "utf8"));
+				buf = new BufferedReader(new InputStreamReader(new FileInputStream(dir)));
 				while ((line = buf.readLine()) != null) {
-					// 消除 UTF-8 BOM
-					if(firstLine && line.startsWith("\uFEFF")){
-						line = line.substring(1);
-						firstLine = false;
-					}
-					if (line.startsWith("#") || line.isEmpty()) // 略過註解
+					if (line.startsWith("#")||line.isEmpty()) // 略過註解
 						continue;
 					sb.delete(0, sb.length()); // 清空 buffer [未來擴充用]
 					list.add(line);
@@ -124,10 +119,10 @@ public class AnnouncementsCycle {
 		@Override
 		public void run() {
 			scanfile();
-			// 啟用修改時間顯示 - (yyyy.MM.dd)
+			// 啟用修改時間顯示 - 〈yyyy.MM.dd〉
 			if (AnnounceTimeDisplay) {
 				SimpleDateFormat formatter = new SimpleDateFormat("yyyy.MM.dd");
-				ShowAnnouncementsCycle("("+ formatter.format(new Date(lastmodify)) + ")");
+				ShowAnnouncementsCycle("〈"+ formatter.format(new Date(lastmodify)) + "〉");
 			}
 			Iterator<String> iterator = list.listIterator();
 			if (iterator.hasNext()) {

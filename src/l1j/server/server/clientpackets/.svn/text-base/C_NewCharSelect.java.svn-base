@@ -25,11 +25,12 @@ import l1j.server.server.serverpackets.S_PacketBox;
  */
 public class C_NewCharSelect extends ClientBasePacket {
 	private static final String C_NEW_CHAR_SELECT = "[C] C_NewCharSelect";
-	private static Logger _log = Logger.getLogger(C_NewCharSelect.class.getName());
+	private static Logger _log = Logger.getLogger(C_NewCharSelect.class
+			.getName());
 
 	public C_NewCharSelect(byte[] decrypt, ClientThread client) {
 		super(decrypt);
-		client.sendPacket(new S_PacketBox(S_PacketBox.LOGOUT)); // 2.70C->3.0追加
+		client.sendPacket(new S_PacketBox(S_PacketBox.LOGOUT)); // 2.70C->3.0で追加
 		client.CharReStart(true);
 		if (client.getActiveChar() != null) {
 			L1PcInstance pc = client.getActiveChar();
@@ -41,7 +42,8 @@ public class C_NewCharSelect extends ClientBasePacket {
 				client.setActiveChar(null);
 			}
 		} else {
-			_log.fine("Disconnect Request from Account : " + client.getAccountName());
+			_log.fine("Disconnect Request from Account : "
+					+ client.getAccountName());
 		}
 	}
 

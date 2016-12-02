@@ -45,9 +45,10 @@ public class S_NewCharPacket extends ServerBasePacket {
 		writeC(pc.getWis());
 		writeC(pc.getCha());
 		writeC(pc.getInt());
-		writeC(0);  // 是否為管理員
+		writeC(0);// is Administrator
+		/* 生日待後續的實作 */
+		// writeD(Integer.parseInt(new SimpleDateFormat("yyyyMMdd").format(pc.getBirthday())));
 		writeD(pc.getSimpleBirthday());
-		writeC((pc.getLevel() ^ pc.getStr() ^ pc.getDex() ^ pc.getCon() ^ pc.getWis() ^ pc.getCha() ^ pc.getInt()) & 0xff);  // XOR 驗證
 	}
 
 	@Override

@@ -69,9 +69,11 @@ public class L1Character extends L1Object {
 
 	private final Map<Integer, L1SkillTimer> _skillEffect = Maps.newMap();
 
-	private final Map<Integer, L1ItemDelay.ItemDelayTimer> _itemdelay = Maps.newMap();
+	private final Map<Integer, L1ItemDelay.ItemDelayTimer> _itemdelay = Maps
+			.newMap();
 
-	private final Map<Integer, L1FollowerInstance> _followerlist = Maps.newMap();
+	private final Map<Integer, L1FollowerInstance> _followerlist = Maps
+			.newMap();
 
 	public L1Character() {
 		_level = 1;
@@ -247,7 +249,8 @@ public class L1Character extends L1Object {
 	 */
 	public void broadcastPacketExceptTargetSight(ServerBasePacket packet,
 			L1Character target) {
-		for (L1PcInstance pc : L1World.getInstance().getVisiblePlayerExceptTargetSight(this, target)) {
+		for (L1PcInstance pc : L1World.getInstance()
+				.getVisiblePlayerExceptTargetSight(this, target)) {
 			pc.sendPackets(packet);
 		}
 	}
@@ -634,7 +637,10 @@ public class L1Character extends L1Object {
 	 */
 	public void addPet(L1NpcInstance npc) {
 		_petlist.put(npc.getId(), npc);
-		sendPetCtrlMenu(npc, true);// 顯示寵物控制圖形介面
+		//if (_petlist.size() < 2) {
+			sendPetCtrlMenu(npc, true);// 顯示寵物控制圖形介面
+		//}
+
 	}
 
 	/**
@@ -645,7 +651,9 @@ public class L1Character extends L1Object {
 	 */
 	public void removePet(L1NpcInstance npc) {
 		_petlist.remove(npc.getId());
-		sendPetCtrlMenu(npc, false);// 關閉寵物控制圖形介面
+		//if (_petlist.isEmpty()) {
+			sendPetCtrlMenu(npc, false);// 關閉寵物控制圖形介面
+		//}
 	}
 
 	/**

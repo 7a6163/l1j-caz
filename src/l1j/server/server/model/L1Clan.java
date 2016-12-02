@@ -14,42 +14,30 @@
  */
 package l1j.server.server.model;
 
-import java.sql.Timestamp;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import l1j.server.Config;
+import l1j.server.server.datatables.CharacterTable;
 import l1j.server.server.model.Instance.L1PcInstance;
 import l1j.server.server.utils.collections.Lists;
 
 public class L1Clan {
-	/** 聯盟一般 */
-	public static final int CLAN_RANK_LEAGUE_PUBLIC = 2;
-	/** 聯盟 副君主*/
-	public static final int CLAN_RANK_LEAGUE_VICEPRINCE = 3;
-	/** 聯盟君主 */
-	public static final int CLAN_RANK_LEAGUE_PRINCE = 4;
-	/** 聯盟見習 */
-	public static final int CLAN_RANK_LEAGUE_PROBATION = 5;
-	/** 聯盟守護騎士 */
-	public static final int CLAN_RANK_LEAGUE_GUARDIAN = 6;
-	/** 一般 */
-	public static final int CLAN_RANK_PUBLIC = 7;
-	/** 見習 */
-	public static final int CLAN_RANK_PROBATION = 8;
-	/** 守護騎士 */
-	public static final int CLAN_RANK_GUARDIAN = 9;
-	/** 君主 */
-	public static final int CLAN_RANK_PRINCE = 10;
+
+	public static final int CLAN_RANK_PROBATION = 1;
+
+	public static final int CLAN_RANK_PUBLIC = 2;
+
+	public static final int CLAN_RANK_GUARDIAN = 3;
+
+	public static final int CLAN_RANK_PRINCE = 4;
 
 	private static final Logger _log = Logger.getLogger(L1Clan.class.getName());
 
 	private int _clanId;
 
 	private String _clanName;
-	
-	private Timestamp _foundDate;
-	
-	private String _announcement;
 
 	private int _leaderId;
 
@@ -60,10 +48,6 @@ public class L1Clan {
 	private int _houseId;
 
 	private int _warehouse = 0;
-	
-	private int _emblemId = 0;
-	
-	private int _emblemStatus = 0;
 
 	private final L1DwarfForClanInventory _dwarfForClan = new L1DwarfForClanInventory(this);
 
@@ -83,38 +67,6 @@ public class L1Clan {
 
 	public void setClanName(String clan_name) {
 		_clanName = clan_name;
-	}
-	
-	public Timestamp getFoundDate() {
-		return _foundDate;
-	}
-
-	public void setFoundDate(Timestamp _foundDate) {
-		this._foundDate = _foundDate;
-	}
-
-	public String getAnnouncement() {
-		return _announcement;
-	}
-
-	public void setAnnouncement(String announcement) {
-		this._announcement = announcement;
-	}
-
-	public int getEmblemId() {
-		return _emblemId;
-	}
-
-	public void setEmblemId(int emblemId) {
-		this._emblemId = emblemId;
-	}
-	
-	public int getEmblemStatus() {
-		return _emblemStatus;
-	}
-
-	public void setEmblemStatus(int emblemStatus) {
-		this._emblemStatus = emblemStatus;
 	}
 
 	public int getLeaderId() {
@@ -166,7 +118,7 @@ public class L1Clan {
 		List<L1PcInstance> onlineMembers = Lists.newList();
 		for (String name : membersNameList) {
 			L1PcInstance pc = L1World.getInstance().getPlayer(name);
-			if ((pc != null) && ! onlineMembers.contains(pc)) {
+			if ((pc != null) && !onlineMembers.contains(pc)) {
 				onlineMembers.add(pc);
 			}
 		}
@@ -190,6 +142,63 @@ public class L1Clan {
 			result = result + name + " ";
 		}
 		return result;
+	}
+
+	public String getOnlineMembersFPWithRank() {
+		String result = "";
+		for (String name : membersNameList) {
+			L1PcInstance pc = L1World.getInstance().getPlayer(name);
+			if (pc != null) {
+				result = result + name + getRankString(pc) + " ";
+			}
+		}
+		return result;
+	}
+
+	public String getAllMembersFPWithRank() {
+		String result = "";
+		try {
+			for (String name : membersNameList) {
+				L1PcInstance pc = CharacterTable.getInstance().restoreCharacter(name);
+				if (pc != null) {
+					result = result + name + getRankString(pc) + " ";
+				}
+			}
+		}
+		catch (Exception e) {
+			_log.log(Level.SEVERE, e.getLocalizedMessage(), e);
+		}
+		return result;
+	}
+
+	private String getRankString(L1PcInstance pc) {
+		String rank = "";
+		String[] msg = {
+				"[見習]", "[一般]", "[守護騎士]", "[血盟君主]",
+				"[见习]", "[一般]", "[守护骑士]", "[血盟君主]",
+				"[見習い]", "[一般]", "[ガーディアン]", "[血盟君主]"
+		};
+		byte i = 0; // 預設：繁體
+		if (Config.CLIENT_LANGUAGE == 5) { // 簡體
+			i = 4;
+		} else if (Config.CLIENT_LANGUAGE == 4) { // 日文
+			i = 8;
+		}
+		if (pc != null) {
+			if (pc.getClanRank() == CLAN_RANK_PROBATION) {
+				rank = msg[0 + i];
+			} else if (pc.getClanRank() == CLAN_RANK_PUBLIC) {
+				rank = msg[1 + i];
+			} else if (pc.getClanRank() == CLAN_RANK_GUARDIAN) {
+				rank = msg[2 + i];
+			} else if (pc.getClanRank() == CLAN_RANK_PRINCE) {
+				rank = msg[3 + i];
+			} else {
+				rank = "";
+			}
+			
+		}
+		return rank;
 	}
 
 	public String[] getAllMembers() {

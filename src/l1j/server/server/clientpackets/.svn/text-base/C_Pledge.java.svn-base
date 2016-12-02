@@ -18,7 +18,6 @@ import l1j.server.server.ClientThread;
 import l1j.server.server.model.L1Clan;
 import l1j.server.server.model.L1World;
 import l1j.server.server.model.Instance.L1PcInstance;
-import l1j.server.server.serverpackets.S_PacketBox;
 import l1j.server.server.serverpackets.S_Pledge;
 import l1j.server.server.serverpackets.S_ServerMessage;
 
@@ -32,7 +31,7 @@ public class C_Pledge extends ClientBasePacket {
 
 	private static final String C_PLEDGE = "[C] C_Pledge";
 
-	public C_Pledge(byte abyte0[], ClientThread clientthread) throws Exception{
+	public C_Pledge(byte abyte0[], ClientThread clientthread) {
 		super(abyte0);
 		
 		L1PcInstance pc = clientthread.getActiveChar();
@@ -42,17 +41,17 @@ public class C_Pledge extends ClientBasePacket {
 
 		if (pc.getClanid() > 0) {
 			L1Clan clan = L1World.getInstance().getClan(pc.getClanname());
-			// 血盟公告
-			pc.sendPackets(new S_Pledge(clan.getClanId()));
-			
-			// 血盟成員
-			pc.sendPackets(new S_Pledge(pc));
-			
-			// 線上血盟成員
-			pc.sendPackets(new S_PacketBox(S_PacketBox.HTML_PLEDGE_ONLINE_MEMBERS, clan.getOnlineClanMember()));
-		} else {
-			// 不屬於血盟。
-			pc.sendPackets(new S_ServerMessage(1064));
+			if (pc.isCrown() && (pc.getId() == clan.getLeaderId())) {
+				pc.sendPackets(new S_Pledge("pledgeM", pc.getId(), clan.getClanName(), clan.getOnlineMembersFPWithRank(), clan
+						.getAllMembersFPWithRank()));
+			}
+			else {
+				pc.sendPackets(new S_Pledge("pledge", pc.getId(), clan.getClanName(), clan.getOnlineMembersFP()));
+			}
+		}
+		else {
+			pc.sendPackets(new S_ServerMessage(1064)); // 血盟に属していません。
+			// pc.sendPackets(new S_Pledge("pledge", pc.getId()));
 		}
 	}
 

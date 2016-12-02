@@ -32,17 +32,22 @@ public class S_RetrieveList extends ServerBasePacket {
 				for (Object itemObject : pc.getDwarfInventory().getItems()) {
 					L1ItemInstance item = (L1ItemInstance) itemObject;
 					writeD(item.getId());
-					writeC(item.getItem().getUseType()); // 道具:0 武器:1  防具:2...
+					writeC(0); // 道具:0 武器:1  防具:2...
 					writeH(item.get_gfxid());
 					writeC(item.getBless());
 					writeD(item.getCount());
 					writeC(item.isIdentified() ? 1 : 0);
 					writeS(item.getViewName());
 				}
-				writeD(0x0000001e); // 金幣30
+				writeH(0x001e); // 金幣30
 			} else {
 				pc.sendPackets(new S_ServerMessage(1625));
 			}
+			// クライアントに適当なメッセージ見つからなかったので非表示
+			/*
+			 * else { l1pcinstance.sendPackets(new
+			 * S_SystemMessage("何もお預かりしていません。")); }
+			 */
 		} else {
 			pc.sendPackets(new S_ServerMessage(263)); // \f1一人のキャラクターが持って歩けるアイテムは最大180個までです。
 		}

@@ -1,41 +1,41 @@
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/skill
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/skill
 END
 L1SkillId.java
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/skill/L1SkillId.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/skill/L1SkillId.java
 END
 L1SkillUse.java
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/skill/L1SkillUse.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/skill/L1SkillUse.java
 END
 L1SkillDelay.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/skill/L1SkillDelay.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/skill/L1SkillDelay.java
 END
 L1SkillTimer.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/skill/L1SkillTimer.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/skill/L1SkillTimer.java
 END
 L1SkillTimerCreator.java
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/skill/L1SkillTimerCreator.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/skill/L1SkillTimerCreator.java
 END
 L1BuffUtil.java
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/385/trunk/L1J-TW_3.80c/src/l1j/server/server/model/skill/L1BuffUtil.java
+/svn/!svn/ver/380/trunk/L1J-TW_3.50c/src/l1j/server/server/model/skill/L1BuffUtil.java
 END

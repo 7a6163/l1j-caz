@@ -64,7 +64,7 @@ public class CastleTable {
 		ResultSet rs = null;
 		try {
 			con = L1DatabaseFactory.getInstance().getConnection();
-			pstm = con.prepareStatement("SELECT * FROM castle ORDER BY castle_id ASC");
+			pstm = con.prepareStatement("SELECT * FROM castle");
 
 			rs = pstm.executeQuery();
 
@@ -73,15 +73,6 @@ public class CastleTable {
 				castle.setWarTime(timestampToCalendar((Timestamp) rs.getObject(3)));
 				castle.setTaxRate(rs.getInt(4));
 				castle.setPublicMoney(rs.getInt(5));
-
-				/** 設置擁有該城堡的血盟 */
-				pstm = con.prepareStatement("SELECT clan_id FROM clan_data WHERE hascastle = ?");
-				pstm.setInt(1, castle.getId());
-				ResultSet rstemp = pstm.executeQuery();
-
-				while (rstemp.next()) {
-					castle.setHeldClan(rstemp.getInt(1));
-				}
 
 				_castles.put(castle.getId(), castle);
 			}

@@ -32,7 +32,8 @@ public class S_Party extends ServerBasePacket {
 		buildPacket(htmlid, objid, partyname, partymembers, 1);
 	}
 
-	private void buildPacket(String htmlid, int objid, String partyname, String partymembers, int type) {
+	private void buildPacket(String htmlid, int objid, String partyname,
+			String partymembers, int type) {
 		writeC(Opcodes.S_OPCODE_SHOWHTML);
 		writeD(objid);
 		writeS(htmlid);
@@ -146,8 +147,7 @@ public class S_Party extends ServerBasePacket {
 				writeH(member[i].getX());
 				writeH(member[i].getY());
 			}
-			writeC(0xff);
-			writeC(0xff);
+			writeC(0x00);
 		}
 	}
 

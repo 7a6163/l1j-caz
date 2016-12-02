@@ -41,7 +41,6 @@ public class C_DeleteInventoryItem extends ClientBasePacket {
 		}
 
 		int itemObjectId = readD();
-		int deleteCount = 0;
 		L1ItemInstance item = pc.getInventory().getItem(itemObjectId);
 
 		// 沒有要刪除的道具
@@ -84,12 +83,7 @@ public class C_DeleteInventoryItem extends ClientBasePacket {
 			return;
 		}
 
-		if(item.getCount() > 1){
-			deleteCount = readD();
-			pc.getInventory().removeItem(item, deleteCount);
-		} else {
-			pc.getInventory().removeItem(item, item.getCount());
-		}
+		pc.getInventory().removeItem(item, item.getCount());
 		pc.turnOnOffLight();
 	}
 

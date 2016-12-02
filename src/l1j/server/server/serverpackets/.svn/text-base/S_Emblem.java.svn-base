@@ -27,19 +27,21 @@ import l1j.server.server.Opcodes;
 public class S_Emblem extends ServerBasePacket {
 	private static final String S_EMBLEM = "[S] S_Emblem";
 
-	public S_Emblem(int emblemId) {
+	public S_Emblem(int clanid) {
 		BufferedInputStream bis = null;
 		try {
-			String emblem_file = String.valueOf(emblemId);
+			String emblem_file = String.valueOf(clanid);
 			File file = new File("emblem/" + emblem_file);
 			if (file.exists()) {
 				int data = 0;
 				bis = new BufferedInputStream(new FileInputStream(file));
 				writeC(Opcodes.S_OPCODE_EMBLEM);
-				writeD(emblemId);
+				writeD(clanid);
 				while ((data = bis.read()) != -1) {
 					writeP(data);
 				}
+				 writeC(0x00); // 3.5C 於盟徽封包末未知的值
+				 writeH(0x0000);
 			}
 		}
 		catch (Exception e) {}

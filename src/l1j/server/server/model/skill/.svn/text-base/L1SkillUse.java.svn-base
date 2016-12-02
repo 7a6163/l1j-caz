@@ -1227,7 +1227,7 @@ public class L1SkillUse {
 		}
 
 		if (_skillId == SHIELD) { // シールド
-			pc.sendPackets(new S_SkillIconShield(2, _getBuffIconDuration));
+			pc.sendPackets(new S_SkillIconShield(5, _getBuffIconDuration));
 		}
 		else if (_skillId == SHADOW_ARMOR) { // シャドウ アーマー
 			pc.sendPackets(new S_SkillIconShield(3, _getBuffIconDuration));
@@ -1303,7 +1303,7 @@ public class L1SkillUse {
 			pc.sendPackets(new S_SkillIconWindShackle(pc.getId(), _getBuffIconDuration));
 			pc.broadcastPacket(new S_SkillIconWindShackle(pc.getId(), _getBuffIconDuration));
 		}
-		//pc.sendPackets(new S_OwnCharStatus(pc)); TODO
+		pc.sendPackets(new S_OwnCharStatus(pc));
 	}
 
 	// グラフィックの送信
@@ -1322,7 +1322,7 @@ public class L1SkillUse {
 		if (_user instanceof L1PcInstance) {
 
 			int targetid = 0;
-			if (_skillId != FIRE_WALL && _skillId != LIFE_STREAM) {
+			if (_skillId != FIRE_WALL) {
 				targetid = _target.getId();
 			}
 			L1PcInstance pc = (L1PcInstance) _user;

@@ -43,6 +43,8 @@ public class C_Party extends ClientBasePacket {
 		}
 		else {
 			pc.sendPackets(new S_ServerMessage(425)); // パーティーに加入していません。
+			// pc.sendPackets(new S_Party("party", pc
+			// .getId()));
 		}
 	}
 

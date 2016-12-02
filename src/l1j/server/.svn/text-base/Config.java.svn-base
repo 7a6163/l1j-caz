@@ -60,7 +60,8 @@ public final class Config {
 
 	public static String CLIENT_LANGUAGE_CODE;
 
-	public static String[] LANGUAGE_CODE_ARRAY = { "UTF8", "EUCKR", "UTF8", "BIG5", "SJIS", "GBK" };
+	public static String[] LANGUAGE_CODE_ARRAY =
+	{ "UTF8", "EUCKR", "UTF8", "BIG5", "SJIS", "GBK" };
 
 	public static boolean HOSTNAME_LOOKUPS;
 

@@ -317,7 +317,7 @@ public class Effect {
 				pc.addHitup(2);
 				pc.addDmgup(2);
 				pc.addStr((byte) 1);
-				pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+				pc.sendPackets(new S_OwnCharStatus2(pc));
 				type = 92;
 				break;
 			case EFFECT_MAGIC_STONE_B_1:
@@ -373,7 +373,7 @@ public class Effect {
 				pc.addBowDmgup(2);
 				pc.addBowHitup(2);
 				pc.addDex((byte) 1);
-				pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+				pc.sendPackets(new S_OwnCharStatus2(pc));
 				type = 101;
 				break;
 			case EFFECT_MAGIC_STONE_C_1:
@@ -418,7 +418,7 @@ public class Effect {
 				pc.addInt((byte)1);
 				pc.addSp(1);
 				pc.sendPackets(new S_SPMR(pc));
-				pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+				pc.sendPackets(new S_OwnCharStatus2(pc));
 				type = 110;
 				break;
 			case EFFECT_MAGIC_STONE_D_1:
@@ -488,7 +488,7 @@ public class Effect {
 			else if (type >= 111 && type <= 119) { // 防禦
 				pc.sendPackets(new S_SPMR(pc));
 				pc.sendPackets(new S_OwnCharAttrDef(pc));
-				pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+				pc.sendPackets(new S_OwnCharStatus2(pc));
 				
 			}
 		}

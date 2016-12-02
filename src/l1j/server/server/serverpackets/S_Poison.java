@@ -44,7 +44,7 @@ public class S_Poison extends ServerBasePacket {
 			writeC(1);
 		} else {
 			throw new IllegalArgumentException("不正な引数です。type = " + type);
-		} 
+		}
 	}
 
 	@Override

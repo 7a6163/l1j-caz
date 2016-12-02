@@ -36,7 +36,7 @@ public class C_Trade extends ClientBasePacket {
 		if ((player == null) || player.isGhost()) {
 			return;
 		}
-		L1PcInstance target = FaceToFace.faceToFace(player, false);
+		L1PcInstance target = FaceToFace.faceToFace(player);
 		if (target != null) {
 			if (!target.isParalyzed()) {
 				player.setTradeID(target.getId()); // 相手のオブジェクトIDを保存しておく

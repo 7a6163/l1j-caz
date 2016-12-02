@@ -31,7 +31,8 @@ import l1j.server.server.utils.SQLUtil;
 public class Logins {
 	private static Logger _log = Logger.getLogger(Logins.class.getName());
 
-	public static boolean loginValid(String account, String password, String ip, String host) throws IOException {
+	public static boolean loginValid(String account, String password,
+			String ip, String host) throws IOException {
 		boolean flag1 = false;
 		_log.info("Connect from : " + account);
 
@@ -47,7 +48,8 @@ public class Logins {
 			abyte2 = null;
 
 			con = L1DatabaseFactory.getInstance().getConnection();
-			pstm = con.prepareStatement("SELECT password FROM accounts WHERE login=? LIMIT 1");
+			pstm = con
+					.prepareStatement("SELECT password FROM accounts WHERE login=? LIMIT 1");
 			pstm.setString(1, account);
 			rs = pstm.executeQuery();
 			if (rs.next()) {
@@ -61,7 +63,8 @@ public class Logins {
 			if (abyte2 == null) {
 				if (Config.AUTO_CREATE_ACCOUNTS) {
 					con = L1DatabaseFactory.getInstance().getConnection();
-					pstm = con.prepareStatement("INSERT INTO accounts SET login=?,password=?,lastactive=?,access_level=?,ip=?,host=?");
+					pstm = con
+							.prepareStatement("INSERT INTO accounts SET login=?,password=?,lastactive=?,access_level=?,ip=?,host=?");
 					pstm.setString(1, account);
 					pstm.setString(2, new BASE64Encoder().encode(abyte1));
 					pstm.setLong(3, 0L);

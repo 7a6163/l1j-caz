@@ -223,8 +223,8 @@ public class L1War {
 
 	public void WinCastleWar(String clan_name) { // クラウンを奪取して、攻撃側クランが勝利
 		String defence_clan_name = GetDefenceClanName();
-		// %0血盟が%1血盟との戦争で勝利しました。
-		L1World.getInstance().broadcastPacketToAll(new S_ServerMessage(231, clan_name, defence_clan_name));
+		L1World.getInstance().broadcastPacketToAll(new S_ServerMessage( // %0血盟が%1血盟との戦争で勝利しました。
+				231, clan_name, defence_clan_name));
 
 		L1Clan defence_clan = L1World.getInstance().getClan(defence_clan_name);
 		if (defence_clan != null) {

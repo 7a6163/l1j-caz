@@ -406,7 +406,7 @@ public class C_ItemUSe extends ClientBasePacket {
 						pc.addBaseStr((byte) 1); // 素のSTR値に+1
 						pc.setElixirStats(pc.getElixirStats() + 1);
 						pc.getInventory().removeItem(l1iteminstance, 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.save(); // DBにキャラクター情報を書き込む
 					}
 					else {
@@ -418,7 +418,7 @@ public class C_ItemUSe extends ClientBasePacket {
 						pc.addBaseCon((byte) 1); // 素のCON値に+1
 						pc.setElixirStats(pc.getElixirStats() + 1);
 						pc.getInventory().removeItem(l1iteminstance, 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.save(); // DBにキャラクター情報を書き込む
 					}
 					else {
@@ -431,7 +431,7 @@ public class C_ItemUSe extends ClientBasePacket {
 						pc.resetBaseAc();
 						pc.setElixirStats(pc.getElixirStats() + 1);
 						pc.getInventory().removeItem(l1iteminstance, 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.save(); // DBにキャラクター情報を書き込む
 					}
 					else {
@@ -443,7 +443,7 @@ public class C_ItemUSe extends ClientBasePacket {
 						pc.addBaseInt((byte) 1); // 素のINT値に+1
 						pc.setElixirStats(pc.getElixirStats() + 1);
 						pc.getInventory().removeItem(l1iteminstance, 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.save(); // DBにキャラクター情報を書き込む
 					}
 					else {
@@ -456,7 +456,7 @@ public class C_ItemUSe extends ClientBasePacket {
 						pc.resetBaseMr();
 						pc.setElixirStats(pc.getElixirStats() + 1);
 						pc.getInventory().removeItem(l1iteminstance, 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.save(); // DBにキャラクター情報を書き込む
 					}
 					else {
@@ -468,7 +468,7 @@ public class C_ItemUSe extends ClientBasePacket {
 						pc.addBaseCha((byte) 1); // 素のCHA値に+1
 						pc.setElixirStats(pc.getElixirStats() + 1);
 						pc.getInventory().removeItem(l1iteminstance, 1);
-						pc.sendPackets(new S_OwnCharStatus2(pc, 0));
+						pc.sendPackets(new S_OwnCharStatus2(pc));
 						pc.save(); // DBにキャラクター情報を書き込む
 					}
 					else {
@@ -1174,9 +1174,8 @@ public class C_ItemUSe extends ClientBasePacket {
 						return;
 					}
 					pc.getInventory().removeItem(l1iteminstance, 1);
-					if ((spellsc_objid == 0) && (l1iteminstance.getItem().getUseType() != 51) && (l1iteminstance.getItem().getUseType() != 26)
+					if ((spellsc_objid == 0) && (l1iteminstance.getItem().getUseType() != 0) && (l1iteminstance.getItem().getUseType() != 26)
 							&& (l1iteminstance.getItem().getUseType() != 27)) {
-						L1World.getInstance().broadcastServerMessage("RETURN " + itemId);
 						return;
 						// ターゲットがいない場合にhandleCommandsを送るとぬるぽになるためここでreturn
 						// handleCommandsのほうで判断＆処理すべき部分かもしれない

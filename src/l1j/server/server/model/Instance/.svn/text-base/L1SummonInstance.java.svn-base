@@ -67,7 +67,8 @@ public class L1SummonInstance extends L1NpcInstance {
 			case 4: // 散開
 				if ((_master != null)
 						&& (_master.getMapId() == getMapId())
-						&& (getLocation().getTileLineDistance(_master.getLocation()) < 5)) {
+						&& (getLocation()
+								.getTileLineDistance(_master.getLocation()) < 5)) {
 					_dir = targetReverseDirection(_master.getX(), _master.getY());
 					_dir = checkObject(getX(), getY(), getMapId(), _dir);
 					setDirectionMove(_dir);
@@ -127,7 +128,8 @@ public class L1SummonInstance extends L1NpcInstance {
 		super(template);
 		setId(IdFactory.getInstance().nextId());
 
-		_summonFuture = GeneralThreadPool.getInstance().schedule(new SummonTimer(), SUMMON_TIME);
+		_summonFuture = GeneralThreadPool.getInstance().schedule(
+				new SummonTimer(), SUMMON_TIME);
 
 		setMaster(master);
 		setX(master.getX() + Random.nextInt(5) - 2);
@@ -148,7 +150,8 @@ public class L1SummonInstance extends L1NpcInstance {
 	}
 
 	// 造屍術處理
-	public L1SummonInstance(L1NpcInstance target, L1Character master, boolean isCreateZombie) {
+	public L1SummonInstance(L1NpcInstance target, L1Character master,
+			boolean isCreateZombie) {
 		super(null);
 		setId(IdFactory.getInstance().nextId());
 
@@ -183,7 +186,8 @@ public class L1SummonInstance extends L1NpcInstance {
 			setCurrentMpDirect(target.getCurrentMp());
 		}
 
-		_summonFuture = GeneralThreadPool.getInstance().schedule(new SummonTimer(), SUMMON_TIME);
+		_summonFuture = GeneralThreadPool.getInstance().schedule(
+				new SummonTimer(), SUMMON_TIME);
 
 		setMaster(master);
 		setX(target.getX());
@@ -193,7 +197,8 @@ public class L1SummonInstance extends L1NpcInstance {
 		setLightSize(target.getLightSize());
 		setPetcost(6);
 
-		if ((target instanceof L1MonsterInstance) && !((L1MonsterInstance) target).is_storeDroped()) {
+		if ((target instanceof L1MonsterInstance)
+				&& !((L1MonsterInstance) target).is_storeDroped()) {
 			DropTable.getInstance().setDrop(target, target.getInventory());
 		}
 		setInventory(target.getInventory());
@@ -282,7 +287,8 @@ public class L1SummonInstance extends L1NpcInstance {
 				} else { // 持てないので足元に落とす
 					targetInventory = L1World.getInstance().getInventory(
 							getX(), getY(), getMapId());
-					_inventory.tradeItem(item, item.getCount(), targetInventory);
+					_inventory
+							.tradeItem(item, item.getCount(), targetInventory);
 				}
 			}
 
@@ -305,14 +311,17 @@ public class L1SummonInstance extends L1NpcInstance {
 			List<L1ItemInstance> items = _inventory.getItems();
 			for (L1ItemInstance item : items) {
 				if (_master.getInventory().checkAddItem( // 容量重量確認及びメッセージ送信
-						item, item.getCount()) == L1Inventory.OK) {_inventory.tradeItem(item, item.getCount(), targetInventory);
+						item, item.getCount()) == L1Inventory.OK) {
+					_inventory
+							.tradeItem(item, item.getCount(), targetInventory);
 					// \f1%0が%1をくれました。
 					((L1PcInstance) _master).sendPackets(new S_ServerMessage(
 							143, getName(), item.getLogName()));
 				} else { // 持てないので足元に落とす
 					targetInventory = L1World.getInstance().getInventory(
 							getX(), getY(), getMapId());
-					_inventory.tradeItem(item, item.getCount(), targetInventory);
+					_inventory
+							.tradeItem(item, item.getCount(), targetInventory);
 				}
 			}
 			deleteMe();

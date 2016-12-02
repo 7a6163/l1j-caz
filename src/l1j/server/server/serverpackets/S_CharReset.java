@@ -53,9 +53,8 @@ public class S_CharReset extends ServerBasePacket {
 	}
 
 	/**
-	 * 『來源:伺服器』<位址:64>{長度:8}(時間:1233632532)<br>
-     *  0000:  40 01 10 00 01 00 0a 34                     @......4<br>
-     *  52等騎士重置
+	 * 45及腰精進入崇志 [Server] opcode = 43 0000: 2b 01 0f 00 04 00 0a 2d 56法進入崇志
+	 * [Server] opcode = 43 0000: 2b 01 0c 00 06 00 0a 38
 	 */
 	public S_CharReset(L1PcInstance pc) {
 		writeC(Opcodes.S_OPCODE_CHARRESET);
@@ -90,18 +89,17 @@ public class S_CharReset extends ServerBasePacket {
 		}
 		writeC(0x0a); // AC
 		writeC(pc.getTempMaxLevel()); // Lv
-	}
-	
-	/**
-	 *  給予角色盟徽編號</br>
-	 * 『來源:伺服器』<位址:64>{長度:16}(時間:1607823495)</br>
-        0000:  40 3c 15 ea 7a 00 33 b6 00 00 6a 6c cb 92 b5 2d    @<..z.3...jl...-
-	 */
-	public S_CharReset(int pcObjId, int emblemId) {
-		writeC(Opcodes.S_OPCODE_CHARRESET);
-		writeC(0x3c);
-		writeD(pcObjId);
-		writeD(emblemId);
+		/**
+		 * 0000: 2b 04 60 04 06 01 07 1e 不知道幹麻用的
+		 */
+		// }else if(type == 4){
+		// writeC(Opcodes.S_OPCODE_CHARRESET);
+		// writeC(4);
+		// writeC(0x60);
+		// writeC(0x04);
+		// writeC(0x09);
+		// writeC(0x01);
+		// writeC(0x07);
 	}
 
 	@Override

@@ -14,113 +14,40 @@
  */
 package l1j.server.server.serverpackets;
 
-import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
-
 import l1j.server.server.Opcodes;
-import l1j.server.server.datatables.CharacterTable;
-import l1j.server.server.datatables.ClanTable;
-import l1j.server.server.model.L1Clan;
-import l1j.server.server.model.Instance.L1PcInstance;
-
-//Referenced classes of package l1j.server.server.serverpackets:
-//ServerBasePacket
-
 
 public class S_Pledge extends ServerBasePacket {
-	
 	private static final String _S_Pledge = "[S] _S_Pledge";
-	
+
 	private byte[] _byte = null;
-	
-	/**
-	 * 盟友查詢 公告視窗
-	 * @param ClanId 血盟Id
-	 */
-	public S_Pledge(int ClanId) {
-		L1Clan clan = ClanTable.getInstance().getTemplate(ClanId);
-		writeC(Opcodes.S_OPCODE_PACKETBOX);
-		writeC(S_PacketBox.HTML_PLEDGE_ANNOUNCE);
-		writeS(clan.getClanName());
-		writeS(clan.getLeaderName());
-		writeD(clan.getEmblemId()); // 盟徽id
-		writeD((int) (clan.getFoundDate().getTime() / 1000)); // 血盟創立日
-		try {
-			byte[] text = new byte[478];
-			Arrays.fill(text, (byte) 0);
-			int i = 0;
-			for (byte b : clan.getAnnouncement().getBytes("Big5")) {
-				text[i++] = b;
-			}
-			writeByte(text);
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+
+	public S_Pledge(String htmlid, int objid) {
+		buildPacket(htmlid, objid, 0, "", "", "");
 	}
 
-	/**
-	 * 盟友查詢 盟友清單
-	 * @param clanName 
-	 * @throws Exception 
-	 */
-	public S_Pledge(L1PcInstance pc) throws Exception {
-		L1Clan clan = ClanTable.getInstance().getTemplate(pc.getClanid());
-		writeC(Opcodes.S_OPCODE_PACKETBOX);
-		writeC(S_PacketBox.HTML_PLEDGE_MEMBERS);
-		writeH(1);
-		writeC(clan.getAllMembers().length); // 血盟總人數
-
-		// 血盟成員資料
-		/* Name/Rank/Level/Notes/MemberId/ClassType */
-		for (String member : clan.getAllMembers()) {
-			L1PcInstance clanMember = CharacterTable.getInstance().restoreCharacter(member);
-			writeS(clanMember.getName());
-			writeC(clanMember.getClanRank());
-			writeC(clanMember.getLevel());
-			
-			/** 產生全由0填充的byte陣列 */
-			byte[] text = new byte[62];
-			Arrays.fill(text, (byte) 0);
-			
-			/** 將備註字串填入byte陣列*/
-			if (clanMember.getClanMemberNotes().length() != 0) {
-				int i = 0;
-				for (byte b : clanMember.getClanMemberNotes().getBytes("Big5")) {
-					text[i++] = b;
-				}
-			}
-			writeByte(text);
-			writeD(clanMember.getClanMemberId());
-			writeC(clanMember.getType());
-		}
+	public S_Pledge(String htmlid, int objid, String clanname, String olmembers) {
+		buildPacket(htmlid, objid, 1, clanname, olmembers, "");
 	}
-	
-	/**
-	 * 盟友查詢 寫入備註
-	 * @param name 玩家名稱
-	 * @param notes 備註文字
-	 */
-	public S_Pledge(String name, String notes){
-		writeC(Opcodes.S_OPCODE_PACKETBOX);
-		writeC(S_PacketBox.HTML_PLEDGE_WRITE_NOTES);
-		writeS(name);
-		
-		/** 產生全由0填充的byte陣列 */
-		byte[] text = new byte[62];
-		Arrays.fill(text, (byte) 0);
-		
-		/** 將備註字串填入byte陣列*/
-		if (notes.length() != 0) {
-			int i = 0;
-			try {
-				for (byte b : notes.getBytes("Big5")) {
-					text[i++] = b;
-				}
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}
-		}
-		writeByte(text);
+
+	public S_Pledge(String htmlid, int objid, String clanname,
+			String olmembers, String allmembers) {
+
+		buildPacket(htmlid, objid, 2, clanname, olmembers, allmembers);
+	}
+
+	private void buildPacket(String htmlid, int objid, int type,
+			String clanname, String olmembers, String allmembers) {
+
+		writeC(Opcodes.S_OPCODE_SHOWHTML);
+		writeD(objid);
+		writeS(htmlid);
+		writeH(type);
+		writeH(0x03);
+		writeS(clanname); // clanname
+		writeS(olmembers); // clanmember with a space in the end
+		writeS(allmembers); // all clan members names with a space in the
+		// end
+		// example: "player1 player2 player3 "
 	}
 
 	@Override

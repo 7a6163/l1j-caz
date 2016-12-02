@@ -28,7 +28,7 @@ public class S_MoveNpcPacket extends ServerBasePacket {
 		writeH(x);
 		writeH(y);
 		writeC(heading);
-		writeC(0x80);       // 3.80C 更動
+		writeC(0x81);
 		writeD(0x00000000);
 
 		// npc.set_moving(false);

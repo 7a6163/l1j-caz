@@ -23,7 +23,6 @@ import static l1j.server.server.model.skill.L1SkillId.MEDITATION;
 import static l1j.server.server.model.skill.L1SkillId.RUN_CLAN;
 import static l1j.server.server.model.skill.L1SkillId.TELEPORT;
 import static l1j.server.server.model.skill.L1SkillId.TRUE_TARGET;
-import static l1j.server.server.model.skill.L1SkillId.SUMMON_MONSTER;
 import l1j.server.Config;
 import l1j.server.server.ActionCodes;
 import l1j.server.server.ClientThread;
@@ -100,14 +99,6 @@ public class C_UseSkill extends ClientBasePacket {
 				else if ((skillId == FIRE_WALL) || (skillId == LIFE_STREAM)) { // ファイアーウォール、ライフストリーム
 					targetX = readH();
 					targetY = readH();
-				}
-				else if(skillId == SUMMON_MONSTER){ // 法師魔法 (召喚術)
-					if(pc.getInventory().checkEquipped(20284)){ // 有裝備召喚戒指
-						int summonId = readD();
-						pc.setSummonId(summonId);
-					} else {
-						targetId = readD();
-					}
 				}
 				else {
 					targetId = readD();

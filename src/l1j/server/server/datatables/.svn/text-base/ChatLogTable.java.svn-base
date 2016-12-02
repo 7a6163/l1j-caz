@@ -77,14 +77,14 @@ public class ChatLogTable {
 		// 11:パーティチャット
 		// 13:連合チャット
 		// 14:チャットパーティ
-		// 17:血盟王族公告頻道
 		Connection con = null;
 		PreparedStatement pstm = null;
 		try {
 
 			con = L1DatabaseFactory.getInstance().getConnection();
 			if (target != null) {
-				pstm = con.prepareStatement("INSERT INTO log_chat (account_name, char_id, name, clan_id, clan_name, locx, locy, mapid, type, target_account_name, target_id, target_name, target_clan_id, target_clan_name, target_locx, target_locy, target_mapid, content, datetime) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE())");
+				pstm = con
+						.prepareStatement("INSERT INTO log_chat (account_name, char_id, name, clan_id, clan_name, locx, locy, mapid, type, target_account_name, target_id, target_name, target_clan_id, target_clan_name, target_locx, target_locy, target_mapid, content, datetime) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE())");
 				pstm.setString(1, pc.getAccountName());
 				pstm.setInt(2, pc.getId());
 				pstm.setString(3, pc.isGm() ? "******" : pc.getName());
@@ -104,7 +104,8 @@ public class ChatLogTable {
 				pstm.setInt(17, target.getMapId());
 				pstm.setString(18, text);
 			} else {
-				pstm = con.prepareStatement("INSERT INTO log_chat (account_name, char_id, name, clan_id, clan_name, locx, locy, mapid, type, content, datetime) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE())");
+				pstm = con
+						.prepareStatement("INSERT INTO log_chat (account_name, char_id, name, clan_id, clan_name, locx, locy, mapid, type, content, datetime) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE())");
 				pstm.setString(1, pc.getAccountName());
 				pstm.setInt(2, pc.getId());
 				pstm.setString(3, pc.isGm() ? "******" : pc.getName());

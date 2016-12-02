@@ -2,15 +2,15 @@
 
 dir
 387
-http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.80c/src/l1j/server/server/datatables
+http://l1j-tw-99nets.googlecode.com/svn/trunk/L1J-TW_3.50c/src/l1j/server/server/datatables
 http://l1j-tw-99nets.googlecode.com/svn
 
 
 
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-has-props
+2012-06-30T18:15:27.691167Z
+373
+yorick.lin1101@gmail.com
+
 
 
 
@@ -26,17 +26,17 @@ has-props
 
 58625a3b-5f24-8265-80b7-ccb988449c27
 
-DoorTable.java
+ChatLogTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-7b0db2e4deb71d4edb3c37823e8b325e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.125067Z
+25e1e63187f78c30034f85060d2380c5
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
 
 
 
@@ -58,19 +58,19 @@ ibm99nets
 
 
 
-4181
+4619
 
-DropTable.java
+ResolventTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-d3c4b758aebdf0bbabbc205f0a70fe34
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.125067Z
+5ed345309c63aa9a95f1e7f30d24121d
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -92,449 +92,7 @@ ibm99nets
 
 
 
-12902
-
-GetBackRestartTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-5eeae1114676fa3f17a3768cedadf1b3
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2541
-
-TrapTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-608da5ad56238cdc0d662656a054c73e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3478
-
-UBTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-4f1a838ded70f3e0bd309f3700410ff8
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5210
-
-BuddyTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-1b375ae794f52222cb2f8729663a628a
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4377
-
-SpawnTimeTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-4bd6182de6dcf7a1b7333872d5544a5e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2554
-
-PetItemTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-dc758f0787cc072832eee5e48fe0b21e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3181
-
-AuctionBoardTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-55d466f9fc5d78a96e29be2c8f5b207b
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5674
-
-ClanTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-952a2b9fb276519daa9d91443130c34c
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8024
-
-RaceTicketTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-64de25e33e30309453b4430fc10519ab
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5844
-
-LightSpawnTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-3638b4d257a99c18d6eab11013db7a3c
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3700
-
-CharBuffTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-c9018c0b0258b8b1f398a88cfcfc8377
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8850
-
-NpcTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-d36f5459aff610a1bde093b435739ee9
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7998
-
-NpcChatTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-a47dabf23c7b285b8f69ff14969b4911
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4222
+2400
 
 MailTable.java
 file
@@ -542,11 +100,11 @@ file
 
 
 
-2016-01-09T23:18:48.404926Z
-f8a386f71b1fe99d6759547e09e36bf4
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.125067Z
+8fcead80a0d80a679fec162764e4097d
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -568,7 +126,7 @@ ibm99nets
 
 
 
-7584
+7636
 
 LogEnchantTable.java
 file
@@ -576,11 +134,11 @@ file
 
 
 
-2016-01-09T23:18:48.404926Z
+2016-01-09T23:18:43.125067Z
 fd1114cdb3742ed1df9a51b3162acd42
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
 
 
 
@@ -604,17 +162,17 @@ ibm99nets
 
 1710
 
-CharacterConfigTable.java
+HouseTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.408926Z
-d318b6b7680467791f2a3ff8c6c860fe
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+9404e1044a8c7ee91d4cd4619772cf66
+2011-05-23T07:28:16.253832Z
+232
+ibm99nets@gmail.com
 
 
 
@@ -636,7 +194,7 @@ ibm99nets
 
 
 
-3699
+4772
 
 DropItemTable.java
 file
@@ -644,11 +202,11 @@ file
 
 
 
-2016-01-09T23:18:48.404926Z
+2016-01-09T23:18:43.129066Z
 c8deffa7c4a2142950f1c19c09add6e8
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -672,85 +230,17 @@ ibm99nets
 
 2723
 
-InnTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-006a90d8f30b2917bb52241d83b6ef6c
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3578
-
-NPCTalkDataTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-9e6463dccb89b455b90214a167bd4b7b
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2588
-
 TownTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.408926Z
+2016-01-09T23:18:43.129066Z
 5b0fa6825134b9244052483e3e8c414f
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -774,17 +264,17 @@ ibm99nets
 
 5222
 
-SpawnTable.java
+PetTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-0b25a04d8aa9bbc12c25617523c4ab41
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+6dba69e20806c9a768098f558027b5fe
+2011-04-25T05:31:21.866972Z
+138
+intel_core_i9@yahoo.com.tw
 
 
 
@@ -806,211 +296,7 @@ ibm99nets
 
 
 
-6814
-
-ClanMembersTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-9a9aa394304b92ac9def395ac97f5d47
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4710
-
-WeaponSkillTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-8c2392668e74a082c5e41990a0d16e15
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3089
-
-PetTypeTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-f4b58e5de3996f583bc24581f31b1ac3
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3337
-
-MagicDollTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-d93b68ad3f4b705216e179180ed18e97
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2796
-
-ExpTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-29c4222c233d8b0b0193a7b09911506e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4746
-
-ArmorSetTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.408926Z
-e09970c513bb7b265a629f42c7820f8d
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3254
+9311
 
 FurnitureSpawnTable.java
 file
@@ -1018,11 +304,11 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
+2016-01-09T23:18:43.129066Z
 f5e94ada5a8e5b0f41d413915c7e0e53
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1046,17 +332,85 @@ ibm99nets
 
 4996
 
+ArmorSetTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.129066Z
+e09970c513bb7b265a629f42c7820f8d
+2011-05-08T05:54:38.409822Z
+182
+intel_core_i9@yahoo.com.tw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3254
+
+CharacterTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.129066Z
+b416b526173af47cc17047eeb6a6cc0a
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7768
+
 InnKeyTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.408926Z
+2016-01-09T23:18:43.129066Z
 c3be8717a3709350df6778772739bdaf
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-05-01T05:33:22.824520Z
+159
+intel_core_i9@yahoo.com.tw
 
 
 
@@ -1086,11 +440,11 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
-44adad23a445d705bdf061ee9a98800b
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+80845021182973b75e2dcd3f0b33dd7a
+2012-06-30T18:15:27.691167Z
+373
+yorick.lin1101@gmail.com
 
 
 
@@ -1112,7 +466,7 @@ ibm99nets
 
 
 
-21935
+21646
 
 LetterTable.java
 file
@@ -1120,11 +474,11 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
-3e89c0527826ff8118c3e5cc0770e27e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+9d7a1e66e0667469005409fc7e51969a
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
 
 
 
@@ -1146,19 +500,19 @@ ibm99nets
 
 
 
-4605
+4626
 
-FurnitureItemTable.java
+BuddyTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-5e796d3ce0111a58da2d870d798c27f9
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+1b375ae794f52222cb2f8729663a628a
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1180,19 +534,19 @@ ibm99nets
 
 
 
-2456
+4377
 
-SprTable.java
+SpawnTimeTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-319cf92f35d1436f15c3dd9bc1788f7a
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+4bd6182de6dcf7a1b7333872d5544a5e
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1214,19 +568,19 @@ ibm99nets
 
 
 
-8989
+2554
 
-ClanRecommendTable.java
+PetItemTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-851e0d00b1521fbb3ffdc8e5c1c2c591
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+dc758f0787cc072832eee5e48fe0b21e
+2011-04-24T12:46:27.110076Z
+137
+intel_core_i9@yahoo.com.tw
 
 
 
@@ -1248,7 +602,7 @@ ibm99nets
 
 
 
-7852
+3181
 
 IpTable.java
 file
@@ -1256,11 +610,11 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
+2016-01-09T23:18:43.129066Z
 0c2e32dfef0fc0b69455ecb5fbc57880
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-04-08T13:01:17.589215Z
+84
+ibm99nets@gmail.com
 
 
 
@@ -1290,10 +644,10 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
+2016-01-09T23:18:43.129066Z
 65310c21ebe8b3a01e128174852b2196
-2013-11-13T15:01:16.279159Z
-385
+2011-06-29T04:48:48.474410Z
+305
 ibm99nets
 
 
@@ -1324,11 +678,11 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
-c567f2d3e0e22d94cf05666c413f7fb9
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+71e1b3fa2cfd173f5f9ac9a2b61c496e
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1350,7 +704,7 @@ ibm99nets
 
 
 
-3957
+3638
 
 MobSkillTable.java
 file
@@ -1358,11 +712,11 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
+2016-01-09T23:18:43.129066Z
 5b3790f3e53f1d71fce91dc5901b0814
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-06-09T03:30:09.022284Z
+275
+intel_core_i9@yahoo.com.tw
 
 
 
@@ -1386,17 +740,17 @@ ibm99nets
 
 4349
 
-NpcActionTable.java
+NpcTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-dc5f179fb16d2b6782bfd506e815e737
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+d36f5459aff610a1bde093b435739ee9
+2011-06-12T02:24:30.801434Z
+283
+ibm99nets@gmail.com
 
 
 
@@ -1418,19 +772,19 @@ ibm99nets
 
 
 
-3789
+7998
 
-BossSpawnTable.java
+NpcChatTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-259521e914ae203687162ba04310e3c2
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+a47dabf23c7b285b8f69ff14969b4911
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1452,19 +806,19 @@ ibm99nets
 
 
 
-3392
+4222
 
-UBSpawnTable.java
+CharacterConfigTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
-5bba146bbe3bc22bd87617eb482bc83c
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+4fad262b26b8ca30b14b64de7bcc3798
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
 
 
 
@@ -1486,109 +840,7 @@ ibm99nets
 
 
 
-4045
-
-ChatLogTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-586b38af87d8193cd057aa23e44581d0
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4637
-
-ResolventTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-5ed345309c63aa9a95f1e7f30d24121d
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2400
-
-HouseTable.java
-file
-
-
-
-
-2016-01-09T23:18:48.404926Z
-9404e1044a8c7ee91d4cd4619772cf66
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4772
+3732
 
 PolyTable.java
 file
@@ -1596,11 +848,11 @@ file
 
 
 
-2016-01-09T23:18:48.408926Z
+2016-01-09T23:18:43.129066Z
 ef051e187be6a44996da1fea4430f25e
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1624,17 +876,17 @@ ibm99nets
 
 2989
 
-PetTable.java
+InnTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.408926Z
-6dba69e20806c9a768098f558027b5fe
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.129066Z
+006a90d8f30b2917bb52241d83b6ef6c
+2011-05-01T05:33:22.824520Z
+159
+intel_core_i9@yahoo.com.tw
 
 
 
@@ -1656,7 +908,109 @@ ibm99nets
 
 
 
-9311
+3578
+
+NPCTalkDataTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.129066Z
+9e6463dccb89b455b90214a167bd4b7b
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2588
+
+SpawnTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+0b25a04d8aa9bbc12c25617523c4ab41
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6814
+
+WeaponSkillTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+8c2392668e74a082c5e41990a0d16e15
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3089
 
 NpcSpawnTable.java
 file
@@ -1664,11 +1018,11 @@ file
 
 
 
-2016-01-09T23:18:48.404926Z
+2016-01-09T23:18:43.125067Z
 7f9e9861c65f650a4d587b1942834026
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-05-01T09:47:26.944293Z
+162
+yamca2701@gmail.com
 
 
 
@@ -1692,17 +1046,51 @@ ibm99nets
 
 5680
 
+PetTypeTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+f4b58e5de3996f583bc24581f31b1ac3
+2011-04-24T12:46:27.110076Z
+137
+intel_core_i9@yahoo.com.tw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3337
+
 MobGroupTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.404926Z
+2016-01-09T23:18:43.125067Z
 c2b459f13a8d15fc30673a91bb1af225
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1726,17 +1114,17 @@ ibm99nets
 
 2896
 
-CharacterTable.java
+MagicDollTable.java
 file
 
 
 
 
-2016-01-09T23:18:48.408926Z
-b416b526173af47cc17047eeb6a6cc0a
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2016-01-09T23:18:43.125067Z
+d93b68ad3f4b705216e179180ed18e97
+2011-08-04T09:27:51.333816Z
+320
+ji3g4al6al6@gmail.com
 
 
 
@@ -1758,7 +1146,41 @@ ibm99nets
 
 
 
-7768
+2796
+
+ExpTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+29c4222c233d8b0b0193a7b09911506e
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4746
 
 MapsTable.java
 file
@@ -1766,11 +1188,11 @@ file
 
 
 
-2016-01-09T23:18:48.404926Z
+2016-01-09T23:18:43.125067Z
 fb8a244080ee181aa2e75c6592f71fd3
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1800,11 +1222,11 @@ file
 
 
 
-2016-01-09T23:18:48.404926Z
+2016-01-09T23:18:43.125067Z
 3921acdcc669ea6cdb9c77bdf1d994b6
-2013-11-13T15:01:16.279159Z
-385
-ibm99nets
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
 
 
 
@@ -1827,4 +1249,514 @@ ibm99nets
 
 
 6543
+
+FurnitureItemTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+5e796d3ce0111a58da2d870d798c27f9
+2012-06-30T18:15:27.691167Z
+373
+yorick.lin1101@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2456
+
+DoorTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+bd2b2cfe5279f9d90d3390997c49b6f9
+2011-06-12T04:42:59.979577Z
+287
+intel_core_i9@yahoo.com.tw
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4206
+
+DropTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+0357bef042f4cec71bd52da6813c9e61
+2011-08-31T06:13:00.546713Z
+326
+yamca2701@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12742
+
+SprTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+319cf92f35d1436f15c3dd9bc1788f7a
+2011-04-26T23:07:53.249182Z
+139
+intel_core_i9@yahoo.com.tw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8989
+
+GetBackRestartTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+5eeae1114676fa3f17a3768cedadf1b3
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2541
+
+TrapTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+608da5ad56238cdc0d662656a054c73e
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3478
+
+UBTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+4f1a838ded70f3e0bd309f3700410ff8
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5210
+
+AuctionBoardTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+55d466f9fc5d78a96e29be2c8f5b207b
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5674
+
+ClanTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+a2eaf695099338b987e36af46ee9ad1a
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6641
+
+RaceTicketTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+64de25e33e30309453b4430fc10519ab
+2011-03-26T04:37:30.497914Z
+35
+ibm99nets@gmail.com
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5844
+
+NpcActionTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+dc5f179fb16d2b6782bfd506e815e737
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3789
+
+UBSpawnTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+5bba146bbe3bc22bd87617eb482bc83c
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4045
+
+BossSpawnTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+259521e914ae203687162ba04310e3c2
+2010-12-19T09:12:38.990114Z
+8
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3392
+
+LightSpawnTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+3638b4d257a99c18d6eab11013db7a3c
+2011-03-25T13:07:22.229676Z
+33
+ibm99nets@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3700
+
+CharBuffTable.java
+file
+
+
+
+
+2016-01-09T23:18:43.125067Z
+b4b24522904ae430ea582297f21fd25d
+2011-05-10T14:13:22.677340Z
+191
+intel_core_i9@yahoo.com.tw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8857
 
