@@ -1,0 +1,33 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: evV2BubA3ZtXchrLuGCthfMfDx8yTr
+    expose:
+      - "3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  l1j:
+    build:
+      context: .
+    ports:
+      - 2000:2000/tcp
+    environment:
+      DB_HOST: db
+      DB_PWD: evV2BubA3ZtXchrLuGCthfMfDx8yTr
+    depends_on:
+      - db
+    links:
+      - 'db:db'
+    command
+      - bash
+      - -c
+      - sh /l1j/ServerStart.sh
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/l1j
+volumes:
+  db_data:
